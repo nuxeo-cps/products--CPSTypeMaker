@@ -46,7 +46,7 @@ if title is not None:
     props['title'] = title
     props['description'] = description
 
-    if new_icon.read(1) != '':
+    if new_icon and new_icon.read(1) != '':
         new_icon.seek(0)
         icon_id = type_id + '_icon' 
         props['content_icon'] = icon_id
