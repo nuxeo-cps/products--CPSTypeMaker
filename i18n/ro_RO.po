@@ -1,0 +1,646 @@
+# ##########################################################
+# ################# DON'T EDIT THIS FILE! ##################
+# ##########################################################
+# Gettext Message File for default.
+# Your Name <your@email>, Year
+msgid ""
+msgstr ""
+"Project-Id-Version: default\n"
+"POT-Creation-Date: 2004-07-02 15:22default\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Your Name <your@email>\n"
+"Language-Team: Name <email>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-code: LL\n"
+"Language-name: Language\n"
+"Preferred-encodings: utf-8 latin1\n"
+"Domain: default\n"
+
+msgid "cpstypes_configuretool"
+msgstr ""
+
+msgid "cpstypes_documentlist"
+msgstr ""
+
+#.   <input type="submit" name="action_save" value="button_save" />
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "button_save"
+msgstr ""
+
+#.   <th colspan="2" align="left">cpstypes_add_new_widget</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_add_new_widget"
+msgstr ""
+
+#.   <input type="submit" name="addrow" value="cpstypes_add_row" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_add_row"
+msgstr ""
+
+#.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_delete_cell"
+msgstr ""
+
+#.   <th>cpstypes_field_indexed</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_field_indexed"
+msgstr ""
+
+#.   <h3>cpstypes_flexible_widgets</h3>
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_flexible_widgets"
+msgstr ""
+
+#.   <h1>cpstypes_label_add_type</h1>
+#: from ../skins/cps_typemaker/cpstypes_add_form.pt
+msgid "cpstypes_label_add_type"
+msgstr ""
+
+#.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_shrink_cell"
+msgstr ""
+
+#.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_split_cell"
+msgstr ""
+
+#.   <th align="right">cpstypes_type_description</th>
+#.   <small content="item/description">cpstypes_type_description</small>
+#: from ../skins/cps_typemaker/cpstypes_add_form.pt
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_list.pt
+msgid "cpstypes_type_description"
+msgstr ""
+
+#.   <th align="right">cpstypes_type_icon</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_type_icon"
+msgstr ""
+
+#.   <th align="right">cpstypes_type_is_addable</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_type_is_addable"
+msgstr ""
+
+#.   <th align="right">cpstypes_type_title</th>
+#: from ../skins/cps_typemaker/cpstypes_add_form.pt
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_type_title"
+msgstr ""
+
+#.   <input type="submit" name="widencell" value="cpstypes_widen_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_widen_cell"
+msgstr ""
+
+#.   <th>cpstypes_widget_max_repeats</th>
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_widget_max_repeats"
+msgstr ""
+
+#.   <th>cpstypes_widget_required</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_widget_required"
+msgstr ""
+
+#.   <th>cpstypes_widget_show_in_view</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_widget_show_in_view"
+msgstr ""
+
+#.   <th>cpstypes_widget_size</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_widget_size"
+msgstr ""
+
+#.   <th>cpstypes_widget_title</th>
+#.   <th align="right">cpstypes_widget_title</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_widget_title"
+msgstr ""
+
+#.   <th>cpstypes_widget_type</th>
+#.   <th align="right">cpstypes_widget_type</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_widget_type"
+msgstr ""
+
+#.   <h3>cpstypes_widgets</h3>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_widgets"
+msgstr ""
+
+msgid "cpstypes_add_type"
+msgstr ""
+
+msgid "cpstypes_edit_metadata"
+msgstr ""
+
+msgid "cpstypes_edit_type"
+msgstr ""
+
+msgid "cpstypes_edit_layout"
+msgstr ""
+
+msgid "cpstypes_edit_flexible"
+msgstr ""
+
+msgid "Type management"
+msgstr ""
+
+msgid "CPS String List Field"
+msgstr ""
+
+msgid "CPS Float Field"
+msgstr ""
+
+msgid "CPS File Field"
+msgstr ""
+
+msgid "CPS Image Field"
+msgstr ""
+
+msgid "CPS String Field"
+msgstr ""
+
+msgid "CPS DateTime Field"
+msgstr ""
+
+msgid "CPS Password Field"
+msgstr ""
+
+msgid "CPS Int Field"
+msgstr ""
+
+msgid "CPS Long Field"
+msgstr ""
+
+msgid "CPS MultiSelect Widget"
+msgstr ""
+
+msgid "CPS Lines Widget"
+msgstr ""
+
+msgid "CPS Ordered List Widget"
+msgstr ""
+
+msgid "CPS Unordered List Widget"
+msgstr ""
+
+msgid "CPS String Widget"
+msgstr ""
+
+msgid "CPS TextArea Widget"
+msgstr ""
+
+msgid "CPS Email Widget"
+msgstr ""
+
+msgid "CPS Heading Widget"
+msgstr ""
+
+msgid "CPS Rich Text Editor Widget"
+msgstr ""
+
+msgid "CPS InternalLinks Widget"
+msgstr ""
+
+msgid "CPS Link Widget"
+msgstr ""
+
+msgid "CPS Html Widget"
+msgstr ""
+
+msgid "CPS DateTime Widget"
+msgstr ""
+
+msgid "CPS Date Widget"
+msgstr ""
+
+msgid "CPS Password Widget"
+msgstr ""
+
+msgid "CPS Int Widget"
+msgstr ""
+
+msgid "CPS CheckBox Widget"
+msgstr ""
+
+msgid "CPS Long Widget"
+msgstr ""
+
+msgid "CPS Float Widget"
+msgstr ""
+
+msgid "CPS AttachedFile Widget"
+msgstr ""
+
+msgid "CPS File Widget"
+msgstr ""
+
+msgid "CPS Image Widget"
+msgstr ""
+
+msgid "CPS Photo Widget"
+msgstr ""
+
+msgid "CPS Boolean Widget"
+msgstr ""
+
+msgid "CPS Directory Entry Widget"
+msgstr ""
+
+msgid "CPS Directory MultiEntries Widget"
+msgstr ""
+
+msgid "CPS Dummy Widget"
+msgstr ""
+
+msgid "CPS ExtendedSelect Widget"
+msgstr ""
+
+msgid "CPS Identifier Widget"
+msgstr ""
+
+msgid "CPS Method Widget"
+msgstr ""
+
+msgid "CPS Select Widget"
+msgstr ""
+
+msgid "CPS Text Widget"
+msgstr ""
+
+msgid "CPS URL Widget"
+msgstr ""
+
+msgid "type_already_exists"
+msgstr ""
+
+msgid "field_already_exists"
+msgstr ""
+
+msgid "psm_duplicate_widgets"
+msgstr ""
+
+msgid "psm_changed"
+msgstr ""
+
+msgid "cpstypes_more"
+msgstr ""
+
+msgid "Format for empty list"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Display separator in view mode"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Label in view mode"
+msgstr ""
+
+msgid "Label in edit mode"
+msgstr ""
+
+msgid "Vocabulary"
+msgstr "Vocabulary"
+
+msgid "Is vocabulary translated on display ?"
+msgstr "Is vocabulary translated on display ?"
+
+msgid "Directory"
+msgstr "Directory"
+
+msgid "Optional directory used in view mode"
+msgstr ""
+
+msgid "Entry type"
+msgstr ""
+
+msgid "Skin name"
+msgstr ""
+
+msgid "Popup Mode"
+msgstr ""
+
+msgid "Maximum image size"
+msgstr ""
+
+msgid "Deletable ?"
+msgstr ""
+
+msgid "Display Width"
+msgstr ""
+
+msgid "Display Height"
+msgstr ""
+
+msgid "Can resize to lower size ?"
+msgstr ""
+
+msgid "Render position"
+msgstr ""
+
+msgid "What is user configurable, require extra fields"
+msgstr ""
+
+msgid "Maximum input width"
+msgstr ""
+
+msgid "Width"
+msgstr ""
+
+msgid "Height"
+msgstr ""
+
+msgid "Format for empty list"
+msgstr ""
+
+msgid "View format"
+msgstr ""
+
+msgid "Vocabulary is translated ?"
+msgstr ""
+
+msgid "View format empty"
+msgstr ""
+
+msgid "Use Javascript ?"
+msgstr ""
+
+msgid "View format (short, medium or long)"
+msgstr ""
+
+msgid "Enabling the setting of time of the day ?"
+msgstr ""
+
+msgid "default hour for time"
+msgstr ""
+
+msgid "default minutes for time"
+msgstr ""
+
+msgid "True label"
+msgstr ""
+
+msgid "False label"
+msgstr ""
+
+msgid "Maximum file size"
+msgstr ""
+
+msgid "Maximum size"
+msgstr ""
+
+msgid "Render format"
+msgstr ""
+
+msgid "cps_types_auto"
+msgstr ""
+
+msgid "cpstypes_widgethasrequiredfields"
+msgstr ""
+
+msgid "cpstypes_splitcell"
+msgstr ""
+
+msgid "cpstypes_moveleft"
+msgstr ""
+
+msgid "cpstypes_moveright"
+msgstr ""
+
+msgid "cpstypes_appendcell"
+msgstr ""
+
+msgid "cpstypes_availablefields"
+msgstr ""
+
+msgid "cpstypes_deletecell"
+msgstr ""
+
+msgid "cpstypes_editcell"
+msgstr ""
+
+msgid "cpstypes_publictype"
+msgstr ""
+
+msgid "cpstypes_widget_label"
+msgstr ""
+
+msgid "cpstypes_configure"
+msgstr ""
+
+msgid "Multiple Layouts"
+msgstr ""
+
+msgid "Id prefix for TypeMaker types"
+msgstr ""
+
+msgid "Id prefix for TypeMaker style"
+msgstr ""
+
+msgid "Base schemas"
+msgstr ""
+
+msgid "Base Layout"
+msgstr ""
+
+msgid "Add in types"
+msgstr ""
+
+msgid "Metadata layout"
+msgstr ""
+
+msgid "Metadata schemas"
+msgstr ""
+
+msgid "Immediate View"
+msgstr ""
+
+msgid "Hidden layout modes"
+msgstr ""
+
+msgid "Maximum number of rows"
+msgstr ""
+
+msgid "Process before type publish state changes"
+msgstr ""
+
+msgid "Process after type publish state changes"
+msgstr ""
+
+msgid "document types deleted"
+msgstr ""
+
+msgid "cpstypemaker_save"
+msgstr ""
+
+msgid "cpstypemaker_autolayout"
+msgstr ""
+
+msgid "cpstypemaker_layoutlabel"
+msgstr ""
+
+msgid "CPS Catalog Navigation Select Widget"
+msgstr ""
+
+msgid "CPS NewsLetter InternalLinks Widgets"
+msgstr ""
+
+msgid "CPS Generic Select Widget"
+msgstr ""
+
+msgid "CPS Generic MultiSelect Widget"
+msgstr ""
+
+msgid "Label in view layout mode"
+msgstr """
+
+msgid "Label in edit layout mode"
+msgstr ""
+
+msgid "Fields"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "Read-only in layout modes"
+msgstr ""
+
+msgid "Label is i18n"
+msgstr ""
+
+msgid "Hidden in layout modes"
+msgstr ""
+
+msgid "Hidden if readonly in layout modes"
+msgstr ""
+
+msgid "Hidden if empty"
+msgstr ""
+
+msgid "Hide the widget if the given TAL expression returns true"
+msgstr ""
+
+msgid "CSS class for view"
+msgstr ""
+
+msgid "Get the widget mode from the given TAL expression"
+msgstr ""
+
+msgid "Is vocabulary translated on display"
+msgstr ""
+
+msgid "Deletable"
+msgstr ""
+
+msgid "Accept blank values (defined in vocabulary) when validating if the widget is required and the vocabulary holds blank values"
+msgstr ""
+
+msgid "Allowed file suffixes (for example: .html .sxw)"
+msgstr ""
+
+msgid "Display for true"
+msgstr ""
+
+msgid "Display for false"
+msgstr ""
+
+msgid "Use javascript"
+msgstr ""
+
+msgid "Widget type"
+msgstr ""
+
+msgid "Display width"
+msgstr ""
+
+msgid "Maximum image size"
+msgstr ""
+
+msgid "Enable to resize img to lower size"
+msgstr ""
+
+msgid "Title of the popup"
+msgstr ""
+
+msgid "Allow configuration options"
+msgstr ""
+
+msgid "Widget render method"
+msgstr ""
+
+msgid "Group id for Javascript switching (if empty widget id is used)"
+msgstr ""
+
+msgid "Depends on id for Javascript switching"
+msgstr ""
+
+msgid "Depends on value for Javascript switching"
+msgstr ""
+
+msgid "Depends on value display widget"
+msgstr ""
+
+msgid "Required widget"
+msgstr ""
+
+msgid "browse or search"
+msgstr ""
+
+msgid "browse"
+msgstr ""
+
+msgid "search"
+msgstr ""
+
+msgid "Enabling the setting of time of the day"
+msgstr ""
+
+msgid "Value must be in range"
+msgstr ""
+
+msgid "Range minimum value"
+msgstr ""
+
+msgid "Range maximum value"
+msgstr ""
+
+msgid "Thousands separator"
+msgstr ""
+
+msgid "Decimal separator"
+msgstr ""
+
+msgid "Number of decimals"
+msgstr ""
+
+msgid "Html for edit"
+msgstr ""
+
+msgid "Html for view"
+msgstr ""
+
+msgid "Render format : select menu (default), radio buttons or checkboxes"
+msgstr ""
+
+msgid "Target for the link"
+msgstr ""
