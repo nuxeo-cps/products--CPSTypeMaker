@@ -1153,30 +1153,41 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             # theses are widget types
             if (attribute == '_marker') or not hasattr(widget, attribute)\
              or widget.is_addable:
-                element = {}
+                
+                
                 meta_type = widget.meta_type
 
+                if meta_type <> 'Broken Because Product is Gone':
+                    # we don't want duplicate meta_types
+                    already_in = False
+                    
+                    for sort, element in res:
+                        if element['meta_type'] == meta_type:
+                            already_in = True
+                            break
+                    
+                    if not already_in:
+                        element = {}
+                        element['id'] = widget.getId()
+                        element['meta_type'] = meta_type
+        
+                        sort_key = widget.getId()
+        
+                        if translated and mcat:
+                            trad_key = mcat(sort_key)
+                            if trad_key == sort_key:
+                                trad_key = mcat('CPS '+sort_key)
+                                if trad_key == 'CPS '+sort_key:
+                                    trad_key = sort_key
+                        else:
+                            trad_key = sort_key            
+                                
+                        sorter =  (trad_key, element,)
+                        res.append(sorter)
 
-                element['id'] = widget.getId()
-                element['meta_type'] = meta_type
-
-                """
-                if meta_type.endswith(' Type'):
-                    sort_key = meta_type[:len(meta_type)-5]
-                else:
-                    sort_key = meta_type
-                """
-                # see for translation
-                sort_key = widget.getId()
-
-                if translated and mcat:
-                    sort_key = mcat(sort_key)
-
-                sorter =  (sort_key, element,)
-                res.append(sorter)
-
+        LOG('avant tri', INFO, str(res))
         res.sort()
-
+        LOG('après tri', INFO, str(res))        
         result = []
 
         for item in res:
