@@ -47,6 +47,7 @@ def install(self):
 
     # translations
     installer.setupTranslations()
+    
     installer.finalize()
     installer.log("End of specific CPSSchemas install")
     return installer.logResult()
