@@ -6,8 +6,7 @@ New features:
 -
 Bug fixes:
 ~~~~~~~~~~
-- Deleted fields where not deleted from the layout.
-- If you didn't select a widget and saved, you got an error when adding the field.
+-
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 -
