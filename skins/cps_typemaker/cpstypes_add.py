@@ -1,7 +1,9 @@
 ##parameters=id,title,description
 
 ttool = context.portal_types
-type_id = 'simpletype_' + id
+prefix = context.cpstypes_get_definitions()['type_prefix']
+
+type_id = prefix + id
 ti = ttool.addFlexibleTypeInformation(id=type_id)
 properties = {
     'title': title,
