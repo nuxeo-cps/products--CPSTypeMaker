@@ -29,11 +29,11 @@
                   actions python:actions.update({'object': [
                     {'id':'create_type',
                      'url':base_url+'cpstypes_add_form',
-                     'name': 'cpstypes_label_add_form',
+                     'name': 'cpstypes_add_form',
                      'category': 'object'},
                     {'id':'edit_schema',
                      'url':base_url+'cpstypes_schema_edit',
-                     'name': 'cpstypes_label_edit_schema',
+                     'name': 'cpstypes_edit_schema',
                      'category': 'object'},
                      ]});
          ">
