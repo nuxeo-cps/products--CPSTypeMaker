@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- encoding: iso-8859-15 -*-
-# (C) Copyright 2004 Nuxeo SARL <http://nuxeo.com>
+# (C) Copyright 2004-2005 Nuxeo SARL <http://nuxeo.com>
 # Author: Tarek Ziadé <tz@nuxeo.com>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -167,9 +167,9 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
         for id, type in types.objectItems():
             #raise str((type._properties))
             tmaker_tool.manage_documentModified(
-                type_id=type_name, 
+                type_id=type_name,
                 action=action,
-                new_widget_title='Totoro '+str(id),
+                new_widget_title='Totoro ' + str(id),
                 new_widget_type=type.id)
 
             # check results on type
@@ -183,7 +183,8 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
             for item_id, item in type_layout.objectItems():
                 if item.id == wid:
                     found = True
-                    self.assertEquals(item.title, 'Totoro ' + str(id))
+                    new_title = 'Totoro ' + str(id)
+                    self.assertEquals(item.title, new_title)
                     break
 
             self.assert_(found)
