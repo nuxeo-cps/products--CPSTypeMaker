@@ -925,16 +925,21 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
 
     security.declareProtected(ViewManagementScreens, 'manage_deleteDocumentType')
-    def manage_deleteDocumentType(self, ids, RESPONSE=None):
+    def manage_deleteDocumentType(self, ids=None, RESPONSE=None):
         """ called when a document type is deleted
         """
         # this is a fake deletion
         # (safer for portal content)
+        utool = getToolByName(self, 'portal_url')
+        if ids is None:
+            if RESPONSE:
+                return RESPONSE.redirect(utool() + '/cpstypes_list')
+            else:
+                return None
+
         ttool = getToolByName(self, 'portal_types')
         stool = getToolByName(self, 'portal_schemas')
         ltool = getToolByName(self, 'portal_layouts')
-        utool = getToolByName(self, 'portal_url')
-
 
         for id in ids:
             self.processBeforeTypeChange(id, 'all', False, self)
