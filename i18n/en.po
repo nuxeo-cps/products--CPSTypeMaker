@@ -130,13 +130,11 @@ msgstr "Widgets"
 msgid "cpstypes_add_type"
 msgstr "Add new type"
 
-#, fuzzy
 msgid "cpstypes_edit_type"
-msgstr "Type"
+msgstr "Edit Type"
 
-#, fuzzy
 msgid "cpstypes_edit_layout"
-msgstr "Edit schema"
+msgstr "Edit Layout"
 
 msgid "Type management"
 msgstr "Document type management"
