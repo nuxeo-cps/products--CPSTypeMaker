@@ -100,9 +100,11 @@ actions['object'].append({'id':'delete_entry',
           <th>Add new field:</th>
           <td>
             <select name="new_field" tal:define="schema here/portal_schemas/metadata">
-              <option tal:repeat="field schema/objectValues"
-                      tal:attributes="value field/getFieldId"
-                      tal:content="field/getFieldId" />
+              <tal:block tal:repeat="field schema/objectValues">
+              <option tal:attributes="value field/getFieldId"
+                      tal:content="field/getFieldId"
+                      tal:condition="python:not hasattr(layoutob, 'w__' + field.getFieldId())" />
+              </tal:block>
             </select>
           </td>
           <td>
