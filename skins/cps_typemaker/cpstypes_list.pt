@@ -29,7 +29,7 @@
                   actions python:actions.update({'object': [
                     {'id':'create_type',
                      'url':base_url+'cpstypes_add_form',
-                     'name': 'cpstypes_add_form',
+                     'name': 'cpstypes_add_type',
                      'category': 'object'},
                     {'id':'edit_schema',
                      'url':base_url+'cpstypes_schema_edit',
