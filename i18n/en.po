@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: en\n"
-"POT-Creation-Date: 2004-04-22 15:26default\n"
+"POT-Creation-Date: 2004-04-22 15:29default\n"
 "PO-Revision-Date: 2004-04-13 14:31+0200\n"
 "Last-Translator: emmanuel <epietriga@nuxeo.com>\n"
 "Language-Team: francais <fr@li.org>\n"
@@ -128,8 +128,9 @@ msgstr "Widgets"
 msgid "cpstypes_add_type"
 msgstr "Add new type"
 
-msgid "cpstypes_edit_schema"
-msgstr "Edit schema"
+#, fuzzy
+msgid "cpstypes_edit_metadata"
+msgstr "Edit Layout"
 
 msgid "cpstypes_edit_type"
 msgstr "Edit Type"
@@ -235,6 +236,9 @@ msgstr "Image"
 
 msgid "CPS Photo Widget"
 msgstr "Photo"
+
+#~ msgid "cpstypes_edit_schema"
+#~ msgstr "Edit schema"
 
 #~ msgid "cpstypes_add_new_field"
 #~ msgstr "Add new field"

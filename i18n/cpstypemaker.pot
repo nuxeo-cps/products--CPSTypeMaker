@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-04-22 15:26default\n"
+"POT-Creation-Date: 2004-04-22 15:29default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -126,7 +126,7 @@ msgstr ""
 msgid "cpstypes_add_type"
 msgstr ""
 
-msgid "cpstypes_edit_schema"
+msgid "cpstypes_edit_metadata"
 msgstr ""
 
 msgid "cpstypes_edit_type"

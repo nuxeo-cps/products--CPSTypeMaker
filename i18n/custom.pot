@@ -19,7 +19,7 @@ msgstr ""
 msgid "cpstypes_add_type"
 msgstr ""
 
-msgid "cpstypes_edit_schema"
+msgid "cpstypes_edit_metadata"
 msgstr ""
 
 msgid "cpstypes_edit_type"
