@@ -1,7 +1,11 @@
 ##parameters=id,title,description
 
 ttool = context.portal_types
-prefix = context.cpstypes_get_definitions()['type_prefix']
+defs = context.cpstypes_get_definitions()
+prefix = defs['type_prefix']
+workspace_wf = defs['workspace_wf']
+section_wf = defs['section_wf']
+
 
 type_id = prefix + id
 ti = ttool.addFlexibleTypeInformation(id=type_id)
@@ -41,10 +45,10 @@ for type in ('Workspace', 'Section'):
 portal = context.portal_url.getPortalObject()
 section_wf = getattr(portal['sections'], '.cps_workflow_configuration')
 if not section_wf.getPlacefulChainFor(type_id):
-    section_wf.manage_addChain(portal_type=type_id, chain='section_content_wf')
+    section_wf.manage_addChain(portal_type=type_id, chain=section_wf)
 
 workspace_wf = getattr(portal['workspaces'], '.cps_workflow_configuration')
 if not workspace_wf.getPlacefulChainFor(type_id):
-    workspace_wf.manage_addChain(portal_type=type_id, chain='workspace_content_wf')
+    workspace_wf.manage_addChain(portal_type=type_id, chain=workspace_wf)
 
 return context.cpstypes_view(type_id=type_id)
