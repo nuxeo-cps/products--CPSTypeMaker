@@ -1,17 +1,11 @@
 <tal:block define="
   type_id request/type_id|options/type_id;
-  definitions here/cpstypes_get_definitions;
-  validate python: request.has_key('cpsdirectory_entry_edit_form');
-  edit_request python: validate and request or nothing;
   delete_allowed python:0;
   typeob here/portal_types/?type_id|nothing;
   title typeob/title|type_id;
   expanded_title title;
-  base_layouts definitions/base_layouts;
-  layoutid python:typeob and typeob.layouts[len(base_layouts)] or type_id;
-  layoutob here/portal_layouts/?layoutid;
+  layoutob here/portal_layouts/?type_id;
   wttool here/portal_widget_types;
-  debug nothing;
   ">
 <metal:block use-macro="here/main_template/macros/master">
   <metal:block fill-slot="css_slot">
@@ -123,7 +117,7 @@ actions['object'].append({'id':'delete_entry',
       </table>
       <input type="submit" name="action_delete" value="button_delete" i18n:attributes="value" />
       <input type="submit" name="action_save" value="button_save" i18n:attributes="value" />
-      <input type="hidden" name="layout_id" tal:attributes="value layoutid">
+      <input type="hidden" name="layout_id" tal:attributes="value type_id">
       <table>
         <tr>
           <th  align='left' i18n:translate="" colspan="2">cpstypes_add_new_widget</th>

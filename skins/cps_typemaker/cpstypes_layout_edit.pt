@@ -1,15 +1,10 @@
 <tal:block define="
   type_id request/type_id|options/type_id;
-  definitions here/cpstypes_get_definitions;
-  validate python: request.has_key('cpsdirectory_entry_edit_form');
-  edit_request python: validate and request or nothing;
   delete_allowed python:0;
   typeob here/portal_types/?type_id|nothing;
   title typeob/title|type_id;
   expanded_title title;
-  base_layouts definitions/base_layouts;
-  layoutid python:typeob and typeob.layouts[len(base_layouts)] or type_id;
-  layoutob here/portal_layouts/?layoutid;
+  layoutob here/portal_layouts/?type_id;
   debug nothing;
   ">
 <metal:block use-macro="here/main_template/macros/master">

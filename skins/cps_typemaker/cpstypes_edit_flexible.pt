@@ -1,14 +1,12 @@
 <tal:block define="
   type_id request/type_id|options/type_id;
   definitions here/cpstypes_get_definitions;
-  validate python: request.has_key('cpsdirectory_entry_edit_form');
-  edit_request python: validate and request or nothing;
   delete_allowed python:0;
   typeob here/portal_types/?type_id;
   title typeob/title|type_id;
   expanded_title title;
-  base_layouts definitions/base_layouts;
-  layoutid python:typeob.layouts[len(base_layouts) + 1];
+  prefix definitions/type_prefix;
+  layoutid python:prefix + 'flexible_' + type_id[len(prefix):];
   layoutob here/portal_layouts/?layoutid;
   widgetinfo layoutob/getFlexibleWidgetsDict;
   wttool here/portal_widget_types;
