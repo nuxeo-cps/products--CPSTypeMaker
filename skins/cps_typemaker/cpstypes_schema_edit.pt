@@ -66,7 +66,8 @@ actions['object'].append({'id':'delete_entry',
               <td>
                 <select name="fieldinfo.widget:records">
                   <option tal:repeat="widgettype python:here.cpstypes_fieldwidgets(fieldtype)"
-                          tal:attributes="value widgettype"
+                          tal:attributes="value widgettype;
+                                          selected python:getattr(field, 'default_widget', '') == widgettype"
                           tal:content="widgettype"/>
                 </select>
               </td>
@@ -74,15 +75,15 @@ actions['object'].append({'id':'delete_entry',
           </tr>
         </tal:block>
       </table>
-      <input type="submit" name="action_delete" value="label_delete" i18n:attributes="value">
-      <input type="submit" name="action_save" value="label_save" i18n:attributes="value">
+      <input type="submit" name="cpstypes_field_delete:method" value="label_delete" i18n:attributes="value">
+      <input type="submit" name="cpstypes_schema_change:method" value="label_save" i18n:attributes="value">
     </form>
     <form method="post" action="cpstypes_add_field">
       <table>
         <tr>
           <th>Add new Field:</th>
           <td>
-            <select name="new_field">
+            <select name="new_field_type">
               <tal:block tal:repeat="fieldtype here/cpstypes_fieldwidgets">
               <option tal:attributes="value fieldtype"
                       tal:content="fieldtype"/>
@@ -90,7 +91,10 @@ actions['object'].append({'id':'delete_entry',
             </select>
           </td>
           <td>
-            <input type="submit" name="add_field" value="add field" />
+            <input type="text" name="new_field_id">
+          </td>
+          <td>
+            <input type="submit" name="cpstypes_field_add:method" value="add field" />
           <td>
         </tr>
       </table>
