@@ -3,9 +3,7 @@ Requires:
 -
 New features:
 ~~~~~~~~~~~~~
-- Big rewrite. No more common schema, instead you have separate schemas for
-  each type. There is also support for modifying the metadata layout and 
-  schema that is common for all document types.
+-
 Bug fixes:
 ~~~~~~~~~~
 -

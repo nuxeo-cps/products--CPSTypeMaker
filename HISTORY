@@ -1,4 +1,22 @@
 *******************************************
+** CPSTypeMaker V1.2.0 [R1 build 2004/04/22-14:08 by regebro]
+
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+- Big rewrite. No more common schema, instead you have separate schemas for
+  each type. There is also support for modifying the metadata layout and 
+  schema that is common for all document types.
+Bug fixes:
+~~~~~~~~~~
+-
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
 ** CPSTypeMaker V1.1.1 [R1 build 2004/04/14-18:37 by regebro]
 
 Requires:
