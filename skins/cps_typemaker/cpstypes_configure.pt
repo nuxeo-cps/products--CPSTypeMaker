@@ -4,7 +4,7 @@
   dummy python:request.set('breadcrumb_set',
     [{
       'id': 'types',
-      'url': here.portal_url()+'/cpstypes_list',
+      'url': here.portal_url()+'/cpstypes_configure',
       'longtitle': dt_title,
       'title': dt_title,
     }]);
