@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
-"POT-Creation-Date: 2004-04-14 12:33default\n"
+"POT-Creation-Date: 2004-04-14 12:40default\n"
 "PO-Revision-Date: 2004-04-13 14:31+0200\n"
 "Last-Translator: emmanuel <epietriga@nuxeo.com>\n"
 "Language-Team: francais <fr@li.org>\n"
@@ -37,6 +37,18 @@ msgstr "Ajouter un nouveau champ"
 msgid "cpstypes_add_new_widget"
 msgstr "Ajouter un nouveau composant"
 
+#.   <input type="submit" name="addrow" value="cpstypes_add_row" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_add_row"
+msgstr "Ajouter un nouveau type"
+
+#.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_delete_cell"
+msgstr "Type"
+
 #.   <h1>cpstypes_edit_schema</h1>
 #: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_edit_schema"
@@ -61,6 +73,18 @@ msgstr "Champs"
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 msgid "cpstypes_label_add_type"
 msgstr "Ajouter un type de document"
+
+#.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_shrink_cell"
+msgstr "Champs"
+
+#.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_split_cell"
+msgstr "Editer le schema"
 
 #.   <th align="right">cpstypes_type_description</th>
 #.   <small content="item/description">cpstypes_type_description</small>
@@ -90,6 +114,12 @@ msgstr "Type de document flexible"
 #: ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_type_title"
 msgstr "Titre"
+
+#.   <input type="submit" name="widencell" value="cpstypes_widen_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_widen_cell"
+msgstr "Taille"
 
 #.   <th>cpstypes_widget_id</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt

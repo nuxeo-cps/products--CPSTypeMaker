@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-04-14 12:33default\n"
+"POT-Creation-Date: 2004-04-14 12:40default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -37,6 +37,16 @@ msgstr ""
 msgid "cpstypes_add_new_widget"
 msgstr ""
 
+#.   <input type="submit" name="addrow" value="cpstypes_add_row" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_add_row"
+msgstr ""
+
+#.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_delete_cell"
+msgstr ""
+
 #.   <h1>cpstypes_edit_schema</h1>
 #: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_edit_schema"
@@ -60,6 +70,16 @@ msgstr ""
 #.   <h1 span="">cpstypes_label_add_type</h1>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 msgid "cpstypes_label_add_type"
+msgstr ""
+
+#.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_shrink_cell"
+msgstr ""
+
+#.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_split_cell"
 msgstr ""
 
 #.   <th align="right">cpstypes_type_description</th>
@@ -89,6 +109,11 @@ msgstr ""
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_type_title"
+msgstr ""
+
+#.   <input type="submit" name="widencell" value="cpstypes_widen_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_widen_cell"
 msgstr ""
 
 #.   <th>cpstypes_widget_id</th>
