@@ -88,7 +88,7 @@ actions['object'].append({'id':'delete_entry',
                       <option tal:repeat="wid widgetids"
                         tal:attributes="value wid;
                           selected python:wid == widget_id"
-                        tal:content="wid" />
+                        tal:content="layoutob/?wid/label_edit" />
                     </select>
                   </td>
                 </tal:span>
