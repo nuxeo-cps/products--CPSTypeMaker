@@ -46,3 +46,4 @@ Widget.getFieldTypes__roles__ = PermissionRole(ManagePortal)
 from AccessControl import ModuleSecurityInfo
 ModuleSecurityInfo('Products.CPSCore.utils').declarePublic('makeId')
 ModuleSecurityInfo('urllib').declarePublic('quote')
+ModuleSecurityInfo('urllib').declarePublic('unquote')
