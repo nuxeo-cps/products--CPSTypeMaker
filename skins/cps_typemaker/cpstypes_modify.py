@@ -1,4 +1,4 @@
-##parameters=REQUEST, RESPONSE
+##parameters=type_id, title, description, is_flexible=None, REQUEST=None, RESPONSE=None
 
 action = None
 for key in REQUEST.keys():
@@ -12,8 +12,40 @@ if not action:
 layoutid = REQUEST['type_id']
 layout = context.portal_layouts[layoutid]
 layoutdef = layout.getLayoutDefinition()
+defs = context.cpstypes_get_definitions()
+flexible_layout = defs['flexible_layout']
+flexible_schema = defs['flexible_schema']
 
-# Firstly, save any changes to the fields.
+ttool = context.portal_types
+type = ttool[type_id]
+
+props = {}
+for id, value in type.propertyItems():
+    props[id] = value
+
+#raise str(props)
+layouts = props['layouts']
+schemas = props['schemas']
+if is_flexible:
+    if not flexible_layout in layouts:
+        layouts.append(flexible_layout)
+    if not flexible_schema in schemas:
+        schemas.append(flexible_schema)
+    props['flexible_layouts'] = [flexible_layout + ':' + flexible_schema]
+else:
+    if flexible_layout in layouts:
+        layouts.remove(flexible_layout)
+    if flexible_schema in schemas:
+        schemas.remove(flexible_schema)
+    props['flexible_layout'] = []
+
+props['layouts'] = layouts
+props['schemas'] = schemas
+props['title'] = title
+props['description'] = description
+
+type.manage_changeProperties(**props)
+
 widgetinfo = REQUEST.get('widgetinfo', [])
 
 for each in widgetinfo:

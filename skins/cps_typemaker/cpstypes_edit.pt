@@ -6,9 +6,10 @@
   typeob here/portal_types/?type_id;
   title typeob/title|type_id;
   expanded_title title;
-  layoutid python:typeob.layouts[-1];
+  layoutid python:typeob.layouts[0];
   layoutob here/portal_layouts/?layoutid;
   debug nothing;
+  definitions here/cpstypes_get_definitions;
   ">
 <metal:block use-macro="here/main_template/macros/master">
   <metal:block fill-slot="css_slot">
@@ -49,11 +50,18 @@ actions['object'].append({'id':'delete_entry',
       <table>
         <tr>
           <th align='right' i18n:translate="">cpstypes_type_title</th>
-          <td><input type="text" size=50 id="title" tal:attributes="value typeob/title"></td>
+          <td><input type="text" size=50 name="title" tal:attributes="value typeob/title"></td>
         </tr>
         <tr>
           <th align='right' i18n:translate="">cpstypes_type_description</th>
-          <td><textarea cols=48 id="description" tal:content="typeob/description" /></td>
+          <td><textarea cols=48 name="description" tal:content="typeob/description" /></td>
+        </tr>
+        <tr>
+          <th align='right' i18n:translate="">cpstypes_type_is_flexible</th>
+          <td tal:define="flexible_layout python:definitions['flexible_layout']">
+            <input type="checkbox" name="is_flexible" 
+              tal:attributes="checked python:flexible_layout in typeob.layouts" />
+          </td>
         </tr>
       </table>
       <h3 i18n:translate="">cpstypes_widgets</h3>
@@ -102,7 +110,7 @@ actions['object'].append({'id':'delete_entry',
           <th i18n:translate="">cpstypes_add_new_widget</th>
           <td>
             <select name="new_field" tal:define="
-                schemaid python:here.cpstypes_get_definitions()['schemaid'];
+                schemaid python:definitions['schemaid'];
                 schema here/portal_schemas/?schemaid">
               <tal:block tal:repeat="field schema/objectValues">
               <option tal:attributes="value field/getFieldId"

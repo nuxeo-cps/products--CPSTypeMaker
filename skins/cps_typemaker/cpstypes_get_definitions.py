@@ -6,4 +6,6 @@ return {'type_prefix': 'simpletype_', # The id prefix for TypeMaker types.
         'workspaceid': 'workspaces',
         'sectionid': 'sections',
         'schemaid': 'metadata',
+        'flexible_schema': 'flexible_content',
+        'flexible_layout': 'flexible_content',
        }
