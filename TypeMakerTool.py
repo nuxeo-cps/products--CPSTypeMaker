@@ -96,7 +96,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
          'label': "Process after type publish state changes"} ,
         )
 
-    multiple_layouts = True
+    multiple_layouts = False
     type_prefix = 'simpletype_'
     style_prefix = 'layout_default_tab_'
     base_schemas  =  ['metadata', 'common']
