@@ -1,0 +1,328 @@
+# translation of CPSTypeMaker_en.po to Euskara
+# translation of en.po to francais
+# Gettext Message File for default.
+# Your Name <your@email>, Year
+# emmanuel <epietriga@nuxeo.com>, 2004.
+# Aitzol Naberan Burgaña <anaberan@codesyntax.com>, 2004.
+msgid ""
+msgstr ""
+"Project-Id-Version: CPSTypeMaker_en\n"
+"POT-Creation-Date: 2004-07-02 15:22default\n"
+"PO-Revision-Date: 2004-10-04 17:01+0100\n"
+"Last-Translator:  <>\n"
+"Language-Team: Euskara <eu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#.   <input type="submit" name="action_save" value="button_save" />
+#: from
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "button_save"
+msgstr "Gorde"
+
+#.   <th colspan="2" align="left">cpstypes_add_new_widget</th>
+#: from
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_add_new_widget"
+msgstr "Trepeta berria gehitu"
+
+#.   <input type="submit" name="addrow" value="cpstypes_add_row" />
+#: from
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_add_row"
+msgstr "Lerroa Gehitu"
+
+#.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
+#: from
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_delete_cell"
+msgstr "Lerroa Ezabatu"
+
+#.   <th>cpstypes_field_indexed</th>
+#: from
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_field_indexed"
+msgstr "Indexatuta"
+
+#.   <h3>cpstypes_flexible_widgets</h3>
+#: from
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_flexible_widgets"
+msgstr "Trepetak"
+
+#.   <h1>cpstypes_label_add_type</h1>
+#: from
+#: ../skins/cps_typemaker/cpstypes_add_form.pt
+msgid "cpstypes_label_add_type"
+msgstr "Mota gehitu"
+
+#.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
+#: from
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_shrink_cell"
+msgstr "Shrink Cell"
+
+#.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
+#: from
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_split_cell"
+msgstr "Split Cell"
+
+#.   <th align="right">cpstypes_type_description</th>
+#.   <small content="item/description">cpstypes_type_description</small>
+#: from
+#: ../skins/cps_typemaker/cpstypes_add_form.pt
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_list.pt
+msgid "cpstypes_type_description"
+msgstr "Deskribapena"
+
+#.   <th align="right">cpstypes_type_icon</th>
+#: from
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_type_icon"
+msgstr "Ikonoa"
+
+#.   <th align="right">cpstypes_type_is_addable</th>
+#: from
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_type_is_addable"
+msgstr "Erabilgarria"
+
+#.   <th align="right">cpstypes_type_title</th>
+#: from
+#: ../skins/cps_typemaker/cpstypes_add_form.pt
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_type_title"
+msgstr "Izenburua"
+
+#.   <input type="submit" name="widencell" value="cpstypes_widen_cell" />
+#: from
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_widen_cell"
+msgstr "Widen Cell"
+
+#.   <th>cpstypes_widget_max_repeats</th>
+#: from
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#, fuzzy
+msgid "cpstypes_widget_max_repeats"
+msgstr "Max repeats"
+
+#.   <th>cpstypes_widget_required</th>
+#: from
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_widget_required"
+msgstr "Derrigorrezkoa"
+
+#.   <th>cpstypes_widget_show_in_view</th>
+#: from
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+#, fuzzy
+msgid "cpstypes_widget_show_in_view"
+msgstr "Show in view mode"
+
+#.   <th>cpstypes_widget_size</th>
+#: from
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_widget_size"
+msgstr "Tamaina"
+
+#.   <th>cpstypes_widget_title</th>
+#.   <th align="right">cpstypes_widget_title</th>
+#: from
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_widget_title"
+msgstr "Izenburua"
+
+#.   <th>cpstypes_widget_type</th>
+#.   <th align="right">cpstypes_widget_type</th>
+#: from
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_widget_type"
+msgstr "Mota"
+
+#.   <h3>cpstypes_widgets</h3>
+#: from
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_widgets"
+msgstr "Trepetak"
+
+msgid "cpstypes_add_type"
+msgstr "Mota berria gehitu"
+
+msgid "cpstypes_edit_metadata"
+msgstr "Metadatuak Editatu"
+
+msgid "cpstypes_edit_type"
+msgstr "Motak Editatu"
+
+#, fuzzy
+msgid "cpstypes_edit_layout"
+msgstr "Edit Layout"
+
+#, fuzzy
+msgid "cpstypes_edit_flexible"
+msgstr "Edit Flexible Widgets"
+
+#, fuzzy
+msgid "Type management"
+msgstr "Document type management"
+
+msgid "CPS String List Field"
+msgstr "Kateen Zerrenda"
+
+msgid "CPS Float Field"
+msgstr "Float"
+
+msgid "CPS File Field"
+msgstr "Fitxategia"
+
+msgid "CPS Image Field"
+msgstr "Irudia"
+
+msgid "CPS String Field"
+msgstr "Katea"
+
+msgid "CPS DateTime Field"
+msgstr "EgunaOrdua"
+
+msgid "CPS Password Field"
+msgstr "Pasahitza"
+
+msgid "CPS Int Field"
+msgstr "Int"
+
+msgid "CPS Long Field"
+msgstr "Luzea"
+
+msgid "CPS MultiSelect Widget"
+msgstr "MultiSelect"
+
+#, fuzzy
+msgid "CPS Lines Widget"
+msgstr "Lines"
+
+#, fuzzy
+msgid "CPS Ordered List Widget"
+msgstr "Ordered List"
+
+#, fuzzy
+msgid "CPS Unordered List Widget"
+msgstr "Unordered List"
+
+msgid "CPS String Widget"
+msgstr "Katea"
+
+msgid "CPS TextArea Widget"
+msgstr "Testua"
+
+msgid "CPS Email Widget"
+msgstr "E-posta"
+
+#, fuzzy
+msgid "CPS Heading Widget"
+msgstr "Heading"
+
+#, fuzzy
+msgid "CPS Rich Text Editor Widget"
+msgstr "Rich Text Editor"
+
+msgid "CPS InternalLinks Widget"
+msgstr "Barne loturak"
+
+msgid "CPS Link Widget"
+msgstr "Lotura"
+
+msgid "CPS Html Widget"
+msgstr "Html"
+
+msgid "CPS DateTime Widget"
+msgstr "Data/Ordua"
+
+msgid "CPS Date Widget"
+msgstr "Data"
+
+msgid "CPS Password Widget"
+msgstr "Pasahitza"
+
+#, fuzzy
+msgid "CPS Int Widget"
+msgstr "Int"
+
+msgid "CPS CheckBox Widget"
+msgstr "CheckBox"
+
+msgid "CPS Long Widget"
+msgstr "Long"
+
+msgid "CPS Float Widget"
+msgstr "Float"
+
+msgid "CPS AttachedFile Widget"
+msgstr "FitxategiaErantsi"
+
+msgid "CPS File Widget"
+msgstr "Fitxategia"
+
+msgid "CPS Image Widget"
+msgstr "Irudia"
+
+msgid "CPS Photo Widget"
+msgstr "Argazkia"
+
+msgid "CPS Boolean Widget"
+msgstr "Boolearra"
+
+#, fuzzy
+msgid "CPS Directory Entry Widget"
+msgstr "Directory Entry"
+
+#, fuzzy
+msgid "CPS Directory MultiEntries Widget"
+msgstr "Directory MultiEntries"
+
+#, fuzzy
+msgid "CPS Dummy Widget"
+msgstr "Dummy"
+
+#, fuzzy
+msgid "CPS ExtendedSelect Widget"
+msgstr "ExtendedSelect"
+
+msgid "CPS Identifier Widget"
+msgstr "Identifikatzailea"
+
+msgid "CPS Method Widget"
+msgstr "Metodoa"
+
+msgid "CPS Select Widget"
+msgstr "Aukeratu"
+
+msgid "CPS Text Widget"
+msgstr "Testua"
+
+msgid "CPS URL Widget"
+msgstr "URL"
+
+msgid "type_already_exists"
+msgstr "Izen hori duen mota bat dagoeneko badago"
+
+msgid "field_already_exists"
+msgstr "Izen hori duen atal bat dagoeneko badago"
+
+msgid "psm_duplicate_widgets"
+msgstr "Kontuz, trepetak bikoiztuta: "
+
+msgid "psm_changed"
+msgstr "Aldatuta."
+
