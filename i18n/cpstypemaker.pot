@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-04-13 14:31default\n"
+"POT-Creation-Date: 2004-04-13 18:00default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -19,8 +19,8 @@ msgstr ""
 "Preferred-encodings: utf-8 latin1\n"
 "Domain: default\n"
 
-#.   <input value="button_save" name="action_save" type="submit" />
-#.   <input value="button_save" name="action_save" type="submit">
+#.   <input type="submit" name="action_save" value="button_save" />
+#.   <input type="submit" name="action_save" value="button_save">
 #.       </input>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_schema_edit.pt
@@ -131,4 +131,100 @@ msgid "cpstypes_add_type"
 msgstr ""
 
 msgid "Type management"
+msgstr ""
+
+msgid "CPS String List Field"
+msgstr ""
+
+msgid "CPS Float Field"
+msgstr ""
+
+msgid "CPS File Field"
+msgstr ""
+
+msgid "CPS Image Field"
+msgstr ""
+
+msgid "CPS String Field"
+msgstr ""
+
+msgid "CPS DateTime Field"
+msgstr ""
+
+msgid "CPS Password Field"
+msgstr ""
+
+msgid "CPS Int Field"
+msgstr ""
+
+msgid "CPS Long Field"
+msgstr ""
+
+msgid "MultiSelect Widget"
+msgstr ""
+
+msgid "Lines Widget"
+msgstr ""
+
+msgid "Ordered List Widget"
+msgstr ""
+
+msgid "Unordered List Widget"
+msgstr ""
+
+msgid "String Widget"
+msgstr ""
+
+msgid "TextArea Widget"
+msgstr ""
+
+msgid "Email Widget"
+msgstr ""
+
+msgid "Heading Widget"
+msgstr ""
+
+msgid "Rich Text Editor Widget"
+msgstr ""
+
+msgid "InternalLinks Widget"
+msgstr ""
+
+msgid "Link Widget"
+msgstr ""
+
+msgid "Html Widget"
+msgstr ""
+
+msgid "DateTime Widget"
+msgstr ""
+
+msgid "Date Widget"
+msgstr ""
+
+msgid "Password Widget"
+msgstr ""
+
+msgid "Int Widget"
+msgstr ""
+
+msgid "CheckBox Widget"
+msgstr ""
+
+msgid "Long Widget"
+msgstr ""
+
+msgid "Float Widget"
+msgstr ""
+
+msgid "AttachedFile Widget"
+msgstr ""
+
+msgid "File Widget"
+msgstr ""
+
+msgid "Image Widget"
+msgstr ""
+
+msgid "Photo Widget"
 msgstr ""
