@@ -10,6 +10,7 @@ sectionid = defs['sectionid']
 schemaid = defs['schemaid']
 base_layouts = defs['base_layouts']
 base_schemas = defs['base_schemas']
+add_in_types = defs['add_in_types']
 
 type_id = prefix + id
 ti = ttool.addFlexibleTypeInformation(id=type_id)
@@ -36,7 +37,7 @@ ltool = context.portal_layouts
 layout = ltool.manage_addCPSLayout(type_id)
 layout.manage_changeProperties(style_prefix='layout_default_')
 
-for type in ('Workspace', 'Section'):
+for type in add_in_types:
     typeobj = ttool[type]
     workspaceACT = list(typeobj.allowed_content_types)
     if type_id not in  workspaceACT:
