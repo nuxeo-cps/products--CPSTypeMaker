@@ -129,3 +129,33 @@ msgstr ""
 
 msgid "CPS Photo Widget"
 msgstr ""
+
+msgid "CPS Boolean Widget"
+msgstr ""
+
+msgid "CPS Directory Entry Widget"
+msgstr ""
+
+msgid "CPS Directory MultiEntries Widget"
+msgstr ""
+
+msgid "CPS Dummy Widget"
+msgstr ""
+
+msgid "CPS ExtendedSelect Widget"
+msgstr ""
+
+msgid "CPS Identifier Widget"
+msgstr ""
+
+msgid "CPS Method Widget"
+msgstr ""
+
+msgid "CPS Select Widget"
+msgstr ""
+
+msgid "CPS Text Widget"
+msgstr ""
+
+msgid "CPS URL Widget"
+msgstr ""

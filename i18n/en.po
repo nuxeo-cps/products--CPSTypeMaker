@@ -237,6 +237,36 @@ msgstr "Image"
 msgid "CPS Photo Widget"
 msgstr "Photo"
 
+msgid "CPS Boolean Widget"
+msgstr "Boolean"
+
+msgid "CPS Directory Entry Widget"
+msgstr "Directory Entry"
+
+msgid "CPS Directory MultiEntries Widget"
+msgstr "Directory MultiEntries"
+
+msgid "CPS Dummy Widget"
+msgstr "Dummy"
+
+msgid "CPS ExtendedSelect Widget"
+msgstr "ExtendedSelect"
+
+msgid "CPS Identifier Widget"
+msgstr "Identifier"
+
+msgid "CPS Method Widget"
+msgstr "Method"
+
+msgid "CPS Select Widget"
+msgstr "Select"
+
+msgid "CPS Text Widget"
+msgstr "Text"
+
+msgid "CPS URL Widget"
+msgstr "URL"
+
 #~ msgid "cpstypes_edit_schema"
 #~ msgstr "Edit schema"
 
