@@ -4,6 +4,7 @@ Requires:
 New features:
 ~~~~~~~~~~~~~
 - You now can't delete a field if it's used in a layout.
+- Icons are now uploaded instead of selected from a list.
 Bug fixes:
 ~~~~~~~~~~
 -

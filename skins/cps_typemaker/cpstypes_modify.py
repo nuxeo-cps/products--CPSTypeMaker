@@ -1,4 +1,4 @@
-##parameters=type_id, title, description, icon, is_flexible=None, REQUEST=None, RESPONSE=None
+##parameters=type_id, title, description, new_icon, is_flexible=None, REQUEST=None, RESPONSE=None
 
 action = None
 for key in REQUEST.keys():
@@ -43,7 +43,13 @@ props['layouts'] = layouts
 props['schemas'] = schemas
 props['title'] = title
 props['description'] = description
-props['content_icon'] = icon
+
+if new_icon.read(1) != '':
+    new_icon.seek(0)
+    icon_id = type_id + '_icon' 
+    props['content_icon'] = icon_id
+    customskin = context.portal_skins.custom
+    customskin.manage_addFile(icon_id, new_icon, title)
 
 type.manage_changeProperties(**props)
 

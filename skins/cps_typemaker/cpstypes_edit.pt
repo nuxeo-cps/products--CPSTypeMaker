@@ -46,7 +46,7 @@ actions['object'].append({'id':'delete_entry',
   </metal:block>
 
   <metal:block fill-slot="main">
-    <form method="post" action="cpstypes_modify">
+    <form method="post" action="cpstypes_modify" enctype="multipart/form-data">
       <input type="hidden" name="type_id" tal:attributes="value type_id">
       <table>
         <tr>
@@ -60,12 +60,8 @@ actions['object'].append({'id':'delete_entry',
         <tr>
           <th align='right' i18n:translate="">cpstypes_type_icon</th>
           <td tal:define="images here/cpstypes_get_icons">
-            <tal:block repeat="image images">
-              <input type="radio" name="icon" 
-                tal:attributes="value image; 
-                                checked python:image == typeob.content_icon" />
-              <img tal:attributes="src image" />
-            </tal:block>
+            <img tal:attributes="src string:${here/portal_url}/${typeob/content_icon}" />
+            <input type="file" name="new_icon" />
           </td>
         </tr>
         <tr>
