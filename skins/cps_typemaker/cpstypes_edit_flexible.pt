@@ -125,7 +125,7 @@ actions['object'].append({'id':'delete_entry',
           <td>
         </tr>
         <tr>
-          <th align='right' i18n:translate="">cpstypes_widget_id</th>
+          <th align='right' i18n:translate="">cpstypes_widget_title</th>
           <td>
             <input type="text" name="new_widget_title" />
           <td>
