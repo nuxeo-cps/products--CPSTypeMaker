@@ -117,5 +117,5 @@ msgstr "Type"
 msgid "cpstypes_widgets"
 msgstr "Widgets"
 
-msgid "cpstypes_add_form"
+msgid "cpstypes_add_type"
 msgstr "Add new type"

@@ -16,7 +16,7 @@ msgstr ""
 "Preferred-encodings: utf-8 latin1\n"
 "Domain: default\n"
 
-msgid "cpstypes_add_form"
+msgid "cpstypes_add_type"
 msgstr ""
 
 msgid "cpstypes_edit_schema"
