@@ -18,7 +18,8 @@ for info in fieldinfo:
         schema.manage_delObjects([info['id']])
     else:
         if field.hasProperty('default_widget'):
-            field.manage_changeProperties(default_widget = info['widget'])
+            field.manage_changeProperties(default_widget = info['widget'], 
+                                          is_searchabletext = info.get('is_indexed', 0))
         else:
             field.manage_addProperty('default_widget', info['widget'], 'string')
 

@@ -45,6 +45,7 @@ actions['object'].append({'id':'delete_entry',
           <th i18n:translate="">cpstypes_field_id</th>
           <th i18n:translate="">cpstypes_field_type</th>
           <th i18n:translate="">cpstypes_widget_type</th>
+          <th i18n:translate="">cpstypes_widget_index</th>
         </tr>
         <tal:block define="fields schema/objectValues">
           <tr tal:condition="debug">
@@ -69,6 +70,10 @@ actions['object'].append({'id':'delete_entry',
                                           selected python:getattr(field, 'default_widget', '') == widgettype"
                           tal:content="widgettype"/>
                 </select>
+              </td>
+              <td>
+                <input type="checkbox" name="fieldinfo.is_indexed:records" 
+                  tal:attributes="checked field/is_searchabletext" />
               </td>
             </tal:block>
           </tr>
