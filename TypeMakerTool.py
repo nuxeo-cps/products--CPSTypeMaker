@@ -261,7 +261,8 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
 
         if not action:
-            raise ValueError('No action specified')
+            action='modify'
+            #raise ValueError('No action specified')
 
         portal_layouts = getToolByName(self, 'portal_layouts')
         portal_schemas = getToolByName(self, 'portal_schemas')
@@ -279,8 +280,6 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
             if not new_widget_title:
                 new_widget_title = ''
-
-            new_widget_id = makeId(new_widget_title)
 
             #if type_id != self.metadata_layout:
                 # When the metadata layout is edited, there is no type to manage
@@ -319,12 +318,14 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
                     self._updateWidget(widget, type_id, each, field, indexed)
 
 
-            if action == 'add' and new_widget_id:
-                res = self._addwidget(layout, type_id, new_widget_id,
-                    new_widget_title, new_widget_type)
-
-                portal_status_message = portal_status_message + res
-                tagger = '#components'
+            if action == 'add' :
+                new_widget_id = makeId(new_widget_title)
+                if new_widget_id is not None:
+                    res = self._addwidget(layout, type_id, new_widget_id,
+                        new_widget_title, new_widget_type)
+    
+                    portal_status_message = portal_status_message + res
+                    tagger = '#components'
 
             # And finally save the new layout
             layout.setLayoutDefinition(layoutdef)
@@ -336,8 +337,9 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         else:
             portal_status_message = ''
 
-        return RESPONSE.redirect('cpstypes_edit?type_id='+
-            type_id+portal_status_message+tagger)
+        if RESPONSE is not None:
+            RESPONSE.redirect('cpstypes_edit?type_id='+
+                type_id+portal_status_message+tagger)
 
 
     security.declarePublic('manage_flexibleModified')
@@ -355,7 +357,8 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
                     break
 
         if not action:
-            raise ValueError('No action specified')
+            action='modify'
+            #raise ValueError('No action specified')
 
         ltool = getToolByName(self, 'portal_layouts')
         ttool = getToolByName(self, 'portal_types')
@@ -377,9 +380,6 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
             if not new_widget_title:
                 new_widget_title = ''
-
-            new_widget_id = makeId(new_widget_title)
-
 
             flexible_widgets = []
 
@@ -407,20 +407,24 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
                     flexible_widgets.append(winfo)
 
 
-            if action == 'add' and new_widget_id:
-                kw = {'fields': ['?'],
-                    'label_edit': new_widget_title,
-                    'title': new_widget_title,
-                    }
-
-                if hasattr(layout, 'w__'+new_widget_id):
-                    portal_status_message.append('field_already_exists')
-
-                else:
-                    widget = layout.manage_addCPSWidget(new_widget_id,
-                        new_widget_type, **kw)
-
-                    flexible_widgets.append(new_widget_id)
+            if action == 'add':
+                new_widget_id = makeId(new_widget_title)
+                
+                if new_widget_id is not None:
+                    
+                    kw = {'fields': ['?'],
+                        'label_edit': new_widget_title,
+                        'title': new_widget_title,
+                        }
+    
+                    if hasattr(layout, 'w__'+new_widget_id):
+                        portal_status_message.append('field_already_exists')
+    
+                    else:
+                        widget = layout.manage_addCPSWidget(new_widget_id,
+                            new_widget_type, **kw)
+    
+                        flexible_widgets.append(new_widget_id)
 
             layout.manage_changeProperties(flexible_widgets=flexible_widgets)
 
@@ -446,8 +450,9 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             portal_status_message = ''
 
 
-        return RESPONSE.redirect('cpstypes_edit_flexible?type_id='+\
-            str(type_id)+portal_status_message)
+        if RESPONSE is not None:
+            RESPONSE.redirect('cpstypes_edit_flexible?type_id='+\
+                str(type_id)+portal_status_message)
 
 
     def _findDirectMoving(self, kw):
