@@ -1,5 +1,5 @@
 <tal:block define="
-  schema_id python:here.cpstype_get_definitions()['schemid'];
+  schema_id python:here.cpstypes_get_definitions()['schemaid'];
   schema here/portal_schemas/?schema_id;
   delete_allowed nothing;
   debug nothing;
