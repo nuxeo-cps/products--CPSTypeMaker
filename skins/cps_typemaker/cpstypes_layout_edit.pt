@@ -251,15 +251,16 @@ string:${here/portal_url}/portal_typemaker/manage_layoutModified?#table"
 
 
                                 <div class="typemaker_cellcontent">
-                                    <metal:block tal:condition="python:widget_id in widgetids"
-                                       tal:define="widget_ob python:layoutob[widget_id] or nothing">
+                                    <metal:block tal:condition="python:widget_id in widgetids">
+                                       <metal:block
+                                        tal:define="widget_ob python:layoutob[widget_id] or nothing">
 
                                         <div tal:condition="widget_ob"
                                            tal:content="widget_ob/label_edit"/>
                                           <input type="hidden" tal:attributes="name
                                                         string:cell_${nrow}_${ncell};
                                                         value widget_id;"/>
-
+                                        </metal:block>
                                     </metal:block>
 
                                 </div>
@@ -318,7 +319,7 @@ string:${here/portal_url}/portal_typemaker/manage_layoutModified?#table"
           <input id="change" type="submit" name="change" value="button_change"
            i18n:attributes="value" />
           <input type="submit" name="addrow" value="cpstypes_add_row" i18n:attributes="value" />
-          <input type="submit" name="autolayout" value="Mise en page automatique"
+          <input type="submit" name="autolayout" value="cpstypemaker_autolayout"
            i18n:attributes="value" />
           <span tal:replace="nothing">
           *** SOON AVAILABLE ***

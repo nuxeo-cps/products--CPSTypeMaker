@@ -20,16 +20,16 @@
                             <a tal:attributes="href
                                 python:base_url+'cpstypes_layout_edit?type_id='+type_id+
                                 '&layout_index='+str(i+1)">
-                                <span i18:translate="">
-                                Disposition</span>&#160;
+                                <span i18n:translate="">
+                                cpstypemaker_layoutlabel</span>&#160;
                                 <span tal:replace="python:str(i+1)"/>
                             </a>
                         </div>
                     </metal:block>
                     <metal:block tal:condition="selected">
                         <div class="typemaker_layoutlink_selected">
-                            <span i18:translate="">
-                                Disposition</span>&#160;
+                            <span i18n:translate="">
+                                cpstypemaker_layoutlabel</span>&#160;
                             <span tal:replace="python:str(i+1)"/>
 
                         </div>
@@ -72,16 +72,16 @@
                             <a tal:attributes="href
                                 python:base_url+'cpstypes_flexible_layout_edit?type_id='+type_id+
                                 '&layout_index='+str(i+1)">
-                                <span i18:translate="">
-                                Disposition</span>&#160;
+                                <span i18n:translate="">
+                                cpstypemaker_layoutlabel</span>&#160;
                                 <span tal:replace="python:str(i+1)"/>
                             </a>
                         </div>
                     </metal:block>
                     <metal:block tal:condition="selected">
                         <div class="typemaker_layoutlink_selected">
-                            <span i18:translate="">
-                                Disposition</span>&#160;
+                            <span i18n:translate="">
+                                cpstypemaker_layoutlabel</span>&#160;
                             <span tal:replace="python:str(i+1)"/>
 
                         </div>
