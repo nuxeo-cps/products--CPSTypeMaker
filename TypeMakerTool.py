@@ -41,7 +41,7 @@ from Products.CPSSchemas.WidgetTypesTool import WidgetTypeRegistry
 import ExtensionClass
 
 from Products.CPSSchemas.BasicWidgets import CPSSelectWidget
-
+from types import StringType
 """
 TypeMakerTool depends on these tools :
 
