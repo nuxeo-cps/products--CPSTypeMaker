@@ -238,7 +238,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         portal_schemas = getToolByName(self, 'portal_schemas')
 
 
-        portal_status_message = ''
+        portal_status_message = []
 
         layout_count = self.getTypeLayoutCount(type_id)
 
@@ -321,7 +321,6 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
         if not action:
             for key in REQUEST.keys():
-
                 if key.startswith('action_'):
                     action = key[7:] # remove the 'action_'-part
                     break
@@ -336,7 +335,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
         type_prefix = self.type_prefix
 
-        layout_count = self.getTypeLayoutCount(type_id)
+        layout_count = self.getFlexibleTypeLayoutCount(type_id)
 
         for i in range(layout_count):
 
@@ -540,8 +539,9 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             layoutdef['rows'] = rows
             layout.setLayoutDefinition(layoutdef)
 
-    security.declarePublic('manage_delLayout')
-    def manage_delLayout(self, REQUEST, RESPONSE, type_id, layout_index):
+
+    security.declarePrivate('_delLayout')
+    def _delLayout(self, REQUEST, RESPONSE, type_id, layout_index, is_flexible = False):
         """ deletes a layout
         """
         # we don't want to let the user delete main layout
@@ -552,37 +552,41 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             ltool = getToolByName(self, 'portal_layouts')
 
             # does the layout exists ?
-            ob_id = type_id + '_' + str(layout_index)
-            if hasattr(ltool, ob_id):
-                # delete
-                ltool.manage_renameObject(ob_id, ob_id+'_del')
-                # let's rename next layouts
-                next_index = int(layout_index) + 1
-                while hasattr(ltool,type_id + '_' + str(next_index)):
-                    old = type_id + '_' + str(next_index)
-                    new = type_id + '_' + str(next_index-1)
-                    ltool.manage_renameObject(old, new)
-                    next_index += 1
-                ltool.manage_delObjects([ob_id+'_del'])
-                nothing_deleted = False
+            if not is_flexible:
+                ob_id = type_id + '_' + str(layout_index)
+                if hasattr(ltool, ob_id):
+                    # delete
+                    ltool.manage_renameObject(ob_id, ob_id+'_del')
+                    # let's rename next layouts
+                    next_index = int(layout_index) + 1
+                    while hasattr(ltool,type_id + '_' + str(next_index)):
+                        old = type_id + '_' + str(next_index)
+                        new = type_id + '_' + str(next_index-1)
+                        ltool.manage_renameObject(old, new)
+                        next_index += 1
+                    ltool.manage_delObjects([ob_id+'_del'])
+                    nothing_deleted = False
 
             # same work for flexibles
-            layout_type_id = type_id.replace(type_prefix,type_prefix + 'flexible_')
+            else:
+                layout_type_id = type_id.replace(type_prefix,type_prefix + 'flexible_')
 
-            flex_ob_id = layout_type_id + '_fexible_' + str(layout_index)
-            if hasattr(ltool, flex_ob_id):
-                # delete
-                ltool.manage_renameObject(flex_ob_id, flex_ob_id+'_del')
-                # let's rename next layouts
-                next_index = int(layout_index) + 1
+                flex_ob_id = layout_type_id + '_' + str(layout_index)
 
-                while hasattr(ltool, layout_type_id + '_' + str(next_index)):
-                    old = layout_type_id + '_' +  str(next_index)
-                    new = layout_type_id + '_' +  str(next_index-1)
-                    ltool.manage_renameObject(old, new)
-                    next_index += 1
 
-                ltool.manage_delObjects([flex_ob_id+'_del'])
+                if hasattr(ltool, flex_ob_id):
+                    # delete
+                    ltool.manage_renameObject(flex_ob_id, flex_ob_id+'_del')
+                    # let's rename next layouts
+                    next_index = int(layout_index) + 1
+
+                    while hasattr(ltool, layout_type_id + '_' + str(next_index)):
+                        old = layout_type_id + '_' +  str(next_index)
+                        new = layout_type_id + '_' +  str(next_index-1)
+                        ltool.manage_renameObject(old, new)
+                        next_index += 1
+
+                    ltool.manage_delObjects([flex_ob_id+'_del'])
 
 
         if RESPONSE:
@@ -595,16 +599,33 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             else:
                 message = ''
 
+            if not is_flexible:
+                method = 'cpstypes_layout_edit'
+            else:
+                method = 'cpstypes_flexible_layout_edit'
+
             urltool = getToolByName(self, 'portal_url')
             RESPONSE.redirect(
                 urltool()+
-                    '/cpstypes_layout_edit?type_id=%s&portal_status_message=%s'
+                    '/'+method+'?type_id=%s&portal_status_message=%s'
                      % (type_id, message))
         else:
             return not nothing_deleted
 
-    security.declarePublic('manage_addLayout')
-    def manage_addLayout(self, REQUEST, RESPONSE, type_id):
+    security.declarePublic('manage_delLayout')
+    def manage_delLayout(self, REQUEST, RESPONSE, type_id, layout_index):
+        """ deletes a layout
+        """
+        return self._delLayout(REQUEST, RESPONSE, type_id, layout_index)
+
+    security.declarePublic('manage_delFlexibleLayout')
+    def manage_delFlexibleLayout(self, REQUEST, RESPONSE, type_id, layout_index):
+        """ deletes a layout
+        """
+        return self._delLayout(REQUEST, RESPONSE, type_id, layout_index, True)
+
+    security.declarePrivate('_addlayout')
+    def _addlayout(self, REQUEST, RESPONSE, type_id, is_flexible = False):
         """ adds an extra layout
         """
         style_prefix = self.style_prefix
@@ -613,42 +634,53 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         ltool = getToolByName(self, 'portal_layouts')
         ttool = getToolByName(self, 'portal_types')
 
+        flex_id = type_id.replace(type_prefix, type_prefix + 'flexible_')
 
         # let's find the next index
         current_index = 1
-        while hasattr(ltool,type_id + '_' + str(current_index)):
-            current_index += 1
 
-        new_id = type_id + '_' +str(current_index)
-        new_flex_id = new_id.replace(type_prefix, type_prefix + 'flexible_')
+        if not is_flexible:
+            while hasattr(ltool,type_id + '_' + str(current_index)):
+                current_index += 1
 
-        layout = ltool.manage_addCPSLayout(new_id)
-        layout.manage_changeProperties(style_prefix=style_prefix)
+            new_id = type_id + '_' +str(current_index)
+            layout = ltool.manage_addCPSLayout(new_id)
+            layout.manage_changeProperties(style_prefix=style_prefix)
+            layount_count = self.getTypeLayoutCount(type_id)
 
-        flexlayout = ltool.manage_addCPSLayout(new_flex_id)
-        flexlayout.manage_changeProperties(style_prefix=style_prefix)
+        else:
+            current_index = 1
+            while hasattr(ltool,flex_id + '_' + str(current_index)):
+                current_index += 1
+
+            new_flex_id = flex_id + '_' +str(current_index)
+            layout = ltool.manage_addCPSLayout(new_flex_id)
+            layout.manage_changeProperties(style_prefix=style_prefix)
+            layount_count = self.getFlexibleTypeLayoutCount(type_id)
 
         # if it's secondary layouts
         # we want to copy widgets from first layout
-        if self.getTypeLayoutCount(type_id) > 0:
+        if layount_count > 0:
             base_type_id = type_id + '_1'
             base_flex_id = base_type_id.replace(type_prefix, type_prefix
                 + 'flexible_')
 
-            primary_layout = ltool[base_type_id]
-            self._copyWidgets(primary_layout, layout)
-
-            primary_flx_layout = ltool[base_flex_id]
-            self._copyWidgets(primary_flx_layout, flexlayout)
+            if not is_flexible:
+                primary_layout = ltool[base_type_id]
+                self._copyWidgets(primary_layout, layout)
+            else:
+                primary_flx_layout = ltool[base_flex_id]
+                self._copyWidgets(primary_flx_layout, layout)
 
 
         type_tool = ttool[type_id]
 
-        if new_id not in type_tool.layouts:
-            type_tool.layouts = list(type_tool.layouts) + [new_id]
-
-        if new_flex_id not in type_tool.schemas:
-            type_tool.layouts = list(type_tool.layouts) + [new_flex_id]
+        if not is_flexible:
+            if new_id not in type_tool.layouts:
+                type_tool.layouts = list(type_tool.layouts) + [new_id]
+        else:
+            if new_flex_id not in type_tool.schemas:
+                type_tool.layouts = list(type_tool.layouts) + [new_flex_id]
 
         if RESPONSE:
             Localizer = getToolByName(self, 'Localizer')
@@ -661,18 +693,53 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
                 message = ''
 
             urltool = getToolByName(self, 'portal_url')
-            RESPONSE.redirect(
-                urltool()+
-                    '/cpstypes_layout_edit?type_id=%s&layout_index=%s&portal_status_message=%s'
+
+            if not is_flexible:
+                method = 'cpstypes_layout_edit'
+            else:
+                method = 'cpstypes_flexible_layout_edit'
+
+            RESPONSE.redirect(urltool() + '/'+ method+'?type_id=%s&layout_index=%s&portal_status_message=%s'
                      % (type_id, current_index, message))
         else:
-            return new_id, new_flex_id
+            if is_flexible:
+                return new_flex_id
+            else:
+                return new_id
+
+
+
+    security.declarePublic('manage_addLayout')
+    def manage_addLayout(self, REQUEST, RESPONSE, type_id):
+        """ adds an extra layout
+        """
+        return self._addlayout(REQUEST, RESPONSE, type_id)
+
+    security.declarePublic('manage_addFlexibleLayout')
+    def manage_addFlexibleLayout(self, REQUEST, RESPONSE, type_id):
+        """ adds an extra layout
+        """
+        return self._addlayout(REQUEST, RESPONSE, type_id, True)
+
+
 
     security.declarePublic('manage_layoutModified')
-    def manage_layoutModified(self,REQUEST, RESPONSE, type_id, layout_index=1):
+    def manage_flexLayoutModified(self, REQUEST, RESPONSE, type_id, layout_index=1):
+        """ called when a flexible layout is modified
+        """
+        return self._layoutModified(REQUEST, RESPONSE, type_id, layout_index, True)
+
+
+    security.declarePublic('manage_layoutModified')
+    def manage_layoutModified(self, REQUEST, RESPONSE, type_id, layout_index=1):
         """ called when a layout is modified
         """
+        return self._layoutModified(REQUEST, RESPONSE, type_id, layout_index)
 
+    security.declarePrivate('_layoutModified')
+    def _layoutModified(self, REQUEST, RESPONSE, type_id, layout_index=1, is_flexible=False):
+        """ called when a layout is modified
+        """
         delcell = 0
         splitcell = 0
         widencell = 0
@@ -684,7 +751,10 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         urltool = getToolByName(self, 'portal_url')
         message = ''
 
-        layout_id = type_id + '_' + str(layout_index)
+        if is_flexible:
+            layout_id = type_id.replace('_', '_flexible_') + '_' + str(layout_index)
+        else:
+            layout_id = type_id + '_' + str(layout_index)
 
         layout = ltool[layout_id]
         kw = {}
@@ -773,21 +843,27 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             layout.manage_changeLayout(widencell=widencell,
                 shrinkcell=shrinkcell,splitcell=splitcell,delcell=delcell,**kw)
 
-        if Localizer:
-            mcat = Localizer.default
-            if duplicate_widgets:
-                message = quote(mcat('psm_duplicate_widgets') +
-                ','.join(duplicate_widgets))
+        if RESPONSE:
+            if Localizer:
+                mcat = Localizer.default
+                if duplicate_widgets:
+                    message = quote(mcat('psm_duplicate_widgets') +
+                    ','.join(duplicate_widgets))
+                else:
+                    if message == '':
+                        message = 'psm_changed'
             else:
-                if message == '':
-                    message = 'psm_changed'
-        else:
-            message = ''
+                message = ''
 
-        RESPONSE.redirect(
-            urltool()+
-                '/cpstypes_layout_edit?type_id=%s&layout_index=%s&portal_status_message=%s' % (
-                type_id, layout_index, message))
+            if is_flexible:
+                method = 'cpstypes_flexible_layout_edit'
+            else:
+                method = 'cpstypes_layout_edit'
+
+            RESPONSE.redirect(
+                urltool()+
+                    '/'+method+'?type_id=%s&layout_index=%s&portal_status_message=%s' % (
+                    type_id, layout_index, message))
 
     def _renameDocumentTypeElement(self, container, id):
         """ renames an object
@@ -858,8 +934,25 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         count = 0
         current_index = 1
 
-
         while hasattr(ltool,str(type_id) + '_' + str(current_index)):
+            count += 1
+            current_index += 1
+
+        return count
+
+    security.declarePublic('getFlexibleTypeLayoutCount')
+    def getFlexibleTypeLayoutCount(self, type_id):
+        """
+            retrieves a flexible type layout count
+        """
+        ltool = getToolByName(self, 'portal_layouts')
+        count = 0
+        current_index = 1
+        type_prefix = self.type_prefix
+
+        pref_id = type_id.replace(type_prefix, type_prefix+'flexible_')
+
+        while hasattr(ltool,str(pref_id) + '_' + str(current_index)):
             count += 1
             current_index += 1
 
