@@ -180,17 +180,44 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
         return self.process_after_tc_(expr_context)
 
+    security.declarePublic('manage_delWidget')
+    def manage_delWidget(self,type_id, widget_id, widget_name, REQUEST=None, RESPONSE=None):
+        """ used to delete a widget from all layouts
+        """
+        portal_layouts = getToolByName(self, 'portal_layouts')
+        portal_schemas = getToolByName(self, 'portal_schemas')
+        portal_status_message = ''
+        tagger = '#main'
+        layout_count = self.getTypeLayoutCount(type_id)
+
+        for i in range(layout_count):
+            current_id = type_id + '_' + str(i+1)
+            layout = portal_layouts[current_id]
+            widget = layout[widget_id]
+            field = self.getFieldId(type_id, widget)
+            schemaid = field.aq_parent.getId()
+            if schemaid == 'metadata':
+                schema = None
+            else:
+                schema = portal_schemas[schemaid]
+
+            self._deleteWidget(layout, schema, widget, widget_id, widget_name)
+
+        if RESPONSE:
+            RESPONSE.redirect('cpstypes_edit?type_id='+
+                type_id+portal_status_message+tagger)
+
+
     security.declarePublic('manage_documentModified')
     def manage_documentModified(self,type_id, is_addable=None,title=None, description=None,
                          new_icon=None,  widgetinfo=[], new_widget_title=None,
-                         new_widget_type=None, REQUEST=None, RESPONSE=None):
+                         new_widget_type=None, REQUEST=None, RESPONSE=None, action=None):
         """ this function is used to
             update a Document Type
         """
         tagger = '#main'
-        action = None
 
-        if REQUEST is not None:
+        if REQUEST is not None and action is None:
             for key in REQUEST.keys():
                 if key.startswith('action_'):
                     action = key[7:] # remove the 'action_'-part
@@ -204,7 +231,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         portal_schemas = getToolByName(self, 'portal_schemas')
 
 
-        portal_status_message = []
+        portal_status_message = ''
 
         layout_count = self.getTypeLayoutCount(type_id)
 
@@ -279,16 +306,18 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
     security.declarePublic('manage_flexibleModified')
     def manage_flexibleModified(self,type_id, widgetinfo=[], new_widget_title=None,
-        new_widget_type=None, REQUEST=None, RESPONSE=None):
+        new_widget_type=None, REQUEST=None, RESPONSE=None, action=None):
         """ this is used to update a flexible type
             content
         """
         portal_status_message = ''
-        action = None
-        for key in REQUEST.keys():
-            if key.startswith('action_'):
-                action = key[7:] # remove the 'action_'-part
-                break
+
+        if not action:
+            for key in REQUEST.keys():
+
+                if key.startswith('action_'):
+                    action = key[7:] # remove the 'action_'-part
+                    break
 
         if not action:
             raise ValueError('No action specified')
@@ -1123,10 +1152,10 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         return ''
 
     security.declarePublic('hasRequiredFields')
-    def hasRequiredFields(self, meta_type):
+    def hasRequiredFields(self, widget):
         """ gives a default value for a widget meta_type
         """
-        return self.widget_renderer.hasRequiredFields(meta_type)
+        return self.widget_renderer.hasRequiredFields(widget)
 
 
 
