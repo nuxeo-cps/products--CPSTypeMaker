@@ -5,6 +5,15 @@
         <tr>
           <td tal:repeat="i python:range(layout_count)">
             <div class="typemaker_layoutelement">
+                <div class="typemaker_layout_toolbar"
+                     tal:condition="python:i>0">
+                    <a tal:attributes="href
+               python:here.portal_url()+'/portal_typemaker/manage_delLayout?type_id='+type_id+'&layout_index='+str(i+1)">
+                      <img src="delete_cell.png"/>
+                    </a>
+
+                </div>
+
                 <div tal:define="selected python:i==int(layout_index)-1">
                     <metal:block tal:condition="not:selected">
                         <div class="typemaker_layoutlink">
@@ -21,7 +30,8 @@
                         <div class="typemaker_layoutlink_selected">
                             <span i18:translate="">
                                 Disposition</span>&#160;
-                                <span tal:replace="python:str(i+1)"/>
+                            <span tal:replace="python:str(i+1)"/>
+
                         </div>
                     </metal:block>
                 </div>
