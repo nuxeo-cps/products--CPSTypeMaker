@@ -324,9 +324,6 @@ msgstr "Modifié."
 msgid "cpstypes_more"
 msgstr "Plus..."
 
-msgid "Format for empty list"
-msgstr "Format liste vide"
-
 msgid "Size"
 msgstr "Taille"
 

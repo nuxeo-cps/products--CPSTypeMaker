@@ -396,9 +396,6 @@ msgstr "Width"
 msgid "Height"
 msgstr "Height"
 
-msgid "Format for empty list"
-msgstr "Format for empty list"
-
 msgid "View format"
 msgstr "View format"
 
