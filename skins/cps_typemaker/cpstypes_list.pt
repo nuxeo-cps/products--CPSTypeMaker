@@ -1,5 +1,5 @@
 <tal:block define="
-  dt_title python:here.Localizer.default('Document Types');
+  dt_title python:here.Localizer.default('cpstypes_documentlist');
   expanded_title dt_title;
   dummy python:request.set('breadcrumb_set',
     [{
@@ -13,14 +13,17 @@
   ">
   <metal:block use-macro="here/main_template/macros/master">
     <metal:block fill-slot="header">
-      <h1 tal:content="expanded_title"
-          i18n:translate="expanded_title"/>
+      <h1 i18n:translate="">cpstypes_documentlist</h1>
     </metal:block>
     <metal:block fill-slot="head_slot"
         tal:define="actions python:actions.update({'object': [
                     {'id':'create_type',
                      'url':base_url+'cpstypes_add_form',
                      'name': 'cpstypes_add_type',
+                     'category': 'object'},
+                     {'id':'configure_tool',
+                     'url':base_url+'cpstypes_configure',
+                     'name': 'cpstypes_configuretool',
                      'category': 'object'},
                      ]});">
     </metal:block>
