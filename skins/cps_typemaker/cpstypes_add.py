@@ -12,6 +12,7 @@ base_layouts = defs['base_layouts']
 base_schemas = defs['base_schemas']
 add_in_types = defs['add_in_types']
 style_prefix = defs['style_prefix']
+type_actions = defs['type_actions']
 
 type_id = prefix + id
 flex_id = prefix + 'flexible_' + id
@@ -36,6 +37,11 @@ properties = {
     }
 ti.manage_changeProperties(**properties)
 
+if type_actions:
+    ti.deleteActions(range(0, len(ti.listActions())))
+    for action in type_actions:
+        ti.addAction(**action)
+
 layout = ltool.manage_addCPSLayout(type_id)
 layout.manage_changeProperties(style_prefix=style_prefix)
 flexlayout = ltool.manage_addCPSLayout(flex_id)
@@ -47,6 +53,7 @@ for type in add_in_types:
     if type_id not in  workspaceACT:
         workspaceACT.append(type_id)
         typeobj.manage_changeProperties(allowed_content_types = workspaceACT)
+
 
 portal = context.portal_url.getPortalObject()
 for sectionspace, workflow in context.cpstypes_get_workflows().items():
