@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-04-07 18:08default\n"
+"POT-Creation-Date: 2004-04-08 16:12default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -66,9 +66,19 @@ msgstr ""
 msgid "cpstypes_type_description"
 msgstr ""
 
+#.   <th align="right">cpstypes_type_icon</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_type_icon"
+msgstr ""
+
 #.   <th align="right">cpstypes_type_id</th>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 msgid "cpstypes_type_id"
+msgstr ""
+
+#.   <th align="right">cpstypes_type_is_flexible</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_type_is_flexible"
 msgstr ""
 
 #.   <th align="right">cpstypes_type_title</th>
