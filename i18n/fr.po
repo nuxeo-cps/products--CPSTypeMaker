@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-04-07 16:34default\n"
+"POT-Creation-Date: 2004-04-07 18:08default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -16,133 +16,93 @@ msgstr ""
 "Preferred-encodings: utf-8 latin1\n"
 "Domain: default\n"
 
-
-#: from ../skins/cps_typemaker/cpstypes_list.pt
-#.   <span>
-#.                 Objects: ${batch_start (tal replace="batch_info/start")} - ${batch_limit (tal replace="batch_info/limit")} of ${batch_length (tal replace="batch_info/length")}
-#.               </span>
-msgid "Objects: ${batch_start} - ${batch_limit} of ${batch_length}"
-msgstr ""
-
-#: from ../skins/cps_typemaker/cpstypes_list.pt
-#.   <a attributes="href python:'%s?%s'%(request['URL'],
-#.                                                       mq(request.form, b_start=next))" condition="python:next is not None" define="next batch_info/next">Next</a>
-msgid "batch_next"
-msgstr ""
-
-#: from ../skins/cps_typemaker/cpstypes_list.pt
-#.   <a attributes="href python:'%s?%s'%(request['URL'],
-#.                                                   mq(request.form, b_start=previous))" condition="python:previous is not None" define="previous batch_info/previous">Previous</a>
-msgid "batch_previous"
-msgstr ""
-
-#: from ../skins/cps_typemaker/cpstypes_add_form.pt
-#.   <input type="submit" value="button_add" />
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-#.   <input type="submit" name="add_field" value="button_add" />
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
-#.   <input type="submit" name="action_add" value="button_add" />
-msgid "button_add"
-msgstr ""
-
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-#.   <input type="submit" name="action_delete" value="button_delete" />
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
-#.   <input type="submit" name="action_delete" value="button_delete">
-#.         <input type="submit" name="action_save" value="button_save">
-#.       </input></input>
-msgid "button_delete"
-msgstr ""
-
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
 #.   <input type="submit" name="action_save" value="button_save" />
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 #.   <input type="submit" name="action_save" value="button_save">
 #.       </input>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "button_save"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 #.   <th>cpstypes_add_new_field</th>
+#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_add_new_field"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
 #.   <th>cpstypes_add_new_widget</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_add_new_widget"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 #.   <h1>cpstypes_edit_schema</h1>
+#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_edit_schema"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 #.   <th>cpstypes_field_id</th>
+#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_field_id"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 #.   <th>cpstypes_field_type</th>
+#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_field_type"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 #.   <h3>cpstypes_fields</h3>
+#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_fields"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #.   <h1 span="">cpstypes_label_add_type</h1>
+#: from ../skins/cps_typemaker/cpstypes_add_form.pt
 msgid "cpstypes_label_add_type"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
 #.   <th align="right">cpstypes_type_description</th>
-#: from ../skins/cps_typemaker/cpstypes_list.pt
 #.   <small content="item/description">cpstypes_type_description</small>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #.   <th align="right">cpstypes_type_id</th>
-#: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 msgid "cpstypes_type_id"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
 #.   <th align="right">cpstypes_type_title</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_type_title"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
 #.   <th>cpstypes_widget_id</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widget_id"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
 #.   <th>cpstypes_widget_required</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widget_required"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
 #.   <th>cpstypes_widget_size</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widget_size"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
 #.   <th>cpstypes_widget_title</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widget_title"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
 #.   <th>cpstypes_widget_type</th>
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_widget_type"
 msgstr ""
 
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
 #.   <h3>cpstypes_widgets</h3>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widgets"
 msgstr ""
