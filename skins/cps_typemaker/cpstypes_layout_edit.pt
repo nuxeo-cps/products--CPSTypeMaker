@@ -108,7 +108,7 @@ string:${here/portal_url}/portal_typemaker/manage_layoutModified?#table"
     <table>
     <tr>
     <metal:block tal:condition="python:len(rows)==0" >
-        <td class="typemakerEmptyLayout" valign="center" align="center" width="70%"
+        <td class="typemakerEmptyLayout" valign="middle" align="center" width="70%"
          i18n:translate="cpstypes_empty_layout">
             No fields in the layout yet.
         </td>
