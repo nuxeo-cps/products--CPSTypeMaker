@@ -185,7 +185,7 @@ msgid "CPS Ordered List Widget"
 msgstr "Ordered List"
 
 msgid "CPS Unordered List Widget"
-msgstr "Unordered Lis"
+msgstr "Unordered List"
 
 msgid "CPS String Widget"
 msgstr "String"
