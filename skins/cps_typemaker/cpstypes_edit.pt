@@ -123,7 +123,7 @@ actions['object'].append({'id':'delete_entry',
           <th  align='left' i18n:translate="" colspan="2">cpstypes_add_new_widget</th>
         </tr>
         <tr>
-          <th align='right'>i18n:Type</th>
+          <th align='right' i18n:translate="">cpstypes_widget_type</th>
           <td>
             <select name="new_widget_type" tal:define="widgets wttool/objectIds;
                                                  foo python:widgets.sort()">
@@ -140,7 +140,7 @@ actions['object'].append({'id':'delete_entry',
           <td>
         </tr>
         <tr>
-          <th align='right'>i18n:Id</th>
+          <th align='right' i18n:translate="">cpstypes_widget_id</th>
           <td>
             <input type="text" name="new_widget_title" />
           <td>
