@@ -11,3 +11,16 @@ def getIcon(self, relative_to_portal=0):
     return self.content_icon
 
 FactoryTypeInformation.getIcon = getIcon
+
+
+from Products.CMFCore.CMFCorePermissions import ManagePortal, ManageProperties, View
+from AccessControl.PermissionRole import PermissionRole
+
+from Products.CPSSchemas.Layout import Layout
+Layout.setLayoutDefinition__roles__ = PermissionRole(ManagePortal)
+
+from Products.CPSCore.CPSWorkflowConfiguration import CPSWorkflowConfiguration
+CPSWorkflowConfiguration.getPlacefulChainFor__roles__ = PermissionRole(ManagePortal)
+
+from Products.CPSSchemas.Field import Field
+Field.manage_addProperty__roles__ = PermissionRole(ManagePortal)
