@@ -11,7 +11,7 @@
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-#
+#"
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
@@ -139,7 +139,7 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
         
         # add 'empty widget'
         tmaker_tool.manage_documentModified(type_id=type_name, action=action,
-          new_widget_title='T    otoro string widget',
+          new_widget_title='Totoro string widget',
           new_widget_type='String Widget')
           
         # check results on type
@@ -148,6 +148,7 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
         
         found = False
         for id, item in type_layout.objectItems():
+            
             if item.id == 'w__Totoro_string_widget':
                 found = True
                 self.assertEquals(item.title, 'Totoro string widget')    
@@ -155,7 +156,40 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
             
         self.assertEquals(found, True)    
         
-       
+    def testallWidgetTypes(self):
+        self.testTypeAdding()    
+        
+        tmaker_tool = self.portal.portal_typemaker        
+        
+        action = 'add'        
+        type_name = tmaker_tool.type_prefix + 'TotoroPowered'
+        
+        # add 'empty widget'
+        types = self.portal.portal_widget_types
+        
+        for id, type in types.objectItems(): 
+            #raise str((type._properties))           
+            tmaker_tool.manage_documentModified(type_id=type_name, action=action,
+            new_widget_title='Totoro '+str(id),
+            new_widget_type= type.id)
+            
+            # check results on type
+            type_layouts = self.portal.portal_layouts 
+            type_layout = type_layouts[type_name+'_1']
+            
+            wid = 'w__Totoro '+str(id)
+            wid = wid.replace(' ', '_')
+                
+            found = False
+            for item_id, item in type_layout.objectItems():                
+                
+                if item.id == wid:
+                    found = True
+                    self.assertEquals(item.title, 'Totoro '+str(id))    
+                    break
+                
+            self.assertEquals(found, True)    
+               
             
 
 def test_suite():
