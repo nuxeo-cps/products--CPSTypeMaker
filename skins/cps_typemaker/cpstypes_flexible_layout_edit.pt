@@ -5,7 +5,8 @@
   layout_count python:tmaker.getFlexibleTypeLayoutCount(type_id);
   show_layouts python:tmaker.multiple_layouts;
   layout_max python:5;
-  flex_id python:type_id.replace('_','_flexible_');
+  type_prefix tmaker/type_prefix;
+  flex_id python:type_id.replace(type_prefix, type_prefix + 'flexible_');
   layout_id python:flex_id+'_'+str(layout_index);
   delete_allowed python:0;
   typeob python:here.portal_types[type_id] or nothing;
@@ -317,7 +318,7 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
           <input id="change" type="submit" name="change" value="button_change"
            i18n:attributes="value" />
           <input type="submit" name="addrow" value="cpstypes_add_row" i18n:attributes="value" />
-          <input type="submit" name="autolayout" value="Mise en page automatique"
+          <input type="submit" name="autolayout" value="cpstypemaker_autolayout"
            i18n:attributes="value" />
           <span tal:replace="nothing">
           *** SOON AVAILABLE ***
