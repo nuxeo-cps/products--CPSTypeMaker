@@ -40,7 +40,8 @@
 # be edited. Therefore we need support for two metadata schemas. These are
 # defined by 'metadata_schemas', and are typically either 'metadata' plus 
 # another, or only the other. Only 'metadata' does not work, and more than 
-# one other than 'metadata' makes no sense. 
+# one other than 'metadata' makes no sense. Please note that the defult skins
+# for CPS requires you to have 'metadata' as a base_schema
 
 return {'type_prefix': 'simpletype_', # The id prefix for TypeMaker types.
         'style_prefix': 'layout_default_tab_',

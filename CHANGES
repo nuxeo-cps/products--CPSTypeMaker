@@ -11,6 +11,7 @@ New features:
 - You can now configure the actions for newly created types.
 - You can now change the name of the metadata layout, and you can specify
   which schemas should be used for metadata.
+- Metadatas that are marked as indexed now also get an index of their own.
 Bug fixes:
 ~~~~~~~~~~
 - "NoneType object has no attribute read" error under dr's MacOS X/Safari

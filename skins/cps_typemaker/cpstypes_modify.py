@@ -66,6 +66,7 @@ for each in widgetinfo:
     widgetname = each['name']
     widgetid = each['id']
     is_selected = each.get('is_selected',0)
+    indexed = each.get('indexed', 0)
     widget = layout[widgetid]
     if widget.fields != ['?']:
         field = context.cpstypes_get_field(type_id, widget)
@@ -99,9 +100,20 @@ for each in widgetinfo:
             kw['hidden_layout_modes'] = ['view']
 
         widget.manage_changeProperties(**kw)
+        # Update indexing:
         if field:
-            field.manage_changeProperties(is_searchabletext=each.get('indexed', 0))
-        
+            field.manage_changeProperties(is_searchabletext=indexed)
+            if type_id == defs['metadata_layout']:
+                # Indexed metadatas should also have an index of their own.
+                fieldid = field.getFieldId()
+                catalog = context.portal_catalog
+                indexes = catalog.indexes()
+                if indexed and fieldid not in indexes:
+                    # Add as index
+                    catalog.addIndex(fieldid, 'TextIndex')
+                if not indexed and fieldid in indexes:
+                    catalog.delIndex(fieldid)    
+               
 
 if action == 'add' and new_widget_id:
     kw = {'fields': [new_widget_id],
@@ -149,6 +161,11 @@ if action == 'add' and new_widget_id:
                     kw = {}
                 i += 1
                 schema.manage_addField(field_id, field_type, **kw)
+
+            if type_id == defs['metadata_layout'] and \
+               field_inits and field_inits[0].get('is_searchabletext', 0):
+                catalog = context.portal_catalog
+                catalog.addIndex(new_widget_id, 'TextIndex')
 
 # And finally save the new layout
 layout.setLayoutDefinition(layoutdef)
