@@ -1,0 +1,365 @@
+<dtml-call "RESPONSE.setHeader('Content-Type','text/css')">
+
+.typemaker_noscript
+{
+  text-align : center;
+  background-color : transparent;
+  border: 1px solid black;
+  margin-top : 10px;
+  font-weight: bold;
+  color: red;
+  padding : 2px;
+}
+
+.typemaker_LayoutCellEditMenu
+{
+  text-align : center;
+  background-color : transparent;
+}
+
+
+.typemaker_feedback
+{
+    vertical-align: middle;
+    text-align: center;
+    position: absolute;
+    display: none;
+    border: 1px solid black;
+}
+
+
+.typemaker_LayoutCellDrag_highlighted
+{
+   padding : 10px;
+   cursor: move;
+   background-color : transparent;
+}
+
+.typemaker_LayoutCellDrag
+{
+   padding : 10px;
+   cursor: move;
+   background-color : transparent;
+}
+
+
+
+.typemaker_LayoutCellDest_highlighted
+{
+    float: left;
+    background-color : red;
+    padding : 2px;
+    border: 1px solid black;
+    width : 150 px;
+    height : 20 px;
+    min-height : 30px;
+    max-height : 30px;
+    word-wrap: break-word;
+
+}
+
+.typemaker_LayoutCellDest
+{
+    float: left;
+    padding : 2px;
+    border: 1px solid black;
+    width : 150 px;
+    height : 20 px;
+    min-height : 30px;
+    max-height : 30px;
+    word-wrap: break-word;
+    min-width : 50px;
+    vertical-align: middle;
+}
+
+.typemaker_cellcontent
+{
+   min-width : 50px;
+   background-color: transparent;
+   text-align: center;
+   font-weight: bold;
+   vertical-align: middle;
+}
+
+.typemaker_bright_toolbar
+{
+  float: left;
+  position: relative;
+  vertical-align : bottom;
+  background : transparent;
+  height : 10px;
+}
+
+.typemaker_emptycell_bright_toolbar
+{
+  float: left;
+  position: relative;
+  vertical-align : bottom;
+  background : transparent;
+  height : 10px;
+}
+
+.typemaker_right_toolbar
+{
+  float: right;
+  position: relative;
+  vertical-align : top;
+  background : transparent;
+  height : 10px;
+}
+
+.typemaker_left_toolbar
+{
+  float: left;
+  position: relative;
+  vertical-align : top;
+  background : transparent;
+  height : 10px;
+}
+
+.typemaker_emptycell_left_toolbar
+{
+  float: left;
+  background : transparent;
+  vertical-align : middle;
+}
+
+.typemaker_emptycell_right_toolbar
+{
+  float: right;
+  background : transparent;
+  vertical-align : middle;
+}
+
+.typemaker_cellimage
+{
+    background-color: transparent;
+}
+
+.typemaker_cell
+{
+    padding : 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    text-align : center;
+    min-width: 150px;
+    float: left;
+    width: 85%;
+    vertical-align : middle;
+}
+
+
+input.typemaker_append_bt
+{
+    float: left;
+    width: 16px;
+    border: none;
+    margin-top: 5px;
+    cursor: hand;
+    background-image : url(append_cell.png);
+    background-repeat: no-repeat;
+    background-position : center right;
+    background-color: transparent;
+    vertical-align : middle;
+}
+
+.typemaker_av_fields
+{
+  margin-top: 8px;
+}
+
+.typemaker_header
+{
+    border: 1px solid black;
+}
+
+input.typemaker_delete_bt
+{
+    border : none;
+    cursor: hand;
+    background-image : url(delete_cell.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+input.typemaker_split_bt
+{
+    border : none;
+    cursor: hand;
+    background-image : url(split_cell.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+
+input.typemaker_widen_bt
+{
+    cursor: hand;
+    background-image : url(widen_cell.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+input.typemaker_shrink_bt
+{
+    cursor: hand;
+    border : none;
+    background-image : url(shrink_cell.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+input.typemaker_up_bt
+{
+    cursor: hand;
+    height: 5px;
+    width: 8px;
+    border : none;
+    background-image : url(up_cell.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+input.typemaker_down_bt
+{
+    height: 5px;
+    cursor: hand;
+    width: 8px;
+    border : none;
+    background-image : url(down_cell.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+input.typemaker_left_bt
+{
+    cursor: hand;
+    width: 5px;
+    height: 8px;
+    border : none;
+    background-image : url(left_cell.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+input.typemaker_right_bt
+{
+    cursor: hand;
+    width: 5px;
+    height: 8px;
+    border : none;
+    background-image : url(right_cell.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+}
+
+input.typemaker_right_bt
+{
+    cursor: hand;
+    width: 5px;
+    height: 8px;
+    border : none;
+    background-image : url(right_cell.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+}
+
+img.typemaker_configure_bt
+{
+    cursor: hand;
+    border : none;
+    vertical-align: top;
+    float: left;
+    background-color: transparent;
+    margin-right : 2px;
+}
+
+
+div.typemaker_b_spaced
+{
+    margin-bottom:10px;
+}
+
+div.typemaker_spaced
+{
+    margin-bottom: 15px;margin-top: 8px;
+}
+
+div.typemaker_up_spaced
+{
+    margin-top: 15px;
+}
+
+div.typemaker_padded
+{
+    padding : 6px;
+}
+
+td.typemaker_empty_layout
+{
+    font-weight: bold;
+}
+
+div.typemaker_liner
+{
+
+}
+
+.typemaker_layoutlist
+{
+    margin-bottom: 2em;
+}
+
+.typemaker_layoutlink
+{
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    margin : 4px;
+    text-decoration: none;
+}
+
+.typemaker_layoutlink_selected
+{
+   text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    margin : 4px;
+    color: red;
+   }
+
+.typemaker_layoutelement
+{
+
+   border: 1px solid black;
+}
+
+
+
+.typemaker_layout_toolbar
+{
+  float: right;
+  vertical-align: top;
+  margin-top: 2px;
+}
+
+.typemaker_empty_layout
+{
+    font-weight: bold;
+
+}
+
+
+.typemaker_buttons
+{
+ margin-bottom : 1em;
+ margin-top : 0.5em;
+}
+
+.typemaker_buttons input
+{
+
+}

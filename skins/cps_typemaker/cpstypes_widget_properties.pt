@@ -1,0 +1,92 @@
+
+<tal:block define="
+  type_id request/type_id|options/type_id;
+  widget_id request/widget_id|options/widget_id;
+  tmakertool here/portal_typemaker;
+  form request/form|nothing;
+  first_type_id python:type_id+'_1';
+  layoutob here/portal_layouts/?first_type_id;
+  widget layoutob/?widget_id;
+  widget_metatype widget/meta_type;
+  widgetname widget/getWidgetId;
+  widgettitle widget/label_edit;
+
+  generic_renderer python:tmakertool.getWidgetRenderer();
+  typeob here/portal_types/?type_id|nothing;
+  title typeob/title|type_id;
+  wtitle widget/label_edit|widget_id;
+  expanded_title title;
+  types_string python:'/cpstypes_edit?type_id='+type_id;
+  ">
+
+
+<metal:block use-macro="here/main_template/macros/master">
+  <metal:block fill-slot="css_slot">
+<tal:block define="dt_title python:here.Localizer.default('Document Types');
+                       dummy python:request.set('breadcrumb_set',
+                        [{
+                          'id': 'types',
+                          'url': here.portal_url()+'/cpstypes_list',
+                          'longtitle': dt_title,
+                          'title': dt_title,
+                         },
+                         {
+                          'id': 'types',
+                          'url':
+                            here.portal_url()+types_string,
+                          'longtitle': title,
+                          'title': title,
+                        },
+                        {
+                          'id': 'types',
+                          'url':
+here.portal_url()+'/cpstypes_widget_properties?type_id='+type_id+
+'&widget_id='+widget_id,
+                          'longtitle': wtitle,
+                          'title': wtitle,
+                        }]);
+                        actionlist python:[
+                        {'id':'edit_type',
+                          'url':base_url+'cpstypes_edit?type_id='+type_id,
+                          'name': 'cpstypes_edit_type',
+                          'category': 'object'},
+                         {'id':'edit_layout',
+                          'url':base_url+'cpstypes_layout_edit?type_id='+type_id,
+                          'name': 'cpstypes_edit_layout',
+                          'category': 'object'}];
+                        actionlist python:typeob and actionlist;
+                        actions python:actions.update({'object': actionlist});
+
+                          " />
+  <link rel="Stylesheet" type="text/css" href=""
+      tal:attributes="href string:${base_url}document.css" />
+  </metal:block>
+
+  <metal:block fill-slot="header">
+    <h1><span i18n:translate="" tal:content="wtitle" /></h1>
+  </metal:block>
+
+  <metal:block fill-slot="main">
+
+
+    <form action="cpstypes_widget_properties" method="post"
+          enctype="multipart/form-data">
+        <input tal:attributes="value type_id" type="hidden" name="type_id"/>
+        <input tal:attributes="value widget_id" type="hidden" name="widget_id"/>
+        <input tal:attributes="value widget_metatype" type="hidden"
+        name="widget_metatype"/>
+
+   <!--
+   <tal:block tal:replace="structure python:obwidgettype.render(widget, form, 'edit','edit')[0]" />
+   -->
+    <tal:block tal:replace="structure python:generic_renderer.render(widget, form, 'edit', 'edit')[0]"/>
+   <input class="standalone" type="submit" name="button_save" value="button_save"
+        i18n:attributes="value" />
+         </form>
+
+
+  </metal:block>
+
+</metal:block>
+
+</tal:block>

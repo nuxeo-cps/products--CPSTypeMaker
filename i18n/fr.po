@@ -312,3 +312,153 @@ msgstr "Modifié."
 
 #~ msgid "cpstypes_type_id"
 #~ msgstr "Id"
+
+msgid "cpstypes_more"
+msgstr "Plus..."
+
+msgid "Format for empty list"
+msgstr "Format liste vide"
+
+msgid "Size"
+msgstr "Taille"
+
+msgid "Display separator in view mode"
+msgstr "Séparateur en mode affichage"
+
+msgid "Title"
+msgstr "Titre"
+
+msgid "Label in view mode"
+msgstr "Libellé en mode édition"
+
+msgid "Label in edit mode"
+msgstr "Libellé en mode affichage"
+
+msgid "Vocabulary"
+msgstr "Vocabulaire"
+
+msgid "Is vocabulary translated on display ?"
+msgstr "Vocabulaire traduit à l'affichage ?"
+
+msgid "Directory"
+msgstr "Annuaire"
+
+msgid "Optional directory used in view mode"
+msgstr "Annuaire utilisé pour l'affichage (optionnel)"
+
+msgid "Entry type"
+msgstr "Type d'entrée"
+
+msgid "Skin name"
+msgstr "Nom de la skin"
+
+msgid "Popup Mode"
+msgstr "Mode du popup"
+
+msgid "Maximum image size"
+msgstr "Taille maximum d'image"
+
+msgid "Deletable ?"
+msgstr "Supprimable ?"
+
+msgid "Display Width"
+msgstr "Largeur d'affichage"
+
+msgid "Display Height"
+msgstr "Hauteur d'affichage"
+
+msgid "Can resize to lower size ?"
+msgstr "Taille réductible ?"
+
+msgid "Render position"
+msgstr "Position de rendu"
+
+msgid "What is user configurable, require extra fields"
+msgstr "Ce qui est configurable par l'utilisateur"
+
+msgid "Maximum input width"
+msgstr "Taille maximum de saisie"
+
+msgid "Width"
+msgstr "Largeur"
+
+msgid "Height"
+msgstr "Hauteur"
+
+msgid "Format for empty list"
+msgstr "Format pour liste vide"
+
+msgid "View format"
+msgstr "Format d'affichage"
+
+msgid "Vocabulary is translated ?"
+msgstr "Vocabulaire traduit ?"
+
+msgid "View format empty"
+msgstr "Format d'affichage vide"
+
+msgid "Use Javascript ?"
+msgstr "Utiliser Javascript ?"
+
+msgid "View format (short, medium or long)"
+msgstr "Format d'affichage (court, moyen ou long)"
+
+msgid "Enabling the setting of time of the day ?"
+msgstr "Permettre la configuration de l'heure pour le jour ?"
+
+msgid "default hour for time"
+msgstr "Heure par défaut pour l'heure"
+
+msgid "default minutes for time"
+msgstr "Minutes par défaut pour l'heure"
+
+msgid "True label"
+msgstr "Libellé vrai"
+
+msgid "False label"
+msgstr "Libellé faux"
+
+msgid "Maximum file size"
+msgstr "Taille maximum de fichier"
+
+msgid "Maximum size"
+msgstr "Taille maximum"
+
+msgid "Render format"
+msgstr "Format de rendu"
+
+msgid "cps_types_auto"
+msgstr "Disposition automatique"
+
+msgid "cpstypes_empty_layout"
+msgstr "Pas de champs pour l'instant."
+
+msgid "cpstypes_widgethasrequiredfields"
+msgstr "Certaines propriétés du champ sont obligatoire"
+
+msgid "cpstypes_splitcell"
+msgstr "Couper"
+
+msgid "cpstypes_moveleft"
+msgstr "Déplacer à gauche"
+
+msgid "cpstypes_moveright"
+msgstr "Déplacer à droite"
+
+msgid "cpstypes_appendcell"
+msgstr "Ajouter"
+
+msgid "cpstypes_availablefields"
+msgstr "Champs disponibles"
+
+msgid "cpstypes_deletecell"
+msgstr "Supprimer"
+
+msgid "cpstypes_editcell"
+msgstr "Editer"
+
+msgid "cpstypes_publictype"
+msgstr "Type utilisable sur le portail"
+
+msgid "cpstypes_widget_label"
+msgstr "Libellé"

@@ -1,14 +1,18 @@
 <tal:block define="
   type_id request/type_id|options/type_id;
+  primary_layout_id python:str(type_id)+'_1';
   delete_allowed python:0;
   typeob here/portal_types/?type_id|nothing;
   title typeob/title|type_id;
   expanded_title title;
-  layoutob here/portal_layouts/?type_id;
+  layoutob here/portal_layouts/?primary_layout_id;
   wttool here/portal_widget_types;
-  widgets python:here.cpstypes_get_definitions()['widget_list'] or wttool.objectIds();
+  tmakertool here/portal_typemaker;
+  widgets python:tmakertool.listWidgetTypes(True);
   foo python:widgets.sort();
+  form_action string:portal_typemaker/manage_documentModified;
   ">
+
 <metal:block use-macro="here/main_template/macros/master">
   <metal:block fill-slot="css_slot">
     <tal:block define="dt_title python:here.Localizer.default('Document Types');
@@ -60,106 +64,20 @@ actions['object'].append({'id':'delete_entry',
   </metal:block>
 
   <metal:block fill-slot="main">
-    <form method="post" action="cpstypes_modify" enctype="multipart/form-data">
-      <input type="hidden" name="type_id" tal:attributes="value type_id" />
-      <table tal:condition="typeob">
-        <tr>
-          <th align='right' i18n:translate="">cpstypes_type_title</th>
-          <td><input type="text" size="50" name="title" tal:attributes="value typeob/title" /></td>
-        </tr>
-        <tr>
-          <th align='right' i18n:translate="">cpstypes_type_description</th>
-          <td><textarea cols="48" rows="3" name="description"
-                        tal:content="typeob/description" /></td>
-        </tr>
-        <tr>
-          <th align='right' i18n:translate="">cpstypes_type_is_addable</th>
-          <td><input type="checkbox" name="is_addable"
-                tal:attributes="checked python:here.cpstypes_is_addable(type_id)" /></td>
-        </tr>
-        <tr>
-          <th align='right' i18n:translate="">cpstypes_type_icon</th>
-          <td>
-            <img tal:attributes="src string:${here/portal_url}/${typeob/content_icon}"
-                 alt="document type icon" />
-            <input type="file" name="new_icon" />
-          </td>
-        </tr>
-      </table>
-      <h3 i18n:translate="">cpstypes_widgets</h3>
-      <table>
-        <tr align="left">
-          <th></th>
-          <th i18n:translate="">cpstypes_widget_title</th>
-          <th i18n:translate="">cpstypes_widget_type</th>
-          <th i18n:translate="">cpstypes_widget_size</th>
-          <th i18n:translate="">cpstypes_widget_required</th>
-          <th i18n:translate="">cpstypes_widget_show_in_view</th>
-          <th i18n:translate="">cpstypes_field_indexed</th>
-        </tr>
-        <tr tal:repeat="widget layoutob/objectValues">
-            <tal:block define="widgetname widget/getWidgetId;
-                               widgetid widget/getId;
-                               ">
-              <td>
-                <input type="hidden" name="widgetinfo.id:records" tal:attributes="value widgetid"/>
-                <input type="hidden" name="widgetinfo.name:records" tal:attributes="value widgetname"/>
-                <input type="checkbox" name="widgetinfo.is_selected:records" />
-              </td>
-              <td><input type="text" size="20" name="widgetinfo.title:records" tal:attributes="value widget/label_edit" /></td>
-              <td tal:content="widget/meta_type" i18n:translate="" />
-              <td>
-                <input type="text" size="10" name="widgetinfo.size:records"
-                  tal:attributes="value widget/size_max" 
-                  tal:condition="python:hasattr(widget, 'size_max')" />
-                <input type="hidden" name="widgetinfo.size:records"
-                  tal:attributes="value python:0" 
-                  tal:condition="python:not hasattr(widget, 'size_max')" />
-              </td>
-              <td><input type="checkbox" name="widgetinfo.required:records"
-                tal:attributes="checked widget/is_required" />
-              </td>
-              <td><input type="checkbox" name="widgetinfo.show_in_view:records"
-                tal:attributes="checked python:'view' not in widget.hidden_layout_modes" />
-              </td>
-              <td><input type="checkbox" name="widgetinfo.indexed:records"
-                tal:attributes="checked python:here.cpstypes_get_field(type_id, widget).is_searchabletext" />
-              </td>
-            </tal:block>
-          </tr>
-      </table>
-      <input type="submit" name="action_delete" value="button_delete" i18n:attributes="value" />
-      <input type="submit" name="action_save" value="button_save" i18n:attributes="value" />
-      <input type="hidden" name="layout_id" tal:attributes="value type_id" />
-      <table>
-        <tr>
-          <th  align='left' i18n:translate="" colspan="2">cpstypes_add_new_widget</th>
-        </tr>
-        <tr>
-          <th align='right' i18n:translate="">cpstypes_widget_type</th>
-          <td>
-            <select name="new_widget_type">
-              <tal:block tal:repeat="widget widgets">
-              <option tal:attributes="value widget"
-                      tal:content="string:CPS ${widget}"
-                      tal:condition="python:wttool[widget].meta_type != 'CPS Compound Widget Type'" 
-                      i18n:translate="" />
-              </tal:block>
-            </select>
-          </td>
-          <td>
-            <input type="submit" name="action_add" value="button_add" i18n:attributes="value" />
-          <td>
-        </tr>
-        <tr>
-          <th align='right' i18n:translate="">cpstypes_widget_title</th>
-          <td>
-            <input type="text" name="new_widget_title" />
-          <td>
-        </tr>
-         
-      </table>
+    <form method="post" tal:attributes="action form_action"
+                        enctype="multipart/form-data">
+
+        <a name="main"></a>
+
+        <metal:block use-macro="here/cpstypes_lib/macros/cpstm_mainprops"/>
+
+        <a name="components"></a>
+        <h3 i18n:translate="">cpstypes_widgets</h3>
+        <metal:block use-macro="here/cpstypes_lib/macros/cpstm_comps"/>
+
+        <metal:block use-macro="here/cpstypes_lib/macros/cpstm_addwidget"/>
     </form>
+
   </metal:block>
 </metal:block>
 </tal:block>

@@ -25,7 +25,7 @@
   </metal:block>
 
   <metal:block fill-slot="main">
-    <form method="post" action="cpstypes_add">
+    <form method="post" action="portal_typemaker/manage_addDocumentType">
       <table>
         <tr>
           <th align='right' i18n:translate="">cpstypes_type_title</th>

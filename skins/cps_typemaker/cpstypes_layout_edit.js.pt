@@ -1,0 +1,140 @@
+<!--
+
+var Destinations = [];
+
+function findDescendant(node, className) {
+  // Returns a descendant with the given class name, or null.
+  if ((node.className == className + '_highlighted') ||
+      (node.className == className) )
+  {
+
+    return node;
+  }
+
+  var i, c;
+  for (i = 0; i < node.childNodes.length; i++) {
+    c = findDescendant(node.childNodes[i], className);
+
+    if (c != null)
+      return c;
+  }
+  return null;
+}
+
+function findDescendantByName(node, nodeName) {
+  // Returns a descendant with the given class name, or null.
+  if (node.nodeName == nodeName)
+  {
+    return node;
+  }
+
+  var i, c;
+  for (i = 0; i < node.childNodes.length; i++) {
+    c = findDescendantByName(node.childNodes[i], nodeName);
+
+    if (c != null)
+      return c;
+  }
+  return null;
+}
+
+
+function LayoutCell_move(selected_items, target_node) {
+
+  if (selected_items.length!=1)
+  {
+    return;
+  }
+
+  dest = findDescendant(target_node,'typemaker_LayoutCellEditMenu');
+
+
+  if (dest == null)
+  {
+     //alert(target_node.childNodes[1].className);
+     return;
+  }
+  else
+  {
+    // we want to hilite the change button
+    // in case of javascript only changes
+    // for the user to remind to save his changes
+    change = document.getElementById("change");
+    change.style.backgroundColor="red";
+
+    drag_cell = selected_items[0];
+    drag_cell_cont = findDescendant(drag_cell,'typemaker_LayoutCellEditMenu');
+
+    dest_cell = findDescendantByName(dest, 'INPUT');
+    cell_name = dest_cell.name;
+    dragged = drag_cell.innerHTML;
+
+    dest_input = findDescendantByName(drag_cell, 'INPUT');
+    cell_dest_name = dest_input.name;
+
+    // dragged from another cell
+    // IE compliant
+    comparing_string = dragged.toLowerCase(dragged);
+    if ((comparing_string.indexOf("name=cell_")!=-1) ||
+        (comparing_string.indexOf("name=\"cell_")!=-1))
+    {
+      dest_content = dest.innerHTML;
+      embed_drag = drag_cell.innerHTML;
+      dest.innerHTML = embed_drag.replace(cell_dest_name,cell_name);
+      drag_cell_cont.innerHTML = dest_content.replace(cell_name,cell_dest_name);
+    }
+    // dragged from field list
+    else
+    {
+      // case insensitive for IE
+      regexpr = /<input /gi;
+      dragged = dragged.replace(regexpr,"<input name="+cell_name+" ");
+      dest.innerHTML = dragged;
+    }
+
+  }
+
+}
+
+function LayoutCell_checkmove(selected_items, target_node)
+{
+  return true;
+}
+
+function setupLayoutCellDrag(node) {
+  pd_setupDragUI(node, LayoutCell_move, LayoutCell_checkmove);
+}
+
+
+function setupDestination(node) {
+  if (Destinations.push)
+    Destinations.push(node);
+  else
+    Destinations = Destinations.concat([node]);
+  pd_setupDropTarget(node, 1);
+
+}
+
+function setupLayoutCellEditMenu(node) {
+  pd_setupContextMenu(node, 'choice-context-menu', null, true);
+}
+
+
+pd_node_setup['typemaker_LayoutCellDrag'] = setupLayoutCellDrag;
+pd_node_setup['typemaker_LayoutCellDest'] = setupDestination;
+pd_node_setup['typemaker_LayoutCellEditMenu'] = setupLayoutCellEditMenu;
+
+// this call typemaker tool to render a preview
+// wich contents is shown in a popup
+
+function layoutPreview(type_id)
+{
+
+ popup = window.open('cpstypes_layout_preview?type_id='+type_id)
+ if(!popup.opener)
+     popup.opener = window;
+ return false;
+ }
+
+//-->
+

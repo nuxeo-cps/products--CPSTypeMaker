@@ -1,16 +1,20 @@
 <tal:block define="
+  tmakertool here/portal_typemaker;
   type_id request/type_id|options/type_id;
-  definitions here/cpstypes_get_definitions;
+  tmaker here/portal_typemaker;
+  layout_index request/layout_index|options/layout_index|python:1;
+  layout_count python:tmaker.getTypeLayoutCount(type_id);
+  layout_max python:5;
   delete_allowed python:0;
   typeob here/portal_types/?type_id;
   title typeob/title|type_id;
   expanded_title title;
-  prefix definitions/type_prefix;
-  layoutid python:prefix + 'flexible_' + type_id[len(prefix):];
+  prefix tmakertool/type_prefix;
+  layoutid python:prefix + 'flexible_' + type_id[len(prefix):]+'_'+str(layout_index);
   layoutob here/portal_layouts/?layoutid;
   widgetinfo layoutob/getFlexibleWidgetsDict;
   wttool here/portal_widget_types;
-  widgets python:here.cpstypes_get_definitions()['flexible_widget_list'] or wttool.objectIds();
+  widgets python:tmakertool.listFlexibleWidgetTypes(True);
   foo python:widgets.sort();
   debug nothing;
   ">
@@ -61,14 +65,33 @@ actions['object'].append({'id':'delete_entry',
   </metal:block>
 
   <metal:block fill-slot="header">
-    <h1><span i18n:translate="" tal:content="title" /></h1>
+    <h1><span i18n:translate="">cpstypes_flexible_widgets</span></h1>
   </metal:block>
 
   <metal:block fill-slot="main">
-    <form method="post" action="cpstypes_modify_flexible" enctype="multipart/form-data">
-      <input type="hidden" name="type_id" tal:attributes="value type_id"/>
-      <h3 i18n:translate="">cpstypes_flexible_widgets</h3>
-      <table>
+
+
+    <form method="post"
+        action="portal_typemaker/manage_flexibleModified"
+        enctype="multipart/form-data">
+
+    <input type="hidden" name="type_id" tal:attributes="value type_id" />
+
+    <a name="components"></a>
+
+      <tal:block tal:define="widgets layoutob/objectValues;
+                         wcount python:len(widgets)">
+
+      <div class="typemaker_spaced"></div>
+
+      <div tal:condition="python:wcount==0"
+          class="typemaker_empty_layout"
+           i18n:translate="cpstypes_empty_layout">
+          pas de champs pour l'instant
+      </div>
+
+      <table tal:condition="python:wcount>0">
+
         <tr align="left">
           <th></th>
           <th i18n:translate="">cpstypes_widget_title</th>
@@ -76,10 +99,9 @@ actions['object'].append({'id':'delete_entry',
           <th i18n:translate="">cpstypes_widget_size</th>
           <th i18n:translate="">cpstypes_widget_max_repeats</th>
         </tr>
-        <tr tal:repeat="widget layoutob/objectValues">
+        <tr tal:repeat="widget widgets">
             <tal:block define="widgetname widget/getWidgetId;
-                               widgetid widget/getId;
-                               ">
+                               widgetid widget/getId;">
               <td>
                 <input type="hidden" name="widgetinfo.id:records" tal:attributes="value widgetid"/>
                 <input type="hidden" name="widgetinfo.name:records" tal:attributes="value widgetname"/>
@@ -89,10 +111,10 @@ actions['object'].append({'id':'delete_entry',
               <td tal:content="widget/meta_type" i18n:translate="" />
               <td>
                 <input type="text" size="10" name="widgetinfo.size:records"
-                  tal:attributes="value widget/size_max" 
+                  tal:attributes="value widget/size_max"
                   tal:condition="python:hasattr(widget, 'size_max')" />
                 <input type="hidden" name="widgetinfo.size:records"
-                  tal:attributes="value python:0" 
+                  tal:attributes="value python:0"
                   tal:condition="python:not hasattr(widget, 'size_max')" />
               </td>
               <td>
@@ -102,37 +124,17 @@ actions['object'].append({'id':'delete_entry',
             </tal:block>
           </tr>
       </table>
+
+      </tal:block>
+      <div class="typemaker_spaced"></div>
       <input type="submit" name="action_delete" value="button_delete" i18n:attributes="value" />
       <input type="submit" name="action_save" value="button_save" i18n:attributes="value" />
       <input type="hidden" name="layout_id" tal:attributes="value layoutid" />
-      <table>
-        <tr>
-          <th  align='left' i18n:translate="" colspan="2">cpstypes_add_new_widget</th>
-        </tr>
-        <tr>
-          <th align='right' i18n:translate="">cpstypes_widget_type</th>
-          <td>
-            <select name="new_widget_type">
-              <tal:block tal:repeat="widget widgets">
-              <option tal:attributes="value widget"
-                      tal:content="string:CPS ${widget}"
-                      tal:condition="python:wttool[widget].meta_type != 'CPS Compound Widget Type'" 
-                      i18n:translate="" />
-              </tal:block>
-            </select>
-          </td>
-          <td>
-            <input type="submit" name="action_add" value="button_add" i18n:attributes="value" />
-          <td>
-        </tr>
-        <tr>
-          <th align='right' i18n:translate="">cpstypes_widget_title</th>
-          <td>
-            <input type="text" name="new_widget_title" />
-          <td>
-        </tr>
-         
-      </table>
+
+
+      <metal:block use-macro="here/cpstypes_lib/macros/cpstm_addwidget"/>
+
+
     </form>
   </metal:block>
 </metal:block>

@@ -290,3 +290,150 @@ msgstr ""
 
 msgid "psm_changed"
 msgstr ""
+
+msgid "cpstypes_more"
+msgstr ""
+
+msgid "Format for empty list"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Display separator in view mode"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Label in view mode"
+msgstr ""
+
+msgid "Label in edit mode"
+msgstr ""
+
+msgid "Vocabulary"
+msgstr "Vocabulary"
+
+msgid "Is vocabulary translated on display ?"
+msgstr "Is vocabulary translated on display ?"
+
+msgid "Directory"
+msgstr "Directory"
+
+msgid "Optional directory used in view mode"
+msgstr ""
+
+msgid "Entry type"
+msgstr ""
+
+msgid "Skin name"
+msgstr ""
+
+msgid "Popup Mode"
+msgstr ""
+
+msgid "Maximum image size"
+msgstr ""
+
+msgid "Deletable ?"
+msgstr ""
+
+msgid "Display Width"
+msgstr ""
+
+msgid "Display Height"
+msgstr ""
+
+msgid "Can resize to lower size ?"
+msgstr ""
+
+msgid "Render position"
+msgstr ""
+
+msgid "What is user configurable, require extra fields"
+msgstr ""
+
+msgid "Maximum input width"
+msgstr ""
+
+msgid "Width"
+msgstr ""
+
+msgid "Height"
+msgstr ""
+
+msgid "Format for empty list"
+msgstr ""
+
+msgid "View format"
+msgstr ""
+
+msgid "Vocabulary is translated ?"
+msgstr ""
+
+msgid "View format empty"
+msgstr ""
+
+msgid "Use Javascript ?"
+msgstr ""
+
+msgid "View format (short, medium or long)"
+msgstr ""
+
+msgid "Enabling the setting of time of the day ?"
+msgstr ""
+
+msgid "default hour for time"
+msgstr ""
+
+msgid "default minutes for time"
+msgstr ""
+
+msgid "True label"
+msgstr ""
+
+msgid "False label"
+msgstr ""
+
+msgid "Maximum file size"
+msgstr ""
+
+msgid "Maximum size"
+msgstr ""
+
+msgid "Render format"
+msgstr ""
+
+msgid "cps_types_auto"
+msgstr ""
+
+msgid "cpstypes_widgethasrequiredfields"
+msgstr ""
+
+msgid "cpstypes_splitcell"
+msgstr ""
+
+msgid "cpstypes_moveleft"
+msgstr ""
+
+msgid "cpstypes_moveright"
+msgstr ""
+
+msgid "cpstypes_appendcell"
+msgstr ""
+
+msgid "cpstypes_availablefields"
+msgstr ""
+
+msgid "cpstypes_deletecell"
+msgstr ""
+
+msgid "cpstypes_editcell"
+msgstr ""
+
+msgid "cpstypes_publictype"
+msgstr ""
+
+msgid "cpstypes_widget_label"
+msgstr ""
