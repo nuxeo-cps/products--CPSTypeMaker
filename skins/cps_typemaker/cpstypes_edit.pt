@@ -57,6 +57,17 @@ actions['object'].append({'id':'delete_entry',
           <td><textarea cols=48 name="description" tal:content="typeob/description" /></td>
         </tr>
         <tr>
+          <th align='right' i18n:translate="">cpstypes_type_icon</th>
+          <td tal:define="images here/cpstypes_get_icons">
+            <tal:block repeat="image images">
+              <input type="radio" name="icon" 
+                tal:attributes="value image; 
+                                checked python:image == typeob.content_icon" />
+              <img tal:attributes="src image" />
+            </tal:block>
+          </td>
+        </tr>
+        <tr>
           <th align='right' i18n:translate="">cpstypes_type_is_flexible</th>
           <td tal:define="flexible_layout python:definitions['flexible_layout']">
             <input type="checkbox" name="is_flexible" 

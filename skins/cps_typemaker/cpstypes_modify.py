@@ -1,4 +1,4 @@
-##parameters=type_id, title, description, is_flexible=None, REQUEST=None, RESPONSE=None
+##parameters=type_id, title, description, icon, is_flexible=None, REQUEST=None, RESPONSE=None
 
 action = None
 for key in REQUEST.keys():
@@ -43,6 +43,7 @@ props['layouts'] = layouts
 props['schemas'] = schemas
 props['title'] = title
 props['description'] = description
+props['content_icon'] = icon
 
 type.manage_changeProperties(**props)
 

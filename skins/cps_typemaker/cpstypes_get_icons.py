@@ -1,4 +1,4 @@
-return ['dummy_icon.gif',
+return ['document_icon.gif',
         'attachedfile_icon.gif',
         'book_icon.gif',
         'event_icon.gif',
