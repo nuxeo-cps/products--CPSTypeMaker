@@ -1,5 +1,5 @@
 ##parameters=mode,datastructure
-## should be merged with the other script
+# should be merged with the other script
 
 if datastructure.has_key('directory_view'):
     value = datastructure['directory_view']
