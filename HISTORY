@@ -1,0 +1,28 @@
+*******************************************
+** CPSTypeMaker V1.1.0 [R1 build 2004/04/14-13:59 by regebro]
+
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+- You now can't delete a field if it's used in a layout.
+- Icons are now uploaded instead of selected from a list.
+- Many more settings are moved to definition file.
+- The workflow configuration now allow any number of sections and workspaces.
+- The add button in the type management screen now saves changes as well.
+- Widget types and field types are now translatable.
+- Full layout field ordering including columns.
+- French translation.
+Bug fixes:
+~~~~~~~~~~
+- A label is no longer displayed for fields in view_mode.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- 
+
+*******************************************
+** CPSTypeMaker V1.0.0 [R1 build 2004/04/09-15:40 by regebro]
+
+First Release.
+
