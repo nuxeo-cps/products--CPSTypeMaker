@@ -1,4 +1,4 @@
-##parameters=layout_id, new_field
+##parameters=layout_id, new_field, RESPONSE=None
 
 ltool = context.portal_layouts
 layout = ltool[layout_id]
@@ -13,4 +13,7 @@ layoutdef = layout.getLayoutDefinition()
 layoutdef['rows'].append([{'ncols': 1, 'widget_id': new_field}])
 layout.setLayoutDefinition(layoutdef)
 
-return context.cpstypes_view(type_id=layout_id)
+if RESPONSE:
+    return RESPONSE.redirect(context.portal_url() + '/cpstypes_edit?type_id='+layout_id)
+else:
+    return 'Updated'
