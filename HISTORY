@@ -1,4 +1,21 @@
 *******************************************
+** CPSTypeMaker V1.5.1 [R1 build 2004/12/17-10:38 by astefanescu]
+
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+-was not possible to change the icon associated with custom document 
+types; fixed
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
 ** CPSTypeMaker V1.5.0 [R1 build 2004/12/13-09:02 by madarche]
 
 Requires:
