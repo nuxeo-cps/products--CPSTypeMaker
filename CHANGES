@@ -6,7 +6,7 @@ New features:
 -
 Bug fixes:
 ~~~~~~~~~~
-- Added unquote to the allowed imports.
+- Removed unquote which is not needed.
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 -

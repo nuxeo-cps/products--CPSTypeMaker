@@ -1,5 +1,5 @@
 ##parameters=REQUEST, RESPONSE, type_id
-from urllib import quote, urlencode, unquote
+from urllib import quote
 from cgi import escape
 
 layout = context.portal_layouts[type_id]
