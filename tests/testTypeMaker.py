@@ -11,7 +11,7 @@
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-#
+#"
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
@@ -20,8 +20,7 @@
 
 """
 methods that should be unit tested here :
-    manage_pchangeProperties
-    manage_documentModified
+    manage_documentModified  ++++ need more tests
     manage_delWidget
     manage_flexibleModified
     manage_delLayout
@@ -86,14 +85,78 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
         # check layout count now (base layout + 10)
         count = tmaker_tool.getTypeLayoutCount(type_name)
 
-        self.assertEquals(count, 11)
+        self.assertEquals(count, 11)        
+               
+        """ seems like copy is not supported in test case
+        liste = range(10)
+        liste.reverse()        
+        for i in liste:
+            tmaker_tool.manage_delLayout(None, None, type_name, i+1)
 
-        ### a finir
-        #for i in range(10):
-        #    tmaker_tool.manage_delLayout(None, None, type_name, 1)
-
-        #self.assertEquals(count, 1)
-
+        self.assertEquals(count, 1)
+        """
+        
+    def testChangeProperties(self):
+        
+        tmaker_tool = self.portal.portal_typemaker
+        props = {}
+        props['multiple_layouts'] = True
+        props['flexible_aware'] = True
+        props['type_prefix'] = 'mes_types_'
+        
+        tmaker_tool.manage_pchangeProperties(REQUEST=props)
+        
+        self.assertEquals(tmaker_tool.multiple_layouts, True)        
+        self.assertEquals(tmaker_tool.flexible_aware, True)        
+        self.assertEquals(tmaker_tool.type_prefix, 'mes_types_')        
+        
+        self.testTypeAdding()
+        
+        
+        
+    def testChangeDocBaseProperties(self):
+        self.testTypeAdding()        
+        tmaker_tool = self.portal.portal_typemaker        
+        type_name = tmaker_tool.type_prefix + 'TotoroPowered'
+        tmaker_tool.manage_documentModified(type_id=type_name, is_addable=1,
+            title='totoro lifestyle', description='totoro rulez the word')
+        
+        # check results on type
+        type_tool = self.portal.portal_types        
+        type_factory = type_tool[type_name]
+        
+        self.assertEquals(type_factory.title, 'totoro lifestyle')
+        self.assertEquals(type_factory.description, 'totoro rulez the word')
+            
+        
+    def testaddDocElements(self):
+        self.testTypeAdding()        
+        
+        tmaker_tool = self.portal.portal_typemaker        
+        
+        action = 'add'        
+        type_name = tmaker_tool.type_prefix + 'TotoroPowered'
+        
+        # add 'empty widget'
+        tmaker_tool.manage_documentModified(type_id=type_name, action=action,
+          new_widget_title='T    otoro string widget',
+          new_widget_type='String Widget')
+          
+        # check results on type
+        type_layouts = self.portal.portal_layouts 
+        type_layout = type_layouts[type_name+'_1']
+        
+        found = False
+        for id, item in type_layout.objectItems():
+            if item.id == 'w__Totoro_string_widget':
+                found = True
+                self.assertEquals(item.title, 'Totoro string widget')    
+                break
+            
+        self.assertEquals(found, True)    
+        
+       
+            
 
 def test_suite():
     suites = [unittest.makeSuite(TestTypeMakerTool)]
