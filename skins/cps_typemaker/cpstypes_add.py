@@ -25,7 +25,6 @@ properties = {
     'cps_proxy_type': 'document',
     'schemas': ['metadata'],
     'layouts': [type_id],
-    'cps_section_wf': 'section_content_wf',
     }
 ti.manage_changeProperties(**properties)
 
