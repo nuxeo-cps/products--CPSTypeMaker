@@ -3,8 +3,9 @@
 
 defs = context.cpstypes_get_definitions()
 fieldid = widget.fields[0]
+schemas = [schema] + defs['metadata_schemas']
 
-for schemaid in (schema, 'metadata', defs['metadata_id']):
+for schemaid in schemas:
     schemaob = context.portal_schemas[schemaid]
     if schemaob.has_key(fieldid):
         return schemaob[fieldid]

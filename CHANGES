@@ -9,6 +9,8 @@ New features:
 - You can now uncheck the "Addable" setting, which will make the type
   not appear in any "New" lists.
 - You can now configure the actions for newly created types.
+- You can now change the name of the metadata layout, and you can specify
+  which schemas should be used for metadata.
 Bug fixes:
 ~~~~~~~~~~
 - "NoneType object has no attribute read" error under dr's MacOS X/Safari

@@ -16,7 +16,9 @@
       <h1 tal:content="expanded_title" />
     </metal:block>
     <metal:block fill-slot="main"
-      tal:define="prefix python:here.cpstypes_get_definitions()['type_prefix'];
+      tal:define="defs python:here.cpstypes_get_definitions();
+                  prefix defs/type_prefix;
+                  metadata_layout defs/metadata_layout;
                   items python:[item for item in here.portal_types.objectValues('CPS Flexible Type Information')
                                 if item.getId().startswith(prefix)];
                   mq nocall:modules/ZTUtils/make_query;
@@ -32,7 +34,7 @@
                      'name': 'cpstypes_add_type',
                      'category': 'object'},
                     {'id':'edit_metadata',
-                     'url':base_url+'cpstypes_edit?type_id=metadata',
+                     'url':base_url+'cpstypes_edit?type_id='+metadata_layout,
                      'name': 'cpstypes_edit_metadata',
                      'category': 'object'},
                      ]});

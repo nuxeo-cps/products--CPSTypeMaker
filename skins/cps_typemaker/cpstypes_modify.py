@@ -27,15 +27,10 @@ layout = context.portal_layouts[type_id]
 layoutdef = layout.getLayoutDefinition()
 defs = context.cpstypes_get_definitions()
 new_widget_id = makeId(new_widget_title)
-if type_id == 'metadata':
-    custom_metadata = context.cpstypes_get_definitions()['metadata_id']
-    schema = context.portal_schemas[custom_metadata]
-    metadata_schema = context.portal_schemas['metadata']
-else:
+if type_id != defs['metadata_layout']:
+    # When the metadata layout is edited, there is no type to manage
     ttool = context.portal_types
     type = ttool[type_id]
-    schema = context.portal_schemas[type_id]
-    metadata_schema = None
     for actype in defs['add_in_types']:
         typeobj = ttool[actype]
         workspaceACT = list(typeobj.allowed_content_types)
@@ -72,9 +67,20 @@ for each in widgetinfo:
     widgetid = each['id']
     is_selected = each.get('is_selected',0)
     widget = layout[widgetid]
+    if widget.fields != ['?']:
+        field = context.cpstypes_get_field(type_id, widget)
+        schemaid = field.aq_parent.getId()
+        if schemaid == 'metadata':
+            # Don't modify the special metadata schema
+            schema = None
+        else:
+            schema = context.portal_schemas[schemaid]
+    else:
+        field = None
+        schema = None
     
     if action == 'delete' and is_selected:    
-        if widget.fields != ['?'] and schema.has_key('f__' + widgetname):
+        if schema and schema.has_key('f__' + widgetname):
             schema.manage_delObjects('f__' + widgetname)
             for num in range(1, len(widget.getFieldTypes())):
                 schema.manage_delObjects('f__%s_f%d' % (widgetname, num))
@@ -93,8 +99,8 @@ for each in widgetinfo:
             kw['hidden_layout_modes'] = ['view']
 
         widget.manage_changeProperties(**kw)
-        field = context.cpstypes_get_field(type_id, widget)
-        field.manage_changeProperties(is_searchabletext=each.get('indexed', 0))
+        if field:
+            field.manage_changeProperties(is_searchabletext=each.get('indexed', 0))
         
 
 if action == 'add' and new_widget_id:
@@ -106,8 +112,23 @@ if action == 'add' and new_widget_id:
     layoutdef = layout.getLayoutDefinition()
     layoutdef['rows'].append([{'ncols': 1, 'widget_id': new_widget_id}])
 
-    if (metadata_schema is None 
-        or not metadata_schema.has_key('f__' + new_widget_id)):
+    try:
+        context.cpstypes_get_field(type_id, widget)
+    except AttributeError:
+        # The field does not exist. We should add it.
+        if type_id == defs['metadata_layout']:
+            schemaid = None
+            for each in defs['metadata_schemas']:
+                if each != 'metadata': # Skip the special 'metadata' schema
+                    schemaid = each
+                    break
+            if schemaid is None:
+                raise "Configuration includes no custom metadata schema."
+        else:
+            schemaid = type_id
+    schema = context.portal_schemas[schemaid]
+
+    if not schema.has_key('f__' + new_widget_id):
         field_types = widget.getFieldTypes()
         field_inits = widget.getFieldInits()
         i = 0
