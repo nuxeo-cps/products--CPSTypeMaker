@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
-"POT-Creation-Date: 2004-04-22 15:29default\n"
+"POT-Creation-Date: 2004-04-22 16:07default\n"
 "PO-Revision-Date: 2004-04-14 13:26+0200\n"
 "Last-Translator: emmanuel <epietriga@nuxeo.com>\n"
 "Language-Team: francais <fr@li.org>\n"
@@ -139,6 +139,10 @@ msgstr "Editer le type"
 msgid "cpstypes_edit_layout"
 msgstr "Editer la disposition"
 
+#, fuzzy
+msgid "cpstypes_edit_flexible"
+msgstr "Titre"
+
 msgid "Type management"
 msgstr "Gestion des types de documents"
 
@@ -238,6 +242,46 @@ msgstr "Image"
 msgid "CPS Photo Widget"
 msgstr "Photo"
 
+#, fuzzy
+msgid "CPS Boolean Widget"
+msgstr "Fichier"
+
+#, fuzzy
+msgid "CPS Directory Entry Widget"
+msgstr "Rich Text Editor"
+
+#, fuzzy
+msgid "CPS Directory MultiEntries Widget"
+msgstr "Liste à sélections multiples"
+
+#, fuzzy
+msgid "CPS Dummy Widget"
+msgstr "Date"
+
+#, fuzzy
+msgid "CPS ExtendedSelect Widget"
+msgstr "Liste à sélections multiples"
+
+#, fuzzy
+msgid "CPS Identifier Widget"
+msgstr "Entier"
+
+#, fuzzy
+msgid "CPS Method Widget"
+msgstr "Photo"
+
+#, fuzzy
+msgid "CPS Select Widget"
+msgstr "Liste à sélections multiples"
+
+#, fuzzy
+msgid "CPS Text Widget"
+msgstr "Zone de texte"
+
+#, fuzzy
+msgid "CPS URL Widget"
+msgstr "Entier long"
+
 #~ msgid "cpstypes_edit_schema"
 #~ msgstr "Editer le schema"
 
@@ -252,10 +296,6 @@ msgstr "Photo"
 
 #~ msgid "cpstypes_fields"
 #~ msgstr "Champs"
-
-#, fuzzy
-#~ msgid "cpstypes_widget_flexible"
-#~ msgstr "Titre"
 
 #~ msgid "cpstypes_widget_index"
 #~ msgstr "Indexer pour la recherche"
