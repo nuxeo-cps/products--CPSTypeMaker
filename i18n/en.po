@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: en\n"
-"POT-Creation-Date: 2004-04-22 16:07default\n"
+"POT-Creation-Date: 2004-04-22 17:18default\n"
 "PO-Revision-Date: 2004-04-13 14:31+0200\n"
 "Last-Translator: emmanuel <epietriga@nuxeo.com>\n"
 "Language-Team: francais <fr@li.org>\n"
@@ -85,6 +85,12 @@ msgstr "Title"
 msgid "cpstypes_widen_cell"
 msgstr "Widen Cell"
 
+#.   <th align="right">cpstypes_widget_id</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_widget_id"
+msgstr "Id"
+
 #.   <th>cpstypes_widget_max_repeats</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_max_repeats"
@@ -113,6 +119,7 @@ msgid "cpstypes_widget_title"
 msgstr "Title"
 
 #.   <th>cpstypes_widget_type</th>
+#.   <th align="right">cpstypes_widget_type</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_type"
@@ -293,6 +300,3 @@ msgstr "URL"
 
 #~ msgid "cpstypes_type_is_flexible"
 #~ msgstr "Flexible"
-
-#~ msgid "cpstypes_widget_id"
-#~ msgstr "Id"

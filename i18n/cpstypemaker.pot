@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-04-22 16:07default\n"
+"POT-Creation-Date: 2004-04-22 17:18default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -85,6 +85,12 @@ msgstr ""
 msgid "cpstypes_widen_cell"
 msgstr ""
 
+#.   <th align="right">cpstypes_widget_id</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_widget_id"
+msgstr ""
+
 #.   <th>cpstypes_widget_max_repeats</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_max_repeats"
@@ -113,6 +119,7 @@ msgid "cpstypes_widget_title"
 msgstr ""
 
 #.   <th>cpstypes_widget_type</th>
+#.   <th align="right">cpstypes_widget_type</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_type"
