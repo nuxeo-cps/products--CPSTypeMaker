@@ -194,12 +194,19 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             current_id = type_id + '_' + str(i+1)
             layout = portal_layouts[current_id]
             widget = layout[widget_id]
-            field = self.getFieldId(type_id, widget)
-            schemaid = field.aq_parent.getId()
-            if schemaid == 'metadata':
-                schema = None
+            try:
+                field = self.getFieldId(type_id, widget)
+            except AttributeError:
+                field = None
+
+            if field:
+                schemaid = field.aq_parent.getId()
+                if schemaid == 'metadata':
+                    schema = None
+                else:
+                    schema = portal_schemas[schemaid]
             else:
-                schema = portal_schemas[schemaid]
+                schema = None
 
             self._deleteWidget(layout, schema, widget, widget_id, widget_name)
 
@@ -388,11 +395,20 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
                     flexible_widgets.append(new_widget_id)
 
             layout.manage_changeProperties(flexible_widgets=flexible_widgets)
+
+            existing_layouts = typeob.flexible_layouts
+            current_layout = flex_id + ':' + flex_id
+
             if flexible_widgets:
-                typeob.manage_changeProperties(flexible_layouts=flex_id + ':' +
-                    flex_id)
+                if current_layout not in existing_layouts:
+                    existing_layouts.append(current_layout)
+                    #typeob.manage_changeProperties(flexible_layouts=existing_layouts)
+                    typeob.flexible_layouts = existing_layouts
             else:
-                typeob.manage_changeProperties(flexible_layouts='')
+                if current_layout in existing_layouts:
+                    del existing_layouts[current_layout]
+                    #typeob.manage_changeProperties(flexible_layouts=existing_layouts)
+                    typeob.flexible_layouts = existing_layouts
 
         if portal_status_message:
             portal_status_message = '\n'.join(portal_status_message)
@@ -534,56 +550,40 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             type_prefix = self.type_prefix
 
             ltool = getToolByName(self, 'portal_layouts')
+
             # does the layout exists ?
             ob_id = type_id + '_' + str(layout_index)
             if hasattr(ltool, ob_id):
                 # delete
                 ltool.manage_renameObject(ob_id, ob_id+'_del')
-
                 # let's rename next layouts
                 next_index = int(layout_index) + 1
                 while hasattr(ltool,type_id + '_' + str(next_index)):
                     old = type_id + '_' + str(next_index)
                     new = type_id + '_' + str(next_index-1)
-
-                    LOG('renaming', INFO, 'old: %s new %s' % (old, new))
-
                     ltool.manage_renameObject(old, new)
                     next_index += 1
-
                 ltool.manage_delObjects([ob_id+'_del'])
-
                 nothing_deleted = False
 
             # same work for flexibles
+            layout_type_id = type_id.replace(type_prefix,type_prefix + 'flexible_')
 
-            ob_id = type_id + '_' + str(layout_index)
-            ob_flex_id = ob_id.replace(type_prefix, type_prefix + 'flexible_')
-
-
-            if hasattr(ltool, ob_flex_id):
+            flex_ob_id = layout_type_id + '_fexible_' + str(layout_index)
+            if hasattr(ltool, flex_ob_id):
                 # delete
-                ob_or = ob_flex_id
-                ltool.manage_renameObject(ob_flex_id, ob_flex_id+'_del')
-
+                ltool.manage_renameObject(flex_ob_id, flex_ob_id+'_del')
                 # let's rename next layouts
                 next_index = int(layout_index) + 1
-                ob_id = type_id + '_' + str(next_index)
-                ob_flex_id = ob_id.replace(type_prefix, type_prefix + 'flexible_')
-                ob_old_id = type_id + '_' + str(next_index+1)
-                ob_old_flex_id = ob_old_id.replace(type_prefix, type_prefix + 'flexible_')
 
-                while hasattr(ltool, ob_flex_id):
-                    if hasattr(ltool, ob_old_flex_id):
-                        ltool.manage_renameObject(ob_old_flex_id, ob_flex_id)
+                while hasattr(ltool, layout_type_id + '_' + str(next_index)):
+                    old = layout_type_id + '_' +  str(next_index)
+                    new = layout_type_id + '_' +  str(next_index-1)
+                    ltool.manage_renameObject(old, new)
                     next_index += 1
-                    ob_id = type_id + '_' + str(next_index)
-                    ob_flex_id = ob_id.replace(type_prefix, type_prefix + 'flexible_')
-                    ob_old_id = type_id + '_' + str(next_index+1)
-                    ob_old_flex_id = ob_old_id.replace(type_prefix, type_prefix + 'flexible_')
 
-                # delete
-                ltool.manage_delObjects([ob_or+'_del'])
+                ltool.manage_delObjects([flex_ob_id+'_del'])
+
 
         if RESPONSE:
             Localizer = getToolByName(self, 'Localizer')
@@ -637,7 +637,8 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
             primary_layout = ltool[base_type_id]
             self._copyWidgets(primary_layout, layout)
-            primary_flx_layout = ltool[base_type_id]
+
+            primary_flx_layout = ltool[base_flex_id]
             self._copyWidgets(primary_flx_layout, flexlayout)
 
 
