@@ -2,10 +2,10 @@
   type_id request/type_id|options/type_id;
   primary_layout_id python:str(type_id)+'_1';
   delete_allowed python:0;
-  typeob here/portal_types/?type_id|nothing;
+  typeob python:here.portal_types[str(type_id)];
   title typeob/title|type_id;
   expanded_title title;
-  layoutob here/portal_layouts/?primary_layout_id;
+  layoutob python:here.portal_layouts[primary_layout_id];
   wttool here/portal_widget_types;
   tmakertool here/portal_typemaker;
   widgets python:tmakertool.listWidgetTypes(True);

@@ -7,10 +7,10 @@
   layout_max python:5;
   layout_id python:type_id+'_'+str(layout_index);
   delete_allowed python:0;
-  typeob here/portal_types/?type_id|nothing;
+  typeob python:here.portal_types[type_id] or nothing;
   title typeob/title|type_id;
   expanded_title title;
-  layoutob here/portal_layouts/?layout_id;
+  layoutob python:here.portal_layouts[layout_id];
   debug nothing;
   ">
 <metal:block use-macro="here/main_template/macros/master">
@@ -248,7 +248,7 @@ string:${here/portal_url}/portal_typemaker/manage_layoutModified?#table"
 
                                 <div class="typemaker_cellcontent">
                                     <metal:block tal:condition="python:widget_id in widgetids"
-                                       tal:define="widget_ob layoutob/?widget_id|nothing">
+                                       tal:define="widget_ob python:layoutob[widget_id] or nothing">
 
                                         <div tal:condition="widget_ob"
                                            tal:content="widget_ob/label_edit"/>
@@ -289,7 +289,7 @@ string:${here/portal_url}/portal_typemaker/manage_layoutModified?#table"
                         value=""/>
             </td>
 
-            <td tal:define="current_widget layoutob/?wid">
+            <td tal:define="current_widget python:layoutob[wid]">
                 <div class="typemaker_cell typemaker_LayoutCellDrag"
                         tal:define="ledit current_widget/label_edit|nothing">
 
