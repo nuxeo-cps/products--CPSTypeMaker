@@ -69,10 +69,10 @@ for each in widgetinfo:
                 if widget['widget_id'] != widgetname:
                     new_widgets.append(widget)
             if new_widgets:
-                new_rows.append(row)
+                new_rows.append(new_widgets)
         layoutdef['rows'] = new_rows
     else:
-        widget = layout[each['name']]
+        widget = layout[widgetid]
         widget.manage_changeProperties(label_edit=each['title'],
             is_required=each.get('required',0), size_max=each['size'])
 
@@ -87,10 +87,8 @@ if action == 'add' and new_field:
     layout.manage_addCPSWidget(new_field, wtype, **kw)
     layoutdef = layout.getLayoutDefinition()
     layoutdef['rows'].append([{'ncols': 1, 'widget_id': new_field}])
-    layout.setLayoutDefinition(layoutdef)
 
-
-if action in ('delete', 'add'):       
+if action in ('delete', 'add'):
     layout.setLayoutDefinition(layoutdef)
 
 return RESPONSE.redirect('cpstypes_edit?type_id='+type_id)
