@@ -53,4 +53,6 @@ return {'type_prefix': 'simpletype_', # The id prefix for TypeMaker types.
         'widget_list': None,
         'flexible_widget_list': None,
         'type_actions': None,
+        'immediate_view': 'cpsdocument_view',
+        'hidden_layout_modes': [],
        }       

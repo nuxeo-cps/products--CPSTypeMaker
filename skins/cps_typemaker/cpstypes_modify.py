@@ -96,9 +96,9 @@ for each in widgetinfo:
               'size_max': each['size']
              } 
         if each.get('show_in_view'):
-            kw['hidden_layout_modes'] = []
+            kw['hidden_layout_modes'] = defs['hidden_layout_modes']
         else:
-            kw['hidden_layout_modes'] = ['view']
+            kw['hidden_layout_modes'] = ['view']+defs['hidden_layout_modes']
 
         widget.manage_changeProperties(**kw)
         # Update indexing:

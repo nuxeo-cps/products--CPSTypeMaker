@@ -13,6 +13,7 @@ base_schemas = defs['base_schemas']
 add_in_types = defs['add_in_types']
 style_prefix = defs['style_prefix']
 type_actions = defs['type_actions']
+immediate_view = defs['immediate_view']
 
 type_id = prefix + id
 flex_id = prefix + 'flexible_' + id
@@ -32,7 +33,7 @@ properties = {
     'content_meta_type': 'CPS Document',
     'product': 'CPSDocument',
     'factory': 'addCPSDocument',
-    'immediate_view': 'cpsdocument_view',
+    'immediate_view': immediate_view,
     'global_allow': 1,
     'filter_content_types': 1,
     'allowed_content_types': (),
