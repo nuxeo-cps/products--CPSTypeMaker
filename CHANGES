@@ -6,6 +6,8 @@ New features:
 - Each field/widget now has a "Indexed" setting that turns on or off 
   field indexing in SearchableText.
 - You can now specify which widget types are allowed.
+- You can now uncheck the "Addable" setting, which will make the type
+  not appear in any "New" lists.
 Bug fixes:
 ~~~~~~~~~~
 - "NoneType object has no attribute read" error under dr's MacOS X/Safari

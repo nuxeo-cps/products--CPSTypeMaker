@@ -1,4 +1,4 @@
-##parameters=type_id, title=None, description=None, new_icon=None, widgetinfo=[], new_widget_title=None, new_widget_type=None, REQUEST=None, RESPONSE=None
+##parameters=type_id, title=None, description=None, new_icon=None, is_addable, widgetinfo=[], new_widget_title=None, new_widget_type=None, REQUEST=None, RESPONSE=None
 
 from Products.CPSCore.utils import makeId
 
@@ -32,29 +32,38 @@ if type_id == 'metadata':
     schema = context.portal_schemas[custom_metadata]
     metadata_schema = context.portal_schemas['metadata']
 else:
-    schema = context.portal_schemas[type_id]
-    metadata_schema = None
-
-if title is not None:
     ttool = context.portal_types
     type = ttool[type_id]
-
-    props = {}
-    for id, value in type.propertyItems():
-        props[id] = value
-
-    props['title'] = title
-    props['description'] = description
-
-    if new_icon and new_icon.read(1) != '':
-        new_icon.seek(0)
-        icon_id = type_id + '_icon' 
-        props['content_icon'] = icon_id
-        customskin = context.portal_skins.custom
-        if hasattr(customskin, icon_id):
-            customskin[icon_id].manage_upload(new_icon)
+    schema = context.portal_schemas[type_id]
+    metadata_schema = None
+    for actype in defs['add_in_types']:
+        typeobj = ttool[actype]
+        workspaceACT = list(typeobj.allowed_content_types)
+        if is_addable:
+            if type_id not in  workspaceACT:
+                workspaceACT.append(type_id)
         else:
-            customskin.manage_addFile(icon_id, new_icon, title)
+            if type_id in  workspaceACT:
+                workspaceACT.remove(type_id)
+        typeobj.manage_changeProperties(allowed_content_types = workspaceACT)
+
+    if title is not None:
+        props = {}
+        for id, value in type.propertyItems():
+            props[id] = value
+
+        props['title'] = title
+        props['description'] = description
+
+        if new_icon and new_icon.read(1) != '':
+            new_icon.seek(0)
+            icon_id = type_id + '_icon' 
+            props['content_icon'] = icon_id
+            customskin = context.portal_skins.custom
+            if hasattr(customskin, icon_id):
+                customskin[icon_id].manage_upload(new_icon)
+            else:
+                customskin.manage_addFile(icon_id, new_icon, title)
 
     type.manage_changeProperties(**props)
 

@@ -73,6 +73,11 @@ actions['object'].append({'id':'delete_entry',
                         tal:content="typeob/description" /></td>
         </tr>
         <tr>
+          <th align='right' i18n:translate="">cpstypes_type_is_addable</th>
+          <td><input type="checkbox" name="is_addable"
+                tal:attributes="checked python:here.cpstypes_is_addable(type_id)" /></td>
+        </tr>
+        <tr>
           <th align='right' i18n:translate="">cpstypes_type_icon</th>
           <td>
             <img tal:attributes="src string:${here/portal_url}/${typeob/content_icon}"

@@ -38,7 +38,7 @@
                      ]});
          ">
       <table width="100%" border="0" cellspacing="0" cellpadding="0"
-             tal:condition="python: batch_info['nb_pages'] > 1">
+             tal:condition="python:items and batch_info['nb_pages'] > 1">
         <tr class="even">
           <td align="right">
             <span i18n:translate="">
