@@ -25,4 +25,4 @@ for info in fieldinfo:
 if RESPONSE:
     return RESPONSE.redirect(context.portal_url() + '/cpstypes_schema_edit')
 else:
-    return updated
+    return 'Updated'
