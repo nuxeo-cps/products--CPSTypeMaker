@@ -3,7 +3,11 @@ Requires:
 -
 New features:
 ~~~~~~~~~~~~~
+- WYSIWYG Layout editor with drag'n'drop capabilities
+- Fields can now be configured
+- Handle multiple layouts for a single type
 -
+
 Bug fixes:
 ~~~~~~~~~~
 -
