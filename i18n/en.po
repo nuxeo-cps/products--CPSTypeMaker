@@ -43,7 +43,6 @@ msgstr "Delete Cell"
 
 #.   <h3>cpstypes_flexible_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
-#, fuzzy
 msgid "cpstypes_flexible_widgets"
 msgstr "Widgets"
 
@@ -88,9 +87,8 @@ msgstr "Widen Cell"
 
 #.   <th>cpstypes_widget_max_repeats</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
-#, fuzzy
 msgid "cpstypes_widget_max_repeats"
-msgstr "Type"
+msgstr "Max repeats"
 
 #.   <th>cpstypes_widget_required</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
@@ -128,15 +126,17 @@ msgstr "Widgets"
 msgid "cpstypes_add_type"
 msgstr "Add new type"
 
-#, fuzzy
 msgid "cpstypes_edit_metadata"
-msgstr "Edit Layout"
+msgstr "Edit Metadata"
 
 msgid "cpstypes_edit_type"
 msgstr "Edit Type"
 
 msgid "cpstypes_edit_layout"
 msgstr "Edit Layout"
+
+msgid "cpstypes_edit_flexible"
+msgstr "Edit Flexible Widgets"
 
 msgid "Type management"
 msgstr "Document type management"
