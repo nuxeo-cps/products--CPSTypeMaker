@@ -97,7 +97,8 @@ actions['object'].append({'id':'delete_entry',
               <td>
                 <input type="hidden" name="widgetinfo.id:records" tal:attributes="value widgetid"/>
                 <input type="hidden" name="widgetinfo.name:records" tal:attributes="value widgetname"/>
-                <input type="checkbox" name="widgetinfo.is_selected:records"/>
+                <input type="checkbox" name="widgetinfo.is_selected:records"
+                  tal:condition="python:widgetname not in ('Title', 'Description')" />
               </td>
               <td tal:content="python:widget.fields[0]" />
               <td><input type="text" size=20 name="widgetinfo.title:records" tal:attributes="value widget/label" /></td>
