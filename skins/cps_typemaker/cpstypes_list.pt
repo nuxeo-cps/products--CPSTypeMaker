@@ -31,9 +31,9 @@
                      'url':base_url+'cpstypes_add_form',
                      'name': 'cpstypes_add_type',
                      'category': 'object'},
-                    {'id':'edit_schema',
-                     'url':base_url+'cpstypes_schema_edit',
-                     'name': 'cpstypes_edit_schema',
+                    {'id':'edit_metadata',
+                     'url':base_url+'cpstypes_edit?type_id=metadata',
+                     'name': 'cpstypes_edit_metadata',
                      'category': 'object'},
                      ]});
          ">

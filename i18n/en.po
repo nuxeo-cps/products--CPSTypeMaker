@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: en\n"
-"POT-Creation-Date: 2004-04-14 13:13default\n"
+"POT-Creation-Date: 2004-04-21 17:16default\n"
 "PO-Revision-Date: 2004-04-13 14:31+0200\n"
 "Last-Translator: emmanuel <epietriga@nuxeo.com>\n"
 "Language-Team: francais <fr@li.org>\n"
@@ -19,8 +19,8 @@ msgstr ""
 "Domain: default\n"
 "X-Generator: KBabel 1.3.1\n"
 
-#.   <input value="button_save" name="action_save" type="submit" />
-#.   <input value="button_save" name="action_save" type="submit">
+#.   <input type="submit" name="action_save" value="button_save" />
+#.   <input type="submit" name="action_save" value="button_save">
 #.       </input>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_schema_edit.pt
@@ -32,17 +32,17 @@ msgstr "Save"
 msgid "cpstypes_add_new_field"
 msgstr "Add new field"
 
-#.   <th>cpstypes_add_new_widget</th>
+#.   <th colspan="2" align="left">cpstypes_add_new_widget</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_add_new_widget"
 msgstr "Add new widget"
 
-#.   <input value="cpstypes_add_row" name="addrow" type="submit" />
+#.   <input type="submit" name="addrow" value="cpstypes_add_row" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_add_row"
 msgstr "Add Row"
 
-#.   <input value="cpstypes_delete_cell" name="delcell" type="submit" />
+#.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_delete_cell"
 msgstr "Delete Cell"
@@ -72,12 +72,12 @@ msgstr "Fields"
 msgid "cpstypes_label_add_type"
 msgstr "Add type"
 
-#.   <input value="cpstypes_shrink_cell" name="shrinkcell" type="submit" />
+#.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_shrink_cell"
 msgstr "Shrink Cell"
 
-#.   <input value="cpstypes_split_cell" name="splitcell" type="submit" />
+#.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_split_cell"
 msgstr "Split Cell"
@@ -95,31 +95,21 @@ msgstr "Description"
 msgid "cpstypes_type_icon"
 msgstr "Icon"
 
-#.   <th align="right">cpstypes_type_id</th>
-#: from ../skins/cps_typemaker/cpstypes_add_form.pt
-msgid "cpstypes_type_id"
-msgstr "Id"
-
-#.   <th align="right">cpstypes_type_is_flexible</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-msgid "cpstypes_type_is_flexible"
-msgstr "Flexible"
-
 #.   <th align="right">cpstypes_type_title</th>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_type_title"
 msgstr "Title"
 
-#.   <input value="cpstypes_widen_cell" name="widencell" type="submit" />
+#.   <input type="submit" name="widencell" value="cpstypes_widen_cell" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_widen_cell"
 msgstr "Widen Cell"
 
-#.   <th>cpstypes_widget_id</th>
+#.   <th>cpstypes_widget_flexible</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
-msgid "cpstypes_widget_id"
-msgstr "Id"
+msgid "cpstypes_widget_flexible"
+msgstr "Is Flexible"
 
 #.   <th>cpstypes_widget_index</th>
 #: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
@@ -130,6 +120,11 @@ msgstr "Index for search"
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widget_required"
 msgstr "Is Required"
+
+#.   <th>cpstypes_widget_show_in_view</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_widget_show_in_view"
+msgstr "Show in view mode"
 
 #.   <th>cpstypes_widget_size</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
@@ -259,3 +254,12 @@ msgstr "Image"
 
 msgid "CPS Photo Widget"
 msgstr "Photo"
+
+#~ msgid "cpstypes_type_id"
+#~ msgstr "Id"
+
+#~ msgid "cpstypes_type_is_flexible"
+#~ msgstr "Flexible"
+
+#~ msgid "cpstypes_widget_id"
+#~ msgstr "Id"

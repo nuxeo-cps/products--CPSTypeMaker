@@ -28,10 +28,6 @@
     <form method="post" action="cpstypes_add">
       <table>
         <tr>
-          <th align='right' i18n:translate="">cpstypes_type_id</th>
-          <td><input type="text" size=20 name="id"></td>
-        </tr>
-        <tr>
           <th align='right' i18n:translate="">cpstypes_type_title</th>
           <td><input type="text" size=50 name="title"></td>
         </tr>

@@ -4,11 +4,11 @@
   validate python: request.has_key('cpsdirectory_entry_edit_form');
   edit_request python: validate and request or nothing;
   delete_allowed python:0;
-  typeob here/portal_types/?type_id;
+  typeob here/portal_types/?type_id|nothing;
   title typeob/title|type_id;
   expanded_title title;
   base_layouts definitions/base_layouts;
-  layoutid python:typeob.layouts[len(base_layouts)];
+  layoutid python:typeob and typeob.layouts[len(base_layouts)] or type_id;
   layoutob here/portal_layouts/?layoutid;
   debug nothing;
   ">
@@ -28,7 +28,7 @@
                           'longtitle': title,
                           'title': title,
                         }]);
-                       actions python:actions.update({'object': [
+                       actionlist python:[
                          {'id':'edit_type',
                           'url':base_url+'cpstypes_edit?type_id='+type_id,
                           'name': 'cpstypes_edit_type',
@@ -36,9 +36,15 @@
                          {'id':'edit_layout',
                           'url':base_url+'cpstypes_layout_edit?type_id='+type_id,
                           'name': 'cpstypes_edit_layout',
-                          'category': 'object'},
-                         ]});"                       
-     />
+                          'category': 'object'}];
+                       flexible_action python:[
+                         {'id':'edit_flexible',
+                          'url':base_url+'cpstypes_edit_flexible?type_id='+type_id,
+                          'name': 'cpstypes_edit_flexible',
+                          'category': 'object'}];
+                       actionlist python:typeob and actionlist + flexible_action or actionlist;
+                       actions python:actions.update({'object': actionlist});
+     "/>
     <tal:block condition="delete_allowed">
       <tal:block define="global actions python:
 actions['object'].append({'id':'delete_entry',

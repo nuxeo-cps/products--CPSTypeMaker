@@ -4,12 +4,13 @@
   validate python: request.has_key('cpsdirectory_entry_edit_form');
   edit_request python: validate and request or nothing;
   delete_allowed python:0;
-  typeob here/portal_types/?type_id|nothing;
+  typeob here/portal_types/?type_id;
   title typeob/title|type_id;
   expanded_title title;
   base_layouts definitions/base_layouts;
-  layoutid python:typeob and typeob.layouts[len(base_layouts)] or type_id;
+  layoutid python:typeob.layouts[len(base_layouts) + 1];
   layoutob here/portal_layouts/?layoutid;
+  widgetinfo layoutob/getFlexibleWidgetsDict;
   wttool here/portal_widget_types;
   debug nothing;
   ">
@@ -64,34 +65,16 @@ actions['object'].append({'id':'delete_entry',
   </metal:block>
 
   <metal:block fill-slot="main">
-    <form method="post" action="cpstypes_modify" enctype="multipart/form-data">
+    <form method="post" action="cpstypes_modify_flexible" enctype="multipart/form-data">
       <input type="hidden" name="type_id" tal:attributes="value type_id">
-      <table tal:condition="typeob">
-        <tr>
-          <th align='right' i18n:translate="">cpstypes_type_title</th>
-          <td><input type="text" size=50 name="title" tal:attributes="value typeob/title"></td>
-        </tr>
-        <tr>
-          <th align='right' i18n:translate="">cpstypes_type_description</th>
-          <td><textarea cols=48 name="description" tal:content="typeob/description" /></td>
-        </tr>
-        <tr>
-          <th align='right' i18n:translate="">cpstypes_type_icon</th>
-          <td>
-            <img tal:attributes="src string:${here/portal_url}/${typeob/content_icon}" />
-            <input type="file" name="new_icon" />
-          </td>
-        </tr>
-      </table>
-      <h3 i18n:translate="">cpstypes_widgets</h3>
+      <h3 i18n:translate="">cpstypes_flexible_widgets</h3>
       <table>
         <tr align="left">
           <th></th>
           <th i18n:translate="">cpstypes_widget_title</th>
           <th i18n:translate="">cpstypes_widget_type</th>
           <th i18n:translate="">cpstypes_widget_size</th>
-          <th i18n:translate="">cpstypes_widget_required</th>
-          <th i18n:translate="">cpstypes_widget_show_in_view</th>
+          <th i18n:translate="">cpstypes_widget_max_repeats</th>
         </tr>
         <tr tal:repeat="widget layoutob/objectValues">
             <tal:block define="widgetname widget/getWidgetId;
@@ -112,11 +95,9 @@ actions['object'].append({'id':'delete_entry',
                   tal:attributes="value python:0" 
                   tal:condition="python:not hasattr(widget, 'size_max')" />
               </td>
-              <td><input type="checkbox" name="widgetinfo.required:records"
-                tal:attributes="checked widget/is_required" />
-              </td>
-              <td><input type="checkbox" name="widgetinfo.show_in_view:records"
-                tal:attributes="checked python:'view' not in widget.hidden_layout_modes" />
+              <td>
+                <input type="text" size=1 name="widgetinfo.repeats:records"
+                  tal:attributes="value widgetinfo/?widgetname" />
               </td>
             </tal:block>
           </tr>
