@@ -164,6 +164,20 @@ input.typemaker_append_bt
     vertical-align : middle;
 }
 
+input.typemaker_deletecomp_bt
+{
+    height: 16px;
+    width: 16px;
+    border: none;
+    cursor: hand;
+    background-image : url(button_delete.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    vertical-align : middle;
+}
+
+
+
 .typemaker_av_fields
 {
   margin-top: 8px;
@@ -344,6 +358,7 @@ div.typemaker_liner
   float: right;
   vertical-align: top;
   margin-top: 2px;
+  margin-right: 2px;
 }
 
 .typemaker_empty_layout
