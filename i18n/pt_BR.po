@@ -1,0 +1,286 @@
+# translation of en.po to francais
+# Gettext Message File for default.
+# Your Name <your@email>, Year
+# emmanuel <epietriga@nuxeo.com>, 2004.
+msgid ""
+msgstr ""
+"Project-Id-Version: pt-BR\n"
+"POT-Creation-Date: 2004-07-02 15:22default\n"
+"PO-Revision-Date: 2004-09-08 16:23-0300\n"
+"Last-Translator: Mario Olimpio de Menezes <mario@curiango.ipen.br>\n"
+"Language-Team: Portugues do Brasil <pt@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#.   <input type="submit" name="action_save" value="button_save" />
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "button_save"
+msgstr "Salvar"
+
+#.   <th colspan="2" align="left">cpstypes_add_new_widget</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_add_new_widget"
+msgstr "Adicionar um novo widget"
+
+#.   <input type="submit" name="addrow" value="cpstypes_add_row" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_add_row"
+msgstr "Adicionar linha"
+
+#.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_delete_cell"
+msgstr "Remover célula"
+
+#.   <th>cpstypes_field_indexed</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_field_indexed"
+msgstr "Indexado"
+
+#.   <h3>cpstypes_flexible_widgets</h3>
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_flexible_widgets"
+msgstr "Widgets"
+
+#.   <h1>cpstypes_label_add_type</h1>
+#: from ../skins/cps_typemaker/cpstypes_add_form.pt
+msgid "cpstypes_label_add_type"
+msgstr "Adicionar um tipo"
+
+#.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_shrink_cell"
+msgstr "Encolher célula"
+
+#.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_split_cell"
+msgstr "Dividir célula"
+
+#.   <th align="right">cpstypes_type_description</th>
+#.   <small content="item/description">cpstypes_type_description</small>
+#: from ../skins/cps_typemaker/cpstypes_add_form.pt
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_list.pt
+msgid "cpstypes_type_description"
+msgstr "Descrição"
+
+#.   <th align="right">cpstypes_type_icon</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_type_icon"
+msgstr "Ícone"
+
+#.   <th align="right">cpstypes_type_is_addable</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_type_is_addable"
+msgstr "Disponível para uso"
+
+#.   <th align="right">cpstypes_type_title</th>
+#: from ../skins/cps_typemaker/cpstypes_add_form.pt
+#: ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_type_title"
+msgstr "Título"
+
+#.   <input type="submit" name="widencell" value="cpstypes_widen_cell" />
+#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_widen_cell"
+msgstr "Alargar célula"
+
+#.   <th>cpstypes_widget_max_repeats</th>
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_widget_max_repeats"
+msgstr "Num. máximo de repetições"
+
+#.   <th>cpstypes_widget_required</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_widget_required"
+msgstr "É requerido"
+
+#.   <th>cpstypes_widget_show_in_view</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_widget_show_in_view"
+msgstr "Mostrar no modo visualização"
+
+#.   <th>cpstypes_widget_size</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_widget_size"
+msgstr "Tamanho"
+
+#.   <th>cpstypes_widget_title</th>
+#.   <th align="right">cpstypes_widget_title</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_widget_title"
+msgstr "Título"
+
+#.   <th>cpstypes_widget_type</th>
+#.   <th align="right">cpstypes_widget_type</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_widget_type"
+msgstr "Tipo"
+
+#.   <h3>cpstypes_widgets</h3>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_widgets"
+msgstr "Widgets"
+
+msgid "cpstypes_add_type"
+msgstr "Adicionar um novo tipo"
+
+msgid "cpstypes_edit_metadata"
+msgstr "Editar metadados"
+
+msgid "cpstypes_edit_type"
+msgstr "Editar tipo"
+
+msgid "cpstypes_edit_layout"
+msgstr "Editar layout"
+
+msgid "cpstypes_edit_flexible"
+msgstr "Editar widgets flexíveis"
+
+msgid "Type management"
+msgstr "Administração do tipo de documento"
+
+msgid "CPS String List Field"
+msgstr "Lista de cadeia de caracteres."
+
+msgid "CPS Float Field"
+msgstr "Ponto flutuante"
+
+msgid "CPS File Field"
+msgstr "Arquivo"
+
+msgid "CPS Image Field"
+msgstr "Imagem"
+
+msgid "CPS String Field"
+msgstr "Cadeia de caracteres"
+
+msgid "CPS DateTime Field"
+msgstr "Data Hora"
+
+msgid "CPS Password Field"
+msgstr "Senha"
+
+msgid "CPS Int Field"
+msgstr "Inteiro"
+
+msgid "CPS Long Field"
+msgstr "Longo"
+
+msgid "CPS MultiSelect Widget"
+msgstr "MultiSeleção"
+
+msgid "CPS Lines Widget"
+msgstr "Linhas"
+
+msgid "CPS Ordered List Widget"
+msgstr "Lista ordenada"
+
+msgid "CPS Unordered List Widget"
+msgstr "Lista não ordenada"
+
+msgid "CPS String Widget"
+msgstr "Cadeia de caracteres"
+
+msgid "CPS TextArea Widget"
+msgstr "Área de texto"
+
+msgid "CPS Email Widget"
+msgstr "Email"
+
+msgid "CPS Heading Widget"
+msgstr "Título principal"
+
+msgid "CPS Rich Text Editor Widget"
+msgstr "Editor de Rich Text"
+
+msgid "CPS InternalLinks Widget"
+msgstr "Links internos"
+
+msgid "CPS Link Widget"
+msgstr "Link"
+
+msgid "CPS Html Widget"
+msgstr "Html"
+
+msgid "CPS DateTime Widget"
+msgstr "Data/hora"
+
+msgid "CPS Date Widget"
+msgstr "Data"
+
+msgid "CPS Password Widget"
+msgstr "Senha"
+
+msgid "CPS Int Widget"
+msgstr "Inteiro"
+
+msgid "CPS CheckBox Widget"
+msgstr "Caixa de seleção"
+
+msgid "CPS Long Widget"
+msgstr "Longo"
+
+msgid "CPS Float Widget"
+msgstr "Ponto Flutuante"
+
+msgid "CPS AttachedFile Widget"
+msgstr "Arquivo Anexado"
+
+msgid "CPS File Widget"
+msgstr "Arquivo"
+
+msgid "CPS Image Widget"
+msgstr "Imagem"
+
+msgid "CPS Photo Widget"
+msgstr "Foto"
+
+msgid "CPS Boolean Widget"
+msgstr "Booleano"
+
+msgid "CPS Directory Entry Widget"
+msgstr "Entrada de Diretório"
+
+msgid "CPS Directory MultiEntries Widget"
+msgstr "Múltiplas entradas de diretório"
+
+msgid "CPS Dummy Widget"
+msgstr "Fictício"
+
+msgid "CPS ExtendedSelect Widget"
+msgstr "Seleção estendida"
+
+msgid "CPS Identifier Widget"
+msgstr "Identificador"
+
+msgid "CPS Method Widget"
+msgstr "Método"
+
+msgid "CPS Select Widget"
+msgstr "Seleção"
+
+msgid "CPS Text Widget"
+msgstr "Texto"
+
+msgid "CPS URL Widget"
+msgstr "URL"
+
+msgid "type_already_exists"
+msgstr "Um tipo com este nome já existe"
+
+msgid "field_already_exists"
+msgstr "Um campo com este nome já existe"
+
+msgid "psm_duplicate_widgets"
+msgstr "Atenção, widgets duplicados:"
+
+msgid "psm_changed"
+msgstr "Mudado."
