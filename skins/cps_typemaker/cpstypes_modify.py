@@ -40,5 +40,5 @@ for each in widgetinfo:
 if action in ('delete',):       
     layout.setLayoutDefinition(layoutdef)
 
-return RESPONSE.redirect('cpstypes_view?type_id='+layoutid)
+return RESPONSE.redirect('cpstypes_edit?type_id='+layoutid)
     

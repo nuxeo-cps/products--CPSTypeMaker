@@ -21,7 +21,7 @@
                          },
                          {
                           'id': 'types',
-                          'url': here.portal_url()+'/cpstypes_view?type_id='+type_id,
+                          'url': here.portal_url()+'/cpstypes_edit?type_id='+type_id,
                           'longtitle': title,
                           'title': title,
                         }]);" />
