@@ -3,7 +3,13 @@ Requires:
 -
 New features:
 ~~~~~~~~~~~~~
--
+- WYSIWYG Layout editor with drag'n'drop capabilities
+- Fields can now be configured
+- Handle multiple layouts for a single type
+- General configuration screens added
+- Added Widget filtering capabilities
+- Added Field widget hidd capabilities
+
 Bug fixes:
 ~~~~~~~~~~
 -
