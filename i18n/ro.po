@@ -1,76 +1,310 @@
+# translation of ro.po to 
 # ##########################################################
 # ################# DON'T EDIT THIS FILE! ##################
 # ##########################################################
 # Gettext Message File for default.
 # Your Name <your@email>, Year
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
+# , 2005.
 msgid ""
 msgstr ""
-"Project-Id-Version: default\n"
+"Project-Id-Version: ro\n"
 "POT-Creation-Date: 2004-07-02 15:22default\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Your Name <your@email>\n"
-"Language-Team: Name <email>\n"
+"PO-Revision-Date: 2005-04-04 17:02+0300\n"
+"Last-Translator: \n"
+"Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-code: ro\n"
 "Language-name: Romanian\n"
 "Preferred-encodings: utf-8 latin1\n"
 "Domain: default\n"
+"X-Generator: KBabel 1.9.1\n"
 
 msgid "cpstypes_configuretool"
-msgstr ""
+msgstr "Configuratia generala a Type Maker-ului"
 
 msgid "cpstypes_documentlist"
-msgstr ""
+msgstr "Tipuri de documente"
 
 #.   <input type="submit" name="action_save" value="button_save" />
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "button_save"
-msgstr ""
+msgstr "Salveaza"
 
 #.   <th colspan="2" align="left">cpstypes_add_new_widget</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_add_new_widget"
-msgstr ""
+msgstr "Adauga un nou widget"
 
 #.   <input type="submit" name="addrow" value="cpstypes_add_row" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_add_row"
-msgstr ""
+msgstr "Adauga un rand"
 
 #.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_delete_cell"
-msgstr ""
+msgstr "Sterge o celula"
 
 #.   <th>cpstypes_field_indexed</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_field_indexed"
-msgstr ""
+msgstr "Indexat"
 
 #.   <h3>cpstypes_flexible_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_flexible_widgets"
-msgstr ""
+msgstr "Widget-uri"
 
 #.   <h1>cpstypes_label_add_type</h1>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 msgid "cpstypes_label_add_type"
-msgstr ""
+msgstr "Adauga un tip de document"
 
 #.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_shrink_cell"
-msgstr ""
+msgstr "Micsoreaza celula"
 
 #.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_split_cell"
-msgstr ""
+msgstr "Scindeaza celula"
 
 #.   <th align="right">cpstypes_type_description</th>
 #.   <small content="item/description">cpstypes_type_description</small>
@@ -78,565 +312,566 @@ msgstr ""
 #: ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
-msgstr ""
+msgstr "Descriere"
 
 #.   <th align="right">cpstypes_type_icon</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_type_icon"
-msgstr ""
+msgstr "Imagine"
 
 #.   <th align="right">cpstypes_type_is_addable</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_type_is_addable"
-msgstr ""
+msgstr "Disponibil pentru utilizator"
 
 #.   <th align="right">cpstypes_type_title</th>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_type_title"
-msgstr ""
+msgstr "Titlu"
 
 #.   <input type="submit" name="widencell" value="cpstypes_widen_cell" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_widen_cell"
-msgstr ""
+msgstr "Mareste celula"
 
 #.   <th>cpstypes_widget_max_repeats</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_max_repeats"
-msgstr ""
+msgstr "Numar maxim de repetari"
 
 #.   <th>cpstypes_widget_required</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widget_required"
-msgstr ""
+msgstr "Camp obligatoriu"
 
 #.   <th>cpstypes_widget_show_in_view</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widget_show_in_view"
-msgstr ""
+msgstr "Arata in modul vizualizare "
 
 #.   <th>cpstypes_widget_size</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_size"
-msgstr ""
+msgstr "Marime"
 
 #.   <th>cpstypes_widget_title</th>
 #.   <th align="right">cpstypes_widget_title</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_title"
-msgstr ""
+msgstr "Titlu"
 
 #.   <th>cpstypes_widget_type</th>
 #.   <th align="right">cpstypes_widget_type</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_type"
-msgstr ""
+msgstr "Tip"
 
 #.   <h3>cpstypes_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widgets"
-msgstr ""
+msgstr "Widgets"
 
 msgid "cpstypes_add_type"
-msgstr ""
+msgstr "Adauga un nou tip"
 
 msgid "cpstypes_edit_metadata"
-msgstr ""
+msgstr "Editeaza metadata"
 
 msgid "cpstypes_edit_type"
-msgstr ""
+msgstr "Editeaza tipul"
 
 msgid "cpstypes_edit_layout"
-msgstr ""
+msgstr "Editeaza dispunerea (Layout-ul)"
 
 msgid "cpstypes_edit_flexible"
-msgstr ""
+msgstr "Editeaza widget-urile flexibile"
 
 msgid "Type management"
-msgstr ""
+msgstr "Administreaza tipurile de documente"
 
 msgid "CPS String List Field"
-msgstr ""
+msgstr "Lista de caractere"
 
 msgid "CPS Float Field"
-msgstr ""
+msgstr "Numar flotant"
 
 msgid "CPS File Field"
-msgstr ""
+msgstr "Fisier"
 
 msgid "CPS Image Field"
-msgstr ""
+msgstr "Imagine"
 
 msgid "CPS String Field"
-msgstr ""
+msgstr "Sir de caractere"
 
 msgid "CPS DateTime Field"
-msgstr ""
+msgstr "Data si Ora"
 
 msgid "CPS Password Field"
-msgstr ""
+msgstr "Parola"
 
 msgid "CPS Int Field"
-msgstr ""
+msgstr "Numar intreg"
 
 msgid "CPS Long Field"
-msgstr ""
+msgstr "Numar intreg (lung)"
 
 msgid "CPS MultiSelect Widget"
-msgstr ""
+msgstr "Lista de selectii multiple"
 
 msgid "CPS Lines Widget"
-msgstr ""
+msgstr "Linii"
 
 msgid "CPS Ordered List Widget"
-msgstr ""
+msgstr "Lista ordonata"
 
 msgid "CPS Unordered List Widget"
-msgstr ""
+msgstr "Lista neordonata"
 
 msgid "CPS String Widget"
-msgstr ""
+msgstr "Sir de caractere"
 
 msgid "CPS TextArea Widget"
-msgstr ""
+msgstr "Zona de text"
 
 msgid "CPS Email Widget"
-msgstr ""
+msgstr "Email"
 
 msgid "CPS Heading Widget"
-msgstr ""
+msgstr "Titlu"
 
 msgid "CPS Rich Text Editor Widget"
-msgstr ""
+msgstr "Editor HTML"
 
 msgid "CPS InternalLinks Widget"
-msgstr ""
+msgstr "Legaturi interne"
 
 msgid "CPS Link Widget"
-msgstr ""
+msgstr "Legatura"
 
 msgid "CPS Html Widget"
-msgstr ""
+msgstr "Html"
 
 msgid "CPS DateTime Widget"
-msgstr ""
+msgstr "Data/Ora"
 
 msgid "CPS Date Widget"
-msgstr ""
+msgstr "Data"
 
 msgid "CPS Password Widget"
-msgstr ""
+msgstr "Parola"
 
 msgid "CPS Int Widget"
-msgstr ""
+msgstr "Intreg"
 
 msgid "CPS CheckBox Widget"
-msgstr ""
+msgstr "CheckBox"
 
 msgid "CPS Long Widget"
-msgstr ""
+msgstr "Intreg Lung"
 
 msgid "CPS Float Widget"
-msgstr ""
+msgstr "Flotant"
 
 msgid "CPS AttachedFile Widget"
-msgstr ""
+msgstr "Fisier Atasat"
 
 msgid "CPS File Widget"
-msgstr ""
+msgstr "Fisier"
 
 msgid "CPS Image Widget"
-msgstr ""
+msgstr "Imagine"
 
 msgid "CPS Photo Widget"
-msgstr ""
+msgstr "Foto"
 
 msgid "CPS Boolean Widget"
-msgstr ""
+msgstr "Boolean"
 
 msgid "CPS Directory Entry Widget"
-msgstr ""
+msgstr "Intrare director"
 
 msgid "CPS Directory MultiEntries Widget"
-msgstr ""
+msgstr "Intrari multiple ale directorului"
 
 msgid "CPS Dummy Widget"
-msgstr ""
+msgstr "Dummy"
 
 msgid "CPS ExtendedSelect Widget"
-msgstr ""
+msgstr "Lista de alegeri extinsa"
 
 msgid "CPS Identifier Widget"
-msgstr ""
+msgstr "Identificator"
 
 msgid "CPS Method Widget"
-msgstr ""
+msgstr "Metoda"
 
 msgid "CPS Select Widget"
-msgstr ""
+msgstr "Lista de selectii"
 
 msgid "CPS Text Widget"
-msgstr ""
+msgstr "Text"
 
 msgid "CPS URL Widget"
-msgstr ""
+msgstr "URL"
 
 msgid "type_already_exists"
-msgstr ""
+msgstr "Acest identificator de tip este deja utilizat."
 
 msgid "field_already_exists"
-msgstr ""
+msgstr "Acest identificator de camp este deja utilizat."
 
 msgid "psm_duplicate_widgets"
-msgstr ""
+msgstr "Atentie, ai selectionat de prea multe ori acelasi widget."
 
 msgid "psm_changed"
-msgstr ""
+msgstr "Modificat."
 
 msgid "cpstypes_more"
-msgstr ""
+msgstr "Mai mult..."
 
 msgid "Format for empty list"
-msgstr ""
+msgstr "Format al unei liste goale"
 
 msgid "Size"
-msgstr ""
+msgstr "Marime"
 
 msgid "Display separator in view mode"
-msgstr ""
+msgstr "Separator in modul de vizualizare"
 
 msgid "Title"
-msgstr ""
+msgstr "Titlu"
 
 msgid "Label in view mode"
-msgstr ""
+msgstr "Eticheta in modul vizualizare"
 
 msgid "Label in edit mode"
-msgstr ""
+msgstr "Eticheta in modul editare"
 
 msgid "Vocabulary"
-msgstr "Vocabulary"
+msgstr "Vocabular"
 
 msgid "Is vocabulary translated on display ?"
-msgstr "Is vocabulary translated on display ?"
+msgstr "Este vocabularul tradus la afisare ?"
 
 msgid "Directory"
-msgstr "Directory"
+msgstr "Director"
 
 msgid "Optional directory used in view mode"
-msgstr ""
+msgstr "Director utilizat pentru afisare (optional)"
 
 msgid "Entry type"
-msgstr ""
+msgstr "Tip de intrare"
 
 msgid "Skin name"
-msgstr ""
+msgstr "Numele skin-ului"
 
 msgid "Popup Mode"
-msgstr ""
+msgstr "Modul de deschidere intr-o alta fereastra"
 
 msgid "Maximum image size"
-msgstr ""
+msgstr "Marimea maxima a imaginii"
 
 msgid "Deletable ?"
-msgstr ""
+msgstr "De sters ?"
 
 msgid "Display Width"
-msgstr ""
+msgstr "Afiseaza largimea"
 
 msgid "Display Height"
-msgstr ""
+msgstr "Afiseaza inaltimea"
 
 msgid "Can resize to lower size ?"
-msgstr ""
+msgstr "Poti sa redimensionezi la o marime mai mica ?"
 
 msgid "Render position"
-msgstr ""
+msgstr "Pozitia redarii"
 
 msgid "What is user configurable, require extra fields"
-msgstr ""
+msgstr "Ceea ce este configurabil pentru utilizator, necesita campuri in plus"
 
 msgid "Maximum input width"
-msgstr ""
+msgstr "Largimea maxima de introdus"
 
 msgid "Width"
-msgstr ""
+msgstr "Largime"
 
 msgid "Height"
-msgstr ""
+msgstr "Inaltime"
 
 msgid "View format"
-msgstr ""
+msgstr "Formatul pentru lista vida"
 
 msgid "Vocabulary is translated ?"
-msgstr ""
+msgstr "Este vocabularul tradus ?"
 
 msgid "View format empty"
-msgstr ""
+msgstr "Format de afisare vid"
 
 msgid "Use Javascript ?"
-msgstr ""
+msgstr "Se utilizeaza Javascript ?"
 
 msgid "View format (short, medium or long)"
-msgstr ""
+msgstr "Format de afisare (scurt, mediu sau lung)"
 
 msgid "Enabling the setting of time of the day ?"
-msgstr ""
+msgstr "Se permite configurarea orei pentru zi?"
 
 msgid "default hour for time"
-msgstr ""
+msgstr "Ora initiala pentru timp"
 
 msgid "default minutes for time"
-msgstr ""
+msgstr "minutele initiale pentru timp"
 
 msgid "True label"
-msgstr ""
+msgstr "Eticheta adevarata"
 
 msgid "False label"
-msgstr ""
+msgstr "Eticheta falsa"
 
 msgid "Maximum file size"
-msgstr ""
+msgstr "Marime maxima a fisierului"
 
 msgid "Maximum size"
-msgstr ""
+msgstr "Marime maxima"
 
 msgid "Render format"
-msgstr ""
+msgstr "Formatul de redare"
 
 msgid "cps_types_auto"
-msgstr ""
+msgstr "Asezare automatica in pagina"
 
 msgid "cpstypes_widgethasrequiredfields"
-msgstr ""
+msgstr "Unele proprietati ale campului sunt obligatorii"
 
 msgid "cpstypes_splitcell"
-msgstr ""
+msgstr "Taie"
 
 msgid "cpstypes_moveleft"
-msgstr ""
+msgstr "Misca spre stanga"
 
 msgid "cpstypes_moveright"
-msgstr ""
+msgstr "Misca spre dreapta"
 
 msgid "cpstypes_appendcell"
-msgstr ""
+msgstr "Adauga celula"
 
 msgid "cpstypes_availablefields"
-msgstr ""
+msgstr "Campuri disponibile"
 
 msgid "cpstypes_deletecell"
-msgstr ""
+msgstr "Sterge "
 
 msgid "cpstypes_editcell"
-msgstr ""
+msgstr "Editeaza celula"
 
 msgid "cpstypes_publictype"
-msgstr ""
+msgstr "Tip utilizabil in portal"
 
 msgid "cpstypes_widget_label"
-msgstr ""
+msgstr "Eticheta"
 
 msgid "cpstypes_configure"
-msgstr ""
+msgstr "Configureaza aceasta componenta"
 
 msgid "Multiple Layouts"
-msgstr ""
+msgstr "Editarea layout-ului permite crearea mai multor layout-uri"
 
 msgid "Id prefix for TypeMaker types"
-msgstr ""
+msgstr "Prefix pentru identificatorii tipurilor"
 
 msgid "Id prefix for TypeMaker style"
-msgstr ""
+msgstr "Prefix pentru zpt utilizat pentru layout-uri"
 
 msgid "Base schemas"
-msgstr ""
+msgstr "Schema principala"
 
 msgid "Base Layout"
-msgstr ""
+msgstr "Layout principal"
 
 msgid "Add in types"
-msgstr ""
+msgstr "Adauga in tipuri"
 
 msgid "Metadata layout"
-msgstr ""
+msgstr "Layout pentru metadata"
 
 msgid "Metadata schemas"
-msgstr ""
+msgstr "Schema pentru metadata"
 
 msgid "Immediate View"
-msgstr ""
+msgstr "Zpt utilizat pentru vizualizarea imediata"
 
 msgid "Hidden layout modes"
-msgstr ""
+msgstr "Moduri pentru layout-urile ascunse"
 
 msgid "Maximum number of rows"
-msgstr ""
+msgstr "Numar maxim de coloane pentru layout-uri"
 
 msgid "Process before type publish state changes"
-msgstr ""
+msgstr "Script sau expresie de executat inainte de schimbarea starii unui tip"
 
 msgid "Process after type publish state changes"
-msgstr ""
+msgstr "Script sau expresie de executat dupa schimbarea starii unui tip"
 
 msgid "document types deleted"
-msgstr ""
+msgstr "Tip(uri) de document(e) sterse"
 
 msgid "cpstypemaker_save"
-msgstr ""
+msgstr "Salveaza configurarea"
 
 msgid "cpstypemaker_autolayout"
-msgstr ""
+msgstr "Asezarea in pagina automata"
 
 msgid "cpstypemaker_layoutlabel"
-msgstr ""
+msgstr "Layout"
 
 msgid "CPS Catalog Navigation Select Widget"
-msgstr ""
+msgstr "Selectare in portal"
 
 msgid "CPS NewsLetter InternalLinks Widgets"
-msgstr ""
+msgstr "Legatura interna"
 
 msgid "CPS Generic Select Widget"
-msgstr ""
+msgstr "Selectie cu intrare vida"
 
 msgid "CPS Generic MultiSelect Widget"
-msgstr ""
+msgstr "Selectie multipla cu intrare vida"
 
 msgid "Label in view layout mode"
-msgstr ""
+msgstr "Eticheta in modul afisare"
 
 msgid "Label in edit layout mode"
-msgstr ""
+msgstr "Eticheta in modul editare"
 
 msgid "Fields"
-msgstr ""
+msgstr "Campuri"
 
 msgid "Help"
-msgstr ""
+msgstr "Text de ajutor"
 
 msgid "Read-only in layout modes"
-msgstr ""
+msgstr "Componenta pentru lectura doar in modurile urmatoare"
 
 msgid "Label is i18n"
-msgstr ""
+msgstr "Eticheta tradusa"
 
 msgid "Hidden in layout modes"
-msgstr ""
+msgstr "Componenta ascunsa in modurile urmatoare : "
 
 msgid "Hidden if readonly in layout modes"
-msgstr ""
+msgstr "Componenta ascunsa in modurile urmatoare ( daca este doar pentru lectura)"
 
 msgid "Hidden if empty"
-msgstr ""
+msgstr "Componenta ascunsa si vida"
 
 msgid "Hide the widget if the given TAL expression returns true"
-msgstr ""
+msgstr "Ascunde componenta daca expresia TAL intoarce adevarat"
 
 msgid "CSS class for view"
-msgstr ""
+msgstr "clasa CSS utilizata pentru afisare"
 
 msgid "Get the widget mode from the given TAL expression"
-msgstr ""
+msgstr "Afla modul expresiei TAL urmatoare"
 
 msgid "Is vocabulary translated on display"
-msgstr ""
+msgstr "Vocabular tradus la afisare"
 
 msgid "Deletable"
-msgstr ""
+msgstr "Care poate fi sters"
 
 msgid ""
 "Accept blank values (defined in vocabulary) when validating if the widget is "
 "required and the vocabulary holds blank values"
-msgstr ""
+msgstr "Accepta alegerea vida daca componenta este obligatorie, si daca lista accepta valori vide "
 
 msgid "Allowed file suffixes (for example: .html .sxw)"
-msgstr ""
+msgstr "Extensii autorizate ( de exemplu .html, .sxw)"
 
 msgid "Display for true"
-msgstr ""
+msgstr "Cuvant afisat pentru boolean-ul 'adevarat'"
 
 msgid "Display for false"
-msgstr ""
+msgstr "Cuvantul afisat pentru booleanul 'false'"
 
 msgid "Use javascript"
-msgstr ""
+msgstr "Se utilizeaza Javascript"
 
 msgid "Widget type"
-msgstr ""
+msgstr "Tip de widget"
 
 msgid "Display width"
-msgstr ""
+msgstr "Afiseaza marimea"
 
 msgid "Enable to resize img to lower size"
-msgstr ""
+msgstr "Autorizeaza micsorarea ferestrei"
 
 msgid "Title of the popup"
-msgstr ""
+msgstr "Titlul ferestrei deschise in popup"
 
 msgid "Allow configuration options"
-msgstr ""
+msgstr "Autorizeaza accesul la optiunile configurarii"
 
 msgid "Widget render method"
-msgstr ""
+msgstr "Metoda de redare a widget-ului"
 
 msgid "Group id for Javascript switching (if empty widget id is used)"
-msgstr ""
+msgstr "id-ul grupului pentru Javascript ( daca id-ul widget-ului este vid)"
 
 msgid "Depends on id for Javascript switching"
-msgstr ""
+msgstr "Depinde de id-ul pentru Javascript"
 
 msgid "Depends on value for Javascript switching"
-msgstr ""
+msgstr "Depinde de valorile pentru Javascript"
 
 msgid "Depends on value display widget"
-msgstr ""
+msgstr "Depinde de valoarea widget-ului"
 
 msgid "Required widget"
-msgstr ""
+msgstr "Widget obligatoriu"
 
 msgid "browse or search"
-msgstr ""
+msgstr "navigare sau cautare ?"
 
 msgid "browse"
-msgstr ""
+msgstr "navigare"
 
 msgid "search"
-msgstr ""
+msgstr "cauta"
 
 msgid "Enabling the setting of time of the day"
-msgstr ""
+msgstr "Autorizeaza reglarea orei unei zile"
 
 msgid "Value must be in range"
-msgstr ""
+msgstr "Valoarea trebuie sa respecte intervalul"
 
 msgid "Range minimum value"
-msgstr ""
+msgstr "Valoarea minima"
 
 msgid "Range maximum value"
-msgstr ""
+msgstr "Valoare maxima"
 
 msgid "Thousands separator"
-msgstr ""
+msgstr "Separatorul pentru mie"
 
 msgid "Decimal separator"
-msgstr ""
+msgstr "Separatorul pentru zecimale"
 
 msgid "Number of decimals"
-msgstr ""
+msgstr "Numar de zecimale"
 
 msgid "Html for edit"
-msgstr ""
+msgstr "Codul html pentru afisare"
 
 msgid "Html for view"
-msgstr ""
+msgstr "Code html pentru editare"
 
 msgid "Render format : select menu (default), radio buttons or checkboxes"
-msgstr ""
+msgstr "Formatul afisarii : meniu de selectare (initial), butoane sau check-box-uri"
 
 msgid "Target for the link"
-msgstr ""
+msgstr "Tinta legaturii"
+
