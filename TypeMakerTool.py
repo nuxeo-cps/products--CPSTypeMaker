@@ -1201,12 +1201,6 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         """ create a widget renderer object
             according to the given widget instance
         """
-        ### XXXX we need to link the object to
-        ### type maker tool
-        ### otherwise some code in layout/schema
-        ### mechansim won't work
-        ### need to figure out how to clean it afterwards
-        ### and how to make it work for several users at the same time
         if not self.widget_renderer:
             self.widget_renderer =  CPSWidgetRenderer()
 
