@@ -52,9 +52,6 @@ def setupPortal(PortalInstaller=CPSTypeMakerTestsInstaller):
     CPSTypeMakerTestsInstaller(app).install('portal')
     ZopeTestCase.close(app)
 
-
-
-
 # needeed products besides cps default onces
 ZopeTestCase.installProduct('CPSTypeMaker')
 
