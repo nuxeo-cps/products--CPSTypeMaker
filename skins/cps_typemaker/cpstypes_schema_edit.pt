@@ -38,7 +38,7 @@ actions['object'].append({'id':'delete_entry',
   </metal:block>
 
   <metal:block fill-slot="main">
-    <form method="post" tal:attributes="action here/REQUEST/URL1">
+    <form method="post" action="cpstypes_schema_change">
       <h3 i18n:translate="">label_fields</h3>
       <table>
         <tr align="left">
@@ -75,8 +75,8 @@ actions['object'].append({'id':'delete_entry',
           </tr>
         </tal:block>
       </table>
-      <input type="submit" name="cpstypes_field_delete:method" value="label_delete" i18n:attributes="value">
-      <input type="submit" name="cpstypes_schema_change:method" value="label_save" i18n:attributes="value">
+      <input type="submit" name="action_delete" value="label_delete" i18n:attributes="value">
+      <input type="submit" name="action_save" value="label_save" i18n:attributes="value">
     </form>
     <form method="post" action="cpstypes_add_field">
       <table>
