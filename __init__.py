@@ -25,7 +25,6 @@ from Products.CMFCore.CMFCorePermissions import ManagePortal
 from AccessControl.PermissionRole import PermissionRole
 from Products.CPSSchemas.Layout import Layout
 from Products.CPSCore.CPSWorkflowConfiguration import CPSWorkflowConfiguration
-from Products.CPSTypeMaker.CPSWidgetType import CPSWidgetType
 from Products.CPSTypeMaker import TypeMakerTool
 from Products.CMFCore.utils import ToolInit
 from Products.CMFCore.DirectoryView import registerDirectory
