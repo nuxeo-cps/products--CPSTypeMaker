@@ -114,8 +114,9 @@ actions['object'].append({'id':'delete_entry',
                                                  foo python:widgets.sort()">
               <tal:block tal:repeat="widget widgets">
               <option tal:attributes="value widget"
-                      tal:content="widget"
-                      tal:condition="python:wttool[widget].meta_type != 'CPS Compound Widget Type'" />
+                      tal:content="string:CPS ${widget}"
+                      tal:condition="python:wttool[widget].meta_type != 'CPS Compound Widget Type'" 
+                      i18n:translate="" />
               </tal:block>
             </select>
           </td>
