@@ -84,7 +84,8 @@ actions['object'].append({'id':'delete_entry',
               <td><input type="text" size=20 name="widgetinfo.title:records" tal:attributes="value widget/label" /></td>
               <td tal:content="widget/meta_type" />
               <td><input type="text" size=10 name="widgetinfo.size:records"
-                    tal:attributes="value widget/size_max" /></td>
+                    tal:attributes="value widget/size_max" 
+                    tal:condition="python:hasattr(widget, 'size_max')" /></td>
               <td><input type="checkbox" name="widgetinfo.required:records"
                 tal:attributes="checked widget/is_required" /></td>
             </tal:block>
