@@ -112,21 +112,19 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
 
         self.testTypeAdding()
 
-
-
     def testChangeDocBaseProperties(self):
         self.testTypeAdding()
         tmaker_tool = self.portal.portal_typemaker
         type_name = tmaker_tool.type_prefix + 'TotoroPowered'
         tmaker_tool.manage_documentModified(type_id=type_name, is_addable=1,
-            title='totoro lifestyle', description='totoro rulez the word')
+            title='totoro lifestyle', description='totoro rulez the world')
 
         # check results on type
         type_tool = self.portal.portal_types
         type_factory = type_tool[type_name]
 
         self.assertEquals(type_factory.title, 'totoro lifestyle')
-        self.assertEquals(type_factory.description, 'totoro rulez the word')
+        self.assertEquals(type_factory.description, 'totoro rulez the world')
 
 
     def testaddDocElements(self):
@@ -154,7 +152,7 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
                 self.assertEquals(item.title, 'Totoro string widget')
                 break
 
-        self.assertEquals(found, True)
+        self.assert_(found)
 
     def testallWidgetTypes(self):
         self.testTypeAdding()
@@ -169,13 +167,15 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
 
         for id, type in types.objectItems():
             #raise str((type._properties))
-            tmaker_tool.manage_documentModified(type_id=type_name, action=action,
-            new_widget_title='Totoro '+str(id),
-            new_widget_type= type.id)
+            tmaker_tool.manage_documentModified(
+                type_id=type_name, 
+                action=action,
+                new_widget_title='Totoro '+str(id),
+                new_widget_type=type.id)
 
             # check results on type
             type_layouts = self.portal.portal_layouts
-            type_layout = type_layouts[type_name+'_1']
+            type_layout = type_layouts[type_name + '_1']
 
             wid = 'w__Totoro '+str(id)
             wid = wid.replace(' ', '_')
@@ -185,21 +185,17 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
 
                 if item.id == wid:
                     found = True
-                    self.assertEquals(item.title, 'Totoro '+str(id))
+                    self.assertEquals(item.title, 'Totoro ' + str(id))
                     break
 
-            self.assertEquals(found, True)
+            self.assert_(found)
 
     def test_listWidgets(self):
-        """ testing list widget
-        """
         tmaker_tool = self.portal.portal_typemaker
         wlist = tmaker_tool._listWidgets()
         self.assertNotEquals(wlist, [])
 
     def test_typeFilters(self):
-        """ tests type filters
-        """
         tmaker_tool = self.portal.portal_typemaker
         wlist = tmaker_tool.listWidgetTypes()
 
