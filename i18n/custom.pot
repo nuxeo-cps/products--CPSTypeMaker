@@ -16,6 +16,12 @@ msgstr ""
 "Preferred-encodings: utf-8 latin1\n"
 "Domain: default\n"
 
+msgid "cpstypes_configuretool"
+msgstr ""
+
+msgid "cpstypes_documentlist"
+msgstr ""
+
 msgid "cpstypes_add_type"
 msgstr ""
 
@@ -29,6 +35,9 @@ msgid "cpstypes_edit_layout"
 msgstr ""
 
 msgid "cpstypes_edit_flexible"
+msgstr ""
+
+msgid "cpstypes_edit_flexible_layout"
 msgstr ""
 
 msgid "Type management"
@@ -317,4 +326,49 @@ msgid "cpstypes_publictype"
 msgstr ""
 
 msgid "cpstypes_widget_label"
+msgstr ""
+
+msgid "cpstypes_configure"
+msgstr ""
+
+msgid "Multiple Layouts"
+msgstr ""
+
+msgid "Id prefix for TypeMaker types"
+msgstr ""
+
+msgid "Id prefix for TypeMaker style"
+msgstr ""
+
+msgid "Base schemas"
+msgstr ""
+
+msgid "Base Layout"
+msgstr ""
+
+msgid "Add in types"
+msgstr ""
+
+msgid "Metadata layout"
+msgstr ""
+
+msgid "Metadata schemas"
+msgstr ""
+
+msgid "Immediate View"
+msgstr ""
+
+msgid "Hidden layout modes"
+msgstr ""
+
+msgid "Maximum number of rows"
+msgstr ""
+
+msgid "Process before type publish state changes"
+msgstr ""
+
+msgid "Process after type publish state changes"
+msgstr ""
+
+msgid "document types deleted"
 msgstr ""

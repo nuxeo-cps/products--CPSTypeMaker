@@ -19,6 +19,12 @@ msgstr ""
 "Domain: default\n"
 "X-Generator: KBabel 1.3.1\n"
 
+msgid "cpstypes_configuretool"
+msgstr "Type Maker General configuration"
+
+msgid "cpstypes_documentlist"
+msgstr "Document Types"
+
 #.   <input type="submit" name="action_save" value="button_save" />
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
@@ -149,6 +155,9 @@ msgstr "Edit Layout"
 
 msgid "cpstypes_edit_flexible"
 msgstr "Edit Flexible Widgets"
+
+msgid "cpstypes_edit_flexible_layout"
+msgstr "Editer Flexible layout"
 
 msgid "Type management"
 msgstr "Document type management"
@@ -464,3 +473,48 @@ msgstr "Available type on the portal"
 
 msgid "cpstypes_widget_label"
 msgstr "Label"
+
+msgid "cpstypes_configure"
+msgstr "Configure this component"
+
+msgid "Multiple Layouts"
+msgstr "Multiple Layouts mode"
+
+msgid "Id prefix for TypeMaker types"
+msgstr "Id prefix for TypeMaker types"
+
+msgid "Id prefix for TypeMaker style"
+msgstr "Prefix for layouts zpt"
+
+msgid "Base schemas"
+msgstr "Base schemas"
+
+msgid "Base Layout"
+msgstr "Base Layout"
+
+msgid "Add in types"
+msgstr "Add in types"
+
+msgid "Metadata layout"
+msgstr "Metadata layout"
+
+msgid "Metadata schemas"
+msgstr "Metadata schemas"
+
+msgid "Immediate View"
+msgstr "Immediate View"
+
+msgid "Hidden layout modes"
+msgstr "Hidden layout modes"
+
+msgid "Maximum number of rows"
+msgstr "Maximum number of rows"
+
+msgid "Process before type publish state changes"
+msgstr "Process before type publish state changes"
+
+msgid "Process after type publish state changes"
+msgstr "Process after type publish state changes"
+
+msgid "document types deleted"
+msgstr "document type(s) deleted"

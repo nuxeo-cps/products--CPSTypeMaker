@@ -19,6 +19,12 @@ msgstr ""
 "Preferred-encodings: utf-8 latin1\n"
 "Domain: default\n"
 
+msgid "cpstypes_configuretool"
+msgstr ""
+
+msgid "cpstypes_documentlist"
+msgstr ""
+
 #.   <input type="submit" name="action_save" value="button_save" />
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
@@ -436,4 +442,49 @@ msgid "cpstypes_publictype"
 msgstr ""
 
 msgid "cpstypes_widget_label"
+msgstr ""
+
+msgid "cpstypes_configure"
+msgstr ""
+
+msgid "Multiple Layouts"
+msgstr ""
+
+msgid "Id prefix for TypeMaker types"
+msgstr ""
+
+msgid "Id prefix for TypeMaker style"
+msgstr ""
+
+msgid "Base schemas"
+msgstr ""
+
+msgid "Base Layout"
+msgstr ""
+
+msgid "Add in types"
+msgstr ""
+
+msgid "Metadata layout"
+msgstr ""
+
+msgid "Metadata schemas"
+msgstr ""
+
+msgid "Immediate View"
+msgstr ""
+
+msgid "Hidden layout modes"
+msgstr ""
+
+msgid "Maximum number of rows"
+msgstr ""
+
+msgid "Process before type publish state changes"
+msgstr ""
+
+msgid "Process after type publish state changes"
+msgstr ""
+
+msgid "document types deleted"
 msgstr ""

@@ -19,6 +19,12 @@ msgstr ""
 "Domain: default\n"
 "X-Generator: KBabel 1.3.1\n"
 
+msgid "cpstypes_configuretool"
+msgstr "Configuration générale de Type Maker"
+
+msgid "cpstypes_documentlist"
+msgstr "Types de documents"
+
 #.   <input type="submit" name="action_save" value="button_save" />
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
@@ -149,6 +155,9 @@ msgstr "Editer la disposition"
 
 msgid "cpstypes_edit_flexible"
 msgstr "Editer les composants flexibles"
+
+msgid "cpstypes_edit_flexible_layout"
+msgstr "Editer la disposition flexible"
 
 msgid "Type management"
 msgstr "Gérer les types de documents"
@@ -462,3 +471,48 @@ msgstr "Type utilisable sur le portail"
 
 msgid "cpstypes_widget_label"
 msgstr "Libellé"
+
+msgid "cpstypes_configure"
+msgstr "Configurer le composant"
+
+msgid "Multiple Layouts"
+msgstr "L'éditeur de layout permet de créer plusieurs layouts"
+
+msgid "Id prefix for TypeMaker types"
+msgstr "Préfixe pour les identifiants des types"
+
+msgid "Id prefix for TypeMaker style"
+msgstr "Préfixe pour le zpt utilisé pour les layouts"
+
+msgid "Base schemas"
+msgstr "Schemas de base"
+
+msgid "Base Layout"
+msgstr "Layouts de base"
+
+msgid "Add in types"
+msgstr "Types de conteneurs"
+
+msgid "Metadata layout"
+msgstr "Layout pour les métadonnées"
+
+msgid "Metadata schemas"
+msgstr "Schema pour les métadonnées"
+
+msgid "Immediate View"
+msgstr "Zpt utilisé pour la vue immédiate"
+
+msgid "Hidden layout modes"
+msgstr "Modes pour les layouts masqués"
+
+msgid "Maximum number of rows"
+msgstr "Nombre maximum de colonnes pour les layouts"
+
+msgid "Process before type publish state changes"
+msgstr "Script ou expression à exécuter avant le changement d'état d'un type"
+
+msgid "Process after type publish state changes"
+msgstr "Script ou expression à exécuter après le changement d'état d'un type"
+
+msgid "document types deleted"
+msgstr "Type(s) de document(s) effacé(s)"
