@@ -22,6 +22,12 @@ msgstr ""
 msgid "cpstypes_edit_schema"
 msgstr ""
 
+msgid "cpstypes_edit_type"
+msgstr ""
+
+msgid "cpstypes_edit_layout"
+msgstr ""
+
 msgid "Type management"
 msgstr ""
 

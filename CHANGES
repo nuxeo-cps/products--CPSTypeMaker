@@ -9,6 +9,8 @@ New features:
 - The workflow configuration now allow any number of sections and workspaces.
 - The add button in the type management screen now saves changes as well.
 - Widget types and field types are now translatable.
+- Full layout field ordering.
+- French translation.
 Bug fixes:
 ~~~~~~~~~~
 - A label is no longer displayed for fields in view_mode.

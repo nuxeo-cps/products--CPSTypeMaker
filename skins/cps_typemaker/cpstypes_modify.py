@@ -9,8 +9,7 @@ for key in REQUEST.keys():
 if not action:
     raise ValueError('No action specified')
 
-layoutid = REQUEST['type_id']
-layout = context.portal_layouts[layoutid]
+layout = context.portal_layouts[type_id]
 layoutdef = layout.getLayoutDefinition()
 defs = context.cpstypes_get_definitions()
 flexible_layout = defs['flexible_layout']
@@ -94,5 +93,5 @@ if action == 'add' and new_field:
 if action in ('delete', 'add'):       
     layout.setLayoutDefinition(layoutdef)
 
-return RESPONSE.redirect('cpstypes_edit?type_id='+layoutid)
+return RESPONSE.redirect('cpstypes_edit?type_id='+type_id)
     

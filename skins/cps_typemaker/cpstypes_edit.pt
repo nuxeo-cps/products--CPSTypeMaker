@@ -27,7 +27,18 @@
                           'url': here.portal_url()+'/cpstypes_edit?type_id='+type_id,
                           'longtitle': title,
                           'title': title,
-                        }]);" />
+                        }]);
+                       actions python:actions.update({'object': [
+                         {'id':'edit_type',
+                          'url':base_url+'cpstypes_edit?type_id='+type_id,
+                          'name': 'cpstypes_edit_type',
+                          'category': 'object'},
+                         {'id':'edit_layout',
+                          'url':base_url+'cpstypes_layout_edit?type_id='+type_id,
+                          'name': 'cpstypes_edit_layout',
+                          'category': 'object'},
+                         ]});                        
+       " />
     <tal:block condition="delete_allowed">
       <tal:block define="global actions python:
 actions['object'].append({'id':'delete_entry',
