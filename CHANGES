@@ -6,7 +6,8 @@ New features:
 -
 Bug fixes:
 ~~~~~~~~~~
--
+- "NoneType object has no attribute read" error under dr's MacOS X/Safari
+  when trying to edit a document type's schema
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 - XHTML-ization of all templates
