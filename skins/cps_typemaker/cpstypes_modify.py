@@ -126,28 +126,29 @@ if action == 'add' and new_widget_id:
                 raise "Configuration includes no custom metadata schema."
         else:
             schemaid = type_id
-    schema = context.portal_schemas[schemaid]
+            
+        schema = context.portal_schemas[schemaid]
 
-    if not schema.has_key('f__' + new_widget_id):
-        field_types = widget.getFieldTypes()
-        field_inits = widget.getFieldInits()
-        i = 0
-        for field_type in field_types:
-            # Find free field id (based on the field type name).
-            field_id = new_widget_id
-            field_ids = schema.keys()
-            n = 0
-            while field_id in field_ids:
-                n += 1
-                field_id = '%s_f%d' % (new_widget_id, n)
+        if not schema.has_key('f__' + new_widget_id):
+            field_types = widget.getFieldTypes()
+            field_inits = widget.getFieldInits()
+            i = 0
+            for field_type in field_types:
+                # Find free field id (based on the field type name).
+                field_id = new_widget_id
+                field_ids = schema.keys()
+                n = 0
+                while field_id in field_ids:
+                    n += 1
+                    field_id = '%s_f%d' % (new_widget_id, n)
 
-            # Create the field.
-            if field_inits:
-                kw = field_inits[i]
-            else:
-                kw = {}
-            i += 1
-            schema.manage_addField(field_id, field_type, **kw)
+                # Create the field.
+                if field_inits:
+                    kw = field_inits[i]
+                else:
+                    kw = {}
+                i += 1
+                schema.manage_addField(field_id, field_type, **kw)
 
 # And finally save the new layout
 layout.setLayoutDefinition(layoutdef)
