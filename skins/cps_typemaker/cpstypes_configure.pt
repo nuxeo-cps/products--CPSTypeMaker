@@ -89,7 +89,7 @@ rows="6" cols="30" tal:attributes="name prop_name">
       <div class="typemakerUpSpaced">
 
       <input type="submit" name="validate"
-             i18n:translate="value"
+             i18n:translate=""
              value="cpstypemaker_save"/>
 
       </div>
