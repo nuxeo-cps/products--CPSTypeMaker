@@ -62,6 +62,10 @@ actions['object'].append({'id':'delete_entry',
 
     <link rel="Stylesheet" type="text/css" href=""
       tal:attributes="href string:${base_url}document.css" />
+
+      <link rel="Stylesheet" type="text/css" href=""
+        tal:attributes="href string:${base_url}cpstypes_layout.css" />
+
   </metal:block>
 
   <metal:block fill-slot="header">

@@ -28,6 +28,11 @@
                      ]});">
     </metal:block>
 
+    <metal:block fill-slot="css_slot">
+      <link rel="Stylesheet" type="text/css" href=""
+        tal:attributes="href string:${base_url}cpstypes_layout.css" />
+    </metal:block>
+
     <metal:block fill-slot="main"
       tal:define="tmaker python:here.portal_typemaker;
                   prefix tmaker/type_prefix;

@@ -54,6 +54,10 @@ TypeMakerTool depends on these tools :
 
 """
 
+#### todo : need to add a "getTypeList" methos out of what's done
+#### in cpstypes_list.pt
+
+
 class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
     """ TypeMakerTool
         this tool store widget types
@@ -748,7 +752,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
 
 
-    security.declarePublic('manage_layoutModified')
+    security.declarePublic('manage_flexLayoutModified')
     def manage_flexLayoutModified(self, REQUEST, RESPONSE, type_id, layout_index=1):
         """ called when a flexible layout is modified
         """
@@ -950,7 +954,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         else:
             return 'Updated'
 
-    security.declarePublic('getLayoutCount')
+    security.declarePublic('getTypeLayoutCount')
     def getTypeLayoutCount(self, type_id):
         """
             retrieves a type layout count
