@@ -108,10 +108,11 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         )
 
     widget_filter_list = ['fields', 'help', 'hidden_layout_modes',
-        'hidden_readonly_layout_modes', 'hidden_empty', 'hidden_if_expr']
+        'hidden_readonly_layout_modes', 'hidden_empty', 'hidden_if_expr',
+        'is_required']
 
     type_filter_list = ['Dummy Widget', 'Search Widget', 'Link Widget',
-        'Text Image Widget']
+        'Text Image Widget', 'Text Widget', 'Range List Widget', 'File Widget']
 
     multiple_layouts = False
     flexible_aware = False
@@ -1192,6 +1193,9 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
                             sorter =  (trad_key, element,)
                             res.append(sorter)
 
+        # need to find out why it raises
+        # on unicode errors here
+        # when mcat make traductions with accents on ascii
         res.sort()
         result = []
         for item in res:
