@@ -37,11 +37,22 @@ for type in ('Workspace', 'Section'):
 
 
 portal = context.portal_url.getPortalObject()
-section_wf = portal['sections']['.cps_workflow_configuration']
+section = portal['sections']
+for id, value in section.objectItems():
+    if id == '.cps_workflow_configuration':
+        section_wf = value
+        break
+
 if not section_wf.getPlacefulChainFor(type_id):
-    section_wf.manage_addChain(portal_type=type_id, chain=section_content_wf)
-workspace_wf = portal['workspaces']['.cps_workflow_configuration']
+    section_wf.manage_addChain(portal_type=type_id, chain='section_content_wf')
+
+workspace = portal['workspaces']
+for id, value in workspace.objectItems():
+    if id == '.cps_workflow_configuration':
+        workspace_wf = value
+        break
+
 if not workspace_wf.getPlacefulChainFor(type_id):
-    workspace_wf.manage_addChain(portal_type=type_id, chain=workspace_content_wf)
+    workspace_wf.manage_addChain(portal_type=type_id, chain='workspace_content_wf')
 
 return context.cpstypes_view(type_id=type_id)
