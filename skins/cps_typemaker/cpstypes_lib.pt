@@ -226,11 +226,6 @@
                     title="cpstypes_widgethasrequiredfields"/>
 
                 </td>
-
-
-
-
-
                 <td>
                     <input type="text" size="20" name="widgetinfo.title:records"
                         tal:attributes="value widget/label_edit" i18n:translate="" />
