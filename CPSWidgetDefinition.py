@@ -28,7 +28,7 @@ from AccessControl import ModuleSecurityInfo
 from DateTime.DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
 from Products.CMFCore.utils import SimpleItemWithProperties
-from Products.CMFCore.CMFCorePermissions import ManagePortal
+from Products.CMFCore.permissions import ManagePortal
 from Products.CMFCore.Expression import Expression
 from Products.CMFCore.Expression import getEngine
 from Products.PageTemplates.TALES import CompilerError
@@ -45,7 +45,7 @@ from Products.CPSSchemas.Schema import CPSSchema
 from Products.CPSSchemas.Layout import CPSLayout
 from Products.CPSSchemas.Vocabulary import CPSVocabulary
 
-from Products.CMFCore.CMFCorePermissions import View
+from Products.CMFCore.permissions import View
 from Products.CMFCore.utils import getToolByName
 from cgi import escape
 from OFS.Folder import Folder

@@ -29,7 +29,7 @@ from OFS.Folder import Folder
 from OFS.Image import Image
 from Products.CMFCore.utils import getToolByName
 from Products.CMFCore.utils import UniqueObject
-from Products.CMFCore.CMFCorePermissions import ManagePortal
+from Products.CMFCore.permissions import ManagePortal
 from Products.CPSTypeMaker.CPSWidgetDefinition import CPSWidgetRenderer
 from Products.CPSCore.utils import makeId
 from Products.CPSSchemas.DataStructure import DataStructure
@@ -39,7 +39,7 @@ from Products.CPSCore.ProxyBase import ProxyFolder
 from Products.CPSSchemas.PropertiesPostProcessor import PropertiesPostProcessor
 from Products.CPSSchemas.WidgetTypesTool import WidgetTypeRegistry
 import ExtensionClass
-from Products.CMFCore.CMFCorePermissions import ViewManagementScreens
+from Products.CMFCore.permissions import ViewManagementScreens
 from Products.CPSSchemas.BasicWidgets import CPSSelectWidget
 from types import StringType
 """
