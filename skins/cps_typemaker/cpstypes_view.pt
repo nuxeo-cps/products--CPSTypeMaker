@@ -93,7 +93,7 @@ actions['object'].append({'id':'delete_entry',
       <input type="submit" name="action_delete" value="label_delete" i18n:attributes="value">
       <input type="submit" name="action_save" value="label_save" i18n:attributes="value">
     </form>
-    <form method="post" action="cpstypes_add_field">
+    <form method="post" action="cpstypes_add_widget">
       <input type="hidden" name="layout_id" tal:attributes="value layoutid">
       <table>
         <tr>
