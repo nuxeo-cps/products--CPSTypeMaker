@@ -70,7 +70,7 @@ msgstr "Description"
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #, fuzzy
 msgid "cpstypes_type_icon"
-msgstr "Id"
+msgstr "Icon"
 
 #.   <th align="right">cpstypes_type_id</th>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
@@ -81,7 +81,7 @@ msgstr "Id"
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #, fuzzy
 msgid "cpstypes_type_is_flexible"
-msgstr "Title"
+msgstr "Flexible"
 
 #.   <th align="right">cpstypes_type_title</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
