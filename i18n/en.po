@@ -134,97 +134,97 @@ msgid "Type management"
 msgstr "Document type management"
 
 msgid "CPS String List Field"
-msgstr ""
+msgstr "String List"
 
 msgid "CPS Float Field"
-msgstr ""
+msgstr "Float"
 
 msgid "CPS File Field"
-msgstr ""
+msgstr "File"
 
 msgid "CPS Image Field"
-msgstr ""
+msgstr "Image"
 
 msgid "CPS String Field"
-msgstr ""
+msgstr "String"
 
 msgid "CPS DateTime Field"
-msgstr ""
+msgstr "DateTime"
 
 msgid "CPS Password Field"
-msgstr ""
+msgstr "Password"
 
 msgid "CPS Int Field"
-msgstr ""
+msgstr "Int"
 
 msgid "CPS Long Field"
-msgstr ""
+msgstr "Long"
 
-msgid "MultiSelect Widget"
-msgstr ""
+msgid "CPS MultiSelect Widget"
+msgstr "MultiSelect"
 
-msgid "Lines Widget"
-msgstr ""
+msgid "CPS Lines Widget"
+msgstr "Lines"
 
-msgid "Ordered List Widget"
-msgstr ""
+msgid "CPS Ordered List Widget"
+msgstr "Ordered List"
 
-msgid "Unordered List Widget"
-msgstr ""
+msgid "CPS Unordered List Widget"
+msgstr "Unordered Lis"
 
-msgid "String Widget"
-msgstr ""
+msgid "CPS String Widget"
+msgstr "String"
 
-msgid "TextArea Widget"
-msgstr ""
+msgid "CPS TextArea Widget"
+msgstr "TextArea"
 
-msgid "Email Widget"
-msgstr ""
+msgid "CPS Email Widget"
+msgstr "Email"
 
-msgid "Heading Widget"
-msgstr ""
+msgid "CPS Heading Widget"
+msgstr "Heading"
 
-msgid "Rich Text Editor Widget"
-msgstr ""
+msgid "CPS Rich Text Editor Widget"
+msgstr "Rich Text Editor"
 
-msgid "InternalLinks Widget"
-msgstr ""
+msgid "CPS InternalLinks Widget"
+msgstr "Internal Links"
 
-msgid "Link Widget"
-msgstr ""
+msgid "CPS Link Widget"
+msgstr "Link"
 
-msgid "Html Widget"
-msgstr ""
+msgid "CPS Html Widget"
+msgstr "Html"
 
-msgid "DateTime Widget"
-msgstr ""
+msgid "CPS DateTime Widget"
+msgstr "Date/Time"
 
-msgid "Date Widget"
-msgstr ""
+msgid "CPS Date Widget"
+msgstr "Date"
 
-msgid "Password Widget"
-msgstr ""
+msgid "CPS Password Widget"
+msgstr "Password"
 
-msgid "Int Widget"
-msgstr ""
+msgid "CPS Int Widget"
+msgstr "Int"
 
-msgid "CheckBox Widget"
-msgstr ""
+msgid "CPS CheckBox Widget"
+msgstr "CheckBox"
 
-msgid "Long Widget"
-msgstr ""
+msgid "CPS Long Widget"
+msgstr "Long"
 
-msgid "Float Widget"
-msgstr ""
+msgid "CPS Float Widget"
+msgstr "Float"
 
-msgid "AttachedFile Widget"
-msgstr ""
+msgid "CPS AttachedFile Widget"
+msgstr "AttachedFile"
 
-msgid "File Widget"
-msgstr ""
+msgid "CPS File Widget"
+msgstr "File"
 
-msgid "Image Widget"
-msgstr ""
+msgid "CPS Image Widget"
+msgstr "Image"
 
-msgid "Photo Widget"
-msgstr ""
+msgid "CPS Photo Widget"
+msgstr "Photo"

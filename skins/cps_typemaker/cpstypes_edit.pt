@@ -98,7 +98,7 @@ actions['object'].append({'id':'delete_entry',
               </td>
               <td tal:content="python:widget.fields[0]" />
               <td><input type="text" size=20 name="widgetinfo.title:records" tal:attributes="value widget/label_edit" /></td>
-              <td tal:content="widget/meta_type" />
+              <td tal:content="widget/meta_type" i18n:translate="" />
               <td>
                 <input type="text" size=10 name="widgetinfo.size:records"
                   tal:attributes="value widget/size_max" 

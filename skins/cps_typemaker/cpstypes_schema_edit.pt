@@ -67,10 +67,10 @@ actions['object'].append({'id':'delete_entry',
               <td tal:content="fieldtype" />
               <td>
                 <select name="fieldinfo.widget:records">
-                  <option tal:repeat="widgettype python:here.cpstypes_fieldwidgets(fieldtype)"
-                          tal:attributes="value widgettype;
-                                          selected python:getattr(field, 'default_widget', '') == widgettype"
-                          tal:content="widgettype"/>
+                  <option tal:repeat="widgetinfo python:here.cpstypes_fieldwidgets(fieldtype)"
+                          tal:attributes="value widgetinfo/id;
+                                          selected python:getattr(field, 'default_widget', '') == widgetinfo['id']"
+                          tal:content="widgetinfo/title" i18n:translate="" />
                 </select>
               </td>
               <td>
@@ -92,7 +92,7 @@ actions['object'].append({'id':'delete_entry',
             <select name="new_field_type">
               <tal:block tal:repeat="fieldtype here/cpstypes_fieldwidgets">
               <option tal:attributes="value fieldtype"
-                      tal:content="fieldtype"/>
+                      tal:content="fieldtype" i18n:translate="" />
               </tal:block>
             </select>
           </td>
