@@ -294,7 +294,6 @@ msgstr "Cet identifiant de type est déjá utilisé."
 msgid "field_already_exists"
 msgstr "Cet identifiant de champ est déjá utilisé."
 
-#, fuzzy
 msgid "psm_duplicate_widgets"
 msgstr "Attention, vous avez sélectionné plusieurs fois le même composant: "
 
