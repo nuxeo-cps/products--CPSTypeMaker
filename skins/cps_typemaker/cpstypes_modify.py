@@ -1,4 +1,4 @@
-##parameters=type_id, title, description, new_icon, is_flexible=None, REQUEST=None, RESPONSE=None
+##parameters=type_id, title, description, new_icon, is_flexible=None, widgetinfo=[], new_field=None, REQUEST=None, RESPONSE=None
 
 action = None
 for key in REQUEST.keys():
@@ -56,8 +56,6 @@ if new_icon.read(1) != '':
 
 type.manage_changeProperties(**props)
 
-widgetinfo = REQUEST.get('widgetinfo', [])
-
 for each in widgetinfo:
     widgetname = each['name']
     widgetid = each['id']
@@ -76,10 +74,24 @@ for each in widgetinfo:
         layoutdef['rows'] = new_rows
     else:
         widget = layout[each['name']]
-        widget.manage_changeProperties(label=each['title'], label_edit=each['title'],
+        widget.manage_changeProperties(label_edit=each['title'],
             is_required=each.get('required',0), size_max=each['size'])
 
-if action in ('delete',):       
+if action == 'add' and new_field:
+    kw = {'fields': [new_field],
+          'label_edit': new_field,
+         }
+
+    field = context.cpstypes_get_schema()[new_field]
+    wtype = field.default_widget
+
+    layout.manage_addCPSWidget(new_field, wtype, **kw)
+    layoutdef = layout.getLayoutDefinition()
+    layoutdef['rows'].append([{'ncols': 1, 'widget_id': new_field}])
+    layout.setLayoutDefinition(layoutdef)
+
+
+if action in ('delete', 'add'):       
     layout.setLayoutDefinition(layoutdef)
 
 return RESPONSE.redirect('cpstypes_edit?type_id='+layoutid)

@@ -97,7 +97,7 @@ actions['object'].append({'id':'delete_entry',
                 <input type="checkbox" name="widgetinfo.is_selected:records" />
               </td>
               <td tal:content="python:widget.fields[0]" />
-              <td><input type="text" size=20 name="widgetinfo.title:records" tal:attributes="value widget/label" /></td>
+              <td><input type="text" size=20 name="widgetinfo.title:records" tal:attributes="value widget/label_edit" /></td>
               <td tal:content="widget/meta_type" />
               <td>
                 <input type="text" size=10 name="widgetinfo.size:records"
@@ -115,8 +115,6 @@ actions['object'].append({'id':'delete_entry',
       </table>
       <input type="submit" name="action_delete" value="button_delete" i18n:attributes="value" />
       <input type="submit" name="action_save" value="button_save" i18n:attributes="value" />
-    </form>
-    <form method="post" action="cpstypes_add_widget">
       <input type="hidden" name="layout_id" tal:attributes="value layoutid">
       <table>
         <tr>
@@ -131,7 +129,7 @@ actions['object'].append({'id':'delete_entry',
             </select>
           </td>
           <td>
-            <input type="submit" name="add_field" value="button_add" i18n:attributes="value" />
+            <input type="submit" name="action_add" value="button_add" i18n:attributes="value" />
           <td>
         </tr>
       </table>
