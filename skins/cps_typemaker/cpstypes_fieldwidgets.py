@@ -1,7 +1,7 @@
 ##parameters=field_type=None
 
 mapping = { 'CPS String List Field': ('MultiSelect Widget',),
-            'CPS String Field': ('Text Widget', 'Textarea Widget', 'String Widget',),
+            'CPS String Field': ('Text Widget', 'TextArea Widget', 'String Widget',),
             'CPS DateTime Field': ('DateTime Widget', 'Date Widget',),
           }
 
