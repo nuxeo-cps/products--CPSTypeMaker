@@ -3,14 +3,11 @@
 ttool = context.portal_types
 defs = context.cpstypes_get_definitions()
 prefix = defs['type_prefix']
-workspace_wf = defs['workspace_wf']
-section_wf = defs['section_wf']
-workspaceid = defs['workspaceid']
-sectionid = defs['sectionid']
 schemaid = defs['schemaid']
 base_layouts = defs['base_layouts']
 base_schemas = defs['base_schemas']
 add_in_types = defs['add_in_types']
+style_prefix = defs['style_prefix']
 
 type_id = prefix + id
 ti = ttool.addFlexibleTypeInformation(id=type_id)
@@ -35,7 +32,7 @@ ti.manage_changeProperties(**properties)
 
 ltool = context.portal_layouts
 layout = ltool.manage_addCPSLayout(type_id)
-layout.manage_changeProperties(style_prefix='layout_default_')
+layout.manage_changeProperties(style_prefix=style_prefix)
 
 for type in add_in_types:
     typeobj = ttool[type]
