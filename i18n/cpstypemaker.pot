@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-04-13 18:00default\n"
+"POT-Creation-Date: 2004-04-14 12:33default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -130,6 +130,12 @@ msgstr ""
 msgid "cpstypes_add_type"
 msgstr ""
 
+msgid "cpstypes_edit_type"
+msgstr ""
+
+msgid "cpstypes_edit_layout"
+msgstr ""
+
 msgid "Type management"
 msgstr ""
 
@@ -160,71 +166,71 @@ msgstr ""
 msgid "CPS Long Field"
 msgstr ""
 
-msgid "MultiSelect Widget"
+msgid "CPS MultiSelect Widget"
 msgstr ""
 
-msgid "Lines Widget"
+msgid "CPS Lines Widget"
 msgstr ""
 
-msgid "Ordered List Widget"
+msgid "CPS Ordered List Widget"
 msgstr ""
 
-msgid "Unordered List Widget"
+msgid "CPS Unordered List Widget"
 msgstr ""
 
-msgid "String Widget"
+msgid "CPS String Widget"
 msgstr ""
 
-msgid "TextArea Widget"
+msgid "CPS TextArea Widget"
 msgstr ""
 
-msgid "Email Widget"
+msgid "CPS Email Widget"
 msgstr ""
 
-msgid "Heading Widget"
+msgid "CPS Heading Widget"
 msgstr ""
 
-msgid "Rich Text Editor Widget"
+msgid "CPS Rich Text Editor Widget"
 msgstr ""
 
-msgid "InternalLinks Widget"
+msgid "CPS InternalLinks Widget"
 msgstr ""
 
-msgid "Link Widget"
+msgid "CPS Link Widget"
 msgstr ""
 
-msgid "Html Widget"
+msgid "CPS Html Widget"
 msgstr ""
 
-msgid "DateTime Widget"
+msgid "CPS DateTime Widget"
 msgstr ""
 
-msgid "Date Widget"
+msgid "CPS Date Widget"
 msgstr ""
 
-msgid "Password Widget"
+msgid "CPS Password Widget"
 msgstr ""
 
-msgid "Int Widget"
+msgid "CPS Int Widget"
 msgstr ""
 
-msgid "CheckBox Widget"
+msgid "CPS CheckBox Widget"
 msgstr ""
 
-msgid "Long Widget"
+msgid "CPS Long Widget"
 msgstr ""
 
-msgid "Float Widget"
+msgid "CPS Float Widget"
 msgstr ""
 
-msgid "AttachedFile Widget"
+msgid "CPS AttachedFile Widget"
 msgstr ""
 
-msgid "File Widget"
+msgid "CPS File Widget"
 msgstr ""
 
-msgid "Image Widget"
+msgid "CPS Image Widget"
 msgstr ""
 
-msgid "Photo Widget"
+msgid "CPS Photo Widget"
 msgstr ""

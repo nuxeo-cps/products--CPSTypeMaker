@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
-"POT-Creation-Date: 2004-04-13 18:00default\n"
+"POT-Creation-Date: 2004-04-14 12:33default\n"
 "PO-Revision-Date: 2004-04-13 14:31+0200\n"
 "Last-Translator: emmanuel <epietriga@nuxeo.com>\n"
 "Language-Team: francais <fr@li.org>\n"
@@ -129,6 +129,14 @@ msgstr "Composants"
 
 msgid "cpstypes_add_type"
 msgstr "Ajouter un nouveau type"
+
+#, fuzzy
+msgid "cpstypes_edit_type"
+msgstr "Type"
+
+#, fuzzy
+msgid "cpstypes_edit_layout"
+msgstr "Editer le schema"
 
 msgid "Type management"
 msgstr "Gestion des types de documents"
