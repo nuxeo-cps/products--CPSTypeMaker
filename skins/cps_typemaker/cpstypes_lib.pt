@@ -50,6 +50,57 @@
 </metal:block>
 <!-- ################################################################################### -->
 
+<!-- layouts toolbar -->
+<metal:block define-macro="cpstm_flexible_layouts">
+<div class="typemaker_layoutlist">
+    <table>
+        <tr>
+          <td tal:repeat="i python:range(layout_count)">
+            <div class="typemaker_layoutelement">
+                <div class="typemaker_layout_toolbar"
+                     tal:condition="python:i>0">
+                    <a tal:attributes="href
+               python:here.portal_url()+'/portal_typemaker/manage_delFlexibleLayout?type_id='+type_id+'&layout_index='+str(i+1)">
+                      <img src="delete_cell.png"/>
+                    </a>
+
+                </div>
+
+                <div tal:define="selected python:i==int(layout_index)-1">
+                    <metal:block tal:condition="not:selected">
+                        <div class="typemaker_layoutlink">
+                            <a tal:attributes="href
+                                python:base_url+'cpstypes_flexible_layout_edit?type_id='+type_id+
+                                '&layout_index='+str(i+1)">
+                                <span i18:translate="">
+                                Disposition</span>&#160;
+                                <span tal:replace="python:str(i+1)"/>
+                            </a>
+                        </div>
+                    </metal:block>
+                    <metal:block tal:condition="selected">
+                        <div class="typemaker_layoutlink_selected">
+                            <span i18:translate="">
+                                Disposition</span>&#160;
+                            <span tal:replace="python:str(i+1)"/>
+
+                        </div>
+                    </metal:block>
+                </div>
+
+             </div>
+          </td>
+          <td tal:condition="python:layout_count<layout_max">
+              <a tal:attributes="href
+               python:here.portal_url()+'/portal_typemaker/manage_addFlexibleLayout?type_id='+type_id">
+                  <img src="add_layout.png"/>
+              </a>
+          </td>
+        </tr>
+    </table>
+</div>
+</metal:block>
+<!-- ################################################################################### -->
 
 <!-- a select widget for adding widget -->
 <metal:block define-macro="cpstm_addwidget">
@@ -133,13 +184,8 @@
 
 <!-- list of widgets -->
 <metal:block define-macro="cpstm_comps">
-
-
-
       <metal:block tal:define="widgets layoutob/objectValues;
                                wcount python:len(widgets)">
-
-
       <div class="typemaker_spaced"></div>
 
       <div tal:condition="python:wcount==0"
