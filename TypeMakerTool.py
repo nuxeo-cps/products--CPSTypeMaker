@@ -1449,8 +1449,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
     def _changeDocumentTypeProperties(self, type_id, is_addable=None,title=None,
         description=None, new_icon=None,):
-        """
-            changes Document Types infos
+        """ changes Document Types infos
         """
         ttool = getToolByName(self, 'portal_types')
         skintool = getToolByName(self, 'portal_skins')
@@ -1489,8 +1488,10 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             description = ''
 
         # changes description and/or title if needeed
+        props = {}
+
         if (type.title <> title) or (type.description <> description):
-            props = {}
+
             for id, value in type.propertyItems():
                 props[id] = value
 
@@ -1498,16 +1499,17 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             props['description'] = description
 
 
-            if new_icon and new_icon.read(1) != '':
-                new_icon.seek(0)
-                icon_id = type_id + '_icon'
-                props['content_icon'] = icon_id
-                customskin = skintool.custom
-                if hasattr(customskin, icon_id):
-                    customskin[icon_id].manage_upload(new_icon)
-                else:
-                    customskin.manage_addFile(icon_id, new_icon, title)
+        if new_icon and new_icon.read(1) != '':
+            new_icon.seek(0)
+            icon_id = type_id + '_icon'
+            props['content_icon'] = icon_id
+            customskin = skintool.custom
+            if hasattr(customskin, icon_id):
+                customskin[icon_id].manage_upload(new_icon)
+            else:
+                customskin.manage_addFile(icon_id, new_icon, title)
 
+        if props <> {}:
             type.manage_changeProperties(**props)
 
 
