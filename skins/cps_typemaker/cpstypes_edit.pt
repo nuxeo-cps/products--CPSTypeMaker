@@ -5,6 +5,7 @@
   delete_allowed python:0;
   typeob here/portal_types/?type_id;
   title typeob/title|type_id;
+  expanded_title title;
   layoutid python:typeob.layouts[-1];
   layoutob here/portal_layouts/?layoutid;
   debug nothing;
