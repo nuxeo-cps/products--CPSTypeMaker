@@ -22,87 +22,87 @@ msgstr ""
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "button_save"
-msgstr ""
+msgstr " Save "
 
 #.   <th>cpstypes_add_new_field</th>
 #: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_add_new_field"
-msgstr ""
+msgstr "Add new field"
 
 #.   <th>cpstypes_add_new_widget</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_add_new_widget"
-msgstr ""
+msgstr "Add new widget"
 
 #.   <h1>cpstypes_edit_schema</h1>
 #: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_edit_schema"
-msgstr ""
+msgstr "Edit schema"
 
 #.   <th>cpstypes_field_id</th>
 #: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_field_id"
-msgstr ""
+msgstr "Id"
 
 #.   <th>cpstypes_field_type</th>
 #: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_field_type"
-msgstr ""
+msgstr "Type"
 
 #.   <h3>cpstypes_fields</h3>
 #: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_fields"
-msgstr ""
+msgstr "Fields"
 
 #.   <h1 span="">cpstypes_label_add_type</h1>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 msgid "cpstypes_label_add_type"
-msgstr ""
+msgstr "Add type"
 
 #.   <th align="right">cpstypes_type_description</th>
 #.   <small content="item/description">cpstypes_type_description</small>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
-msgstr ""
+msgstr "Description"
 
 #.   <th align="right">cpstypes_type_id</th>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 msgid "cpstypes_type_id"
-msgstr ""
+msgstr "Id"
 
 #.   <th align="right">cpstypes_type_title</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_type_title"
-msgstr ""
+msgstr "Title"
 
 #.   <th>cpstypes_widget_id</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widget_id"
-msgstr ""
+msgstr "Id"
 
 #.   <th>cpstypes_widget_required</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widget_required"
-msgstr ""
+msgstr "Is Required"
 
 #.   <th>cpstypes_widget_size</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widget_size"
-msgstr ""
+msgstr "Size"
 
 #.   <th>cpstypes_widget_title</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widget_title"
-msgstr ""
+msgstr "Title"
 
 #.   <th>cpstypes_widget_type</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_widget_type"
-msgstr ""
+msgstr "Type"
 
 #.   <h3>cpstypes_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widgets"
-msgstr ""
+msgstr "Widgets"
