@@ -285,6 +285,12 @@ msgstr "A type with that name already exists"
 msgid "field_already_exists"
 msgstr "A field with that name already exists"
 
+msgid "psm_duplicate_widgets"
+msgstr "Warning, duplicate widgets: "
+
+msgid "psm_changed"
+msgstr "Changed."
+
 #~ msgid "cpstypes_widget_id"
 #~ msgstr "Id"
 

@@ -165,3 +165,9 @@ msgstr ""
 
 msgid "field_already_exists"
 msgstr ""
+
+msgid "psm_duplicate_widgets"
+msgstr ""
+
+msgid "psm_changed"
+msgstr ""
