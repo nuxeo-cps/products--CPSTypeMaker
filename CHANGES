@@ -3,10 +3,10 @@ Requires:
 -
 New features:
 ~~~~~~~~~~~~~
-- Added support for configuring hidden_layout_modes and immediate_view.
+-
 Bug fixes:
 ~~~~~~~~~~
-- Conflicting Id's caused ugly errors.
+-
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 -

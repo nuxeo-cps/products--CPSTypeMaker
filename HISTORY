@@ -1,4 +1,20 @@
 *******************************************
+** CPSTypeMaker V1.4.0 [R1 build 2004/07/26-11:52 by epietrig]
+
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+- Added support for configuring hidden_layout_modes and immediate_view.
+Bug fixes:
+~~~~~~~~~~
+- Conflicting Id's caused ugly errors.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
 ** CPSTypeMaker V1.3.0 [R1 build 2004/06/15-11:28 by epietrig]
 
 Requires:
