@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-06-22 17:28default\n"
+"POT-Creation-Date: 2004-07-02 15:22default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -283,4 +283,10 @@ msgid "type_already_exists"
 msgstr ""
 
 msgid "field_already_exists"
+msgstr ""
+
+msgid "psm_duplicate_widgets"
+msgstr ""
+
+msgid "psm_changed"
 msgstr ""
