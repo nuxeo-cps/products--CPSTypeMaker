@@ -8,6 +8,7 @@
   layoutob python:here.portal_layouts[primary_layout_id];
   wttool here/portal_widget_types;
   tmakertool here/portal_typemaker;
+  flexible_enabled python:tmakertool.flexible_aware;
   widgets python:tmakertool.listWidgetTypes(True);
   foo python:widgets.sort();
   form_action string:portal_typemaker/manage_documentModified;
@@ -38,7 +39,7 @@
                           'url':base_url+'cpstypes_layout_edit?type_id='+type_id,
                           'name': 'cpstypes_edit_layout',
                           'category': 'object'}];
-                       flexible_action python:[
+                       flexible_action python:test(flexible_enabled,[
                          {'id':'edit_flexible',
                           'url':base_url+'cpstypes_edit_flexible?type_id='+type_id,
                           'name': 'cpstypes_edit_flexible',
@@ -46,7 +47,7 @@
                          {'id':'edit_flexible_layout',
                           'url':base_url+'cpstypes_flexible_layout_edit?type_id='+type_id,
                           'name': 'cpstypes_edit_flexible_layout',
-                          'category': 'object'}];
+                          'category': 'object'}],[]);
                        actionlist python:typeob and actionlist + flexible_action or actionlist;
                        actions python:actions.update({'object': actionlist});
        " />
