@@ -1,0 +1,94 @@
+<tal:block define="
+  dt_title python:here.Localizer.default('cpstypes_configuretool');
+  expanded_title dt_title;
+  dummy python:request.set('breadcrumb_set',
+    [{
+      'id': 'types',
+      'url': here.portal_url()+'/cpstypes_list',
+      'longtitle': dt_title,
+      'title': dt_title,
+    }]);
+  dirtool here/portal_directories;
+  directories dirtool/listVisibleDirectories;
+  ">
+  <metal:block use-macro="here/main_template/macros/master">
+    <metal:block fill-slot="header">
+      <h1 i18n:translate="">cpstypes_configuretool</h1>
+    </metal:block>
+    <metal:block fill-slot="head_slot"
+        tal:define="actions python:actions.update({'object': [
+                    {'id':'list_types',
+                     'url':base_url+'cpstypes_list',
+                     'name': 'cpstypes_documentlist',
+                     'category': 'object'},
+                     {'id':'configure_tool',
+                     'url':base_url+'cpstypes_configure',
+                     'name': 'cpstypes_configuretool',
+                     'category': 'object'},
+                     ]});">
+    </metal:block>
+
+    <metal:block fill-slot="main"
+      tal:define="tmaker python:here.portal_typemaker;">
+
+      <form action="portal_typemaker/manage_pchangeProperties" method="post">
+      <table border="0" cellspacing="5" cellpadding="0">
+        <tr tal:repeat="property python:tmaker.getConfigurableProperties()">
+          <th align="right" width="50%"><span tal:content="property/label" i18n:translate=""/></th>
+          <td width="50%" tal:define="prop_type property/type;
+                          prop_value python:getattr(tmaker, property['id']);
+                          prop_name property/id">
+
+              <metal:block tal:condition="python:prop_type=='string'">
+                  <input type="text" tal:attributes="name prop_name;
+                                                     value prop_value"/>
+              </metal:block>
+
+              <metal:block tal:condition="python:prop_type=='tokens'">
+                  <metal:block tal:define="exp_value prop_value;">
+                      <input type="text" tal:attributes="name prop_name;
+                                                     value python:' '.join(exp_value)"/>
+                  </metal:block>
+              </metal:block>
+
+              <metal:block tal:condition="python:prop_type=='int'">
+                  <input type="text" tal:attributes="name prop_name;
+                                                     value prop_value"/>
+              </metal:block>
+
+              <metal:block tal:condition="python:prop_type=='text'">
+                  <textarea tal:attributes="name prop_name">
+                      <span tal:replace="prop_value"/>
+                  </textarea>
+              </metal:block>
+
+              <metal:block tal:condition="python:prop_type=='boolean'">
+                  <input type="checkbox" tal:attributes="name prop_name;
+                    checked python:test(prop_value,'checked','')"/>
+              </metal:block>
+
+
+            <!--<input type="checkbox" name="" value/>
+            <input type="checkbox" name="ids:list" value="" id="" class="noborder"
+                           tal:define="id python:item.getId()"
+                           tal:attributes="value id;
+                             id python:'cb_' + id;
+                             checked python:id in choosen_ids;" />
+            -->
+
+          </td>
+        </tr>
+      </table>
+
+      <div class="typemaker_up_spaced">
+
+
+      <input
+                  type="submit" name="validate"
+                   value="Enregistrer"  />
+
+      </div>
+      </form>
+    </metal:block>
+  </metal:block>
+</tal:block>
