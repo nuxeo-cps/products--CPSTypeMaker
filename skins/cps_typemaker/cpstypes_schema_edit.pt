@@ -38,7 +38,7 @@ actions['object'].append({'id':'delete_entry',
   </metal:block>
 
   <metal:block fill-slot="main">
-    <form method="post" action="cpstypes_schema_change">
+    <form method="post" action="cpstypes_schema_modify">
       <h3 i18n:translate="">label_fields</h3>
       <table>
         <tr align="left">
