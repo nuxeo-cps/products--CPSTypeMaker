@@ -44,15 +44,11 @@ for type in add_in_types:
         workspaceACT.append(type_id)
         typeobj.manage_changeProperties(allowed_content_types = workspaceACT)
 
-
 portal = context.portal_url.getPortalObject()
-wfconf = getattr(portal[sectionid], '.cps_workflow_configuration')
-if not wfconf.getPlacefulChainFor(type_id):
-    wfconf.manage_addChain(portal_type=type_id, chain=section_wf)
-
-wfconf = getattr(portal[workspaceid], '.cps_workflow_configuration')
-if not wfconf.getPlacefulChainFor(type_id):
-    wfconf.manage_addChain(portal_type=type_id, chain=workspace_wf)
+for sectionspace, workflow in context.cpstypes_get_workflows().items():
+    wfconf = getattr(portal[sectionspace], '.cps_workflow_configuration')
+    if not wfconf.getPlacefulChainFor(type_id):
+        wfconf.manage_addChain(portal_type=type_id, chain=workflow)
 
 if RESPONSE:
     return RESPONSE.redirect(context.portal_url() + '/cpstypes_edit?type_id='+type_id)

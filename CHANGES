@@ -5,6 +5,8 @@ New features:
 ~~~~~~~~~~~~~
 - You now can't delete a field if it's used in a layout.
 - Icons are now uploaded instead of selected from a list.
+- Which types to make these types addable in is now configurable.
+- The workflow configuration now allow any number of sections and workspaces.
 Bug fixes:
 ~~~~~~~~~~
 -
