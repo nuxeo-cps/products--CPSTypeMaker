@@ -42,6 +42,10 @@
                          {'id':'edit_flexible',
                           'url':base_url+'cpstypes_edit_flexible?type_id='+type_id,
                           'name': 'cpstypes_edit_flexible',
+                          'category': 'object'},
+                         {'id':'edit_flexible_layout',
+                          'url':base_url+'cpstypes_flexible_layout_edit?type_id='+type_id,
+                          'name': 'cpstypes_edit_flexible_layout',
                           'category': 'object'}];
                        actionlist python:typeob and actionlist + flexible_action or actionlist;
                        actions python:actions.update({'object': actionlist});
