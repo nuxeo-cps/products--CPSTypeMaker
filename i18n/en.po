@@ -300,30 +300,6 @@ msgstr "Warning, duplicate widgets: "
 msgid "psm_changed"
 msgstr "Changed."
 
-#~ msgid "cpstypes_widget_id"
-#~ msgstr "Id"
-
-#~ msgid "cpstypes_edit_schema"
-#~ msgstr "Edit schema"
-
-#~ msgid "cpstypes_add_new_field"
-#~ msgstr "Add new field"
-
-#~ msgid "cpstypes_field_type"
-#~ msgstr "Type"
-
-#~ msgid "cpstypes_fields"
-#~ msgstr "Fields"
-
-#~ msgid "cpstypes_widget_flexible"
-#~ msgstr "Is Flexible"
-
-#~ msgid "cpstypes_widget_index"
-#~ msgstr "Index for search"
-
-#~ msgid "cpstypes_type_id"
-#~ msgstr "Id"
-
 msgid "cpstypes_more"
 msgstr "More..."
 
@@ -536,4 +512,3 @@ msgstr "Generic Select"
 
 msgid "CPS Generic MultiSelect Widget"
 msgstr "Generic Multiselect"
-

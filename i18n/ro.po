@@ -570,9 +570,6 @@ msgstr ""
 msgid "Display width"
 msgstr ""
 
-msgid "Maximum image size"
-msgstr ""
-
 msgid "Enable to resize img to lower size"
 msgstr ""
 

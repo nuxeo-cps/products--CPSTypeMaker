@@ -360,9 +360,6 @@ msgstr "Nom de la skin"
 msgid "Popup Mode"
 msgstr "Mode du popup"
 
-msgid "Maximum image size"
-msgstr "Taille maximum d'image"
-
 msgid "Deletable ?"
 msgstr "Supprimable ?"
 
