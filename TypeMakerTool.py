@@ -1035,8 +1035,9 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             for action in type_actions:
                 ti.addAction(**action)
 
-        # adding first layout
-        new_id, new_flexid = self.manage_addLayout(None, None, type_id)
+        # adding first layouts
+        self.manage_addLayout(None, None, type_id)
+        self.manage_addFlexibleLayout(None, None, type_id)
         #layout = ltool.manage_addCPSLayout(type_id)
         #layout.manage_changeProperties(style_prefix=style_prefix)
         #flexlayout = ltool.manage_addCPSLayout(flex_id)
