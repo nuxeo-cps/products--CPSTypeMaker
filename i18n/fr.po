@@ -280,10 +280,10 @@ msgid "CPS URL Widget"
 msgstr "URL"
 
 msgid "type_already_exists"
-msgstr ""
+msgstr "Cet identifiant de type est déjá utilisé."
 
 msgid "field_already_exists"
-msgstr ""
+msgstr "Cet identifiant de champ est déjá utilisé."
 
 #~ msgid "cpstypes_widget_id"
 #~ msgstr "Id"
