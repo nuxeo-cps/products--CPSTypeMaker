@@ -14,7 +14,7 @@ layout = context.portal_layouts[layoutid]
 layoutdef = layout.getLayoutDefinition()
 
 # Firstly, save any changes to the fields.
-widgetinfo = REQUEST['widgetinfo']
+widgetinfo = REQUEST.get('widgetinfo', [])
 
 for each in widgetinfo:
     widgetname = each['name']
@@ -27,7 +27,7 @@ for each in widgetinfo:
         for row in layoutdef['rows']:
             new_widgets = []
             for widget in row:
-                if widget['widget_id'] not in widgetname:
+                if widget['widget_id'] != widgetname:
                     new_widgets.append(widget)
             if new_widgets:
                 new_rows.append(row)
