@@ -97,7 +97,7 @@ msgstr "Id"
 #: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 #, fuzzy
 msgid "cpstypes_widget_index"
-msgstr "Id"
+msgstr "Index for search"
 
 #.   <th>cpstypes_widget_required</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
