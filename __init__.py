@@ -24,7 +24,7 @@ from Products.CPSSchemas.Field import Field
 from Products.CMFCore.CMFCorePermissions import ManagePortal
 from AccessControl.PermissionRole import PermissionRole
 from Products.CPSSchemas.Layout import Layout
-from Products.CPSCore.CPSWorkflowConfiguration import CPSWorkflowConfiguration
+from Products.CPSWorkflow.configuration import Configuration
 from Products.CPSTypeMaker import TypeMakerTool
 from Products.CMFCore.utils import ToolInit
 from Products.CMFCore.DirectoryView import registerDirectory
@@ -59,8 +59,8 @@ FactoryTypeInformation.getIcon = getIcon
 Layout.setLayoutDefinition__roles__ = PermissionRole(ManagePortal)
 Layout.getFlexibleWidgetsDict = getFlexibleWidgetsDict
 Layout.getFlexibleWidgetsInfo__roles__ = PermissionRole(ManagePortal)
-CPSWorkflowConfiguration.getPlacefulChainFor__roles__ =\
-    PermissionRole(ManagePortal)
+Configuration.getPlacefulChainFor__roles__ =\
+PermissionRole(ManagePortal)
 Field.manage_addProperty__roles__ = PermissionRole(ManagePortal)
 Widget.getFieldInits__roles__ = PermissionRole(ManagePortal)
 Widget.getFieldTypes__roles__ = PermissionRole(ManagePortal)
