@@ -1,6 +1,7 @@
 <tal:block define="
   schema here/cpstypes_get_schema;
   delete_allowed nothing;
+  used_fields here/cpstypes_used_fields;
   debug nothing;
   ">
 <metal:block use-macro="here/main_template/macros/master">
@@ -59,7 +60,8 @@ actions['object'].append({'id':'delete_entry',
               <td>
                 <input type="hidden" name="fieldinfo.id:records" tal:attributes="value fieldid"/>
                 <input type="hidden" name="fieldinfo.name:records" tal:attributes="value fieldname"/>
-                <input type="checkbox" name="fieldinfo.is_selected:records" />
+                <input type="checkbox" name="fieldinfo.is_selected:records" 
+                  tal:condition="python:fieldname not in used_fields"/>
               </td>
               <td tal:content="fieldname" />
               <td tal:content="fieldtype" />

@@ -3,7 +3,7 @@ Requires:
 -
 New features:
 ~~~~~~~~~~~~~
--
+- You now can't delete a field if it's used in a layout.
 Bug fixes:
 ~~~~~~~~~~
 -
