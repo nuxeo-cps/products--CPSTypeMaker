@@ -9,9 +9,7 @@ for key in REQUEST.keys():
 if not action:
     raise ValueError('No action specified')
 
-defs = context.cpstypes_get_definitions()
-schemaid = defs['schemaid']
-schema = context.portal_schemas[schemaid]
+schema = context.cpstypes_get_schema()
 
 for info in fieldinfo:
     field = schema[info['id']]

@@ -8,9 +8,7 @@ kw = {'fields': [new_field],
       'label_edit': new_field,
      }
 
-defs = context.cpstypes_get_definitions()
-schemaid = defs['schemaid']
-field = context.portal_schemas[schemaid][new_field]
+field = context.cpstypes_get_schema()[new_field]
 wtype = field.default_widget
 
 layout.manage_addCPSWidget(new_field, wtype, **kw)

@@ -120,9 +120,7 @@ actions['object'].append({'id':'delete_entry',
         <tr>
           <th i18n:translate="">cpstypes_add_new_widget</th>
           <td>
-            <select name="new_field" tal:define="
-                schemaid python:definitions['schemaid'];
-                schema here/portal_schemas/?schemaid">
+            <select name="new_field" tal:define="schema here/cpstypes_get_schema">
               <tal:block tal:repeat="field schema/objectValues">
               <option tal:attributes="value field/getFieldId"
                       tal:content="field/getFieldId"
