@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-04-22 17:18default\n"
+"POT-Creation-Date: 2004-05-18 18:42default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -41,12 +41,17 @@ msgstr ""
 msgid "cpstypes_delete_cell"
 msgstr ""
 
+#.   <th>cpstypes_field_indexed</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_field_indexed"
+msgstr ""
+
 #.   <h3>cpstypes_flexible_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_flexible_widgets"
 msgstr ""
 
-#.   <h1 span="">cpstypes_label_add_type</h1>
+#.   <h1>cpstypes_label_add_type</h1>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 msgid "cpstypes_label_add_type"
 msgstr ""
@@ -85,12 +90,6 @@ msgstr ""
 msgid "cpstypes_widen_cell"
 msgstr ""
 
-#.   <th align="right">cpstypes_widget_id</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
-msgid "cpstypes_widget_id"
-msgstr ""
-
 #.   <th>cpstypes_widget_max_repeats</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_max_repeats"
@@ -113,6 +112,7 @@ msgid "cpstypes_widget_size"
 msgstr ""
 
 #.   <th>cpstypes_widget_title</th>
+#.   <th align="right">cpstypes_widget_title</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_title"

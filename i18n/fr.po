@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
-"POT-Creation-Date: 2004-04-22 17:18default\n"
+"POT-Creation-Date: 2004-05-18 18:42default\n"
 "PO-Revision-Date: 2004-04-23 09:10+0200\n"
 "Last-Translator: emmanuel <epietriga@nuxeo.com>\n"
 "Language-Team: francais <fr@li.org>\n"
@@ -41,12 +41,18 @@ msgstr "Ajouter une ligne"
 msgid "cpstypes_delete_cell"
 msgstr "Supprimer une cellule"
 
+#.   <th>cpstypes_field_indexed</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#, fuzzy
+msgid "cpstypes_field_indexed"
+msgstr "Id"
+
 #.   <h3>cpstypes_flexible_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_flexible_widgets"
 msgstr "Composants"
 
-#.   <h1 span="">cpstypes_label_add_type</h1>
+#.   <h1>cpstypes_label_add_type</h1>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 msgid "cpstypes_label_add_type"
 msgstr "Ajouter un type de document"
@@ -85,12 +91,6 @@ msgstr "Titre"
 msgid "cpstypes_widen_cell"
 msgstr "Elargir la cellule"
 
-#.   <th align="right">cpstypes_widget_id</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
-msgid "cpstypes_widget_id"
-msgstr "Id"
-
 #.   <th>cpstypes_widget_max_repeats</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_max_repeats"
@@ -113,6 +113,7 @@ msgid "cpstypes_widget_size"
 msgstr "Taille"
 
 #.   <th>cpstypes_widget_title</th>
+#.   <th align="right">cpstypes_widget_title</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_title"
@@ -274,14 +275,14 @@ msgstr "Texte"
 msgid "CPS URL Widget"
 msgstr "URL"
 
+#~ msgid "cpstypes_widget_id"
+#~ msgstr "Id"
+
 #~ msgid "cpstypes_edit_schema"
 #~ msgstr "Editer le schema"
 
 #~ msgid "cpstypes_add_new_field"
 #~ msgstr "Ajouter un nouveau champ"
-
-#~ msgid "cpstypes_field_id"
-#~ msgstr "Id"
 
 #~ msgid "cpstypes_field_type"
 #~ msgstr "Type de champ"
@@ -297,4 +298,3 @@ msgstr "URL"
 
 #~ msgid "cpstypes_type_is_flexible"
 #~ msgstr "Type de document flexible"
-
