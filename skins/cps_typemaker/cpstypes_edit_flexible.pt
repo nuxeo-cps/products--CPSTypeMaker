@@ -55,7 +55,7 @@ actions['object'].append({'id':'delete_entry',
     </tal:block>
 
     <link rel="Stylesheet" type="text/css" href=""
-      tal:attributes="href string:${base_url}document.css">
+      tal:attributes="href string:${base_url}document.css" />
   </metal:block>
 
   <metal:block fill-slot="header">
@@ -64,7 +64,7 @@ actions['object'].append({'id':'delete_entry',
 
   <metal:block fill-slot="main">
     <form method="post" action="cpstypes_modify_flexible" enctype="multipart/form-data">
-      <input type="hidden" name="type_id" tal:attributes="value type_id">
+      <input type="hidden" name="type_id" tal:attributes="value type_id"/>
       <h3 i18n:translate="">cpstypes_flexible_widgets</h3>
       <table>
         <tr align="left">
@@ -83,10 +83,10 @@ actions['object'].append({'id':'delete_entry',
                 <input type="hidden" name="widgetinfo.name:records" tal:attributes="value widgetname"/>
                 <input type="checkbox" name="widgetinfo.is_selected:records" />
               </td>
-              <td><input type="text" size=20 name="widgetinfo.title:records" tal:attributes="value widget/label_edit" /></td>
+              <td><input type="text" size="20" name="widgetinfo.title:records" tal:attributes="value widget/label_edit" /></td>
               <td tal:content="widget/meta_type" i18n:translate="" />
               <td>
-                <input type="text" size=10 name="widgetinfo.size:records"
+                <input type="text" size="10" name="widgetinfo.size:records"
                   tal:attributes="value widget/size_max" 
                   tal:condition="python:hasattr(widget, 'size_max')" />
                 <input type="hidden" name="widgetinfo.size:records"
@@ -94,7 +94,7 @@ actions['object'].append({'id':'delete_entry',
                   tal:condition="python:not hasattr(widget, 'size_max')" />
               </td>
               <td>
-                <input type="text" size=1 name="widgetinfo.repeats:records"
+                <input type="text" size="1" name="widgetinfo.repeats:records"
                   tal:attributes="value widgetinfo/?widgetname" />
               </td>
             </tal:block>
@@ -102,7 +102,7 @@ actions['object'].append({'id':'delete_entry',
       </table>
       <input type="submit" name="action_delete" value="button_delete" i18n:attributes="value" />
       <input type="submit" name="action_save" value="button_save" i18n:attributes="value" />
-      <input type="hidden" name="layout_id" tal:attributes="value layoutid">
+      <input type="hidden" name="layout_id" tal:attributes="value layoutid" />
       <table>
         <tr>
           <th  align='left' i18n:translate="" colspan="2">cpstypes_add_new_widget</th>

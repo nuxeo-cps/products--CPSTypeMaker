@@ -50,7 +50,7 @@ actions['object'].append({'id':'delete_entry',
     </tal:block>
 
     <link rel="Stylesheet" type="text/css" href=""
-      tal:attributes="href string:${base_url}document.css">
+      tal:attributes="href string:${base_url}document.css" />
   </metal:block>
 
   <metal:block fill-slot="header">
@@ -59,20 +59,22 @@ actions['object'].append({'id':'delete_entry',
 
   <metal:block fill-slot="main">
     <form method="post" action="cpstypes_modify" enctype="multipart/form-data">
-      <input type="hidden" name="type_id" tal:attributes="value type_id">
+      <input type="hidden" name="type_id" tal:attributes="value type_id" />
       <table tal:condition="typeob">
         <tr>
           <th align='right' i18n:translate="">cpstypes_type_title</th>
-          <td><input type="text" size=50 name="title" tal:attributes="value typeob/title"></td>
+          <td><input type="text" size="50" name="title" tal:attributes="value typeob/title" /></td>
         </tr>
         <tr>
           <th align='right' i18n:translate="">cpstypes_type_description</th>
-          <td><textarea cols=48 name="description" tal:content="typeob/description" /></td>
+          <td><textarea cols="48" rows="3" name="description"
+                        tal:content="typeob/description" /></td>
         </tr>
         <tr>
           <th align='right' i18n:translate="">cpstypes_type_icon</th>
           <td>
-            <img tal:attributes="src string:${here/portal_url}/${typeob/content_icon}" />
+            <img tal:attributes="src string:${here/portal_url}/${typeob/content_icon}"
+                 alt="document type icon" />
             <input type="file" name="new_icon" />
           </td>
         </tr>
@@ -96,10 +98,10 @@ actions['object'].append({'id':'delete_entry',
                 <input type="hidden" name="widgetinfo.name:records" tal:attributes="value widgetname"/>
                 <input type="checkbox" name="widgetinfo.is_selected:records" />
               </td>
-              <td><input type="text" size=20 name="widgetinfo.title:records" tal:attributes="value widget/label_edit" /></td>
+              <td><input type="text" size="20" name="widgetinfo.title:records" tal:attributes="value widget/label_edit" /></td>
               <td tal:content="widget/meta_type" i18n:translate="" />
               <td>
-                <input type="text" size=10 name="widgetinfo.size:records"
+                <input type="text" size="10" name="widgetinfo.size:records"
                   tal:attributes="value widget/size_max" 
                   tal:condition="python:hasattr(widget, 'size_max')" />
                 <input type="hidden" name="widgetinfo.size:records"
@@ -117,7 +119,7 @@ actions['object'].append({'id':'delete_entry',
       </table>
       <input type="submit" name="action_delete" value="button_delete" i18n:attributes="value" />
       <input type="submit" name="action_save" value="button_save" i18n:attributes="value" />
-      <input type="hidden" name="layout_id" tal:attributes="value type_id">
+      <input type="hidden" name="layout_id" tal:attributes="value type_id" />
       <table>
         <tr>
           <th  align='left' i18n:translate="" colspan="2">cpstypes_add_new_widget</th>
