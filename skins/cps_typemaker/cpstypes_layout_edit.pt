@@ -76,9 +76,9 @@ here.Localizer.default('description_confirm_delete').encode('ISO-8859-15',
 
   <metal:block fill-slot="header">
     <script type="text/javascript"
-            src="/cps/cpstypes_pdlib.js"></script>
+            tal:attributes="src string:${base_url}cpstypes_pdlib.js"></script>
     <script type="text/javascript"
-            src="/cps/cpstypes_layout_edit.js"></script>
+            tal:attributes="src string:${base_url}cpstypes_layout_edit.js"></script>
 
     <h1><span i18n:translate="" tal:content="title" /></h1>
   </metal:block>
@@ -298,7 +298,7 @@ string:${here/portal_url}/portal_typemaker/manage_layoutModified?#table"
 
      <td valign="top" width="30%">
         <h3 i18n:translate="">cpstypes_availablefields</h3>
-        <table>
+        <table width="100%">
             <metal:block tal:repeat="wid widgetids">
             <tr>
             <td>

@@ -71,7 +71,12 @@ actions['object'].append({'id':'delete_entry',
 
   <metal:block fill-slot="header">
     <h1><span i18n:translate="" tal:content="title" /></h1>
+    <script type="text/javascript"
+            tal:attributes="src string:${base_url}cpstypes_pdlib.js"></script>
+    <script type="text/javascript"
+            tal:attributes="src string:${base_url}cpstypes_layout_edit.js"></script>
   </metal:block>
+
   <metal:block fill-slot="main"
     tal:define="widgetids layoutob/keys;
                 layoutdef layoutob/getLayoutDefinition;
