@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-04-14 12:40default\n"
+"POT-Creation-Date: 2004-04-14 13:13default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -19,8 +19,8 @@ msgstr ""
 "Preferred-encodings: utf-8 latin1\n"
 "Domain: default\n"
 
-#.   <input type="submit" name="action_save" value="button_save" />
-#.   <input type="submit" name="action_save" value="button_save">
+#.   <input value="button_save" name="action_save" type="submit" />
+#.   <input value="button_save" name="action_save" type="submit">
 #.       </input>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_schema_edit.pt
@@ -37,12 +37,12 @@ msgstr ""
 msgid "cpstypes_add_new_widget"
 msgstr ""
 
-#.   <input type="submit" name="addrow" value="cpstypes_add_row" />
+#.   <input value="cpstypes_add_row" name="addrow" type="submit" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_add_row"
 msgstr ""
 
-#.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
+#.   <input value="cpstypes_delete_cell" name="delcell" type="submit" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_delete_cell"
 msgstr ""
@@ -72,12 +72,12 @@ msgstr ""
 msgid "cpstypes_label_add_type"
 msgstr ""
 
-#.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
+#.   <input value="cpstypes_shrink_cell" name="shrinkcell" type="submit" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_shrink_cell"
 msgstr ""
 
-#.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
+#.   <input value="cpstypes_split_cell" name="splitcell" type="submit" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_split_cell"
 msgstr ""
@@ -111,7 +111,7 @@ msgstr ""
 msgid "cpstypes_type_title"
 msgstr ""
 
-#.   <input type="submit" name="widencell" value="cpstypes_widen_cell" />
+#.   <input value="cpstypes_widen_cell" name="widencell" type="submit" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_widen_cell"
 msgstr ""

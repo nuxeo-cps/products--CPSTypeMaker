@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
-"POT-Creation-Date: 2004-04-14 12:40default\n"
-"PO-Revision-Date: 2004-04-13 14:31+0200\n"
+"POT-Creation-Date: 2004-04-14 13:13default\n"
+"PO-Revision-Date: 2004-04-14 13:26+0200\n"
 "Last-Translator: emmanuel <epietriga@nuxeo.com>\n"
 "Language-Team: francais <fr@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,8 +19,8 @@ msgstr ""
 "Domain: default\n"
 "X-Generator: KBabel 1.3.1\n"
 
-#.   <input type="submit" name="action_save" value="button_save" />
-#.   <input type="submit" name="action_save" value="button_save">
+#.   <input value="button_save" name="action_save" type="submit" />
+#.   <input value="button_save" name="action_save" type="submit">
 #.       </input>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_schema_edit.pt
@@ -37,17 +37,15 @@ msgstr "Ajouter un nouveau champ"
 msgid "cpstypes_add_new_widget"
 msgstr "Ajouter un nouveau composant"
 
-#.   <input type="submit" name="addrow" value="cpstypes_add_row" />
+#.   <input value="cpstypes_add_row" name="addrow" type="submit" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_add_row"
-msgstr "Ajouter un nouveau type"
+msgstr "Ajouter une ligne"
 
-#.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
+#.   <input value="cpstypes_delete_cell" name="delcell" type="submit" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_delete_cell"
-msgstr "Type"
+msgstr "Supprimer une cellule"
 
 #.   <h1>cpstypes_edit_schema</h1>
 #: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
@@ -62,7 +60,7 @@ msgstr "Id"
 #.   <th>cpstypes_field_type</th>
 #: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_field_type"
-msgstr "Type"
+msgstr "Type de champ"
 
 #.   <h3>cpstypes_fields</h3>
 #: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
@@ -74,17 +72,15 @@ msgstr "Champs"
 msgid "cpstypes_label_add_type"
 msgstr "Ajouter un type de document"
 
-#.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
+#.   <input value="cpstypes_shrink_cell" name="shrinkcell" type="submit" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_shrink_cell"
-msgstr "Champs"
+msgstr "Réduire la cellule"
 
-#.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
+#.   <input value="cpstypes_split_cell" name="splitcell" type="submit" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_split_cell"
-msgstr "Editer le schema"
+msgstr "Scinder la cellule"
 
 #.   <th align="right">cpstypes_type_description</th>
 #.   <small content="item/description">cpstypes_type_description</small>
@@ -115,11 +111,10 @@ msgstr "Type de document flexible"
 msgid "cpstypes_type_title"
 msgstr "Titre"
 
-#.   <input type="submit" name="widencell" value="cpstypes_widen_cell" />
+#.   <input value="cpstypes_widen_cell" name="widencell" type="submit" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_widen_cell"
-msgstr "Taille"
+msgstr "Elargir la cellule"
 
 #.   <th>cpstypes_widget_id</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
@@ -150,7 +145,7 @@ msgstr "Titre"
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "cpstypes_widget_type"
-msgstr "Type"
+msgstr "Type de composant"
 
 #.   <h3>cpstypes_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
@@ -160,109 +155,108 @@ msgstr "Composants"
 msgid "cpstypes_add_type"
 msgstr "Ajouter un nouveau type"
 
-#, fuzzy
 msgid "cpstypes_edit_type"
-msgstr "Type"
+msgstr "Editer le type"
 
-#, fuzzy
 msgid "cpstypes_edit_layout"
-msgstr "Editer le schema"
+msgstr "Editer la disposition"
 
 msgid "Type management"
 msgstr "Gestion des types de documents"
 
 msgid "CPS String List Field"
-msgstr ""
+msgstr "Liste de chaînes"
 
 msgid "CPS Float Field"
-msgstr ""
+msgstr "Nombre flotant"
 
 msgid "CPS File Field"
-msgstr ""
+msgstr "Fichier"
 
 msgid "CPS Image Field"
-msgstr ""
+msgstr "Image"
 
 msgid "CPS String Field"
-msgstr ""
+msgstr "Chaîne de caractères"
 
 msgid "CPS DateTime Field"
-msgstr ""
+msgstr "Date et heure"
 
 msgid "CPS Password Field"
-msgstr ""
+msgstr "Mot de passe"
 
 msgid "CPS Int Field"
-msgstr ""
+msgstr "Nombre entier"
 
 msgid "CPS Long Field"
-msgstr ""
+msgstr "Nombre entier (long)"
 
 msgid "CPS MultiSelect Widget"
-msgstr ""
+msgstr "Liste à sélections multiples"
 
 msgid "CPS Lines Widget"
-msgstr ""
+msgstr "Lignes"
 
 msgid "CPS Ordered List Widget"
-msgstr ""
+msgstr "Liste ordonnée"
 
 msgid "CPS Unordered List Widget"
-msgstr ""
+msgstr "Liste non ordonnée"
 
 msgid "CPS String Widget"
-msgstr ""
+msgstr "Chaîne de caractères"
 
 msgid "CPS TextArea Widget"
-msgstr ""
+msgstr "Zone de texte"
 
 msgid "CPS Email Widget"
-msgstr ""
+msgstr "Courriel"
 
 msgid "CPS Heading Widget"
-msgstr ""
+msgstr "Titre"
 
 msgid "CPS Rich Text Editor Widget"
-msgstr ""
+msgstr "Rich Text Editor"
 
 msgid "CPS InternalLinks Widget"
-msgstr ""
+msgstr "Liens internes"
 
 msgid "CPS Link Widget"
-msgstr ""
+msgstr "Lien"
 
 msgid "CPS Html Widget"
-msgstr ""
+msgstr "Html"
 
 msgid "CPS DateTime Widget"
-msgstr ""
+msgstr "Date/Heure"
 
 msgid "CPS Date Widget"
-msgstr ""
+msgstr "Date"
 
 msgid "CPS Password Widget"
-msgstr ""
+msgstr "Mot de passe"
 
 msgid "CPS Int Widget"
-msgstr ""
+msgstr "Entier"
 
 msgid "CPS CheckBox Widget"
-msgstr ""
+msgstr "Case à cocher"
 
 msgid "CPS Long Widget"
-msgstr ""
+msgstr "Entier long"
 
 msgid "CPS Float Widget"
-msgstr ""
+msgstr "Flottant"
 
 msgid "CPS AttachedFile Widget"
-msgstr ""
+msgstr "Fichier attaché"
 
 msgid "CPS File Widget"
-msgstr ""
+msgstr "Fichier"
 
 msgid "CPS Image Widget"
-msgstr ""
+msgstr "Image"
 
 msgid "CPS Photo Widget"
-msgstr ""
+msgstr "Photo"
+
