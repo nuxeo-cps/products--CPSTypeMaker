@@ -32,7 +32,7 @@ from Products.CMFCore.CMFCorePermissions import ManagePortal
 from Products.CMFCore.Expression import Expression
 from Products.CMFCore.Expression import getEngine
 from Products.PageTemplates.TALES import CompilerError
-
+from Products.CMFCore.utils import getToolByName
 from Products.CPSSchemas.PropertiesPostProcessor import PropertiesPostProcessor
 # from Products.CPSSchemas.StorageAdapter import AttributeStorageAdapter
 from Products.CPSSchemas.StorageAdapter import BaseStorageAdapter
@@ -59,7 +59,6 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
     """
     id = 'widget_renderer'
     portal_type = meta_type = 'CPSWidgetRenderer'
-    parent = None
     widget = None
     layout = schema = None
     security = ClassSecurityInfo()
@@ -84,6 +83,13 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
 
         return vocabulary
 
+    security.declarePrivate('_canChange')
+    def _canChange(self, widget_id):
+        """ checks the list of widgets
+            we don't want to view
+        """
+        tmaker = getToolByName(self, 'portal_typemaker')
+        return widget_id not in tmaker.widget_filter_list
 
 
     security.declarePrivate('_getLayout')
@@ -125,7 +131,7 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
                     # finding the right widget type from property type
                     widget_type = self._findWidgetLayoutType(p_type)
 
-                    if p_mode == 'w':
+                    if p_mode == 'w' and self._canChange(p_id):
 
                         # adding layout definition element
                         element = {}
@@ -181,7 +187,7 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
             return 'String Widget'
         elif property_type == 'int':
             return 'Int Widget'
-        elif property_type == 'tokens':
+        elif property_type == 'tokens' or property_type == 'lines':
             return 'Lines Widget'
         elif property_type == 'boolean':
             return 'Boolean Widget'
@@ -208,7 +214,7 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
             return 'CPS String Field'
         elif property_type == 'int':
             return 'CPS Int Field'
-        elif property_type == 'tokens':
+        elif property_type == 'tokens' or property_type == 'lines':
             return 'CPS String List Field'
         elif property_type == 'boolean':
             return 'CPS Int Field'
@@ -217,7 +223,7 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
         elif property_type == 'selection':
             return 'CPS String Field'
         elif property_type == 'float':
-            return 'CPS Float Field'        
+            return 'CPS Float Field'
         else:
             raise "Miss one type : %s" % property_type
 
@@ -287,7 +293,6 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
         """ renders the object according
             to the associated layout an schema
         """
-        # see for multiple users
         self.widget = widget
 
         # XXXXX empty render ?
@@ -295,15 +300,9 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
             return ''
 
         self._cleanInstances()
-
-
         dm = self._getDataModel(widget)
         ds = DataStructure(datamodel=dm)
         layout = self._getLayout()
-
-        # need a try..finally here
-
-        #layout.prepareLayoutWidgets(ds)
 
         for widget_id, widget in layout.items():
             if not widget.isHidden():
@@ -334,8 +333,6 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
 
         self._cleanInstances()
         return rendered, ok, ds
-
-
 
     security.declarePrivate('_cleanInstances')
     def _cleanInstances(self):

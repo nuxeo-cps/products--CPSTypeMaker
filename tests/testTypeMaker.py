@@ -85,112 +85,131 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
         # check layout count now (base layout + 10)
         count = tmaker_tool.getTypeLayoutCount(type_name)
 
-        self.assertEquals(count, 11)        
-               
+        self.assertEquals(count, 11)
+
         """ seems like copy is not supported in test case
         liste = range(10)
-        liste.reverse()        
+        liste.reverse()
         for i in liste:
             tmaker_tool.manage_delLayout(None, None, type_name, i+1)
 
         self.assertEquals(count, 1)
         """
-        
+
     def testChangeProperties(self):
-        
+
         tmaker_tool = self.portal.portal_typemaker
         props = {}
         props['multiple_layouts'] = True
         props['flexible_aware'] = True
         props['type_prefix'] = 'mes_types_'
-        
+
         tmaker_tool.manage_pchangeProperties(REQUEST=props)
-        
-        self.assertEquals(tmaker_tool.multiple_layouts, True)        
-        self.assertEquals(tmaker_tool.flexible_aware, True)        
-        self.assertEquals(tmaker_tool.type_prefix, 'mes_types_')        
-        
+
+        self.assertEquals(tmaker_tool.multiple_layouts, True)
+        self.assertEquals(tmaker_tool.flexible_aware, True)
+        self.assertEquals(tmaker_tool.type_prefix, 'mes_types_')
+
         self.testTypeAdding()
-        
-        
-        
+
+
+
     def testChangeDocBaseProperties(self):
-        self.testTypeAdding()        
-        tmaker_tool = self.portal.portal_typemaker        
+        self.testTypeAdding()
+        tmaker_tool = self.portal.portal_typemaker
         type_name = tmaker_tool.type_prefix + 'TotoroPowered'
         tmaker_tool.manage_documentModified(type_id=type_name, is_addable=1,
             title='totoro lifestyle', description='totoro rulez the word')
-        
+
         # check results on type
-        type_tool = self.portal.portal_types        
+        type_tool = self.portal.portal_types
         type_factory = type_tool[type_name]
-        
+
         self.assertEquals(type_factory.title, 'totoro lifestyle')
         self.assertEquals(type_factory.description, 'totoro rulez the word')
-            
-        
+
+
     def testaddDocElements(self):
-        self.testTypeAdding()        
-        
-        tmaker_tool = self.portal.portal_typemaker        
-        
-        action = 'add'        
+        self.testTypeAdding()
+
+        tmaker_tool = self.portal.portal_typemaker
+
+        action = 'add'
         type_name = tmaker_tool.type_prefix + 'TotoroPowered'
-        
+
         # add 'empty widget'
         tmaker_tool.manage_documentModified(type_id=type_name, action=action,
           new_widget_title='Totoro string widget',
           new_widget_type='String Widget')
-          
+
         # check results on type
-        type_layouts = self.portal.portal_layouts 
+        type_layouts = self.portal.portal_layouts
         type_layout = type_layouts[type_name+'_1']
-        
+
         found = False
         for id, item in type_layout.objectItems():
-            
+
             if item.id == 'w__Totoro_string_widget':
                 found = True
-                self.assertEquals(item.title, 'Totoro string widget')    
+                self.assertEquals(item.title, 'Totoro string widget')
                 break
-            
-        self.assertEquals(found, True)    
-        
+
+        self.assertEquals(found, True)
+
     def testallWidgetTypes(self):
-        self.testTypeAdding()    
-        
-        tmaker_tool = self.portal.portal_typemaker        
-        
-        action = 'add'        
+        self.testTypeAdding()
+
+        tmaker_tool = self.portal.portal_typemaker
+
+        action = 'add'
         type_name = tmaker_tool.type_prefix + 'TotoroPowered'
-        
+
         # add 'empty widget'
         types = self.portal.portal_widget_types
-        
-        for id, type in types.objectItems(): 
-            #raise str((type._properties))           
+
+        for id, type in types.objectItems():
+            #raise str((type._properties))
             tmaker_tool.manage_documentModified(type_id=type_name, action=action,
             new_widget_title='Totoro '+str(id),
             new_widget_type= type.id)
-            
+
             # check results on type
-            type_layouts = self.portal.portal_layouts 
+            type_layouts = self.portal.portal_layouts
             type_layout = type_layouts[type_name+'_1']
-            
+
             wid = 'w__Totoro '+str(id)
             wid = wid.replace(' ', '_')
-                
+
             found = False
-            for item_id, item in type_layout.objectItems():                
-                
+            for item_id, item in type_layout.objectItems():
+
                 if item.id == wid:
                     found = True
-                    self.assertEquals(item.title, 'Totoro '+str(id))    
+                    self.assertEquals(item.title, 'Totoro '+str(id))
                     break
-                
-            self.assertEquals(found, True)    
-               
-            
+
+            self.assertEquals(found, True)
+
+    def test_listWidgets(self):
+        """ testing list widget
+        """
+        tmaker_tool = self.portal.portal_typemaker
+        wlist = tmaker_tool._listWidgets()
+        self.assertNotEquals(wlist, [])
+
+    def test_typeFilters(self):
+        """ tests type filters
+        """
+        tmaker_tool = self.portal.portal_typemaker
+        wlist = tmaker_tool.listWidgetTypes()
+
+        for element in wlist:
+            self.assertNotEquals(element['id'], 'Search Widget')
+
+        tmaker_tool.type_filter_list.append('Int Widget')
+        wlist = tmaker_tool.listWidgetTypes()
+        for element in wlist:
+            self.assertNotEquals(element['id'], 'Int Widget')
 
 def test_suite():
     suites = [unittest.makeSuite(TestTypeMakerTool)]

@@ -39,7 +39,7 @@ from Products.CPSCore.ProxyBase import ProxyFolder
 from Products.CPSSchemas.PropertiesPostProcessor import PropertiesPostProcessor
 from Products.CPSSchemas.WidgetTypesTool import WidgetTypeRegistry
 import ExtensionClass
-
+from Products.CMFCore.CMFCorePermissions import ViewManagementScreens
 from Products.CPSSchemas.BasicWidgets import CPSSelectWidget
 from types import StringType
 """
@@ -97,11 +97,21 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
          'label': "Hidden layout modes",'configurable' : 1} ,
         {'id': 'max_rows', 'type': 'int', 'mode': 'w',
          'label': "Maximum number of rows",'configurable' : 1} ,
-        {'id': 'process_before_t', 'type': 'string', 'mode': 'w',
+        {'id': 'process_before_t', 'type': 'text', 'mode': 'w',
          'label': "Process before type publish state changes",'configurable' : 1} ,
-        {'id': 'process_after_t', 'type': 'string', 'mode': 'w',
+        {'id': 'process_after_t', 'type': 'text', 'mode': 'w',
          'label': "Process after type publish state changes",'configurable' : 1} ,
+        {'id': 'widget_filter_list', 'type': 'lines', 'mode':'w',
+         'label': "Fields hidden in widget edit mode",'configurable' : 1},
+        {'id': 'type_filter_list', 'type': 'lines', 'mode':'w',
+         'label': "Widget types that are not usable in TypeMaker",'configurable' : 1},
         )
+
+    widget_filter_list = ['fields', 'help', 'hidden_layout_modes',
+        'hidden_readonly_layout_modes', 'hidden_empty', 'hidden_if_expr']
+
+    type_filter_list = ['Dummy Widget', 'Search Widget', 'Link Widget',
+        'Text Image Widget']
 
     multiple_layouts = False
     flexible_aware = False
@@ -142,7 +152,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
     #
     # APIs
     #
-    security.declarePublic('getConfigurableProperties')
+    security.declareProtected(ViewManagementScreens, 'getConfigurableProperties')
     def getConfigurableProperties(self):
         """ gives a list of properties that can be configure
             thru the portal
@@ -156,7 +166,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         return result
 
 
-    security.declarePublic('manage_pchangeProperties')
+    security.declareProtected(ViewManagementScreens, 'manage_pchangeProperties')
     def manage_pchangeProperties(self, REQUEST=None, RESPONSE=None, **kw):
         """ method used to publish properties
         """
@@ -209,7 +219,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
         return self.process_after_tc_(expr_context)
 
-    security.declarePublic('manage_delWidget')
+    security.declareProtected(ViewManagementScreens, 'manage_delWidget')
     def manage_delWidget(self,type_id, widget_id, widget_name, REQUEST=None, RESPONSE=None):
         """ used to delete a widget from all layouts
         """
@@ -244,7 +254,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
                 type_id+portal_status_message+tagger)
 
 
-    security.declarePublic('manage_documentModified')
+    security.declareProtected(ViewManagementScreens, 'manage_documentModified')
     def manage_documentModified(self,type_id, is_addable=None,title=None, description=None,
                          new_icon=None,  widgetinfo=[], new_widget_title=None,
                          new_widget_type=None, REQUEST=None, RESPONSE=None, action=None):
@@ -323,7 +333,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
                 if new_widget_id is not None:
                     res = self._addwidget(layout, type_id, new_widget_id,
                         new_widget_title, new_widget_type)
-    
+
                     portal_status_message = portal_status_message + res
                     tagger = '#components'
 
@@ -342,7 +352,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
                 type_id+portal_status_message+tagger)
 
 
-    security.declarePublic('manage_flexibleModified')
+    security.declareProtected(ViewManagementScreens, 'manage_flexibleModified')
     def manage_flexibleModified(self,type_id, widgetinfo=[], new_widget_title=None,
         new_widget_type=None, REQUEST=None, RESPONSE=None, action=None):
         """ this is used to update a flexible type
@@ -409,21 +419,21 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
             if action == 'add':
                 new_widget_id = makeId(new_widget_title)
-                
+
                 if new_widget_id is not None:
-                    
+
                     kw = {'fields': ['?'],
                         'label_edit': new_widget_title,
                         'title': new_widget_title,
                         }
-    
+
                     if hasattr(layout, 'w__'+new_widget_id):
                         portal_status_message.append('field_already_exists')
-    
+
                     else:
                         widget = layout.manage_addCPSWidget(new_widget_id,
                             new_widget_type, **kw)
-    
+
                         flexible_widgets.append(new_widget_id)
 
             layout.manage_changeProperties(flexible_widgets=flexible_widgets)
@@ -645,13 +655,13 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         else:
             return not nothing_deleted
 
-    security.declarePublic('manage_delLayout')
+    security.declareProtected(ViewManagementScreens, 'manage_delLayout')
     def manage_delLayout(self, REQUEST, RESPONSE, type_id, layout_index):
         """ deletes a layout
         """
         return self._delLayout(REQUEST, RESPONSE, type_id, layout_index)
 
-    security.declarePublic('manage_delFlexibleLayout')
+    security.declareProtected(ViewManagementScreens, 'manage_delFlexibleLayout')
     def manage_delFlexibleLayout(self, REQUEST, RESPONSE, type_id, layout_index):
         """ deletes a layout
         """
@@ -743,13 +753,13 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
 
 
-    security.declarePublic('manage_addLayout')
+    security.declareProtected(ViewManagementScreens, 'manage_addLayout')
     def manage_addLayout(self, REQUEST, RESPONSE, type_id):
         """ adds an extra layout
         """
         return self._addlayout(REQUEST, RESPONSE, type_id)
 
-    security.declarePublic('manage_addFlexibleLayout')
+    security.declareProtected(ViewManagementScreens, 'manage_addFlexibleLayout')
     def manage_addFlexibleLayout(self, REQUEST, RESPONSE, type_id):
         """ adds an extra layout
         """
@@ -757,14 +767,14 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
 
 
-    security.declarePublic('manage_flexLayoutModified')
+    security.declareProtected(ViewManagementScreens, 'manage_flexLayoutModified')
     def manage_flexLayoutModified(self, REQUEST, RESPONSE, type_id, layout_index=1):
         """ called when a flexible layout is modified
         """
         return self._layoutModified(REQUEST, RESPONSE, type_id, layout_index, True)
 
 
-    security.declarePublic('manage_layoutModified')
+    security.declareProtected(ViewManagementScreens, 'manage_layoutModified')
     def manage_layoutModified(self, REQUEST, RESPONSE, type_id, layout_index=1):
         """ called when a layout is modified
         """
@@ -914,7 +924,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
 
 
-    security.declarePublic('manage_deleteDocumentType')
+    security.declareProtected(ViewManagementScreens, 'manage_deleteDocumentType')
     def manage_deleteDocumentType(self, ids, RESPONSE=None):
         """ called when a document type is deleted
         """
@@ -959,7 +969,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         else:
             return 'Updated'
 
-    security.declarePublic('getTypeLayoutCount')
+    security.declareProtected(ViewManagementScreens, 'getTypeLayoutCount')
     def getTypeLayoutCount(self, type_id):
         """
             retrieves a type layout count
@@ -974,7 +984,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
         return count
 
-    security.declarePublic('getFlexibleTypeLayoutCount')
+    security.declareProtected(ViewManagementScreens, 'getFlexibleTypeLayoutCount')
     def getFlexibleTypeLayoutCount(self, type_id):
         """
             retrieves a flexible type layout count
@@ -992,8 +1002,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
         return count
 
-
-    security.declarePublic('manage_addDocumentType')
+    security.declareProtected(ViewManagementScreens, 'manage_addDocumentType')
     def manage_addDocumentType(self,title,description,RESPONSE=None):
         """ called when a document type is added
         """
@@ -1086,15 +1095,12 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         else:
             return 'Updated'
 
-
-
-    security.declarePublic('getFieldId')
+    security.declareProtected(ViewManagementScreens, 'getFieldId')
     def getFieldId(self, schema, widget):
         """
             gives a field id for a given*
             schema and widget couple
         """
-        # XXX needs protection
         fieldid = widget.fields[0]
         schemas = [schema]
 
@@ -1114,7 +1120,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         raise AttributeError("Field %s is not found for widget %s in type %s"
             %(fieldid, widget.getId(), schema))
 
-    security.declarePublic('isAddable')
+    security.declareProtected(ViewManagementScreens, 'isAddable')
     def isAddable(self,type_id):
         """ is this portal type is an allowed content ?
         """
@@ -1127,14 +1133,11 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
         return 0
 
-    security.declarePublic('listTypeActions')
+    security.declareProtected(ViewManagementScreens, 'listTypeActions')
     def listTypeActions(self):
         """ will return action list
         """
         return ()
-
-
-
 
     security.declarePrivate('_listWidgets')
     def _listWidgets(self, attribute='_marker', translated = False):
@@ -1150,61 +1153,54 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             mcat = Localizer.default
 
         for id, widget in portal_widget_types.objectItems():
-            # theses are widget types
-            if (attribute == '_marker') or not hasattr(widget, attribute)\
-             or widget.is_addable:
-                
-                
-                meta_type = widget.meta_type
+            if id not in self.type_filter_list:
+                # theses are widget types
+                if (attribute == '_marker') or not hasattr(widget, attribute)\
+                or widget.is_addable:
+                    meta_type = widget.meta_type
 
-                if meta_type <> 'Broken Because Product is Gone':
-                    # we don't want duplicate meta_types
-                    already_in = False
-                    
-                    for sort, element in res:
-                        if element['meta_type'] == meta_type:
-                            already_in = True
-                            break
-                    
-                    if not already_in:
-                        element = {}
-                        element['id'] = widget.getId()
-                        element['meta_type'] = meta_type
-        
-                        sort_key = widget.getId()
-        
-                        if translated and mcat:
-                            trad_key = mcat(sort_key)
-                            if trad_key == sort_key:
-                                trad_key = mcat('CPS '+sort_key)
-                                if trad_key == 'CPS '+sort_key:
-                                    trad_key = sort_key
-                        else:
-                            trad_key = sort_key            
-                                
-                        sorter =  (trad_key, element,)
-                        res.append(sorter)
+                    if meta_type <> 'Broken Because Product is Gone':
+                        # we don't want duplicate meta_types
+                        already_in = False
 
-        LOG('avant tri', INFO, str(res))
+                        for sort, element in res:
+                            if element['meta_type'] == meta_type:
+                                already_in = True
+                                break
+
+                        if not already_in:
+                            element = {}
+                            element['id'] = widget.getId()
+                            element['meta_type'] = meta_type
+
+                            sort_key = widget.getId()
+
+                            if translated and mcat:
+                                trad_key = mcat(sort_key)
+                                if trad_key == sort_key:
+                                    trad_key = mcat('CPS '+sort_key)
+                                    if trad_key == 'CPS '+sort_key:
+                                        trad_key = sort_key
+                            else:
+                                trad_key = sort_key
+
+                            sorter =  (trad_key, element,)
+                            res.append(sorter)
+
         res.sort()
-        LOG('après tri', INFO, str(res))        
         result = []
-
         for item in res:
             result.append(item[1])
-
         return result
 
-
-
-    security.declarePublic('listWidgetTypes')
+    security.declareProtected(ViewManagementScreens, 'listWidgetTypes')
     def listWidgetTypes(self, translated = False):
         """ list widget types that can be used to
             create new documents types
         """
         return self._listWidgets('is_addable', translated)
 
-    security.declarePublic('listFlexibleWidgetTypes')
+    security.declareProtected(ViewManagementScreens, 'listFlexibleWidgetTypes')
     def listFlexibleWidgetTypes(self, translated = False):
         """ list widget types that can be used to
             create new documents types
@@ -1212,7 +1208,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         return self._listWidgets('flex_is_addable', translated)
 
 
-    security.declarePublic('getWidgetRenderer')
+    security.declareProtected(ViewManagementScreens, 'getWidgetRenderer')
     def getWidgetRenderer(self):
         """ create a widget renderer object
             according to the given widget instance
@@ -1222,10 +1218,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
         return self.widget_renderer
 
-
-
-
-    security.declarePublic('getWidgetType')
+    security.declareProtected(ViewManagementScreens, 'getWidgetType')
     def layoutPreview(self,type_id):
         """ this renders a preview
             made up with
@@ -1285,7 +1278,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
         return ''
 
-    security.declarePublic('hasRequiredFields')
+    security.declareProtected(ViewManagementScreens, 'hasRequiredFields')
     def hasRequiredFields(self, widget):
         """ gives a default value for a widget meta_type
         """
@@ -1374,7 +1367,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
          new_widget_type):
         """ used to add a new widget in the given layout
             and its schemas
-
+            XXX need to make it compatible with compound widgets
         """
         portal_status_message = []
 
@@ -1411,36 +1404,37 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
                             break
                     if schemaid is None:
                         raise "Configuration includes no custom metadata\
-schema."
+                                    schema."
                 else:
                     schemaid = type_id
 
-                schema = portal_schemas[schemaid]
+            schema = portal_schemas[schemaid]
 
-                if not schema.has_key('f__' + new_widget_id):
-                    field_types = widget.getFieldTypes()
-                    field_inits = widget.getFieldInits()
-                    i = 0
-                    for field_type in field_types:
-                        # Find free field id (based on the field type name).
-                        field_id = new_widget_id
-                        field_ids = schema.keys()
-                        n = 0
-                        while field_id in field_ids:
-                            n += 1
-                            field_id = '%s_f%d' % (new_widget_id, n)
+            if not schema.has_key('f__' + new_widget_id):
+                field_types = widget.getFieldTypes()
+                field_inits = widget.getFieldInits()
+                i = 0
 
-                        # Create the field.
-                        if field_inits:
-                            kw = field_inits[i]
-                        else:
-                            kw = {}
-                        i += 1
-                        schema.manage_addField(field_id, field_type, **kw)
+                for field_type in field_types:
+                    # Find free field id (based on the field type name).
+                    field_id = new_widget_id
+                    field_ids = schema.keys()
+                    n = 0
+                    while field_id in field_ids:
+                        n += 1
+                        field_id = '%s_f%d' % (new_widget_id, n)
 
-                    if type_id == self.metadata_layout and \
-                field_inits and field_inits[0].get('is_searchabletext',0):
-                        catalog.addIndex(new_widget_id, 'TextIndex')
+                    # Create the field.
+                    if field_inits:
+                        kw = field_inits[i]
+                    else:
+                        kw = {}
+                    i += 1
+                    schema.manage_addField(field_id, field_type, **kw)
+
+                if type_id == self.metadata_layout and \
+                    field_inits and field_inits[0].get('is_searchabletext',0):
+                    catalog.addIndex(new_widget_id, 'TextIndex')
 
         return portal_status_message
 

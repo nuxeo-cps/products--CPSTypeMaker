@@ -39,12 +39,12 @@
                           prop_value python:getattr(tmaker, property['id']);
                           prop_name property/id">
 
+
               <metal:block tal:condition="python:prop_type=='string'">
                   <input type="text" tal:attributes="name prop_name;
                                                      value prop_value"/>
               </metal:block>
-
-              <metal:block tal:condition="python:prop_type=='tokens'">
+              <metal:block tal:condition="python:prop_type=='tokens' or prop_type=='list'">
                   <metal:block tal:define="exp_value prop_value;">
                       <input type="text" tal:attributes="name prop_name;
                                                      value python:' '.join(exp_value)"/>
@@ -57,9 +57,15 @@
               </metal:block>
 
               <metal:block tal:condition="python:prop_type=='text'">
-                  <textarea tal:attributes="name prop_name">
-                      <span tal:replace="prop_value"/>
-                  </textarea>
+<textarea rows="6" cols="30" tal:attributes="name prop_name">
+<metal:block tal:replace="prop_value"/>
+</textarea>
+              </metal:block>
+              <metal:block tal:condition="python:prop_type=='lines'">
+<textarea tal:define="text python:'\n'.join(prop_value)"
+rows="6" cols="30" tal:attributes="name prop_name">
+<metal:block tal:replace="text"/>
+</textarea>
               </metal:block>
 
               <metal:block tal:condition="python:prop_type=='boolean'">
