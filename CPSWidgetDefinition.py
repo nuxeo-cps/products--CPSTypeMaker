@@ -189,8 +189,10 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
             return 'Text Widget'
         elif property_type == 'selection':
             return 'Select Widget'
+        elif property_type == 'float':
+            return 'Float Widget'
         else:
-            raise "miss one : %s" % property_type
+            raise "Miss one : %s" % property_type
 
     security.declarePrivate('_findWidgetFieldType')
     def _findWidgetFieldType(self, property_type):
@@ -214,8 +216,10 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
             return 'CPS String Field'
         elif property_type == 'selection':
             return 'CPS String Field'
+        elif property_type == 'float':
+            return 'CPS Float Field'        
         else:
-            raise "miss one : %s" % property_type
+            raise "Miss one type : %s" % property_type
 
 
 
