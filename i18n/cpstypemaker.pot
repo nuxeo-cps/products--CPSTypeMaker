@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-04-07 16:28default\n"
+"POT-Creation-Date: 2004-04-07 16:34default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -16,11 +16,6 @@ msgstr ""
 "Preferred-encodings: utf-8 latin1\n"
 "Domain: default\n"
 
-
-#: from ../skins/cps_typemaker/cpstypes_list.pt
-#.   <b content="item/title_or_id">ID</b>
-msgid "ID"
-msgstr ""
 
 #: from ../skins/cps_typemaker/cpstypes_list.pt
 #.   <span>
