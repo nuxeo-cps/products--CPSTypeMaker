@@ -549,7 +549,9 @@ msgstr ""
 msgid "Deletable"
 msgstr ""
 
-msgid "Accept blank values (defined in vocabulary) when validating if the widget is required and the vocabulary holds blank values"
+msgid ""
+"Accept blank values (defined in vocabulary) when validating if the widget is "
+"required and the vocabulary holds blank values"
 msgstr ""
 
 msgid "Allowed file suffixes (for example: .html .sxw)"

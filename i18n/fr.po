@@ -300,27 +300,6 @@ msgstr "Attention, vous avez sélectionné plusieurs fois le même composant: "
 msgid "psm_changed"
 msgstr "Modifié."
 
-#~ msgid "cpstypes_widget_id"
-#~ msgstr "Id"
-
-#~ msgid "cpstypes_edit_schema"
-#~ msgstr "Editer le schema"
-
-#~ msgid "cpstypes_add_new_field"
-#~ msgstr "Ajouter un nouveau champ"
-
-#~ msgid "cpstypes_field_type"
-#~ msgstr "Type de champ"
-
-#~ msgid "cpstypes_fields"
-#~ msgstr "Champs"
-
-#~ msgid "cpstypes_widget_index"
-#~ msgstr "Indexer pour la recherche"
-
-#~ msgid "cpstypes_type_id"
-#~ msgstr "Id"
-
 msgid "cpstypes_more"
 msgstr "Plus..."
 
@@ -573,8 +552,12 @@ msgstr "Vocabulaire traduit à l'affichage"
 msgid "Deletable"
 msgstr "Effacable"
 
-msgid "Accept blank values (defined in vocabulary) when validating if the widget is required and the vocabulary holds blank values"
-msgstr "Accepter le choix vide si le composant est requis, et que la liste comporte des valeurs vides "
+msgid ""
+"Accept blank values (defined in vocabulary) when validating if the widget is "
+"required and the vocabulary holds blank values"
+msgstr ""
+"Accepter le choix vide si le composant est requis, et que la liste comporte "
+"des valeurs vides "
 
 msgid "Allowed file suffixes (for example: .html .sxw)"
 msgstr "Extensions autorisées (par exemple .html, .sxw)"
@@ -661,7 +644,8 @@ msgid "Html for edit"
 msgstr "Code html pour l'édition"
 
 msgid "Render format : select menu (default), radio buttons or checkboxes"
-msgstr "Format d'affichage : menu de sélection (défaut), boutons ou cases à cocher"
+msgstr ""
+"Format d'affichage : menu de sélection (défaut), boutons ou cases à cocher"
 
 msgid "Target for the link"
 msgstr "Cible pour le lien"
