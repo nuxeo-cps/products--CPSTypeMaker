@@ -1,0 +1,81 @@
+CPS Type Maker Quick Overview - Tarek Ziadé - <tz@nuxeo.com>
+
+Type Maker can be reached through Portal Actions
+
+1. General screens
+2. Document type screens
+3. General guidelines
+
+
+1. General screens
+
+A. Document Types screen
+
+This screen lists all types created with Type Maker.
+when a green check is visible, that means the given type
+is available through the portal, so it has to be carrefully edited.
+
+You can suppress existing types but beware that all existing
+ documents instances of this type will be unreadable.
+
+You can edit existing types or add new ones (object actions) on this screen
+
+B. General configuration screen
+
+This screen let you configure all properties founded in type maker
+
+*[todo here : explain each property]*
+
+2.Document type screens
+
+A. Edit Type Screen
+
+On this screen you can :
++ set Title, Description, and Icon properties
+  of your type
++ set if the Type is available to the users
+
++ add, suppress or edit components
+
+  components marked with a red flag are components that needs
+  to be configured.
+
+  This can be done by clicking on the tool icon
+
+
+B. Edit layout screen
+
+This is a WYSIWYG layout editor.
+
++ you can drag'n'drop fields in the layout view
++ if enabled, you can work on multiple layouts by adding layouts
+
+
+C. Flexible Edit Type Screen
+
+Same as A. but without type common properties
+
+D. Flexible Edit layout Screen
+
+Same as B.
+
+
+3. General guidelines
+
+If your document type is published on the portal, you should be careful
+ when you are editing it, especially if you're messing with indexed fields.
+
+When you delete a type is not really deleted, check in the zmi for renamed
+ types, if you need to get it back.
+
+Original widgets type should be parsed and shown in TypeMaker.
+
+You can tell if a widget type has required properties by adding in its
+properties a new int key named "is_required" (value: 1)
+
+If you have a problem with some widgets, please submit them.
+
+
+
+
+
