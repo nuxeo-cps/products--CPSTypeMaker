@@ -1,4 +1,6 @@
 ##parameters=REQUEST, RESPONSE, type_id
+from urllib import quote, urlencode, unquote
+from cgi import escape
 
 layout = context.portal_layouts[type_id]
 kw = {}
@@ -22,13 +24,14 @@ while kw.has_key('cell_%d_1' % row):
      
 layout.manage_changeLayout(**kw)
 
-lcat = context.Localizer.default
+mcat = context.Localizer.default
 if duplicate_widgets:
-    message = lcat('psm_duplicate_widgets') + ', '.join(duplicate_widgets)
+    message = quote(mcat('psm_duplicate_widgets') + ', '.join(duplicate_widgets))
 else:
-    message = lcat('psm_changed')
+    message = 'psm_changed'
 
 RESPONSE.redirect(
     context.portal_url()+
         '/cpstypes_layout_edit?type_id=%s&portal_status_message=%s' % (
         type_id, message))
+
