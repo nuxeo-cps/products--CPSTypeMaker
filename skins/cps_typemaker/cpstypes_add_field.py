@@ -3,7 +3,10 @@
 ltool = context.portal_layouts
 layout = ltool[layout_id]
 
-kw = {'fields': [new_field],}
+kw = {'fields': [new_field],
+      'label': new_field,
+      'label_edit': new_field,
+     }
 
 layout.manage_addCPSWidget(new_field, 'String Widget', **kw)
 layoutdef = layout.getLayoutDefinition()
