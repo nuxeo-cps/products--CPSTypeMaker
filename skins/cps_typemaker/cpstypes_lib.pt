@@ -142,12 +142,12 @@
 
         <tr align="left">
           <th></th>
-          <th></th>
           <th i18n:translate="">cpstypes_widget_label</th>
           <th i18n:translate="">cpstypes_widget_type</th>
           <th i18n:translate="">cpstypes_widget_required</th>
           <th i18n:translate="">cpstypes_widget_show_in_view</th>
           <th i18n:translate="">cpstypes_field_indexed</th>
+          <th></th>
           <th></th>
         </tr>
 
@@ -155,8 +155,9 @@
             <tal:block define="widgetname widget/getWidgetId;
                                widgetid widget/getId;
                                widget_metatype widget/meta_type;
-                               rfields python:tmakertool.hasRequiredFields(widget_metatype);
+                               rfields python:tmakertool.hasRequiredFields(widget);
                                ">
+
                 <input type="hidden" name="widgetinfo.id:records"
                                     tal:attributes="value widgetid"/>
                 <input type="hidden" name="widgetinfo.name:records"
@@ -170,9 +171,10 @@
 
                 </td>
 
-                <td>
-                    <input type="checkbox" name="widgetinfo.is_selected:records"/>
-                </td>
+
+
+
+
                 <td>
                     <input type="text" size="20" name="widgetinfo.title:records"
                         tal:attributes="value widget/label_edit" i18n:translate="" />
@@ -197,8 +199,30 @@
                 <td>
                     <a i18n:translate="" tal:attributes="href
                                     python:'cpstypes_widget_properties?type_id='+type_id+
-                                    '&widget_id='+widgetid" >cpstypes_more</a>
+                                    '&widget_id='+widgetid" >
+                            <img
+                                src="configure.png"
+                                i18n:attributes="title"
+                                title="cpstypes_configure"/>
+
+                     </a>
                 </td>
+
+
+                <td>
+                    <a tal:attributes="href
+                    python:here.portal_url()+'/portal_typemaker/manage_delWidget?type_id='+type_id+
+                                    '&widget_id='+widgetid+'&widget_name='+widgetname">
+
+                    <img src="button_delete.png"
+                         i18n:attributes="title"
+                         title="action_delete"/>
+
+                    </a>
+
+                </td>
+
+
             </tal:block>
          </tr>
       </table>
@@ -206,8 +230,8 @@
       <div class="typemaker_spaced"></div>
 
       <div class="typemaker_buttons">
-        <input type="submit" name="action_delete" value="button_delete"
-            i18n:attributes="value" tal:condition="python:wcount>0"/>
+        <!--<input type="submit" name="action_delete" value="button_delete"
+            i18n:attributes="value" tal:condition="python:wcount>0"/>-->
         <input type="submit" name="action_save" value="button_save"
             i18n:attributes="value" tal:condition="python:wcount>0"/>
         <input type="hidden" name="layout_id" tal:attributes="value type_id" />
