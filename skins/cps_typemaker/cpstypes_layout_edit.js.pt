@@ -4,7 +4,7 @@ var Destinations = [];
 
 function findDescendant(node, className) {
   // Returns a descendant with the given class name, or null.
-  if ((node.className == className + '_highlighted') ||
+  if ((node.className == className + 'highlighted') ||
       (node.className == className) )
   {
 
@@ -46,7 +46,7 @@ function LayoutCell_move(selected_items, target_node) {
     return;
   }
 
-  dest = findDescendant(target_node,'typemaker_LayoutCellEditMenu');
+  dest = findDescendant(target_node,'typemakerLayoutCellEditMenu');
 
 
   if (dest == null)
@@ -63,7 +63,7 @@ function LayoutCell_move(selected_items, target_node) {
     change.style.backgroundColor="red";
 
     drag_cell = selected_items[0];
-    drag_cell_cont = findDescendant(drag_cell,'typemaker_LayoutCellEditMenu');
+    drag_cell_cont = findDescendant(drag_cell,'typemakerLayoutCellEditMenu');
 
     dest_cell = findDescendantByName(dest, 'INPUT');
     cell_name = dest_cell.name;
@@ -120,9 +120,9 @@ function setupLayoutCellEditMenu(node) {
 }
 
 
-pd_node_setup['typemaker_LayoutCellDrag'] = setupLayoutCellDrag;
-pd_node_setup['typemaker_LayoutCellDest'] = setupDestination;
-pd_node_setup['typemaker_LayoutCellEditMenu'] = setupLayoutCellEditMenu;
+pd_node_setup['typemakerLayoutCellDrag'] = setupLayoutCellDrag;
+pd_node_setup['typemakerLayoutCellDest'] = setupDestination;
+pd_node_setup['typemakerLayoutCellEditMenu'] = setupLayoutCellEditMenu;
 
 // this call typemaker tool to render a preview
 // wich contents is shown in a popup

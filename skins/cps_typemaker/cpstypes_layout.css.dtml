@@ -1,6 +1,6 @@
 <dtml-call "RESPONSE.setHeader('Content-Type','text/css')">
 
-.typemaker_noscript
+div.typemakerNoScript
 {
   text-align : center;
   background-color : transparent;
@@ -11,14 +11,14 @@
   padding : 2px;
 }
 
-.typemaker_LayoutCellEditMenu
+div.typemakerLayoutCellEditMenu
 {
   text-align : center;
   background-color : transparent;
 }
 
 
-.typemaker_feedback
+div.typemakerFeedback
 {
     vertical-align: middle;
     text-align: center;
@@ -28,14 +28,14 @@
 }
 
 
-.typemaker_LayoutCellDrag_highlighted
+div.typemakerLayoutCellDraghighlighted
 {
    padding : 10px;
    cursor: move;
    background-color : transparent;
 }
 
-.typemaker_LayoutCellDrag
+div.typemakerLayoutCellDrag
 {
    padding : 10px;
    cursor: move;
@@ -44,7 +44,7 @@
 
 
 
-.typemaker_LayoutCellDest_highlighted
+div.typemakerLayoutCellDesthighlighted
 {
     float: left;
     background-color : red;
@@ -58,7 +58,7 @@
 
 }
 
-.typemaker_LayoutCellDest
+div.typemakerLayoutCellDest
 {
     float: left;
     padding : 2px;
@@ -72,7 +72,7 @@
     vertical-align: middle;
 }
 
-.typemaker_cellcontent
+div.typemakerCellContent
 {
    min-width : 50px;
    background-color: transparent;
@@ -81,7 +81,7 @@
    vertical-align: middle;
 }
 
-.typemaker_bright_toolbar
+div.typemakerBrightToolbar
 {
   float: left;
   position: relative;
@@ -90,7 +90,7 @@
   height : 10px;
 }
 
-.typemaker_emptycell_bright_toolbar
+div.typemakerEmptycellBrightToolbar
 {
   float: left;
   position: relative;
@@ -99,7 +99,7 @@
   height : 10px;
 }
 
-.typemaker_right_toolbar
+div.typemakerRightToolbar
 {
   float: right;
   position: relative;
@@ -108,7 +108,7 @@
   height : 10px;
 }
 
-.typemaker_left_toolbar
+div.typemakerLeftToolbar
 {
   float: left;
   position: relative;
@@ -117,26 +117,26 @@
   height : 10px;
 }
 
-.typemaker_emptycell_left_toolbar
+div.typemakerEmptycellLeftToolbar
 {
   float: left;
   background : transparent;
   vertical-align : middle;
 }
 
-.typemaker_emptycell_right_toolbar
+div.typemakerEmptycellRightToolbar
 {
   float: right;
   background : transparent;
   vertical-align : middle;
 }
 
-.typemaker_cellimage
+div.typemakerCellImage
 {
     background-color: transparent;
 }
 
-.typemaker_cell
+div.typemakerCell
 {
     padding : 2px;
     margin-top: 5px;
@@ -150,7 +150,7 @@
 }
 
 
-input.typemaker_append_bt
+input#typemakerAppendBt
 {
     float: left;
     width: 16px;
@@ -164,7 +164,7 @@ input.typemaker_append_bt
     vertical-align : middle;
 }
 
-input.typemaker_deletecomp_bt
+input#typemakerDeleteCompBt
 {
     height: 16px;
     width: 16px;
@@ -178,17 +178,17 @@ input.typemaker_deletecomp_bt
 
 
 
-.typemaker_av_fields
+.typemakeravfields
 {
   margin-top: 8px;
 }
 
-.typemaker_header
+td.typemakerHeader
 {
     border: 1px solid black;
 }
 
-input.typemaker_delete_bt
+input#typemakerDeleteBt
 {
     border : none;
     cursor: hand;
@@ -197,7 +197,7 @@ input.typemaker_delete_bt
     background-color: transparent;
 }
 
-input.typemaker_split_bt
+input#typemakerSplitBt
 {
     border : none;
     cursor: hand;
@@ -207,7 +207,7 @@ input.typemaker_split_bt
 }
 
 
-input.typemaker_widen_bt
+input#typemakerWidenBt
 {
     cursor: hand;
     background-image : url(widen_cell.png);
@@ -215,7 +215,7 @@ input.typemaker_widen_bt
     background-color: transparent;
 }
 
-input.typemaker_shrink_bt
+input#typemakerShrinkBt
 {
     cursor: hand;
     border : none;
@@ -224,7 +224,7 @@ input.typemaker_shrink_bt
     background-color: transparent;
 }
 
-input.typemaker_up_bt
+input#typemakerUpBt
 {
     cursor: hand;
     height: 5px;
@@ -235,7 +235,7 @@ input.typemaker_up_bt
     background-color: transparent;
 }
 
-input.typemaker_down_bt
+input#typemakerDownBt
 {
     height: 5px;
     cursor: hand;
@@ -246,7 +246,7 @@ input.typemaker_down_bt
     background-color: transparent;
 }
 
-input.typemaker_left_bt
+input#typemakerLeftBt
 {
     cursor: hand;
     width: 5px;
@@ -257,7 +257,7 @@ input.typemaker_left_bt
     background-color: transparent;
 }
 
-input.typemaker_right_bt
+input#typemakerRightBt
 {
     cursor: hand;
     width: 5px;
@@ -269,19 +269,8 @@ input.typemaker_right_bt
 
 }
 
-input.typemaker_right_bt
-{
-    cursor: hand;
-    width: 5px;
-    height: 8px;
-    border : none;
-    background-image : url(right_cell.png);
-    background-repeat: no-repeat;
-    background-color: transparent;
 
-}
-
-img.typemaker_configure_bt
+img.typemakerConfigureBt
 {
     cursor: hand;
     border : none;
@@ -292,42 +281,42 @@ img.typemaker_configure_bt
 }
 
 
-div.typemaker_b_spaced
+div.typemakerbspaced
 {
     margin-bottom:10px;
 }
 
-div.typemaker_spaced
+div.typemakerspaced
 {
     margin-bottom: 15px;margin-top: 8px;
 }
 
-div.typemaker_up_spaced
+div.typemakerupspaced
 {
     margin-top: 15px;
 }
 
-div.typemaker_padded
+div.typemakerPadded
 {
     padding : 6px;
 }
 
-td.typemaker_empty_layout
+td.typemakeremptylayout
 {
     font-weight: bold;
 }
 
-div.typemaker_liner
+div.typemakerliner
 {
 
 }
 
-.typemaker_layoutlist
+div.typemakerLayoutList
 {
     margin-bottom: 2em;
 }
 
-.typemaker_layoutlink
+div.typemakerLayoutLink
 {
     text-align: center;
     font-weight: bold;
@@ -336,7 +325,7 @@ div.typemaker_liner
     text-decoration: none;
 }
 
-.typemaker_layoutlink_selected
+div.typemakerLayoutLinkSelected
 {
    text-align: center;
     font-weight: bold;
@@ -345,15 +334,14 @@ div.typemaker_liner
     color: red;
    }
 
-.typemaker_layoutelement
+div.typemakerLayoutElement
 {
 
    border: 1px solid black;
 }
 
 
-
-.typemaker_layout_toolbar
+div.typemakerLayoutToolbar
 {
   float: right;
   vertical-align: top;
@@ -361,20 +349,20 @@ div.typemaker_liner
   margin-right: 2px;
 }
 
-.typemaker_empty_layout
+div.typemakerEmptyLayout
 {
     font-weight: bold;
 
 }
 
 
-.typemaker_buttons
+div.typemakerButtons
 {
  margin-bottom : 1em;
  margin-top : 0.5em;
 }
 
-.typemaker_buttons input
+div.typemakerButtons input
 {
 
 }

@@ -1,11 +1,11 @@
 <!-- layouts toolbar -->
 <metal:block define-macro="cpstm_layouts">
-<div class="typemaker_layoutlist">
+<div class="typemakerLayoutList">
     <table>
         <tr>
           <td tal:repeat="i python:range(layout_count)">
-            <div class="typemaker_layoutelement">
-                <div class="typemaker_layout_toolbar"
+            <div class="typemakerLayoutElement">
+                <div class="typemakerLayoutToolbar"
                      tal:condition="python:i>0">
                     <a tal:attributes="href
                python:here.portal_url()+'/portal_typemaker/manage_delLayout?type_id='+type_id+'&layout_index='+str(i+1)">
@@ -16,7 +16,7 @@
 
                 <div tal:define="selected python:i==int(layout_index)-1">
                     <metal:block tal:condition="not:selected">
-                        <div class="typemaker_layoutlink">
+                        <div class="typemakerLayoutLink">
                             <a tal:attributes="href
                                 python:base_url+'cpstypes_layout_edit?type_id='+type_id+
                                 '&layout_index='+str(i+1)">
@@ -27,7 +27,7 @@
                         </div>
                     </metal:block>
                     <metal:block tal:condition="selected">
-                        <div class="typemaker_layoutlink_selected">
+                        <div class="typemakerLayoutLinkSelected">
                             <span i18n:translate="">
                                 cpstypemaker_layoutlabel</span>&#160;
                             <span tal:replace="python:str(i+1)"/>
@@ -52,12 +52,12 @@
 
 <!-- layouts toolbar -->
 <metal:block define-macro="cpstm_flexible_layouts">
-<div class="typemaker_layoutlist">
+<div class="typemakerLayoutList">
     <table>
         <tr>
           <td tal:repeat="i python:range(layout_count)">
-            <div class="typemaker_layoutelement">
-                <div class="typemaker_layout_toolbar"
+            <div class="typemakerLayoutElement">
+                <div class="typemakerLayoutToolbar"
                      tal:condition="python:i>0">
                     <a tal:attributes="href
                python:here.portal_url()+'/portal_typemaker/manage_delFlexibleLayout?type_id='+type_id+'&layout_index='+str(i+1)">
@@ -68,7 +68,7 @@
 
                 <div tal:define="selected python:i==int(layout_index)-1">
                     <metal:block tal:condition="not:selected">
-                        <div class="typemaker_layoutlink">
+                        <div class="typemakerLayoutLink">
                             <a tal:attributes="href
                                 python:base_url+'cpstypes_flexible_layout_edit?type_id='+type_id+
                                 '&layout_index='+str(i+1)">
@@ -79,7 +79,7 @@
                         </div>
                     </metal:block>
                     <metal:block tal:condition="selected">
-                        <div class="typemaker_layoutlink_selected">
+                        <div class="typemakerLayoutLinkSelected">
                             <span i18n:translate="">
                                 cpstypemaker_layoutlabel</span>&#160;
                             <span tal:replace="python:str(i+1)"/>
@@ -105,8 +105,8 @@
 <!-- a select widget for adding widget -->
 <metal:block define-macro="cpstm_addwidget">
     <h3 i18n:translate="">cpstypes_add_new_widget</h3>
-      <div class="typemaker_padded">
-          <div class="typemaker_spaced">
+      <div class="typemakerPadded">
+          <div class="typemakerSpaced">
             <table>
               <tr>
                 <th align="right" i18n:translate="">cpstypes_widget_label</th>
@@ -171,9 +171,9 @@
           </td>
         </tr>
       </table>
-      <div class="typemaker_spaced"></div>
+      <div class="typemakerSpaced"></div>
 
-      <div class="typemaker_buttons">
+      <div class="typemakerButtons">
 
         <input type="submit" name="action_save" value="button_save"
             i18n:attributes="value" />
@@ -186,10 +186,10 @@
 <metal:block define-macro="cpstm_comps">
       <metal:block tal:define="widgets layoutob/objectValues;
                                wcount python:len(widgets)">
-      <div class="typemaker_spaced"></div>
+      <div class="typemakerSpaced"></div>
 
       <div tal:condition="python:wcount==0"
-          class="typemaker_empty_layout"
+          class="typemakerEmptyLayout"
            i18n:translate="cpstypes_empty_layout">
       pas de champs pour l'instant
       </div>
@@ -283,9 +283,9 @@
          </tr>
       </table>
 
-      <div class="typemaker_spaced"></div>
+      <div class="typemakerSpaced"></div>
 
-      <div class="typemaker_buttons">
+      <div class="typemakerButtons">
         <!--<input type="submit" name="action_delete" value="button_delete"
             i18n:attributes="value" tal:condition="python:wcount>0"/>-->
         <input type="submit" name="action_save" value="button_save"

@@ -93,13 +93,13 @@ function pd_highlight(node, state) {
   var cn = node.className;
 
   if (state) {
-    if (cn.length < 12 || cn.substr(cn.length - 12) != "_highlighted")
-      node.className = cn + "_highlighted";
+    if (cn.length < 11 || cn.substr(cn.length - 11) != "highlighted")
+      node.className = cn + "highlighted";
 
   }
   else {
-    if (cn.length >= 12 && cn.substr(cn.length - 12) == "_highlighted")
-      node.className = cn.substr(0, cn.length - 12);
+    if (cn.length >= 11 && cn.substr(cn.length - 11) == "highlighted")
+      node.className = cn.substr(0, cn.length - 11);
   }
 
 }

@@ -74,7 +74,7 @@ actions['object'].append({'id':'delete_entry',
                 layoutdef layoutob/getLayoutDefinition;
                 totcols layoutdef/ncols;
                 rows layoutdef/rows" >
-                <div class="typemaker_feedback"
+                <div class="typemakerFeedback"
                 id="drag-feedback-box"></div>
 
 
@@ -95,7 +95,7 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
     <table>
     <tr>
     <metal:block tal:condition="python:len(rows)==0" >
-        <td class="typemaker_empty_layout" valign="center" align="center" width="70%"
+        <td class="typemakerEmptyLayout" valign="center" align="center" width="70%"
          i18n:translate="cpstypes_empty_layout">
             No fields in the layout yet.
         </td>
@@ -111,7 +111,7 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
           <div class="form-label">
             <table border=0>
               <tr>
-                <td class="typemaker_header"
+                <td class="typemakerHeader"
                     tal:repeat="nr python:range(1,totcols+1)"
                   tal:content="nr" />
               </tr>
@@ -125,11 +125,11 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
                   <td tal:attributes="colspan cell/ncols">
 
 
-                   <div class="typemaker_LayoutCellDest">
+                   <div class="typemakerLayoutCellDest">
 
                     <div tal:attributes="class
-                            python:test(not widget_id=='','typemaker_right_toolbar',
-                             'typemaker_emptycell_right_toolbar')">
+                            python:test(not widget_id=='','typemakerRightToolbar',
+                             'typemakerEmptycellRightToolbar')">
 
                       <metal:block tal:condition="python:not widget_id==''">
 
@@ -139,16 +139,16 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
                         "     i18n:attributes="title"
                                 title="cpstypes_editcell"
                                 >
-                            <img class="typemaker_configure_bt" src="configure_cell.png"/>
+                            <img class="typemakerConfigureBt" src="configure_cell.png"/>
                         </a>
                       </metal:block>
-                            <input class="typemaker_split_bt"
+                            <input id="typemakerSplitBt"
                                 type="submit" value=""
                                 i18n:attributes="title"
                                 title="cpstypes_splitcell"
                                 tal:attributes="name
                                  python:'split_check_'+str(nrow)+'_'+str(ncell)"/>
-                            <input class="typemaker_delete_bt"
+                            <input id="typemakerDeleteBt"
                                 i18n:attributes="title"
                                 title="cpstypes_deletecell"
                                 type="submit" value=""
@@ -158,12 +158,12 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
 
                         <noscript>
                         <div tal:attributes="class
-                            python:test(not widget_id=='','typemaker_left_toolbar',
-                             'typemaker_emptycell_left_toolbar')">
+                            python:test(not widget_id=='','typemakerLeftToolbar',
+                             'typemakerEmptyCellLeftToolbar')">
                             <table border=0>
                                 <tr>
                                   <td align="center" colspan="2">
-                                    <input class="typemaker_up_bt"
+                                    <input id="typemakerUpBt"
                                         tal:attributes="name
                                           string:up_${nrow}_${ncell};"
                                         type="submit" value="">
@@ -172,7 +172,7 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
 
                                 <tr>
                                   <td align="center" colspan="2">
-                                  <input class="typemaker_down_bt"
+                                  <input id="typemakerDownBt"
                                       tal:attributes="name
                                           string:down_${nrow}_${ncell};"
                                         type="submit" value="">
@@ -188,13 +188,13 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
 
                         <noscript>
                         <div tal:attributes="class
-                            python:test(not widget_id=='','typemaker_bright_toolbar',
-                             'typemaker_emptycell_bright_toolbar')">
+                            python:test(not widget_id=='','typemakerBrightToolbar',
+                             'typemakerEmptycellBrightToolbar')">
                             <table border=0>
 
                                 <tr>
                                    <td align="left" colspan="1">
-                                   <input class="typemaker_left_bt"
+                                   <input id="typemakerLeftBt"
                                           i18n:attributes="title"
                                           title="cpstypes_moveleft"
                                           tal:attributes="name
@@ -202,7 +202,7 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
                                         type="submit" value="">
                                    </td>
                                   <td align="right" colspan="1">
-                                  <input class="typemaker_right_bt"
+                                  <input id="typemakerRightBt"
                                           i18n:attributes="title"
                                           title="cpstypes_moveright"
                                         tal:attributes="name
@@ -220,13 +220,13 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
 
                         ##### power user / will be integrated later
                         <div tal:attributes="class
-                            python:test(not widget_id=='','typemaker_left_toolbar',
-                             'typemaker_emptycell_left_toolbar')">
-                          <input class="typemaker_widen_bt"
+                            python:test(not widget_id=='','typemakerLeftToolbar',
+                             'typemakerEmptycellLeftToolbar')">
+                          <input id="typemakerWidenBt"
                                 type="submit" value=""
                                 tal:attributes="name
                                  python:'widen_check_'+str(nrow)+'_'+str(ncell)"/>
-                            <input class="typemaker_shrink_bt"
+                            <input id="typemakerShrinkBt"
                                 type="submit" value=""
                                 tal:attributes="name
                                  python:'shrink_check_'+str(nrow)+'_'+str(ncell)"/>
@@ -235,9 +235,9 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
 
 
 
-                        <div class="typemaker_LayoutCellDrag">
+                        <div class="typemakerLayoutCellDrag">
 
-                            <div class="typemaker_LayoutCellEditMenu">
+                            <div class="typemakerLayoutCellEditMenu">
 
 
                         <metal:block tal:condition="python:widget_id not in widgetids">
@@ -246,7 +246,7 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
                                                      value widget_id;"/>
 
                                 </metal:block>
-                                <div class="typemaker_cellcontent">
+                                <div class="typemakerCellContent">
 
                                     <metal:block tal:condition="python:widget_id in widgetids">
 
@@ -286,7 +286,7 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
             <metal:block tal:repeat="wid widgetids">
             <tr>
             <td>
-                <input class="typemaker_append_bt" type="submit"
+                <input id="typemakerAppendBt" type="submit"
                         i18n:attributes="title"
                         title="cpstypes_appendcell"
                         tal:attributes="name string:addnamedrow_${wid}"
@@ -294,7 +294,7 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
             </td>
 
             <td tal:define="current_widget python:layoutob[wid]">
-                <div class="typemaker_cell typemaker_LayoutCellDrag"
+                <div class="typemakerCell typemakerLayoutCellDrag"
                         tal:define="ledit current_widget/label_edit|nothing">
 
                     <input type="hidden" tal:attributes="value wid"/>
@@ -302,7 +302,7 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
                         <div>&nbsp;</div>
                     </metal:block>
                     <metal:block tal:condition="ledit">
-                        <div class="typemaker_cellcontent" tal:content="ledit"/>
+                        <div class="typemakerCellContent" tal:content="ledit"/>
                     </metal:block>
                 </div>
             </td>
@@ -314,7 +314,7 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
 
      </tr>
      </table>
-      <div class="typemaker_spaced">
+      <div class="typemakerSpaced">
           <input id="change" type="submit" name="change" value="button_change"
            i18n:attributes="value" />
           <input type="submit" name="addrow" value="cpstypes_add_row" i18n:attributes="value" />
@@ -340,7 +340,7 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
           </span>
      </div>
      <noscript>
-         <div class="typemaker_noscript" i18n:translate="cpstypes_scriptdisabled">
+         <div class="typemakerNoScript" i18n:translate="cpstypes_scriptdisabled">
              Warning : Javascript should be enabled for drag and drop features
          </div>
      </noscript>

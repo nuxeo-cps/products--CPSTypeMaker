@@ -80,7 +80,7 @@
         </tr>
       </table>
 
-      <div class="typemaker_up_spaced">
+      <div class="typemakerUpSpaced">
 
       <input type="submit" name="validate"
              i18n:translate="value"
