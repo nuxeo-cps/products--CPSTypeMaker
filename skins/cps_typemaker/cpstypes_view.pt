@@ -7,6 +7,7 @@
   typeob here/portal_types/?type_id;
   layoutid python:typeob.layouts[-1];
   layoutob here/portal_layouts/?layoutid;
+  debug nothing;
   ">
 <metal:block use-macro="here/main_template/macros/master">
   <metal:block fill-slot="css_slot">
@@ -65,9 +66,14 @@ actions['object'].append({'id':'delete_entry',
           <th>Required</th>
         </tr>
         <tal:block define="layoutdef layoutob/getLayoutDefinition" repeat="row layoutdef/rows">
+          <tr tal:condition="debug">
+            <td tal:content="layoutdef" />
+          </tr>
           <tr tal:repeat="entry row">
-            <tal:block define="widgetid entry/widget_id;
-                               widget python:layoutob[widgetid];">
+            <tal:block define="widgetname entry/widget_id;
+                               widget python:layoutob[widgetname];
+                               widgetid widget/getId;
+                               ">
               <td><input type="checkbox" name="selected_ids:list" 
                 tal:attributes="value widgetid"/></td>
               <td tal:content="python:widget.fields[0]" />
