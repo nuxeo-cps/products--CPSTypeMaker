@@ -6,6 +6,8 @@
   expanded_title title;
   layoutob here/portal_layouts/?type_id;
   wttool here/portal_widget_types;
+  widgets python:here.cpstypes_get_definitions()['widget_list'] or wttool.objectIds();
+  foo python:widgets.sort();
   ">
 <metal:block use-macro="here/main_template/macros/master">
   <metal:block fill-slot="css_slot">
@@ -127,8 +129,7 @@ actions['object'].append({'id':'delete_entry',
         <tr>
           <th align='right' i18n:translate="">cpstypes_widget_type</th>
           <td>
-            <select name="new_widget_type" tal:define="widgets wttool/objectIds;
-                                                 foo python:widgets.sort()">
+            <select name="new_widget_type">
               <tal:block tal:repeat="widget widgets">
               <option tal:attributes="value widget"
                       tal:content="string:CPS ${widget}"
