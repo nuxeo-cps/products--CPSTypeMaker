@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-04-21 17:16default\n"
+"POT-Creation-Date: 2004-04-22 15:26default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -20,20 +20,14 @@ msgstr ""
 "Domain: default\n"
 
 #.   <input type="submit" name="action_save" value="button_save" />
-#.   <input type="submit" name="action_save" value="button_save">
-#.       </input>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_schema_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "button_save"
-msgstr ""
-
-#.   <th>cpstypes_add_new_field</th>
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
-msgid "cpstypes_add_new_field"
 msgstr ""
 
 #.   <th colspan="2" align="left">cpstypes_add_new_widget</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_add_new_widget"
 msgstr ""
 
@@ -47,24 +41,9 @@ msgstr ""
 msgid "cpstypes_delete_cell"
 msgstr ""
 
-#.   <h1>cpstypes_edit_schema</h1>
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
-msgid "cpstypes_edit_schema"
-msgstr ""
-
-#.   <th>cpstypes_field_id</th>
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
-msgid "cpstypes_field_id"
-msgstr ""
-
-#.   <th>cpstypes_field_type</th>
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
-msgid "cpstypes_field_type"
-msgstr ""
-
-#.   <h3>cpstypes_fields</h3>
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
-msgid "cpstypes_fields"
+#.   <h3>cpstypes_flexible_widgets</h3>
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_flexible_widgets"
 msgstr ""
 
 #.   <h1 span="">cpstypes_label_add_type</h1>
@@ -106,14 +85,9 @@ msgstr ""
 msgid "cpstypes_widen_cell"
 msgstr ""
 
-#.   <th>cpstypes_widget_flexible</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-msgid "cpstypes_widget_flexible"
-msgstr ""
-
-#.   <th>cpstypes_widget_index</th>
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
-msgid "cpstypes_widget_index"
+#.   <th>cpstypes_widget_max_repeats</th>
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+msgid "cpstypes_widget_max_repeats"
 msgstr ""
 
 #.   <th>cpstypes_widget_required</th>
@@ -128,17 +102,19 @@ msgstr ""
 
 #.   <th>cpstypes_widget_size</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_size"
 msgstr ""
 
 #.   <th>cpstypes_widget_title</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_title"
 msgstr ""
 
 #.   <th>cpstypes_widget_type</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_schema_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_type"
 msgstr ""
 
@@ -148,6 +124,9 @@ msgid "cpstypes_widgets"
 msgstr ""
 
 msgid "cpstypes_add_type"
+msgstr ""
+
+msgid "cpstypes_edit_schema"
 msgstr ""
 
 msgid "cpstypes_edit_type"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: en\n"
-"POT-Creation-Date: 2004-04-21 17:16default\n"
+"POT-Creation-Date: 2004-04-22 15:26default\n"
 "PO-Revision-Date: 2004-04-13 14:31+0200\n"
 "Last-Translator: emmanuel <epietriga@nuxeo.com>\n"
 "Language-Team: francais <fr@li.org>\n"
@@ -20,20 +20,14 @@ msgstr ""
 "X-Generator: KBabel 1.3.1\n"
 
 #.   <input type="submit" name="action_save" value="button_save" />
-#.   <input type="submit" name="action_save" value="button_save">
-#.       </input>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_schema_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "button_save"
 msgstr "Save"
 
-#.   <th>cpstypes_add_new_field</th>
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
-msgid "cpstypes_add_new_field"
-msgstr "Add new field"
-
 #.   <th colspan="2" align="left">cpstypes_add_new_widget</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_add_new_widget"
 msgstr "Add new widget"
 
@@ -47,25 +41,11 @@ msgstr "Add Row"
 msgid "cpstypes_delete_cell"
 msgstr "Delete Cell"
 
-#.   <h1>cpstypes_edit_schema</h1>
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
-msgid "cpstypes_edit_schema"
-msgstr "Edit schema"
-
-#.   <th>cpstypes_field_id</th>
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
-msgid "cpstypes_field_id"
-msgstr "Id"
-
-#.   <th>cpstypes_field_type</th>
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
-msgid "cpstypes_field_type"
-msgstr "Type"
-
-#.   <h3>cpstypes_fields</h3>
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
-msgid "cpstypes_fields"
-msgstr "Fields"
+#.   <h3>cpstypes_flexible_widgets</h3>
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#, fuzzy
+msgid "cpstypes_flexible_widgets"
+msgstr "Widgets"
 
 #.   <h1 span="">cpstypes_label_add_type</h1>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
@@ -106,15 +86,11 @@ msgstr "Title"
 msgid "cpstypes_widen_cell"
 msgstr "Widen Cell"
 
-#.   <th>cpstypes_widget_flexible</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-msgid "cpstypes_widget_flexible"
-msgstr "Is Flexible"
-
-#.   <th>cpstypes_widget_index</th>
-#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
-msgid "cpstypes_widget_index"
-msgstr "Index for search"
+#.   <th>cpstypes_widget_max_repeats</th>
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#, fuzzy
+msgid "cpstypes_widget_max_repeats"
+msgstr "Type"
 
 #.   <th>cpstypes_widget_required</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
@@ -128,17 +104,19 @@ msgstr "Show in view mode"
 
 #.   <th>cpstypes_widget_size</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_size"
 msgstr "Size"
 
 #.   <th>cpstypes_widget_title</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_title"
 msgstr "Title"
 
 #.   <th>cpstypes_widget_type</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_schema_edit.pt
+#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_type"
 msgstr "Type"
 
@@ -149,6 +127,9 @@ msgstr "Widgets"
 
 msgid "cpstypes_add_type"
 msgstr "Add new type"
+
+msgid "cpstypes_edit_schema"
+msgstr "Edit schema"
 
 msgid "cpstypes_edit_type"
 msgstr "Edit Type"
@@ -254,6 +235,24 @@ msgstr "Image"
 
 msgid "CPS Photo Widget"
 msgstr "Photo"
+
+#~ msgid "cpstypes_add_new_field"
+#~ msgstr "Add new field"
+
+#~ msgid "cpstypes_field_id"
+#~ msgstr "Id"
+
+#~ msgid "cpstypes_field_type"
+#~ msgstr "Type"
+
+#~ msgid "cpstypes_fields"
+#~ msgstr "Fields"
+
+#~ msgid "cpstypes_widget_flexible"
+#~ msgstr "Is Flexible"
+
+#~ msgid "cpstypes_widget_index"
+#~ msgstr "Index for search"
 
 #~ msgid "cpstypes_type_id"
 #~ msgstr "Id"
