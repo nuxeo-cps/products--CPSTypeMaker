@@ -49,7 +49,10 @@ if new_icon.read(1) != '':
     icon_id = type_id + '_icon' 
     props['content_icon'] = icon_id
     customskin = context.portal_skins.custom
-    customskin.manage_addFile(icon_id, new_icon, title)
+    if hasattr(customskin, icon_id):
+        customskin[icon_id].manage_upload(new_icon)
+    else:
+        customskin.manage_addFile(icon_id, new_icon, title)
 
 type.manage_changeProperties(**props)
 

@@ -59,7 +59,7 @@ actions['object'].append({'id':'delete_entry',
         </tr>
         <tr>
           <th align='right' i18n:translate="">cpstypes_type_icon</th>
-          <td tal:define="images here/cpstypes_get_icons">
+          <td>
             <img tal:attributes="src string:${here/portal_url}/${typeob/content_icon}" />
             <input type="file" name="new_icon" />
           </td>
