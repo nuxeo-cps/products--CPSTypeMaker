@@ -6,8 +6,7 @@ New features:
 -
 Bug fixes:
 ~~~~~~~~~~
-- The Layout edit view now shows the label of the widgets, not the id.
-- Removed unquote which is not needed.
+-
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 -
