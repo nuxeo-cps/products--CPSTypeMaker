@@ -14,6 +14,7 @@ while kw.has_key('cell_%d_1' % row):
         if widget_id in used_widgets and not (kw.has_key('delcell') and \
            kw.get('check_%d_%d' % (row, cell))):
             duplicate_widgets.append(widget_id)
+            kw['cell_%d_%d' % (row, cell)] = ''
         else:
             used_widgets.append(widget_id)
         cell += 1
