@@ -110,7 +110,7 @@
             <table>
               <tr>
                 <th align="right" i18n:translate="">cpstypes_widget_label</th>
-                <td> 
+                <td>
                   <div><input type="text" name="new_widget_title" /></div>
                 </td>
               </tr>
