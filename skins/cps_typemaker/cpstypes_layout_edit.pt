@@ -98,12 +98,12 @@ actions['object'].append({'id':'delete_entry',
       </tr>
       <tr>
         <td align="left">
-          <input type="submit" name="change" value=" Change " />
-          <input type="submit" name="addrow" value=" Add row " />
-          <input type="submit" name="splitcell" value=" Split cell " />
-          <input type="submit" name="delcell" value=" Delete cell " />
-          <input type="submit" name="widencell" value=" Widen cell " />
-          <input type="submit" name="shrinkcell" value=" Shrink cell " />
+          <input type="submit" name="change" value="button_change" i18n:attributes="value" />
+          <input type="submit" name="addrow" value="cpstypes_add_row" i18n:attributes="value" />
+          <input type="submit" name="splitcell" value="cpstypes_split_cell" i18n:attributes="value" />
+          <input type="submit" name="delcell" value="cpstypes_delete_cell" i18n:attributes="value" />
+          <input type="submit" name="widencell" value="cpstypes_widen_cell" i18n:attributes="value" />
+          <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" i18n:attributes="value" />
         </td>
     </tr>
     </table>

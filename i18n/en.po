@@ -25,7 +25,7 @@ msgstr ""
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_schema_edit.pt
 msgid "button_save"
-msgstr " Save "
+msgstr "Save"
 
 #.   <th>cpstypes_add_new_field</th>
 #: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
@@ -39,15 +39,13 @@ msgstr "Add new widget"
 
 #.   <input type="submit" name="addrow" value="cpstypes_add_row" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_add_row"
-msgstr "Add new type"
+msgstr "Add Row"
 
 #.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_delete_cell"
-msgstr "Type"
+msgstr "Delete Cell"
 
 #.   <h1>cpstypes_edit_schema</h1>
 #: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
@@ -76,15 +74,13 @@ msgstr "Add type"
 
 #.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_shrink_cell"
-msgstr "Fields"
+msgstr "Shrink Cell"
 
 #.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_split_cell"
-msgstr "Edit schema"
+msgstr "Split Cell"
 
 #.   <th align="right">cpstypes_type_description</th>
 #.   <small content="item/description">cpstypes_type_description</small>
@@ -117,9 +113,8 @@ msgstr "Title"
 
 #.   <input type="submit" name="widencell" value="cpstypes_widen_cell" />
 #: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_widen_cell"
-msgstr "Size"
+msgstr "Widen Cell"
 
 #.   <th>cpstypes_widget_id</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
