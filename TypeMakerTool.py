@@ -30,7 +30,6 @@ from OFS.Image import Image
 from Products.CMFCore.utils import getToolByName
 from Products.CMFCore.utils import UniqueObject
 from Products.CMFCore.CMFCorePermissions import ManagePortal
-#from Products.CPSTypeMaker.CPSWidgetDefinition import CPSWidgetDefinition
 from Products.CPSTypeMaker.CPSWidgetDefinition import CPSWidgetRenderer
 from Products.CPSCore.utils import makeId
 from Products.CPSSchemas.DataStructure import DataStructure
@@ -39,8 +38,10 @@ from Products.CPSCore.CPSBase import CPSBaseFolder
 from Products.CPSCore.ProxyBase import ProxyFolder
 from Products.CPSSchemas.PropertiesPostProcessor import PropertiesPostProcessor
 from Products.CPSSchemas.WidgetTypesTool import WidgetTypeRegistry
-
 import ExtensionClass
+
+from Products.CPSSchemas.BasicWidgets import CPSSelectWidget
+
 """
 TypeMakerTool depends on these tools :
 
@@ -69,7 +70,9 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
     _propertiesBaseClass = Folder
     _properties = Folder._properties + (
         {'id': 'multiple_layouts', 'type': 'boolean', 'mode': 'w',
-         'label': "Multiple Layouts",'configurable' : 1},
+         'label': "Multiple Layouts",'configurable' : 0},
+        {'id': 'flexible_aware', 'type': 'boolean', 'mode': 'w',
+         'label': "Can edit flexibles",'configurable' : 0},
         {'id': 'type_prefix', 'type': 'string', 'mode': 'w',
          'label': "Id prefix for TypeMaker types",'configurable' : 1},
         {'id': 'style_prefix', 'type': 'string', 'mode': 'w',
@@ -97,6 +100,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         )
 
     multiple_layouts = False
+    flexible_aware = False
     type_prefix = 'simpletype_'
     style_prefix = 'layout_default_tab_'
     base_schemas  =  ['metadata', 'common']
@@ -416,7 +420,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
             layout.manage_changeProperties(flexible_widgets=flexible_widgets)
 
-            existing_layouts = typeob.flexible_layouts
+            existing_layouts = list(typeob.flexible_layouts)
             current_layout = flex_id + ':' + flex_id
 
             if flexible_widgets:
@@ -719,7 +723,8 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             else:
                 method = 'cpstypes_flexible_layout_edit'
 
-            RESPONSE.redirect(urltool() + '/'+ method+'?type_id=%s&layout_index=%s&portal_status_message=%s'
+            RESPONSE.redirect(urltool() + '/'+
+             method+'?type_id=%s&layout_index=%s&portal_status_message=%s'
                      % (type_id, current_index, message))
         else:
             if is_flexible:
@@ -1490,6 +1495,27 @@ schema."
 
 
 InitializeClass(TypeMakerTool)
+
+# monkey patch for previous versions of CPS
+def _getVocabulary(self, datastructure=None):
+    """Get the vocabulary object for this widget."""
+    if not type(self.vocabulary) is StringType:
+        # this is in case vocabulary directly holds
+        # a vocabulary object
+        vocabulary = self.vocabulary
+    else:
+        vtool = getToolByName(self, 'portal_vocabularies')
+        try:
+            vocabulary = getattr(vtool, self.vocabulary)
+        except AttributeError:
+            raise ValueError("Missing vocabulary '%s' for widget '%s'" %
+                            (self.vocabulary, self.getWidgetId()))
+    return vocabulary
+
+setattr(CPSSelectWidget, '_getVocabulary', _getVocabulary)
+
+
+########################################################################################
 
 def addCPSTypeMakerTool(container, id=None, REQUEST=None, **kw):
     """Add a CPS MemberData Tool."""
