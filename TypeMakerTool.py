@@ -1509,7 +1509,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             else:
                 customskin.manage_addFile(icon_id, new_icon, title)
 
-        if props <> {}:
+        if props:
             type.manage_changeProperties(**props)
 
 
