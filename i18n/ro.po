@@ -508,7 +508,7 @@ msgid "CPS Generic MultiSelect Widget"
 msgstr ""
 
 msgid "Label in view layout mode"
-msgstr """
+msgstr ""
 
 msgid "Label in edit layout mode"
 msgstr ""
