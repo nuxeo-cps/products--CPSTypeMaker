@@ -74,19 +74,24 @@ actions['object'].append({'id':'delete_entry',
                                widget python:layoutob[widgetname];
                                widgetid widget/getId;
                                ">
-              <td><input type="checkbox" name="selected_ids:list" 
-                tal:attributes="value widgetid"/></td>
+              <td>
+                <input type="hidden" name="widgetinfo.id:records" tal:attributes="value widgetid"/>
+                <input type="hidden" name="widgetinfo.name:records" tal:attributes="value widgetname"/>
+                <input type="checkbox" name="widgetinfo.is_selected:records"/>
+              </td>
               <td tal:content="python:widget.fields[0]" />
-              <td><input type="text" size=20 tal:attributes="value widget/label" /></td>
+              <td><input type="text" size=20 name="widgetinfo.title:records" tal:attributes="value widget/label" /></td>
               <td tal:content="widget/meta_type" />
-              <td><input type="text" size=10 
+              <td><input type="text" size=10 name="widgetinfo.size:records"
                     tal:attributes="value widget/size_max" /></td>
-              <td><input type="checkbox" tal:attributes="checked widget/is_required" /></td>
+              <td><input type="checkbox" name="widgetinfo.required:records"
+                tal:attributes="checked widget/is_required" /></td>
             </tal:block>
           </tr>
         </tal:block>
       </table>
       <input type="submit" name="action_delete" value="label_delete" i18n:attributes="value">
+      <input type="submit" name="action_save" value="label_save" i18n:attributes="value">
     </form>
     <form method="post" action="cpstypes_add_field">
       <input type="hidden" name="layout_id" tal:attributes="value layoutid">

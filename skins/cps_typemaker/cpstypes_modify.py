@@ -11,24 +11,34 @@ if not action:
 
 layoutid = REQUEST['type_id']
 layout = context.portal_layouts[layoutid]
+layoutdef = layout.getLayoutDefinition()
+
+# Firstly, save any changes to the fields.
+widgetinfo = REQUEST['widgetinfo']
+
+for each in widgetinfo:
+    widgetname = each['name']
+    widgetid = each['id']
+    is_selected = each.get('is_selected',0)
     
-if action == 'delete':
-    selected = REQUEST.get('selected_ids', [])
-    widgetnames = [layout[w].getWidgetId() for w in selected]
-        
-    layout.manage_delObjects(selected)
-    layoutdef = layout.getLayoutDefinition()
-    new_rows = []
-    for row in layoutdef['rows']:
-        new_widgets = []
-        for widget in row:
-            if widget['widget_id'] not in widgetnames:
-                new_widgets.append(widget)
-        if new_widgets:
-            new_rows.append(row)
-    layoutdef['rows'] = new_rows
+    if action == 'delete' and is_selected:    
+        layout.manage_delObjects([widgetid])
+        new_rows = []
+        for row in layoutdef['rows']:
+            new_widgets = []
+            for widget in row:
+                if widget['widget_id'] not in widgetname:
+                    new_widgets.append(widget)
+            if new_widgets:
+                new_rows.append(row)
+        layoutdef['rows'] = new_rows
+    else:
+        widget = layout[each['name']]
+        widget.manage_changeProperties(label=each['title'], label_edit=each['title'],
+            is_required=each.get('required',0), size_max=each['size'])
+
+if action in ('delete',):       
     layout.setLayoutDefinition(layoutdef)
 
-    
 return RESPONSE.redirect('cpstypes_view?type_id='+layoutid)
     
