@@ -1,4 +1,21 @@
 *******************************************
+** CPSTypeMaker V1.2.1 [R1 build 2004/04/25-20:55 by regebro]
+
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- Some labels were not translated
+- The installer now creates the custom medatada schema
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
 ** CPSTypeMaker V1.2.0 [R1 build 2004/04/22-14:08 by regebro]
 
 Requires:

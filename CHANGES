@@ -6,8 +6,7 @@ New features:
 -
 Bug fixes:
 ~~~~~~~~~~
-- Some labels were not translated
-- The installer now creates the custom medatada schema
+-
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 -
