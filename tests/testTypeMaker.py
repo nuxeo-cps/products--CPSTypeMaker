@@ -146,8 +146,7 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
 
         found = False
         for id, item in type_layout.objectItems():
-
-            if item.id == 'w__Totoro_string_widget':
+            if item.id == 'w__Totoro-string-widget':
                 found = True
                 self.assertEquals(item.title, 'Totoro string widget')
                 break
@@ -177,12 +176,11 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
             type_layouts = self.portal.portal_layouts
             type_layout = type_layouts[type_name + '_1']
 
-            wid = 'w__Totoro '+str(id)
-            wid = wid.replace(' ', '_')
+            wid = 'w__Totoro ' + str(id)
+            wid = wid.replace(' ', '-')
 
             found = False
             for item_id, item in type_layout.objectItems():
-
                 if item.id == wid:
                     found = True
                     self.assertEquals(item.title, 'Totoro ' + str(id))
