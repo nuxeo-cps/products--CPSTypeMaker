@@ -1,5 +1,7 @@
 ##parameters=new_field_id, new_field_type, RESPONSE=None
-
+if not new_field_id:
+    raise ValueError('No ID given')
+    
 defs = context.cpstypes_get_definitions()
 schemaid = defs['schemaid']
 schema = context.portal_schemas[schemaid]
