@@ -34,6 +34,8 @@ ltool = context.portal_layouts
 layout = ltool.manage_addCPSLayout(type_id)
 layout.manage_changeProperties(style_prefix='layout_default_')
 
+context.cpstypes_add_widget(type_id, 'Title')
+context.cpstypes_add_widget(type_id, 'Description')
 
 for type in ('Workspace', 'Section'):
     typeobj = ttool[type]
