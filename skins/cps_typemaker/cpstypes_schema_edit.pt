@@ -1,0 +1,101 @@
+<tal:block define="
+  schema_id string:metadata;
+  schema here/portal_schemas/?schema_id;
+  delete_allowed nothing;
+  debug nothing;
+  ">
+<metal:block use-macro="here/main_template/macros/master">
+  <metal:block fill-slot="css_slot">
+    <tal:block define="dt_title python:here.Localizer.default('Document Types');
+                       dummy python:request.set('breadcrumb_set',
+                        [{
+                          'id': 'types',
+                          'url': here.portal_url()+'/cpstypes_list',
+                          'longtitle': dt_title,
+                          'title': dt_title,
+                         },
+                         {
+                          'id': 'schemas',
+                          'url': here.portal_url()+'/cpstypes_schema_edit',
+                          'longtitle': 'Edit Schema',
+                          'title': 'Edit Schema',
+                        }]);" />
+    <tal:block condition="delete_allowed">
+      <tal:block define="global actions python:
+actions['object'].append({'id':'delete_entry',
+  'url':base_url+'cpsdirectory_entry_delete?type_id='+type_id,
+  'onclick': 'return window.confirm(\''+ here.Localizer.default('description_confirm_delete').encode('ISO-8859-15', 'ignore') +'\')' ,
+  'name': 'cpsdir_label_delete_entry',
+  'category': 'object'})" />
+    </tal:block>
+
+    <link rel="Stylesheet" type="text/css" href=""
+      tal:attributes="href string:${base_url}document.css">
+  </metal:block>
+
+  <metal:block fill-slot="header">
+    <h1 i18n:translate="">label_edit_schema</h1>
+  </metal:block>
+
+  <metal:block fill-slot="main">
+    <form method="post" tal:attributes="action here/REQUEST/URL1">
+      <h3 i18n:translate="">label_fields</h3>
+      <table>
+        <tr align="left">
+          <th></th>
+          <th>Id</th>
+          <th>Type</th>
+          <th>Widget Type</th>
+        </tr>
+        <tal:block define="fields schema/objectValues">
+          <tr tal:condition="debug">
+            <td tal:content="fields" />
+          </tr>
+          <tr tal:repeat="field fields">
+            <tal:block define="fieldname field/getFieldId;
+                               fieldid field/getId;
+                               fieldtype field/meta_type;
+                               ">
+              <td>
+                <input type="hidden" name="fieldinfo.id:records" tal:attributes="value fieldid"/>
+                <input type="hidden" name="fieldinfo.name:records" tal:attributes="value fieldname"/>
+                <input type="checkbox" name="fieldinfo.is_selected:records"/>
+              </td>
+              <td tal:content="fieldname" />
+              <td tal:content="fieldtype" />
+              <td>
+                <select name="fieldinfo.widget:records">
+                  <option tal:repeat="widgettype python:here.cpstypes_fieldwidgets(fieldtype)"
+                          tal:attributes="value widgettype"
+                          tal:content="widgettype"/>
+                </select>
+              </td>
+            </tal:block>
+          </tr>
+        </tal:block>
+      </table>
+      <input type="submit" name="action_delete" value="label_delete" i18n:attributes="value">
+      <input type="submit" name="action_save" value="label_save" i18n:attributes="value">
+    </form>
+    <form method="post" action="cpstypes_add_field">
+      <table>
+        <tr>
+          <th>Add new Field:</th>
+          <td>
+            <select name="new_field">
+              <tal:block tal:repeat="fieldtype here/cpstypes_fieldwidgets">
+              <option tal:attributes="value fieldtype"
+                      tal:content="fieldtype"/>
+              </tal:block>
+            </select>
+          </td>
+          <td>
+            <input type="submit" name="add_field" value="add field" />
+          <td>
+        </tr>
+      </table>
+    </form>
+  </metal:block>
+
+</metal:block>
+</tal:block>
