@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-04-08 16:22default\n"
+"POT-Creation-Date: 2004-04-09 17:28default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -61,7 +61,8 @@ msgstr ""
 
 #.   <th align="right">cpstypes_type_description</th>
 #.   <small content="item/description">cpstypes_type_description</small>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_add_form.pt
+#: ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
 msgstr ""
@@ -82,13 +83,19 @@ msgid "cpstypes_type_is_flexible"
 msgstr ""
 
 #.   <th align="right">cpstypes_type_title</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_add_form.pt
+#: ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_type_title"
 msgstr ""
 
 #.   <th>cpstypes_widget_id</th>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widget_id"
+msgstr ""
+
+#.   <th>cpstypes_widget_index</th>
+#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
+msgid "cpstypes_widget_index"
 msgstr ""
 
 #.   <th>cpstypes_widget_required</th>
