@@ -69,31 +69,31 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
     _propertiesBaseClass = Folder
     _properties = Folder._properties + (
         {'id': 'multiple_layouts', 'type': 'boolean', 'mode': 'w',
-         'label': "Multiple Layouts"},
+         'label': "Multiple Layouts",'configurable' : 1},
         {'id': 'type_prefix', 'type': 'string', 'mode': 'w',
-         'label': "Id prefix for TypeMaker types"},
+         'label': "Id prefix for TypeMaker types",'configurable' : 1},
         {'id': 'style_prefix', 'type': 'string', 'mode': 'w',
-         'label': "Id prefix for TypeMaker style"},
+         'label': "Id prefix for TypeMaker style",'configurable' : 1},
         {'id': 'base_schemas', 'type': 'tokens', 'mode': 'w',
-         'label': "Base schemas"},
+         'label': "Base schemas",'configurable' : 1},
         {'id': 'base_layouts', 'type': 'tokens', 'mode': 'w',
-         'label': "Base Layout"},
+         'label': "Base Layout",'configurable' : 1},
         {'id': 'add_in_types', 'type': 'tokens', 'mode': 'w',
-         'label': "Add in types"},
+         'label': "Add in types",'configurable' : 1},
         {'id': 'metadata_layout', 'type': 'string', 'mode': 'w',
-         'label': "Metadata layout"},
+         'label': "Metadata layout",'configurable' : 1},
         {'id': 'metadata_schemas', 'type': 'tokens', 'mode': 'w',
-         'label': "Metadata schemas"},
+         'label': "Metadata schemas",'configurable' : 1},
         {'id': 'immediate_view', 'type': 'string', 'mode': 'w',
-         'label': "Immediate View"},
+         'label': "Immediate View",'configurable' : 1},
         {'id': 'hidden_layout_modes', 'type': 'tokens', 'mode': 'w',
-         'label': "Hidden layout modes"} ,
+         'label': "Hidden layout modes",'configurable' : 1} ,
         {'id': 'max_rows', 'type': 'int', 'mode': 'w',
-         'label': "Maximum number of rows"} ,
+         'label': "Maximum number of rows",'configurable' : 1} ,
         {'id': 'process_before_t', 'type': 'string', 'mode': 'w',
-         'label': "Process before type publish state changes"} ,
+         'label': "Process before type publish state changes",'configurable' : 1} ,
         {'id': 'process_after_t', 'type': 'string', 'mode': 'w',
-         'label': "Process after type publish state changes"} ,
+         'label': "Process after type publish state changes",'configurable' : 1} ,
         )
 
     multiple_layouts = False
@@ -134,8 +134,29 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
     #
     # APIs
     #
-    # XXX needs to be security-leveled
-    # see for naming conventions (manage_)
+    security.declarePublic('getConfigurableProperties')
+    def getConfigurableProperties(self):
+        """ gives a list of properties that can be configure
+            thru the portal
+        """
+        result = []
+        for property in self._properties:
+            if property.has_key('configurable'):
+                if property['configurable'] == 1 and \
+                    property['mode'] == 'w':
+                    result.append(property)
+        return result
+
+
+    security.declarePublic('manage_pchangeProperties')
+    def manage_pchangeProperties(self, REQUEST=None, RESPONSE=None, **kw):
+        """ method used to publish properties
+        """
+        self.manage_changeProperties(REQUEST=REQUEST)
+        if RESPONSE:
+            RESPONSE.redirect('cpstypes_configure')
+
+    security.declarePrivate('_createExpressionContext')
     def _createExpressionContext(self, type_id, ac_type, state, context):
         """Create an expression context """
         mapping = {}
@@ -594,7 +615,6 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
             if Localizer:
                 mcat = Localizer.default
-                #message = mcat('psm_changed')
                 message = 'psm_changed'
             else:
                 message = ''
