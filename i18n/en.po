@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: en\n"
-"POT-Creation-Date: 2004-05-18 18:42default\n"
+"POT-Creation-Date: 2004-05-19 12:00default\n"
 "PO-Revision-Date: 2004-04-13 14:31+0200\n"
 "Last-Translator: emmanuel <epietriga@nuxeo.com>\n"
 "Language-Team: francais <fr@li.org>\n"
@@ -78,6 +78,11 @@ msgstr "Description"
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_type_icon"
 msgstr "Icon"
+
+#.   <th align="right">cpstypes_type_is_addable</th>
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+msgid "cpstypes_type_is_addable"
+msgstr "Addable"
 
 #.   <th align="right">cpstypes_type_title</th>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
@@ -297,6 +302,3 @@ msgstr "URL"
 
 #~ msgid "cpstypes_type_id"
 #~ msgstr "Id"
-
-#~ msgid "cpstypes_type_is_flexible"
-#~ msgstr "Flexible"
