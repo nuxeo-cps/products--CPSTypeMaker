@@ -62,8 +62,6 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
     parent = None
     widget = None
     layout = schema = None
-
-
     security = ClassSecurityInfo()
 
     def __init__(self):
@@ -75,6 +73,7 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
             out of infos found in the widget
         """
         vocabulary_id = widget.getId() + '_' + select_variable
+
         if hasattr(widget, select_variable):
             values = getattr(widget, select_variable)
         else:
@@ -223,7 +222,7 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
 
     security.declarePrivate('_getSchemas')
     def _getSchema(self):
-        """Get the schema for our typhasRequiredFieldse
+        """Get the schema for our typhe
 
         """
         if self.schema:
@@ -305,7 +304,7 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
             validate = 0
         else:
             validate = 1
-            ds.updateFromMapping(form)hasRequiredFields
+            ds.updateFromMapping(form)
 
         layout_structure = layout.computeLayoutStructure(layout_mode, dm)
 
@@ -399,32 +398,16 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
         return rendered
 
     security.declarePublic('hasRequiredFields')
-    def hasRequiredFields(self, meta_type):
-        """ tells if a widget meta_type has required fields
+    def hasRequiredFields(self, widget):
+        """ tells if the given widget has any required fields
         """
-        wtool = getToolByName(self, 'portal_widget_types')
-
-        # let's find the widget in the list
-        for widget_type in wtool.objectValues():
-            #raise (widget_type.meta_type)
-            #LOG('hasRequiredFields', INFO,'meta_type %s widget_id %s widget_type %s'
-            # %(str(meta_type),widget_type.getId(),widget_type.meta_type))
-
-            # this is unreliable
-            # XXXXX
-            # we need here to extend widget class _properties
-            # with a new key "is_required"
-            if (widget_type.getId() == meta_type) or \
-                (widget_type.meta_type == meta_type) or \
-                (widget_type.meta_type == meta_type+' Type'):
-                if hasattr(widget_type, 'has_required_fields'):
-                    return widget_type.has_required_fields
-                else:
-                    return False
-
+        # check if there's any property with
+        # is_required key
+        for property in widget._properties:
+            if property.has_key('is_required'):
+                if property['is_required']:
+                  return True
         return False
-
-
 
 
 InitializeClass(CPSWidgetRenderer)
@@ -445,9 +428,12 @@ class WidgetTypeAdapter(BaseStorageAdapter):
 
     def _getFieldData(self, field_id, field, **kw):
         if self.widget_ob is not None:
+
             value = getattr(self.widget_ob, field_id,None)
+            LOG('_getFieldData', INFO, '%s : %s' %(field_id, str(value)))
         else:
             value = None
+
         return value
 
     def _setFieldData(self, field_id, value):
