@@ -96,7 +96,7 @@
                     <b tal:content="item/title_or_id" i18n:translate="" /></a>
                     <metal:block tal:condition="python:here.portal_typemaker.isAddable(type_id)">
 
-                    <img src="public_type.png"
+                    <img src="public_type.gif"
                        alt="cpstypes_publictype"
                        title="cpstypes_publictype"
                        i18n:attributes="alt;title"/>

@@ -157,7 +157,7 @@ input#typemakerAppendBt
     border: none;
     margin-top: 5px;
     cursor: hand;
-    background-image : url(append_cell.png);
+    background-image : url(append_cell.gif);
     background-repeat: no-repeat;
     background-position : center right;
     background-color: transparent;
@@ -170,7 +170,7 @@ input#typemakerDeleteCompBt
     width: 16px;
     border: none;
     cursor: hand;
-    background-image : url(button_delete.png);
+    background-image : url(button_delete.gif);
     background-repeat: no-repeat;
     background-color: transparent;
     vertical-align : middle;
@@ -192,7 +192,7 @@ input#typemakerDeleteBt
 {
     border : none;
     cursor: hand;
-    background-image : url(delete_cell.png);
+    background-image : url(delete_cell.gif);
     background-repeat: no-repeat;
     background-color: transparent;
 }
@@ -201,7 +201,7 @@ input#typemakerSplitBt
 {
     border : none;
     cursor: hand;
-    background-image : url(split_cell.png);
+    background-image : url(split_cell.gif);
     background-repeat: no-repeat;
     background-color: transparent;
 }
@@ -210,7 +210,7 @@ input#typemakerSplitBt
 input#typemakerWidenBt
 {
     cursor: hand;
-    background-image : url(widen_cell.png);
+    background-image : url(widen_cell.gif);
     background-repeat: no-repeat;
     background-color: transparent;
 }
@@ -219,7 +219,7 @@ input#typemakerShrinkBt
 {
     cursor: hand;
     border : none;
-    background-image : url(shrink_cell.png);
+    background-image : url(shrink_cell.gif);
     background-repeat: no-repeat;
     background-color: transparent;
 }
@@ -230,7 +230,7 @@ input#typemakerUpBt
     height: 5px;
     width: 8px;
     border : none;
-    background-image : url(up_cell.png);
+    background-image : url(up_cell.gif);
     background-repeat: no-repeat;
     background-color: transparent;
 }
@@ -241,7 +241,7 @@ input#typemakerDownBt
     cursor: hand;
     width: 8px;
     border : none;
-    background-image : url(down_cell.png);
+    background-image : url(down_cell.gif);
     background-repeat: no-repeat;
     background-color: transparent;
 }
@@ -252,7 +252,7 @@ input#typemakerLeftBt
     width: 5px;
     height: 8px;
     border : none;
-    background-image : url(left_cell.png);
+    background-image : url(left_cell.gif);
     background-repeat: no-repeat;
     background-color: transparent;
 }
@@ -263,7 +263,7 @@ input#typemakerRightBt
     width: 5px;
     height: 8px;
     border : none;
-    background-image : url(right_cell.png);
+    background-image : url(right_cell.gif);
     background-repeat: no-repeat;
     background-color: transparent;
 

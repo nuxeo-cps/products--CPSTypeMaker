@@ -9,7 +9,7 @@
                      tal:condition="python:i>0">
                     <a tal:attributes="href
                python:here.portal_url()+'/portal_typemaker/manage_delLayout?type_id='+type_id+'&layout_index='+str(i+1)">
-                      <img src="delete_cell.png"/>
+                      <img src="delete_cell.gif"/>
                     </a>
 
                 </div>
@@ -41,7 +41,7 @@
           <td tal:condition="python:layout_count<layout_max">
               <a tal:attributes="href
                python:here.portal_url()+'/portal_typemaker/manage_addLayout?type_id='+type_id">
-                  <img src="add_layout.png"/>
+                  <img src="add_layout.gif"/>
               </a>
           </td>
         </tr>
@@ -61,7 +61,7 @@
                      tal:condition="python:i>0">
                     <a tal:attributes="href
                python:here.portal_url()+'/portal_typemaker/manage_delFlexibleLayout?type_id='+type_id+'&layout_index='+str(i+1)">
-                      <img src="delete_cell.png"/>
+                      <img src="delete_cell.gif"/>
                     </a>
 
                 </div>
@@ -93,7 +93,7 @@
           <td tal:condition="python:layout_count<layout_max">
               <a tal:attributes="href
                python:here.portal_url()+'/portal_typemaker/manage_addFlexibleLayout?type_id='+type_id">
-                  <img src="add_layout.png"/>
+                  <img src="add_layout.gif"/>
               </a>
           </td>
         </tr>
@@ -221,7 +221,7 @@
 
                 <td>
                 <img
-                    tal:condition="rfields" src="required_fields.png"
+                    tal:condition="rfields" src="required_fields.gif"
                     i18n:attributes="title"
                     title="cpstypes_widgethasrequiredfields"/>
 
@@ -257,7 +257,7 @@
                                     python:'cpstypes_widget_properties?type_id='+type_id+
                                     '&widget_id='+widgetid" >
                             <img
-                                src="configure.png"
+                                src="configure.gif"
                                 i18n:attributes="title"
                                 title="cpstypes_configure"/>
 
@@ -270,7 +270,7 @@
                     python:here.portal_url()+'/portal_typemaker/manage_delWidget?type_id='+type_id+
                                     '&widget_id='+widgetid+'&widget_name='+widgetname">
 
-                    <img src="button_delete.png"
+                    <img src="button_delete.gif"
                          i18n:attributes="title"
                          title="action_delete"/>
 

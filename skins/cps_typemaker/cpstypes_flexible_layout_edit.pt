@@ -142,7 +142,7 @@ string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
                         "     i18n:attributes="title"
                                 title="cpstypes_editcell"
                                 >
-                            <img class="typemakerConfigureBt" src="configure_cell.png"/>
+                            <img class="typemakerConfigureBt" src="configure_cell.gif"/>
                         </a>
                       </metal:block>
                             <input id="typemakerSplitBt"
