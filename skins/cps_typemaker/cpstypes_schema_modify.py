@@ -11,7 +11,7 @@ if not action:
 
 defs = context.cpstypes_get_definitions()
 schemaid = defs['schemaid']
-schema = context.portal_schemas['schemaid']
+schema = context.portal_schemas[schemaid]
 
 for info in fieldinfo:
     field = schema[info['id']]
