@@ -214,7 +214,7 @@ msgid "CPS Heading Widget"
 msgstr "Titre"
 
 msgid "CPS Rich Text Editor Widget"
-msgstr "Rich Text Editor"
+msgstr "Editeur HTML"
 
 msgid "CPS InternalLinks Widget"
 msgstr "Liens internes"
@@ -525,3 +525,150 @@ msgstr "Mise en page automatique"
 
 msgid "cpstypemaker_layoutlabel"
 msgstr "Disposition"
+
+msgid "CPS Catalog Navigation Select Widget"
+msgstr "Sélection dans le portail"
+
+msgid "CPS NewsLetter InternalLinks Widgets"
+msgstr "Lien interne"
+
+msgid "CPS Generic Select Widget"
+msgstr "Selection avec entree vide"
+
+msgid "CPS Generic MultiSelect Widget"
+msgstr "Selection multiple avec entree vide"
+
+msgid "Label in view layout mode"
+msgstr "Libellé en mode affichage"
+
+msgid "Label in edit layout mode"
+msgstr "Libellé en mode édition"
+
+msgid "Fields"
+msgstr "Champs"
+
+msgid "Help"
+msgstr "Texte d'aide"
+
+msgid "Read-only in layout modes"
+msgstr "Composant en lecture seule dans les modes suivants"
+
+msgid "Label is i18n"
+msgstr "Libellé traduit"
+
+msgid "Hidden in layout modes"
+msgstr "Composant caché dans les modes suivants :"
+
+msgid "Hidden if readonly in layout modes"
+msgstr "Composant caché dans les modes suivants (s'il est en lecture seule)"
+
+msgid "Hidden if empty"
+msgstr "Composant caché si vide"
+
+msgid "Hide the widget if the given TAL expression returns true"
+msgstr "Cacher le composant si l'expression TAL suivante renvoie vrai"
+
+msgid "CSS class for view"
+msgstr "classe CSS utilisée pour l'affichage"
+
+msgid "Get the widget mode from the given TAL expression"
+msgstr "Déduire le mode de l'expression TAL suivante"
+
+msgid "Is vocabulary translated on display"
+msgstr "Vocabulaire traduit à l'affichage"
+
+msgid "Deletable"
+msgstr "Effacable"
+
+msgid "Accept blank values (defined in vocabulary) when validating if the widget is required and the vocabulary holds blank values"
+msgstr "Accepter le choix vide si le composant est requis, et que la liste comporte des valeurs vides "
+
+msgid "Allowed file suffixes (for example: .html .sxw)"
+msgstr "Extensions autorisées (par exemple .html, .sxw)"
+
+msgid "Display for true"
+msgstr "Mot affiché pour le booléen 'vrai'"
+
+msgid "Display for false"
+msgstr "Mot affiché pour le booléen 'faux'"
+
+msgid "Use javascript"
+msgstr "Utiliser Javascript"
+
+msgid "Widget type"
+msgstr "Type de composant"
+
+msgid "Display width"
+msgstr "Taille d'affichage"
+
+msgid "Maximum image size"
+msgstr "Taille maximum de l'image"
+
+msgid "Enable to resize img to lower size"
+msgstr "Autoriser la réduction de la fenêtre"
+
+msgid "Title of the popup"
+msgstr "Titre du pop-up"
+
+msgid "Allow configuration options"
+msgstr "Autoriser l'accès aux options de configuration"
+
+msgid "Widget render method"
+msgstr "Méthode de rendu du composant"
+
+msgid "Group id for Javascript switching (if empty widget id is used)"
+msgstr "id de Group pour le Javascript (si l'id de widget est vide)"
+
+msgid "Depends on id for Javascript switching"
+msgstr "Dépend des id pour le Javascript"
+
+msgid "Depends on value for Javascript switching"
+msgstr "Dépend des valeurs pour le Javascript"
+
+msgid "Depends on value display widget"
+msgstr "Dépend de la valeur du widget"
+
+msgid "Required widget"
+msgstr "Composant obligatoire"
+
+msgid "browse or search"
+msgstr "navigation ou recherche ?"
+
+msgid "browse"
+msgstr "navigation"
+
+msgid "search"
+msgstr "recherche"
+
+msgid "Enabling the setting of time of the day"
+msgstr "Autoriser le réglage de l'heure du jour"
+
+msgid "Value must be in range"
+msgstr "La valeur doit respecter l'interval"
+
+msgid "Range minimum value"
+msgstr "Valeur minimum"
+
+msgid "Range maximum value"
+msgstr "Valeur maximum"
+
+msgid "Thousands separator"
+msgstr "Séparateur des milliers"
+
+msgid "Decimal separator"
+msgstr "Séparateur des décimales"
+
+msgid "Number of decimals"
+msgstr "Nombre de décimales"
+
+msgid "Html for view"
+msgstr "Code html pour l'affichage"
+
+msgid "Html for edit"
+msgstr "Code html pour l'édition"
+
+msgid "Render format : select menu (default), radio buttons or checkboxes"
+msgstr "Format d'affichage : menu de sélection (défaut), boutons ou cases à cocher"
+
+msgid "Target for the link"
+msgstr "Cible pour le lien"

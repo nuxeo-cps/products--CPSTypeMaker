@@ -528,3 +528,15 @@ msgstr "Automatic layout"
 msgid "cpstypemaker_layoutlabel"
 msgstr "Layout"
 
+msgid "CPS Catalog Navigation Select Widget"
+msgstr "Catalog Navigation Select"
+
+msgid "CPS NewsLetter InternalLinks Widgets"
+msgstr "Newsletter internal link"
+
+msgid "CPS Generic Select Widget"
+msgstr "Generic Select"
+
+msgid "CPS Generic MultiSelect Widget"
+msgstr "Generic Multiselect"
+

@@ -382,3 +382,149 @@ msgstr ""
 msgid "cpstypemaker_layoutlabel"
 msgstr ""
 
+msgid "CPS Catalog Navigation Select Widget"
+msgstr ""
+
+msgid "CPS NewsLetter InternalLinks Widgets"
+msgstr ""
+
+msgid "CPS Generic Select Widget"
+msgstr ""
+
+msgid "CPS Generic MultiSelect Widget"
+msgstr ""
+
+msgid "Label in view layout mode"
+msgstr """
+
+msgid "Label in edit layout mode"
+msgstr ""
+
+msgid "Fields"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "Read-only in layout modes"
+msgstr ""
+
+msgid "Label is i18n"
+msgstr ""
+
+msgid "Hidden in layout modes"
+msgstr ""
+
+msgid "Hidden if readonly in layout modes"
+msgstr ""
+
+msgid "Hidden if empty"
+msgstr ""
+
+msgid "Hide the widget if the given TAL expression returns true"
+msgstr ""
+
+msgid "CSS class for view"
+msgstr ""
+
+msgid "Get the widget mode from the given TAL expression"
+msgstr ""
+
+msgid "Is vocabulary translated on display"
+msgstr ""
+
+msgid "Deletable"
+msgstr ""
+
+msgid "Accept blank values (defined in vocabulary) when validating if the widget is required and the vocabulary holds blank values"
+msgstr ""
+
+msgid "Allowed file suffixes (for example: .html .sxw)"
+msgstr ""
+
+msgid "Display for true"
+msgstr ""
+
+msgid "Display for false"
+msgstr ""
+
+msgid "Use javascript"
+msgstr ""
+
+msgid "Widget type"
+msgstr ""
+
+msgid "Display width"
+msgstr ""
+
+msgid "Maximum image size"
+msgstr ""
+
+msgid "Enable to resize img to lower size"
+msgstr ""
+
+msgid "Title of the popup"
+msgstr ""
+
+msgid "Allow configuration options"
+msgstr ""
+
+msgid "Widget render method"
+msgstr ""
+
+msgid "Group id for Javascript switching (if empty widget id is used)"
+msgstr ""
+
+msgid "Depends on id for Javascript switching"
+msgstr ""
+
+msgid "Depends on value for Javascript switching"
+msgstr ""
+
+msgid "Depends on value display widget"
+msgstr ""
+
+msgid "Required widget"
+msgstr ""
+
+msgid "browse or search"
+msgstr ""
+
+msgid "browse"
+msgstr ""
+
+msgid "search"
+msgstr ""
+
+msgid "Enabling the setting of time of the day"
+msgstr ""
+
+msgid "Value must be in range"
+msgstr ""
+
+msgid "Range minimum value"
+msgstr ""
+
+msgid "Range maximum value"
+msgstr ""
+
+msgid "Thousands separator"
+msgstr ""
+
+msgid "Decimal separator"
+msgstr ""
+
+msgid "Number of decimals"
+msgstr ""
+
+msgid "Html for edit"
+msgstr ""
+
+msgid "Html for view"
+msgstr ""
+
+msgid "Render format : select menu (default), radio buttons or checkboxes"
+msgstr ""
+
+msgid "Target for the link"
+msgstr ""
