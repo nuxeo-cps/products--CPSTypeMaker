@@ -34,18 +34,18 @@ actions['object'].append({'id':'delete_entry',
   </metal:block>
 
   <metal:block fill-slot="header">
-    <h1 i18n:translate="">label_edit_schema</h1>
+    <h1 i18n:translate="">cpstypes_edit_schema</h1>
   </metal:block>
 
   <metal:block fill-slot="main">
     <form method="post" action="cpstypes_schema_modify">
-      <h3 i18n:translate="">label_fields</h3>
+      <h3 i18n:translate="">cpstypes_fields</h3>
       <table>
         <tr align="left">
           <th></th>
-          <th>Id</th>
-          <th>Type</th>
-          <th>Widget Type</th>
+          <th i18n:translate="">cpstypes_field_id</th>
+          <th i18n:translate="">cpstypes_field_type</th>
+          <th i18n:translate="">cpstypes_widget_type</th>
         </tr>
         <tal:block define="fields schema/objectValues">
           <tr tal:condition="debug">
@@ -75,13 +75,13 @@ actions['object'].append({'id':'delete_entry',
           </tr>
         </tal:block>
       </table>
-      <input type="submit" name="action_delete" value="label_delete" i18n:attributes="value">
-      <input type="submit" name="action_save" value="label_save" i18n:attributes="value">
+      <input type="submit" name="action_delete" value="button_delete" i18n:attributes="value">
+      <input type="submit" name="action_save" value="button_save" i18n:attributes="value">
     </form>
     <form method="post" action="cpstypes_schema_add_field">
       <table>
         <tr>
-          <th>Add new Field:</th>
+          <th i18n:translate="">cpstypes_add_new_field</th>
           <td>
             <select name="new_field_type">
               <tal:block tal:repeat="fieldtype here/cpstypes_fieldwidgets">
@@ -94,7 +94,7 @@ actions['object'].append({'id':'delete_entry',
             <input type="text" name="new_field_id">
           </td>
           <td>
-            <input type="submit" name="action_add" value="add field" />
+            <input type="submit" name="action_add" value="button_add" i18n:attributes="value"/>
           <td>
         </tr>
       </table>
