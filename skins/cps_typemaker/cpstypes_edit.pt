@@ -1,10 +1,10 @@
 <tal:block define="
   type_id request/type_id|options/type_id;
-  title type_id;
   validate python: request.has_key('cpsdirectory_entry_edit_form');
   edit_request python: validate and request or nothing;
   delete_allowed python:0;
   typeob here/portal_types/?type_id;
+  title typeob/title|type_id;
   layoutid python:typeob.layouts[-1];
   layoutob here/portal_layouts/?layoutid;
   debug nothing;
