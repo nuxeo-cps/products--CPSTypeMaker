@@ -6,7 +6,7 @@ New features:
 -
 Bug fixes:
 ~~~~~~~~~~
--
+- Conflicting Id's caused ugly errors.
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 -
