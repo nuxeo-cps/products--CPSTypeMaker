@@ -32,11 +32,11 @@
           <td><input type="text" size=20 name="id"></td>
         </tr>
         <tr>
-          <th align='right' i18n:translate="">cpstypes_type_id</th>
+          <th align='right' i18n:translate="">cpstypes_type_title</th>
           <td><input type="text" size=50 name="title"></td>
         </tr>
         <tr>
-          <th align='right' i18n:translate="">cpstypes_type_id</th>
+          <th align='right' i18n:translate="">cpstypes_type_description</th>
           <td><textarea cols=48 name="description"></textarea></td>
         </tr>
         <tr>
