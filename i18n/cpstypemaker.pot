@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-05-19 12:00default\n"
+"POT-Creation-Date: 2004-06-22 17:23default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -277,4 +277,10 @@ msgid "CPS Text Widget"
 msgstr ""
 
 msgid "CPS URL Widget"
+msgstr ""
+
+msgid "type_already_exists"
+msgstr ""
+
+msgid "field_already_exists"
 msgstr ""

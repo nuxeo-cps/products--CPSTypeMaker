@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: en\n"
-"POT-Creation-Date: 2004-05-19 12:00default\n"
+"POT-Creation-Date: 2004-06-22 17:23default\n"
 "PO-Revision-Date: 2004-05-19 14:34+0200\n"
 "Last-Translator: emmanuel <epietriga@nuxeo.com>\n"
 "Language-Team: francais <fr@li.org>\n"
@@ -279,6 +279,12 @@ msgstr "Text"
 msgid "CPS URL Widget"
 msgstr "URL"
 
+msgid "type_already_exists"
+msgstr ""
+
+msgid "field_already_exists"
+msgstr ""
+
 #~ msgid "cpstypes_widget_id"
 #~ msgstr "Id"
 
@@ -302,4 +308,3 @@ msgstr "URL"
 
 #~ msgid "cpstypes_type_id"
 #~ msgstr "Id"
-
