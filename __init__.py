@@ -1,6 +1,6 @@
 
 from Products.CMFCore.DirectoryView import registerDirectory
-registerDirectory('skins', globals())
+registerDirectory('skins/cps_typemaker', globals())
 
 from Products.CMFCore.TypesTool import FactoryTypeInformation
 
