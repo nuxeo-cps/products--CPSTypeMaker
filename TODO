@@ -1,14 +1,6 @@
 TODOS
 
-+ document types with misconfigured fields
-  should be labeled with a red flag and
-  should not be publishable
 + finish preview part (images and other binary files)
-+ make unit tests
++ make unit test (this is a skins refactoring at this time)
 + create a workflow editor
-+ hiliting the "save" button in red can be avoided
-  by submitting the form on drag drop operations
-  via POSTs
-+ let the manager configure locale roles
-  for tool use through a specific interface
-
++ make the css portable with more accurate declarations
