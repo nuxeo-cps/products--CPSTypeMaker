@@ -46,10 +46,8 @@ def install(self):
                 visible=1)
 
     # Set up the custom meta data schema.
-    # The reason I'm not using the installer too add the schema is that it
-    # should be empty, so this is easier.
-    self.portal_schemas.manage_addCPSSchema('custom_metadata')
-
+    installer.verifySchemas( {'custom_metadata': {}})
+    
     # translations
     installer.setupTranslations()
     
