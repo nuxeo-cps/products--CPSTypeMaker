@@ -8,7 +8,12 @@ kw = {'fields': [new_field],
       'label_edit': new_field,
      }
 
-layout.manage_addCPSWidget(new_field, 'String Widget', **kw)
+defs = context.cpstypes_get_definitions()
+schemaid = defs['schemaid']
+field = context.portal_schemas[schemaid][new_field]
+wtype = field.default_widget
+
+layout.manage_addCPSWidget(new_field, wtype, **kw)
 layoutdef = layout.getLayoutDefinition()
 layoutdef['rows'].append([{'ncols': 1, 'widget_id': new_field}])
 layout.setLayoutDefinition(layoutdef)
