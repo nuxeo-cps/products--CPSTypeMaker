@@ -159,3 +159,9 @@ msgstr ""
 
 msgid "CPS URL Widget"
 msgstr ""
+
+msgid "type_already_exists"
+msgstr ""
+
+msgid "field_already_exists"
+msgstr ""

@@ -16,6 +16,7 @@ type_prefix = defs['type_prefix']
 flex_id = type_prefix + 'flexible_' + type_id[len(type_prefix):]
 layout = context.portal_layouts[flex_id]
 typeob = context.portal_types[type_id]
+portal_status_message = []
 
 new_widget_id = makeId(new_widget_title)
 flexible_widgets = []
@@ -50,8 +51,12 @@ if action == 'add' and new_widget_id:
           'title': new_widget_title,
          }
 
-    widget = layout.manage_addCPSWidget(new_widget_id, new_widget_type, **kw)
-    flexible_widgets.append(new_widget_id)
+    if hasattr(layout, 'w__'+new_widget_id):
+        portal_status_message.append('field_already_exists')
+
+    else:
+        widget = layout.manage_addCPSWidget(new_widget_id, new_widget_type, **kw)
+        flexible_widgets.append(new_widget_id)
 
 layout.manage_changeProperties(flexible_widgets=flexible_widgets)
 if flexible_widgets:
@@ -59,5 +64,11 @@ if flexible_widgets:
 else:
     typeob.manage_changeProperties(flexible_layouts='')
 
-return RESPONSE.redirect('cpstypes_edit_flexible?type_id='+type_id)
+if portal_status_message:
+    portal_status_message = '\n'.join(portal_status_message)
+    portal_status_message = '&portal_status_message=' + portal_status_message
+else:
+    portal_status_message = ''
+
+return RESPONSE.redirect('cpstypes_edit_flexible?type_id='+type_id+portal_status_message)
     

@@ -17,6 +17,13 @@ type_actions = defs['type_actions']
 type_id = prefix + id
 flex_id = prefix + 'flexible_' + id
 
+if hasattr(ttool, type_id):
+    if RESPONSE:
+        return RESPONSE.redirect(context.portal_url() + \
+            '/cpstypes_add_form?portal_status_message=type_already_exists')
+    else:
+        return 
+
 ti = ttool.addFlexibleTypeInformation(id=type_id)
 properties = {
     'title': title,

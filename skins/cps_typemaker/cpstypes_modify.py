@@ -23,6 +23,7 @@ for key in REQUEST.keys():
 if not action:
     raise ValueError('No action specified')
 
+portal_status_message = []
 layout = context.portal_layouts[type_id]
 layoutdef = layout.getLayoutDefinition()
 defs = context.cpstypes_get_definitions()
@@ -120,55 +121,64 @@ if action == 'add' and new_widget_id:
           'label_edit': new_widget_title,
          }
 
-    widget = layout.manage_addCPSWidget(new_widget_id, new_widget_type, **kw)
-    layoutdef = layout.getLayoutDefinition()
-    layoutdef['rows'].append([{'ncols': 1, 'widget_id': new_widget_id}])
+    if hasattr(layout, 'w__'+new_widget_id):
+        portal_status_message.append('field_already_exists')
 
-    try:
-        context.cpstypes_get_field(type_id, widget)
-    except AttributeError:
-        # The field does not exist. We should add it.
-        if type_id == defs['metadata_layout']:
-            schemaid = None
-            for each in defs['metadata_schemas']:
-                if each != 'metadata': # Skip the special 'metadata' schema
-                    schemaid = each
-                    break
-            if schemaid is None:
-                raise "Configuration includes no custom metadata schema."
-        else:
-            schemaid = type_id
-            
-        schema = context.portal_schemas[schemaid]
+    else:
+        widget = layout.manage_addCPSWidget(new_widget_id, new_widget_type, **kw)
+        layoutdef = layout.getLayoutDefinition()
+        layoutdef['rows'].append([{'ncols': 1, 'widget_id': new_widget_id}])
 
-        if not schema.has_key('f__' + new_widget_id):
-            field_types = widget.getFieldTypes()
-            field_inits = widget.getFieldInits()
-            i = 0
-            for field_type in field_types:
-                # Find free field id (based on the field type name).
-                field_id = new_widget_id
-                field_ids = schema.keys()
-                n = 0
-                while field_id in field_ids:
-                    n += 1
-                    field_id = '%s_f%d' % (new_widget_id, n)
+        try:
+            context.cpstypes_get_field(type_id, widget)
+        except AttributeError:
+            # The field does not exist. We should add it.
+            if type_id == defs['metadata_layout']:
+                schemaid = None
+                for each in defs['metadata_schemas']:
+                    if each != 'metadata': # Skip the special 'metadata' schema
+                        schemaid = each
+                        break
+                if schemaid is None:
+                    raise "Configuration includes no custom metadata schema."
+            else:
+                schemaid = type_id
 
-                # Create the field.
-                if field_inits:
-                    kw = field_inits[i]
-                else:
-                    kw = {}
-                i += 1
-                schema.manage_addField(field_id, field_type, **kw)
+            schema = context.portal_schemas[schemaid]
 
-            if type_id == defs['metadata_layout'] and \
-               field_inits and field_inits[0].get('is_searchabletext', 0):
-                catalog = context.portal_catalog
-                catalog.addIndex(new_widget_id, 'TextIndex')
+            if not schema.has_key('f__' + new_widget_id):
+                field_types = widget.getFieldTypes()
+                field_inits = widget.getFieldInits()
+                i = 0
+                for field_type in field_types:
+                    # Find free field id (based on the field type name).
+                    field_id = new_widget_id
+                    field_ids = schema.keys()
+                    n = 0
+                    while field_id in field_ids:
+                        n += 1
+                        field_id = '%s_f%d' % (new_widget_id, n)
+
+                    # Create the field.
+                    if field_inits:
+                        kw = field_inits[i]
+                    else:
+                        kw = {}
+                    i += 1
+                    schema.manage_addField(field_id, field_type, **kw)
+
+                if type_id == defs['metadata_layout'] and \
+                   field_inits and field_inits[0].get('is_searchabletext', 0):
+                    catalog = context.portal_catalog
+                    catalog.addIndex(new_widget_id, 'TextIndex')
 
 # And finally save the new layout
 layout.setLayoutDefinition(layoutdef)
-
-return RESPONSE.redirect('cpstypes_edit?type_id='+type_id)
+if portal_status_message:
+    portal_status_message = '\n'.join(portal_status_message)
+    portal_status_message = '&portal_status_message=' + portal_status_message
+else:
+    portal_status_message = ''
+    
+return RESPONSE.redirect('cpstypes_edit?type_id='+type_id+portal_status_message)
 
