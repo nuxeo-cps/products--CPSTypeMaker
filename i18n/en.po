@@ -1,0 +1,77 @@
+# Gettext Message File for default.
+# Your Name <your@email>, Year
+msgid ""
+msgstr ""
+"Project-Id-Version: default\n"
+"POT-Creation-Date: 2004-04-07 16:03default\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Your Name <your@email>\n"
+"Language-Team: Name <email>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-code: LL\n"
+"Language-name: Language\n"
+"Preferred-encodings: utf-8 latin1\n"
+"Domain: default\n"
+
+
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+#.   <small content="item/description">Description</small>
+msgid "Description"
+msgstr ""
+
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+#.   <b content="item/title_or_id">ID</b>
+msgid "ID"
+msgstr ""
+
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+#.   <span>
+#.                 Objects: ${batch_start (tal replace="batch_info/start")} - ${batch_limit (tal replace="batch_info/limit")} of ${batch_length (tal replace="batch_info/length")}
+#.               </span>
+msgid "Objects: ${batch_start} - ${batch_limit} of ${batch_length}"
+msgstr ""
+
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+#.   <a attributes="href python:'%s?%s'%(request['URL'],
+#.                                                       mq(request.form, b_start=next))" condition="python:next is not None" define="next batch_info/next">Next</a>
+msgid "batch_next"
+msgstr ""
+
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+#.   <a attributes="href python:'%s?%s'%(request['URL'],
+#.                                                   mq(request.form, b_start=previous))" condition="python:previous is not None" define="previous batch_info/previous">Previous</a>
+msgid "batch_previous"
+msgstr ""
+
+#: from ../skins/cps_typemaker/cpstypes_add_form.pt
+#.   <h1 span="">cpstypes_label_add_type</h1>
+msgid "cpstypes_label_add_type"
+msgstr ""
+
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#.   <input type="submit" name="action_delete" value="label_delete">
+#.         <input type="submit" name="action_save" value="label_save">
+#.       </input></input>
+#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
+msgid "label_delete"
+msgstr ""
+
+#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
+#.   <h1>label_edit_schema</h1>
+msgid "label_edit_schema"
+msgstr ""
+
+#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
+#.   <h3>label_fields</h3>
+msgid "label_fields"
+msgstr ""
+
+#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#.   <input type="submit" name="action_save" value="label_save">
+#.       </input>
+#: from ../skins/cps_typemaker/cpstypes_schema_edit.pt
+msgid "label_save"
+msgstr ""
