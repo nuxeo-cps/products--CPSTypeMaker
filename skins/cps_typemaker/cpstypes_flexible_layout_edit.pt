@@ -1,0 +1,354 @@
+<tal:block define="
+  type_id request/type_id|options/type_id;
+  tmaker here/portal_typemaker;
+  layout_index request/layout_index|options/layout_index|python:1;
+  layout_count python:tmaker.getFlexibleTypeLayoutCount(type_id);
+  show_layouts python:tmaker.multiple_layouts;
+  layout_max python:5;
+  flex_id python:type_id.replace('_','_flexible_');
+  layout_id python:flex_id+'_'+str(layout_index);
+  delete_allowed python:0;
+  typeob python:here.portal_types[type_id] or nothing;
+  title typeob/title|type_id;
+  expanded_title title;
+  layoutob python:here.portal_layouts[layout_id];
+  debug nothing;
+  ">
+<metal:block use-macro="here/main_template/macros/master">
+  <metal:block fill-slot="css_slot">
+    <tal:block define="dt_title python:here.Localizer.default('Document Types');
+                       dummy python:request.set('breadcrumb_set',
+                        [{
+                          'id': 'types',
+                          'url': here.portal_url()+'/cpstypes_list',
+                          'longtitle': dt_title,
+                          'title': dt_title,
+                         },
+                         {
+                          'id': 'types',
+                          'url': here.portal_url()+'/cpstypes_edit?type_id='+type_id,
+                          'longtitle': title,
+                          'title': title,
+                        }]);
+                       actionlist python:[
+                         {'id':'edit_type',
+                          'url':base_url+'cpstypes_edit?type_id='+type_id,
+                          'name': 'cpstypes_edit_type',
+                          'category': 'object'},
+                         {'id':'edit_layout',
+                          'url':base_url+'cpstypes_layout_edit?type_id='+type_id,
+                          'name': 'cpstypes_edit_layout',
+                          'category': 'object'}];
+                       flexible_action python:[
+                         {'id':'edit_flexible',
+                          'url':base_url+'cpstypes_edit_flexible?type_id='+type_id,
+                          'name': 'cpstypes_edit_flexible',
+                          'category': 'object'},
+                         {'id':'edit_flexible_layout',
+                          'url':base_url+'cpstypes_flexible_layout_edit?type_id='+type_id,
+                          'name': 'cpstypes_edit_flexible_layout',
+                          'category': 'object'}];
+
+                       actionlist python:typeob and actionlist + flexible_action or actionlist;
+                       actions python:actions.update({'object': actionlist});
+     "/>
+    <tal:block condition="delete_allowed">
+      <tal:block define="global actions python:
+actions['object'].append({'id':'delete_entry',
+  'url':base_url+'cpsdirectory_entry_delete?type_id='+type_id,
+  'onclick': 'return window.confirm(\''+ here.Localizer.default('description_confirm_delete').encode('ISO-8859-15', 'ignore') +'\')' ,
+  'name': 'cpsdir_label_delete_entry',
+  'category': 'object'})" />
+    </tal:block>
+
+    <link rel="Stylesheet" type="text/css" href=""
+      tal:attributes="href string:${base_url}document.css" />
+  </metal:block>
+
+  <metal:block fill-slot="header">
+    <h1><span i18n:translate="" tal:content="title" /></h1>
+  </metal:block>
+  <metal:block fill-slot="main"
+    tal:define="widgetids layoutob/keys;
+                layoutdef layoutob/getLayoutDefinition;
+                totcols layoutdef/ncols;
+                rows layoutdef/rows" >
+                <div class="typemaker_feedback"
+                id="drag-feedback-box"></div>
+
+
+   <tal:block tal:condition="show_layouts">
+     <a name="layouts"></a>
+     <metal:block use-macro="here/cpstypes_lib/macros/cpstm_flexible_layouts"/>
+   </tal:block>
+
+   <a name="table"></a>
+   <form tal:attributes="action
+string:${here/portal_url}/portal_typemaker/manage_flexLayoutModified?#table"
+     method="post">
+    <input type="hidden" name="type_id" tal:attributes="value type_id"/>
+    <input type="hidden" name="layout_index" tal:attributes="value layout_index"/>
+    <span tal:replace="nothing">
+        this table hould be replaced with divs
+    </span>
+    <table>
+    <tr>
+    <metal:block tal:condition="python:len(rows)==0" >
+        <td class="typemaker_empty_layout" valign="center" align="center" width="70%"
+         i18n:translate="cpstypes_empty_layout">
+            No fields in the layout yet.
+        </td>
+    </metal:block>
+
+    <metal:block tal:condition="python:not len(rows)==0">
+
+    <td valign="top"  align="center" width="70%">
+
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr class="row-normal">
+        <td align="left" valign="top">
+          <div class="form-label">
+            <table border=0>
+              <tr>
+                <td class="typemaker_header"
+                    tal:repeat="nr python:range(1,totcols+1)"
+                  tal:content="nr" />
+              </tr>
+              <tr tal:repeat="row rows">
+                <tal:span repeat="cell row">
+                    <metal:block tal:attributes="colspan cell/ncols"
+                            tal:define="nrow repeat/row/number;
+                            ncell repeat/cell/number;
+                            widget_id cell/widget_id;">
+
+                  <td tal:attributes="colspan cell/ncols">
+
+
+                   <div class="typemaker_LayoutCellDest">
+
+                    <div tal:attributes="class
+                            python:test(not widget_id=='','typemaker_right_toolbar',
+                             'typemaker_emptycell_right_toolbar')">
+
+                      <metal:block tal:condition="python:not widget_id==''">
+
+                            <a
+                                type="button" tal:attributes="href
+                        python:'cpstypes_widget_properties?type_id='+type_id+'&widget_id='+widget_id;
+                        "     i18n:attributes="title"
+                                title="cpstypes_editcell"
+                                >
+                            <img class="typemaker_configure_bt" src="configure_cell.png"/>
+                        </a>
+                      </metal:block>
+                            <input class="typemaker_split_bt"
+                                type="submit" value=""
+                                i18n:attributes="title"
+                                title="cpstypes_splitcell"
+                                tal:attributes="name
+                                 python:'split_check_'+str(nrow)+'_'+str(ncell)"/>
+                            <input class="typemaker_delete_bt"
+                                i18n:attributes="title"
+                                title="cpstypes_deletecell"
+                                type="submit" value=""
+                                tal:attributes="name python:'del_check_'+str(nrow)+'_'+str(ncell)"/>
+                        </div>
+
+
+                        <noscript>
+                        <div tal:attributes="class
+                            python:test(not widget_id=='','typemaker_left_toolbar',
+                             'typemaker_emptycell_left_toolbar')">
+                            <table border=0>
+                                <tr>
+                                  <td align="center" colspan="2">
+                                    <input class="typemaker_up_bt"
+                                        tal:attributes="name
+                                          string:up_${nrow}_${ncell};"
+                                        type="submit" value="">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align="center" colspan="2">
+                                  <input class="typemaker_down_bt"
+                                      tal:attributes="name
+                                          string:down_${nrow}_${ncell};"
+                                        type="submit" value="">
+                                  </td>
+                                </tr>
+                            </table>
+
+                        </div>
+
+
+
+                        </noscript>
+
+                        <noscript>
+                        <div tal:attributes="class
+                            python:test(not widget_id=='','typemaker_bright_toolbar',
+                             'typemaker_emptycell_bright_toolbar')">
+                            <table border=0>
+
+                                <tr>
+                                   <td align="left" colspan="1">
+                                   <input class="typemaker_left_bt"
+                                          i18n:attributes="title"
+                                          title="cpstypes_moveleft"
+                                          tal:attributes="name
+                                          string:left_${nrow}_${ncell};"
+                                        type="submit" value="">
+                                   </td>
+                                  <td align="right" colspan="1">
+                                  <input class="typemaker_right_bt"
+                                          i18n:attributes="title"
+                                          title="cpstypes_moveright"
+                                        tal:attributes="name
+                                          string:right_${nrow}_${ncell};"
+                                        type="submit" value="">
+                                  </td>
+                                <tr>
+
+                            </table>
+
+                        </div>
+                        </noscript>
+
+                        <span tal:replace="nothing">
+
+                        ##### power user / will be integrated later
+                        <div tal:attributes="class
+                            python:test(not widget_id=='','typemaker_left_toolbar',
+                             'typemaker_emptycell_left_toolbar')">
+                          <input class="typemaker_widen_bt"
+                                type="submit" value=""
+                                tal:attributes="name
+                                 python:'widen_check_'+str(nrow)+'_'+str(ncell)"/>
+                            <input class="typemaker_shrink_bt"
+                                type="submit" value=""
+                                tal:attributes="name
+                                 python:'shrink_check_'+str(nrow)+'_'+str(ncell)"/>
+                        </div>
+                        </span>
+
+
+
+                        <div class="typemaker_LayoutCellDrag">
+
+                            <div class="typemaker_LayoutCellEditMenu">
+
+
+                        <metal:block tal:condition="python:widget_id not in widgetids">
+                                <input type="hidden" tal:attributes="name
+                                                     string:cell_${nrow}_${ncell};
+                                                     value widget_id;"/>
+
+                                </metal:block>
+                                <div class="typemaker_cellcontent">
+
+                                    <metal:block tal:condition="python:widget_id in widgetids">
+
+                                        <metal:block
+                                        tal:define="widget_ob python:layoutob[widget_id] or nothing">
+
+                                        <div tal:condition="widget_ob"
+                                           tal:content="widget_ob/label_edit"/>
+                                          <input type="hidden" tal:attributes="name
+                                                        string:cell_${nrow}_${ncell};
+                                                        value widget_id;"/>
+
+                                        </metal:block>
+                                    </metal:block>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                  </td>
+                  </metal:block>
+                </tal:span>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
+      </table>
+      </td>
+     </metal:block>
+
+     <td valign="top" width="30%">
+        <h3 i18n:translate="">cpstypes_availablefields</h3>
+        <table>
+            <metal:block tal:repeat="wid widgetids">
+            <tr>
+            <td>
+                <input class="typemaker_append_bt" type="submit"
+                        i18n:attributes="title"
+                        title="cpstypes_appendcell"
+                        tal:attributes="name string:addnamedrow_${wid}"
+                        value=""/>
+            </td>
+
+            <td tal:define="current_widget python:layoutob[wid]">
+                <div class="typemaker_cell typemaker_LayoutCellDrag"
+                        tal:define="ledit current_widget/label_edit|nothing">
+
+                    <input type="hidden" tal:attributes="value wid"/>
+                    <metal:block tal:condition="not:ledit">
+                        <div>&nbsp;</div>
+                    </metal:block>
+                    <metal:block tal:condition="ledit">
+                        <div class="typemaker_cellcontent" tal:content="ledit"/>
+                    </metal:block>
+                </div>
+            </td>
+
+            </tr>
+            </metal:block>
+        </table>
+     </td>
+
+     </tr>
+     </table>
+      <div class="typemaker_spaced">
+          <input id="change" type="submit" name="change" value="button_change"
+           i18n:attributes="value" />
+          <input type="submit" name="addrow" value="cpstypes_add_row" i18n:attributes="value" />
+          <input type="submit" name="autolayout" value="Mise en page automatique"
+           i18n:attributes="value" />
+          <span tal:replace="nothing">
+          *** SOON AVAILABLE ***
+          <input type="button" name="preview" value="Preview"
+              tal:attributes="onclick string:layoutPreview('${type_id}');"
+           i18n:attributes="value" />
+         ************************
+
+            <input type="submit" name="autolayout" value="cpstypes_auto" i18n:attributes="value" />
+            <br/>
+            <input type="submit" name="splitcell" value="cpstypes_split_cell"
+                 i18n:attributes="value"/>
+            <input type="submit" name="delcell" value="cpstypes_delete_cell"
+                i18n:attributes="value"/>
+            <input type="submit" name="widencell" value="cpstypes_widen_cell"
+                 i18n:attributes="value"/>
+            <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell"
+                i18n:attributes="value"/>
+          </span>
+     </div>
+     <noscript>
+         <div class="typemaker_noscript" i18n:translate="cpstypes_scriptdisabled">
+             Warning : Javascript should be enabled for drag and drop features
+         </div>
+     </noscript>
+    </form>
+    <!-- Begin pdlib footer -->
+      <script type="text/javascript"><!--
+      pd_setupPage();
+      // --></script>
+    <!-- End pdlib footer -->
+  </metal:block>
+</metal:block>
+</tal:block>
