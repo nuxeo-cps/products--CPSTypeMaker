@@ -16,7 +16,9 @@
       <h1 tal:content="expanded_title" />
     </metal:block>
     <metal:block fill-slot="main"
-      tal:define="items python:here.portal_types.objectValues('CPS Flexible Type Information');
+      tal:define="prefix python:here.cpstypes_get_definitions()['type_prefix'];
+                  items python:[item for item in here.portal_types.objectValues('CPS Flexible Type Information')
+                                if item.getId().startswith(prefix)];
                   mq nocall:modules/ZTUtils/make_query;
                   no_form python:1;
                   items_per_page python:10;
