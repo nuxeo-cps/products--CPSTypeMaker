@@ -20,12 +20,12 @@
 import os
 from zLOG import LOG, INFO, DEBUG
 
-from Products.CPSInstaller.CMFInstaller import CMFInstaller
+from Products.CPSInstaller.CPSInstaller import CPSInstaller
 
 
 def install(self):
 
-    installer = CMFInstaller(self, 'CPSTypeMaker')
+    installer = CPSInstaller(self, 'CPSTypeMaker')
     installer.log("Starting CPSTypeMaker install")
 
     # skins
@@ -45,6 +45,8 @@ def install(self):
                 category='global',
                 visible=1)
 
+    # translations
+    installer.setupTranslations()
     installer.finalize()
     installer.log("End of specific CPSSchemas install")
     return installer.logResult()
