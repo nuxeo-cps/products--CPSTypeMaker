@@ -151,7 +151,7 @@ msgid "cpstypes_edit_flexible"
 msgstr "Editer les composants flexibles"
 
 msgid "Type management"
-msgstr "Gestion des types de documents"
+msgstr "Gérer les types de documents"
 
 msgid "CPS String List Field"
 msgstr "Liste de chaînes"
