@@ -3,7 +3,8 @@ Requires:
 -
 New features:
 ~~~~~~~~~~~~~
--
+- Each field/widget now has a "Indexed" setting that turns on or off 
+  field indexing in SearchableText.
 Bug fixes:
 ~~~~~~~~~~
 - "NoneType object has no attribute read" error under dr's MacOS X/Safari

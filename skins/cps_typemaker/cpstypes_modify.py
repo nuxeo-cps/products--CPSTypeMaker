@@ -84,6 +84,8 @@ for each in widgetinfo:
             kw['hidden_layout_modes'] = ['view']
 
         widget.manage_changeProperties(**kw)
+        field = context.cpstypes_get_field(type_id, widget)
+        field.manage_changeProperties(is_searchabletext=each.get('indexed', 0))
         
 
 if action == 'add' and new_widget_id:

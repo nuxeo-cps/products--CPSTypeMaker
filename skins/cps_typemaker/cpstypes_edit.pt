@@ -90,6 +90,7 @@ actions['object'].append({'id':'delete_entry',
           <th i18n:translate="">cpstypes_widget_size</th>
           <th i18n:translate="">cpstypes_widget_required</th>
           <th i18n:translate="">cpstypes_widget_show_in_view</th>
+          <th i18n:translate="">cpstypes_field_indexed</th>
         </tr>
         <tr tal:repeat="widget layoutob/objectValues">
             <tal:block define="widgetname widget/getWidgetId;
@@ -115,6 +116,9 @@ actions['object'].append({'id':'delete_entry',
               </td>
               <td><input type="checkbox" name="widgetinfo.show_in_view:records"
                 tal:attributes="checked python:'view' not in widget.hidden_layout_modes" />
+              </td>
+              <td><input type="checkbox" name="widgetinfo.indexed:records"
+                tal:attributes="checked python:here.cpstypes_get_field(type_id, widget).is_searchabletext" />
               </td>
             </tal:block>
           </tr>
