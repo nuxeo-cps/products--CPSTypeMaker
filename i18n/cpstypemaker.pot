@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: default\n"
-"POT-Creation-Date: 2004-04-09 17:28default\n"
+"POT-Creation-Date: 2004-04-13 14:31default\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Your Name <your@email>\n"
 "Language-Team: Name <email>\n"
@@ -19,8 +19,8 @@ msgstr ""
 "Preferred-encodings: utf-8 latin1\n"
 "Domain: default\n"
 
-#.   <input type="submit" name="action_save" value="button_save" />
-#.   <input type="submit" name="action_save" value="button_save">
+#.   <input value="button_save" name="action_save" type="submit" />
+#.   <input value="button_save" name="action_save" type="submit">
 #.       </input>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 #: ../skins/cps_typemaker/cpstypes_schema_edit.pt
@@ -128,4 +128,7 @@ msgid "cpstypes_widgets"
 msgstr ""
 
 msgid "cpstypes_add_type"
+msgstr ""
+
+msgid "Type management"
 msgstr ""
