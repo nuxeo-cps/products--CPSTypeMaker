@@ -8,4 +8,6 @@ return {'type_prefix': 'simpletype_', # The id prefix for TypeMaker types.
         'schemaid': 'simpletype',
         'flexible_schema': 'flexible_content',
         'flexible_layout': 'flexible_content',
+        'base_schemas': ['metadata', 'common'],
+        'base_layouts': ['common'],
        }

@@ -58,8 +58,7 @@ actions['object'].append({'id':'delete_entry',
               <td>
                 <input type="hidden" name="fieldinfo.id:records" tal:attributes="value fieldid"/>
                 <input type="hidden" name="fieldinfo.name:records" tal:attributes="value fieldname"/>
-                <input type="checkbox" name="fieldinfo.is_selected:records"
-                  tal:condition="python:fieldname not in ('Title', 'Description')" />
+                <input type="checkbox" name="fieldinfo.is_selected:records" />
               </td>
               <td tal:content="fieldname" />
               <td tal:content="fieldtype" />

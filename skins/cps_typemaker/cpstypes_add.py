@@ -8,6 +8,8 @@ section_wf = defs['section_wf']
 workspaceid = defs['workspaceid']
 sectionid = defs['sectionid']
 schemaid = defs['schemaid']
+base_layouts = defs['base_layouts']
+base_schemas = defs['base_schemas']
 
 type_id = prefix + id
 ti = ttool.addFlexibleTypeInformation(id=type_id)
@@ -25,17 +27,14 @@ properties = {
     'allow_discussion': 0,
     'cps_is_searchable': 1,
     'cps_proxy_type': 'document',
-    'schemas': [schemaid],
-    'layouts': [type_id],
+    'schemas': base_schemas + [schemaid],
+    'layouts': base_layouts + [type_id],
     }
 ti.manage_changeProperties(**properties)
 
 ltool = context.portal_layouts
 layout = ltool.manage_addCPSLayout(type_id)
 layout.manage_changeProperties(style_prefix='layout_default_')
-
-context.cpstypes_add_widget(type_id, 'Title')
-context.cpstypes_add_widget(type_id, 'Description')
 
 for type in ('Workspace', 'Section'):
     typeobj = ttool[type]

@@ -1,15 +1,16 @@
 <tal:block define="
   type_id request/type_id|options/type_id;
+  definitions here/cpstypes_get_definitions;
   validate python: request.has_key('cpsdirectory_entry_edit_form');
   edit_request python: validate and request or nothing;
   delete_allowed python:0;
   typeob here/portal_types/?type_id;
   title typeob/title|type_id;
   expanded_title title;
-  layoutid python:typeob.layouts[0];
+  base_layouts definitions/base_layouts;
+  layoutid python:typeob.layouts[len(base_layouts)];
   layoutob here/portal_layouts/?layoutid;
   debug nothing;
-  definitions here/cpstypes_get_definitions;
   ">
 <metal:block use-macro="here/main_template/macros/master">
   <metal:block fill-slot="css_slot">
@@ -87,7 +88,7 @@ actions['object'].append({'id':'delete_entry',
         </tr>
         <tal:block define="layoutdef layoutob/getLayoutDefinition" repeat="row layoutdef/rows">
           <tr tal:condition="debug">
-            <td tal:content="layoutdef" />
+            <td tal:content="python:typeob.layouts" />
           </tr>
           <tr tal:repeat="entry row">
             <tal:block define="widgetname entry/widget_id;
@@ -97,8 +98,7 @@ actions['object'].append({'id':'delete_entry',
               <td>
                 <input type="hidden" name="widgetinfo.id:records" tal:attributes="value widgetid"/>
                 <input type="hidden" name="widgetinfo.name:records" tal:attributes="value widgetname"/>
-                <input type="checkbox" name="widgetinfo.is_selected:records"
-                  tal:condition="python:widgetname not in ('Title', 'Description')" />
+                <input type="checkbox" name="widgetinfo.is_selected:records" />
               </td>
               <td tal:content="python:widget.fields[0]" />
               <td><input type="text" size=20 name="widgetinfo.title:records" tal:attributes="value widget/label" /></td>
