@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# -*- encoding: iso-8859-1 -*-
+# -*- encoding: iso-8859-15 -*-
 # (C) Copyright 2003 Nuxeo SARL <http://nuxeo.com>
 # Author: Tarek Ziadé <tz@nuxeo.com>
 #
@@ -93,7 +93,6 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
         if self.layout:
             return self.layout
         else:
-
             widget = self.widget
 
             if not widget:
@@ -118,6 +117,11 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
                     p_label = property['label']
                     p_mode = property['mode']
 
+                    if property.has_key('is_required'):
+                        p_required = property['is_required']
+                    else:
+                        p_required = False
+
                     # finding the right widget type from property type
                     widget_type = self._findWidgetLayoutType(p_type)
 
@@ -133,6 +137,8 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
                         widget_type = wtool[widget_type]
 
                         new_widget = widget_type.makeInstance(p_id)
+
+                        new_widget.is_required = p_required
                         new_widget.is_i18n = 1
                         new_widget.label = p_label
                         new_widget.label_edit = p_label
