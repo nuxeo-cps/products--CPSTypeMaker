@@ -47,23 +47,23 @@ actions['object'].append({'id':'delete_entry',
       <input type="hidden" name="type_id" tal:attributes="value type_id">
       <table>
         <tr>
-          <th align='right'>Title:</th>
+          <th align='right' i18n:translate="">cpstypes_type_title</th>
           <td><input type="text" size=50 id="title" tal:attributes="value typeob/title"></td>
         </tr>
         <tr>
-          <th align='right'>Description:</th>
+          <th align='right' i18n:translate="">cpstypes_type_description</th>
           <td><textarea cols=48 id="description" tal:content="typeob/description" /></td>
         </tr>
       </table>
-      <h3>Widgets</h3>
+      <h3 i18n:translate="">cpstypes_widgets</h3>
       <table>
         <tr align="left">
           <th></th>
-          <th>Id</th>
-          <th>Title</th>
-          <th>Type</th>
-          <th>Size</th>
-          <th>Required</th>
+          <th i18n:translate="">cpstypes_widget_id</th>
+          <th i18n:translate="">cpstypes_widget_title</th>
+          <th i18n:translate="">cpstypes_widget_type</th>
+          <th i18n:translate="">cpstypes_widget_size</th>
+          <th i18n:translate="">cpstypes_widget_required</th>
         </tr>
         <tal:block define="layoutdef layoutob/getLayoutDefinition" repeat="row layoutdef/rows">
           <tr tal:condition="debug">
@@ -90,14 +90,14 @@ actions['object'].append({'id':'delete_entry',
           </tr>
         </tal:block>
       </table>
-      <input type="submit" name="action_delete" value="label_delete" i18n:attributes="value">
-      <input type="submit" name="action_save" value="label_save" i18n:attributes="value">
+      <input type="submit" name="action_delete" value="button_delete" i18n:attributes="value" />
+      <input type="submit" name="action_save" value="button_save" i18n:attributes="value" />
     </form>
     <form method="post" action="cpstypes_add_widget">
       <input type="hidden" name="layout_id" tal:attributes="value layoutid">
       <table>
         <tr>
-          <th>Add new field:</th>
+          <th i18n:translate="">cpstypes_add_new_widget</th>
           <td>
             <select name="new_field" tal:define="
                 schemaid python:here.cpstypes_get_definitions()['schemaid'];
@@ -110,12 +110,11 @@ actions['object'].append({'id':'delete_entry',
             </select>
           </td>
           <td>
-            <input type="submit" name="add_field" value="add field" />
+            <input type="submit" name="add_field" value="button_add" i18n:attributes="value" />
           <td>
         </tr>
       </table>
     </form>
   </metal:block>
-
 </metal:block>
 </tal:block>

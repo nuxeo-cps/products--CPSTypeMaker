@@ -1,6 +1,7 @@
 <metal:block use-macro="here/main_template/macros/master">
   <metal:block fill-slot="css_slot">
     <tal:block define="dt_title python:here.Localizer.default('Document Types');
+                       cat_title python:here.Localizer.default('cpstypes_add_type');
                        dummy python:request.set('breadcrumb_set',
                         [{
                           'id': 'types',
@@ -11,8 +12,8 @@
                          {
                           'id': 'add',
                           'url': here.portal_url()+'/cpstypes_add_form',
-                          'longtitle': 'Add type',
-                          'title': 'Add type',
+                          'longtitle': cat_title,
+                          'title': cat_title,
                         }]);" />
 
     <link rel="Stylesheet" type="text/css" href=""
@@ -27,20 +28,20 @@
     <form method="post" action="cpstypes_add">
       <table>
         <tr>
-          <th align='right'>Id:</th>
+          <th align='right' i18n:translate="">cpstypes_type_id</th>
           <td><input type="text" size=20 name="id"></td>
         </tr>
         <tr>
-          <th align='right'>Title:</th>
+          <th align='right' i18n:translate="">cpstypes_type_id</th>
           <td><input type="text" size=50 name="title"></td>
         </tr>
         <tr>
-          <th align='right'>Description:</th>
+          <th align='right' i18n:translate="">cpstypes_type_id</th>
           <td><textarea cols=48 name="description"></textarea></td>
         </tr>
         <tr>
           <th align='right'></th>
-          <td><input type="submit" value="Add"></td>
+          <td><input type="submit" value="button_add" i18n:attributes="value"></td>
         </tr>
       </table>
     </form>
