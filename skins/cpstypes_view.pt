@@ -1,0 +1,106 @@
+<tal:block define="
+  type_id request/type_id|options/type_id;
+  title type_id;
+  validate python: request.has_key('cpsdirectory_entry_edit_form');
+  edit_request python: validate and request or nothing;
+  delete_allowed python:0;
+  typeob here/portal_types/?type_id;
+  layoutid python:typeob.layouts[-1];
+  layoutob here/portal_layouts/?layoutid;
+  ">
+<metal:block use-macro="here/main_template/macros/master">
+  <metal:block fill-slot="css_slot">
+    <tal:block define="dt_title python:here.Localizer.default('Document Types');
+                       dummy python:request.set('breadcrumb_set',
+                        [{
+                          'id': 'types',
+                          'url': here.portal_url()+'/cpstypes_list',
+                          'longtitle': dt_title,
+                          'title': dt_title,
+                         },
+                         {
+                          'id': 'types',
+                          'url': here.portal_url()+'/cpstypes_type_view?type_id='+type_id,
+                          'longtitle': title,
+                          'title': title,
+                        }]);" />
+    <tal:block condition="delete_allowed">
+      <tal:block define="global actions python:
+actions['object'].append({'id':'delete_entry',
+  'url':base_url+'cpsdirectory_entry_delete?type_id='+type_id,
+  'onclick': 'return window.confirm(\''+ here.Localizer.default('description_confirm_delete').encode('ISO-8859-15', 'ignore') +'\')' ,
+  'name': 'cpsdir_label_delete_entry',
+  'category': 'object'})" />
+    </tal:block>
+
+    <link rel="Stylesheet" type="text/css" href=""
+      tal:attributes="href string:${base_url}document.css">
+  </metal:block>
+
+  <metal:block fill-slot="header">
+    <h1><span i18n:translate="" tal:content="title" /></h1>
+  </metal:block>
+
+  <metal:block fill-slot="main">
+    <form method="post" action="cpstypes_modify">
+      <input type="hidden" name="type_id" tal:attributes="value type_id">
+      <table>
+        <tr>
+          <th align='right'>Title:</th>
+          <td><input type="text" size=50 id="title" tal:attributes="value typeob/title"></td>
+        </tr>
+        <tr>
+          <th align='right'>Description:</th>
+          <td><textarea cols=48 id="description" tal:content="typeob/description" /></td>
+        </tr>
+      </table>
+      <h3>Widgets</h3>
+      <table>
+        <tr align="left">
+          <th></th>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Type</th>
+          <th>Size</th>
+          <th>Required</th>
+        </tr>
+        <tal:block define="layoutdef layoutob/getLayoutDefinition" repeat="row layoutdef/rows">
+          <tr tal:repeat="entry row">
+            <tal:block define="widgetid entry/widget_id;
+                               widget python:layoutob[widgetid];">
+              <td><input type="checkbox" name="selected_ids:list" 
+                tal:attributes="value widgetid"/></td>
+              <td tal:content="python:widget.fields[0]" />
+              <td><input type="text" size=20 tal:attributes="value widget/label" /></td>
+              <td tal:content="widget/meta_type" />
+              <td><input type="text" size=10 
+                    tal:attributes="value widget/size_max" /></td>
+              <td><input type="checkbox" tal:attributes="checked widget/is_required" /></td>
+            </tal:block>
+          </tr>
+        </tal:block>
+      </table>
+      <input type="submit" name="action_delete" value="label_delete" i18n:attributes="value">
+    </form>
+    <form method="post" action="cpstypes_add_field">
+      <input type="hidden" name="layout_id" tal:attributes="value layoutid">
+      <table>
+        <tr>
+          <th>Add new field:</th>
+          <td>
+            <select name="new_field" tal:define="schema here/portal_schemas/metadata">
+              <option tal:repeat="field schema/objectValues"
+                      tal:attributes="value field/getFieldId"
+                      tal:content="field/getFieldId" />
+            </select>
+          </td>
+          <td>
+            <input type="submit" name="add_field" value="add field" />
+          <td>
+        </tr>
+      </table>
+    </form>
+  </metal:block>
+
+</metal:block>
+</tal:block>

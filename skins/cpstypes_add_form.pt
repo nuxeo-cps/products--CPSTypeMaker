@@ -1,0 +1,49 @@
+<metal:block use-macro="here/main_template/macros/master">
+  <metal:block fill-slot="css_slot">
+    <tal:block define="dt_title python:here.Localizer.default('Document Types');
+                       dummy python:request.set('breadcrumb_set',
+                        [{
+                          'id': 'types',
+                          'url': here.portal_url()+'/cpstypes_list',
+                          'longtitle': dt_title,
+                          'title': dt_title,
+                         },
+                         {
+                          'id': 'add',
+                          'url': here.portal_url()+'/cpstypes_add_form',
+                          'longtitle': 'Add type',
+                          'title': 'Add type',
+                        }]);" />
+
+    <link rel="Stylesheet" type="text/css" href=""
+      tal:attributes="href string:${base_url}document.css">
+  </metal:block>
+
+  <metal:block fill-slot="header">
+    <h1 span i18n:translate="">cpstypes_label_add_type</h1>
+  </metal:block>
+
+  <metal:block fill-slot="main">
+    <form method="post" action="cpstypes_add">
+      <table>
+        <tr>
+          <th align='right'>Id:</th>
+          <td><input type="text" size=20 name="id"></td>
+        </tr>
+        <tr>
+          <th align='right'>Title:</th>
+          <td><input type="text" size=50 name="title"></td>
+        </tr>
+        <tr>
+          <th align='right'>Description:</th>
+          <td><textarea cols=48 name="description"></textarea></td>
+        </tr>
+        <tr>
+          <th align='right'></th>
+          <td><input type="submit" value="Add"></td>
+        </tr>
+      </table>
+    </form>
+  </metal:block>
+
+</metal:block>
