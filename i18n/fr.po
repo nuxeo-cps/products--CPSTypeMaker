@@ -516,3 +516,12 @@ msgstr "Script ou expression à exécuter après le changement d'état d'un type"
 
 msgid "document types deleted"
 msgstr "Type(s) de document(s) effacé(s)"
+
+msgid "cpstypemaker_save"
+msgstr "Enregistrer la configuration"
+
+msgid "cpstypemaker_autolayout"
+msgstr "Mise en page automatique"
+
+msgid "cpstypemaker_layoutlabel"
+msgstr "Disposition"

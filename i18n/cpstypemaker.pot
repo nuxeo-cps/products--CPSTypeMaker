@@ -488,3 +488,12 @@ msgstr ""
 
 msgid "document types deleted"
 msgstr ""
+
+msgid "cpstypemaker_save"
+msgstr ""
+
+msgid "cpstypemaker_autolayout"
+msgstr ""
+
+msgid "cpstypemaker_layoutlabel"
+msgstr ""

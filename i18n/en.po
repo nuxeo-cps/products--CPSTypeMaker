@@ -518,3 +518,13 @@ msgstr "Process after type publish state changes"
 
 msgid "document types deleted"
 msgstr "document type(s) deleted"
+
+msgid "cpstypemaker_save"
+msgstr "Save configuration"
+
+msgid "cpstypemaker_autolayout"
+msgstr "Automatic layout"
+
+msgid "cpstypemaker_layoutlabel"
+msgstr "Layout"
+
