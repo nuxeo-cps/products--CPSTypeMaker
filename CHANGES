@@ -6,7 +6,8 @@ New features:
 -
 Bug fixes:
 ~~~~~~~~~~
--
+-was not possible to change the icon associated with custom document 
+types; fixed
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 -
