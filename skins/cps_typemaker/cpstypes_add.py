@@ -7,6 +7,7 @@ workspace_wf = defs['workspace_wf']
 section_wf = defs['section_wf']
 workspaceid = defs['workspaceid']
 sectionid = defs['sectionid']
+schemaid = defs['schemaid']
 
 type_id = prefix + id
 ti = ttool.addFlexibleTypeInformation(id=type_id)
@@ -24,7 +25,7 @@ properties = {
     'allow_discussion': 0,
     'cps_is_searchable': 1,
     'cps_proxy_type': 'document',
-    'schemas': ['metadata'],
+    'schemas': [schemaid],
     'layouts': [type_id],
     }
 ti.manage_changeProperties(**properties)

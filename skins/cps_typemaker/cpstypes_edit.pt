@@ -99,7 +99,9 @@ actions['object'].append({'id':'delete_entry',
         <tr>
           <th>Add new field:</th>
           <td>
-            <select name="new_field" tal:define="schema here/portal_schemas/metadata">
+            <select name="new_field" tal:define="
+                schemaid python:here.cpstype_get_definitions()['schemid'];
+                schema here/portal_schemas/?schemaid">
               <tal:block tal:repeat="field schema/objectValues">
               <option tal:attributes="value field/getFieldId"
                       tal:content="field/getFieldId"

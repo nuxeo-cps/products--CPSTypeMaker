@@ -1,6 +1,8 @@
 ##parameters=new_field_id, new_field_type, RESPONSE=None
 
-schema = context.portal_schemas.metadata
+defs = context.cpstypes_get_definitions()
+schemaid = defs['schemaid']
+schema = context.portal_schemas['schemaid']
 schema.manage_addField(new_field_id, new_field_type)
 field = schema[new_field_id]
 widgettype = context.cpstypes_fieldwidgets(new_field_type)[0]
