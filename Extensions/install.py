@@ -17,24 +17,20 @@
 #
 # $Id$
 
-import os
-from zLOG import LOG, INFO, DEBUG
-
 from Products.CPSInstaller.CPSInstaller import CPSInstaller
 
 
 def install(self):
-
     installer = CPSInstaller(self, 'CPSTypeMaker')
     installer.log("Starting CPSTypeMaker install")
 
-    # skins
+    # Skins
     skins = {
         'cps_typemaker': 'Products/CPSTypeMaker/skins/cps_typemaker',
     }
     installer.verifySkins(skins)
 
-    # action
+    # Action
     installer.verifyAction(
                 'portal_actions',
                 id='typemaker',
@@ -45,10 +41,10 @@ def install(self):
                 category='global',
                 visible=1)
 
-    # Set up the custom meta data schema.
-    installer.verifySchemas( {'custom_metadata': {}})
+    # Set up the custom metadata schema
+    installer.verifySchemas({'custom_metadata': {}})
     
-    # translations
+    # Translations
     installer.setupTranslations()
     
     installer.finalize()

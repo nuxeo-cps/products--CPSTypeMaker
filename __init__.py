@@ -13,7 +13,7 @@ def getIcon(self, relative_to_portal=0):
 FactoryTypeInformation.getIcon = getIcon
 
 
-from Products.CMFCore.CMFCorePermissions import ManagePortal, ManageProperties, View
+from Products.CMFCore.CMFCorePermissions import ManagePortal
 from AccessControl.PermissionRole import PermissionRole
 
 from Products.CPSSchemas.Layout import Layout

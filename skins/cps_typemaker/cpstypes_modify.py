@@ -95,7 +95,8 @@ if action == 'add' and new_widget_id:
     layoutdef = layout.getLayoutDefinition()
     layoutdef['rows'].append([{'ncols': 1, 'widget_id': new_widget_id}])
 
-    if metadata_schema is None or not metadata_schema.has_key('f__' + new_widget_id):
+    if (metadata_schema is None 
+        or not metadata_schema.has_key('f__' + new_widget_id)):
         field_types = widget.getFieldTypes()
         field_inits = widget.getFieldInits()
         i = 0
@@ -120,4 +121,4 @@ if action == 'add' and new_widget_id:
 layout.setLayoutDefinition(layoutdef)
 
 return RESPONSE.redirect('cpstypes_edit?type_id='+type_id)
-    
+
