@@ -78,7 +78,7 @@ actions['object'].append({'id':'delete_entry',
       <input type="submit" name="action_delete" value="label_delete" i18n:attributes="value">
       <input type="submit" name="action_save" value="label_save" i18n:attributes="value">
     </form>
-    <form method="post" action="cpstypes_add_field">
+    <form method="post" action="cpstypes_schema_add_field">
       <table>
         <tr>
           <th>Add new Field:</th>
@@ -94,7 +94,7 @@ actions['object'].append({'id':'delete_entry',
             <input type="text" name="new_field_id">
           </td>
           <td>
-            <input type="submit" name="cpstypes_field_add:method" value="add field" />
+            <input type="submit" name="action_add" value="add field" />
           <td>
         </tr>
       </table>
