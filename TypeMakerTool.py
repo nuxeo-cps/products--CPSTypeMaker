@@ -1531,7 +1531,8 @@ def _getVocabulary(self, datastructure=None):
                             (self.vocabulary, self.getWidgetId()))
     return vocabulary
 
-setattr(CPSSelectWidget, '_getVocabulary', _getVocabulary)
+if not hasattr(CPSSelectWidget, '_getVocabulary'):
+    setattr(CPSSelectWidget, '_getVocabulary', _getVocabulary)
 
 
 ########################################################################################
@@ -1547,4 +1548,3 @@ def addCPSTypeMakerTool(container, id=None, REQUEST=None, **kw):
     if REQUEST is not None:
         t = container._getOb(t.getId())
         REQUEST.RESPONSE.redirect(t.absolute_url()+'/manage_overview')
-
