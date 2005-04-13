@@ -236,57 +236,158 @@
 # , 2005.
 # , 2005.
 # , 2005.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: ro\n"
-"POT-Creation-Date: 2004-07-02 15:22default\n"
+"POT-Creation-Date: 2005-04-13 17:51default\n"
 "PO-Revision-Date: 2005-04-04 17:02+0300\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Language-code: ro\n"
 "Language-name: Romanian\n"
 "Preferred-encodings: utf-8 latin1\n"
 "Domain: default\n"
 "X-Generator: KBabel 1.9.1\n"
 
-msgid "cpstypes_configuretool"
-msgstr "Configuratia generala a Type Maker-ului"
+#.   <a attributes="href
+#.                                       python:'cpstypes_widget_properties?type_id='+type_id+
+#.                                       '&widget_id='+widgetid">
+#.                               <img src="configure.gif" title="cpstypes_configure" />
+#.   
+#.                        </a>
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
+msgid "<img src=\"configure.gif\" title=\"cpstypes_configure\" />"
+msgstr ""
 
-msgid "cpstypes_documentlist"
-msgstr "Tipuri de documente"
+#.   <input type="button" name="preview" value="Preview" attributes="onclick string:layoutPreview('${type_id}');" />
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "Preview"
+msgstr ""
 
 #.   <input type="submit" name="action_save" value="button_save" />
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#.   <input type="submit" name="action_save" value="button_save" condition="python:wcount>0" />
+#.   <input name="button_save" type="submit" class="standalone" value="button_save" />
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#: ../skins/cps_typemaker/cpstypes_lib.pt
+#: ../skins/cps_typemaker/cpstypes_widget_properties.pt
 msgid "button_save"
 msgstr "Salveaza"
 
-#.   <th colspan="2" align="left">cpstypes_add_new_widget</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#.   <input type="submit" name="autolayout" value="cpstypemaker_autolayout" />
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypemaker_autolayout"
+msgstr "Asezarea in pagina automata"
+
+#.   <span>
+#.                                   cpstypemaker_layoutlabel</span>
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
+msgid "cpstypemaker_layoutlabel"
+msgstr "Layout"
+
+#.   <h3>cpstypes_add_new_widget</h3>
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_add_new_widget"
 msgstr "Adauga un nou widget"
 
 #.   <input type="submit" name="addrow" value="cpstypes_add_row" />
-#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_add_row"
 msgstr "Adauga un rand"
 
+#.   <input title="cpstypes_appendcell" type="submit" id="typemakerAppendBt" value="" attributes="name string:addnamedrow_${wid}" />
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_appendcell"
+msgstr "Adauga celula"
+
+#.   <input type="submit" name="autolayout" value="cpstypes_auto" />
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_auto"
+msgstr "Disposition automatique"
+
+#.   <h3>cpstypes_availablefields</h3>
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_availablefields"
+msgstr "Campuri disponibile"
+
+#.   <img src="configure.gif" title="cpstypes_configure" />
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
+msgid "cpstypes_configure"
+msgstr "Configureaza aceasta componenta"
+
+#.   <h1>cpstypes_configuretool</h1>
+#: from ../skins/cps_typemaker/cpstypes_configure.pt
+msgid "cpstypes_configuretool"
+msgstr "Configuratia generala a Type Maker-ului"
+
 #.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
-#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_delete_cell"
 msgstr "Sterge o celula"
 
+#.   <input title="cpstypes_deletecell" type="submit" id="typemakerDeleteBt" value="" attributes="name python:'del_check_'+str(nrow)+'_'+str(ncell)" />
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_deletecell"
+msgstr "Sterge "
+
+#.   <h1>cpstypes_documentlist</h1>
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+msgid "cpstypes_documentlist"
+msgstr "Tipuri de documente"
+
+#.   <a type="button" title="cpstypes_editcell" attributes="href
+#.                           python:'cpstypes_widget_properties?type_id='+type_id+'&widget_id='+widget_id;
+#.                           ">
+#.                               <img src="configure_cell.gif" class="typemakerConfigureBt" />
+#.                           </a>
+#.   <a type="button" title="cpstypes_editcell" attributes="href
+#.                           python:'cpstypes_widget_properties?type_id='+type_id+'&widget_id='+widget_id;
+#.                           ">
+#.                               <img src="configure_cell.gif" class="typemakerConfigureBt" />
+#.   
+#.   
+#.                           </a>
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_editcell"
+msgstr "Editeaza celula"
+
+#.   <div condition="python:wcount==0" class="typemaker_empty_layout">
+#.             pas de champs pour l'instant
+#.         </div>
+#.   <td width="70%" valign="middle" align="center" class="typemakerEmptyLayout">
+#.               No fields in the layout yet.
+#.           </td>
+#.   <div condition="python:wcount==0" class="typemakerEmptyLayout">
+#.         pas de champs pour l'instant
+#.         </div>
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#: ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_lib.pt
+#, fuzzy
+msgid "cpstypes_empty_layout"
+msgstr "Pas de champs pour l'instant."
+
 #.   <th>cpstypes_field_indexed</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_field_indexed"
 msgstr "Indexat"
 
-#.   <h3>cpstypes_flexible_widgets</h3>
+#.   <span>cpstypes_flexible_widgets</span>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_flexible_widgets"
 msgstr "Widget-uri"
@@ -296,44 +397,96 @@ msgstr "Widget-uri"
 msgid "cpstypes_label_add_type"
 msgstr "Adauga un tip de document"
 
+#.   <input title="cpstypes_moveleft" type="submit" id="typemakerLeftBt" value="" attributes="name
+#.                                             string:left_${nrow}_${ncell};">
+#.                                      </input>
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_moveleft"
+msgstr "Misca spre stanga"
+
+#.   <input title="cpstypes_moveright" type="submit" id="typemakerRightBt" value="" attributes="name
+#.                                             string:right_${nrow}_${ncell};">
+#.                                     </input>
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_moveright"
+msgstr "Misca spre dreapta"
+
+#.   <span>Preview for </span>
+#: from ../skins/cps_typemaker/cpstypes_layout_preview.pt
+#, fuzzy
+msgid "cpstypes_preview_for"
+msgstr "Icône"
+
+#.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+msgid "cpstypes_publictype"
+msgstr "Tip utilizabil in portal"
+
+#.   <div class="typemakerNoScript">
+#.                Warning : Javascript should be enabled for drag and drop features
+#.            </div>
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_scriptdisabled"
+msgstr "Disponible pour utilisation"
+
 #.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
-#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_shrink_cell"
 msgstr "Micsoreaza celula"
 
 #.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
-#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_split_cell"
 msgstr "Scindeaza celula"
+
+#.   <input title="cpstypes_splitcell" type="submit" id="typemakerSplitBt" value="" attributes="name
+#.                                    python:'split_check_'+str(nrow)+'_'+str(ncell)" />
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "cpstypes_splitcell"
+msgstr "Taie"
 
 #.   <th align="right">cpstypes_type_description</th>
 #.   <small content="item/description">cpstypes_type_description</small>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
-#: ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_lib.pt
 #: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
 msgstr "Descriere"
 
 #.   <th align="right">cpstypes_type_icon</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_type_icon"
 msgstr "Imagine"
 
 #.   <th align="right">cpstypes_type_is_addable</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_type_is_addable"
 msgstr "Disponibil pentru utilizator"
 
 #.   <th align="right">cpstypes_type_title</th>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
-#: ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_type_title"
 msgstr "Titlu"
 
 #.   <input type="submit" name="widencell" value="cpstypes_widen_cell" />
-#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_widen_cell"
 msgstr "Mareste celula"
+
+#.   <th align="right">cpstypes_widget_label</th>
+#.   <th>cpstypes_widget_label</th>
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
+msgid "cpstypes_widget_label"
+msgstr "Eticheta"
 
 #.   <th>cpstypes_widget_max_repeats</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
@@ -341,34 +494,36 @@ msgid "cpstypes_widget_max_repeats"
 msgstr "Numar maxim de repetari"
 
 #.   <th>cpstypes_widget_required</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_widget_required"
 msgstr "Camp obligatoriu"
 
 #.   <th>cpstypes_widget_show_in_view</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_widget_show_in_view"
 msgstr "Arata in modul vizualizare "
 
 #.   <th>cpstypes_widget_size</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_size"
 msgstr "Marime"
 
 #.   <th>cpstypes_widget_title</th>
-#.   <th align="right">cpstypes_widget_title</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_title"
 msgstr "Titlu"
 
 #.   <th>cpstypes_widget_type</th>
 #.   <th align="right">cpstypes_widget_type</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#: ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_widget_type"
 msgstr "Tip"
+
+#.   <img condition="rfields" src="required_fields.gif" title="cpstypes_widgethasrequiredfields" />
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
+msgid "cpstypes_widgethasrequiredfields"
+msgstr "Unele proprietati ale campului sunt obligatorii"
 
 #.   <h3>cpstypes_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
@@ -389,6 +544,10 @@ msgstr "Editeaza dispunerea (Layout-ul)"
 
 msgid "cpstypes_edit_flexible"
 msgstr "Editeaza widget-urile flexibile"
+
+#, fuzzy
+msgid "cpstypes_edit_flexible_layout"
+msgstr "Editer la disposition flexible"
 
 msgid "Type management"
 msgstr "Administreaza tipurile de documente"
@@ -573,9 +732,6 @@ msgstr "Numele skin-ului"
 msgid "Popup Mode"
 msgstr "Modul de deschidere intr-o alta fereastra"
 
-msgid "Maximum image size"
-msgstr "Marimea maxima a imaginii"
-
 msgid "Deletable ?"
 msgstr "De sters ?"
 
@@ -645,39 +801,6 @@ msgstr "Formatul de redare"
 msgid "cps_types_auto"
 msgstr "Asezare automatica in pagina"
 
-msgid "cpstypes_widgethasrequiredfields"
-msgstr "Unele proprietati ale campului sunt obligatorii"
-
-msgid "cpstypes_splitcell"
-msgstr "Taie"
-
-msgid "cpstypes_moveleft"
-msgstr "Misca spre stanga"
-
-msgid "cpstypes_moveright"
-msgstr "Misca spre dreapta"
-
-msgid "cpstypes_appendcell"
-msgstr "Adauga celula"
-
-msgid "cpstypes_availablefields"
-msgstr "Campuri disponibile"
-
-msgid "cpstypes_deletecell"
-msgstr "Sterge "
-
-msgid "cpstypes_editcell"
-msgstr "Editeaza celula"
-
-msgid "cpstypes_publictype"
-msgstr "Tip utilizabil in portal"
-
-msgid "cpstypes_widget_label"
-msgstr "Eticheta"
-
-msgid "cpstypes_configure"
-msgstr "Configureaza aceasta componenta"
-
 msgid "Multiple Layouts"
 msgstr "Editarea layout-ului permite crearea mai multor layout-uri"
 
@@ -723,12 +846,6 @@ msgstr "Tip(uri) de document(e) sterse"
 msgid "cpstypemaker_save"
 msgstr "Salveaza configurarea"
 
-msgid "cpstypemaker_autolayout"
-msgstr "Asezarea in pagina automata"
-
-msgid "cpstypemaker_layoutlabel"
-msgstr "Layout"
-
 msgid "CPS Catalog Navigation Select Widget"
 msgstr "Selectare in portal"
 
@@ -763,7 +880,8 @@ msgid "Hidden in layout modes"
 msgstr "Componenta ascunsa in modurile urmatoare : "
 
 msgid "Hidden if readonly in layout modes"
-msgstr "Componenta ascunsa in modurile urmatoare ( daca este doar pentru lectura)"
+msgstr ""
+"Componenta ascunsa in modurile urmatoare ( daca este doar pentru lectura)"
 
 msgid "Hidden if empty"
 msgstr "Componenta ascunsa si vida"
@@ -786,7 +904,9 @@ msgstr "Care poate fi sters"
 msgid ""
 "Accept blank values (defined in vocabulary) when validating if the widget is "
 "required and the vocabulary holds blank values"
-msgstr "Accepta alegerea vida daca componenta este obligatorie, si daca lista accepta valori vide "
+msgstr ""
+"Accepta alegerea vida daca componenta este obligatorie, si daca lista "
+"accepta valori vide "
 
 msgid "Allowed file suffixes (for example: .html .sxw)"
 msgstr "Extensii autorizate ( de exemplu .html, .sxw)"
@@ -805,6 +925,9 @@ msgstr "Tip de widget"
 
 msgid "Display width"
 msgstr "Afiseaza marimea"
+
+msgid "Maximum image size"
+msgstr "Marimea maxima a imaginii"
 
 msgid "Enable to resize img to lower size"
 msgstr "Autorizeaza micsorarea ferestrei"
@@ -870,8 +993,8 @@ msgid "Html for view"
 msgstr "Code html pentru editare"
 
 msgid "Render format : select menu (default), radio buttons or checkboxes"
-msgstr "Formatul afisarii : meniu de selectare (initial), butoane sau check-box-uri"
+msgstr ""
+"Formatul afisarii : meniu de selectare (initial), butoane sau check-box-uri"
 
 msgid "Target for the link"
 msgstr "Tinta legaturii"
-

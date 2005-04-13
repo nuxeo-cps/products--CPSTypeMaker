@@ -3,10 +3,11 @@
 # ##########################################################
 # Gettext Message File for default.
 # Your Name <your@email>, Year
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: CPStypeMaker\n"
-"POT-Creation-Date: 2004-07-02 15:22default\n"
+"POT-Creation-Date: 2005-04-13 17:51default\n"
 "PO-Revision-Date: 2004-09-30 16:28+0100\n"
 "Last-Translator: Fabio Nosari <fabnos@fastwebnet.it>\n"
 "Language-Team: Fabio Nosari <fabnos@fastwebnet.it>\n"
@@ -21,34 +22,149 @@ msgstr ""
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
 
+#.   <a attributes="href
+#.                                       python:'cpstypes_widget_properties?type_id='+type_id+
+#.                                       '&widget_id='+widgetid">
+#.                               <img src="configure.gif" title="cpstypes_configure" />
+#.   
+#.                        </a>
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
+msgid "<img src=\"configure.gif\" title=\"cpstypes_configure\" />"
+msgstr ""
+
+#.   <input type="button" name="preview" value="Preview" attributes="onclick string:layoutPreview('${type_id}');" />
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+msgid "Preview"
+msgstr ""
+
 #.   <input type="submit" name="action_save" value="button_save" />
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#.   <input type="submit" name="action_save" value="button_save" condition="python:wcount>0" />
+#.   <input name="button_save" type="submit" class="standalone" value="button_save" />
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#: ../skins/cps_typemaker/cpstypes_lib.pt
+#: ../skins/cps_typemaker/cpstypes_widget_properties.pt
 msgid "button_save"
 msgstr "Salva"
 
-#.   <th colspan="2" align="left">cpstypes_add_new_widget</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#.   <input type="submit" name="autolayout" value="cpstypemaker_autolayout" />
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypemaker_autolayout"
+msgstr "Mise en page automatique"
+
+#.   <span>
+#.                                   cpstypemaker_layoutlabel</span>
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
+#, fuzzy
+msgid "cpstypemaker_layoutlabel"
+msgstr "Disposition"
+
+#.   <h3>cpstypes_add_new_widget</h3>
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_add_new_widget"
 msgstr "Aggiungi un nuovo componente"
 
 #.   <input type="submit" name="addrow" value="cpstypes_add_row" />
-#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_add_row"
 msgstr "Aggiungi una riga"
 
+#.   <input title="cpstypes_appendcell" type="submit" id="typemakerAppendBt" value="" attributes="name string:addnamedrow_${wid}" />
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_appendcell"
+msgstr "Ajouter"
+
+#.   <input type="submit" name="autolayout" value="cpstypes_auto" />
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_auto"
+msgstr "Disposition automatique"
+
+#.   <h3>cpstypes_availablefields</h3>
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_availablefields"
+msgstr "Champs disponibles"
+
+#.   <img src="configure.gif" title="cpstypes_configure" />
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
+#, fuzzy
+msgid "cpstypes_configure"
+msgstr "Configurer le composant"
+
+#.   <h1>cpstypes_configuretool</h1>
+#: from ../skins/cps_typemaker/cpstypes_configure.pt
+#, fuzzy
+msgid "cpstypes_configuretool"
+msgstr "Configuration générale de Type Maker"
+
 #.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
-#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_delete_cell"
 msgstr "Elimina la cella"
 
+#.   <input title="cpstypes_deletecell" type="submit" id="typemakerDeleteBt" value="" attributes="name python:'del_check_'+str(nrow)+'_'+str(ncell)" />
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_deletecell"
+msgstr "Supprimer"
+
+#.   <h1>cpstypes_documentlist</h1>
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+#, fuzzy
+msgid "cpstypes_documentlist"
+msgstr "Types de documents"
+
+#.   <a type="button" title="cpstypes_editcell" attributes="href
+#.                           python:'cpstypes_widget_properties?type_id='+type_id+'&widget_id='+widget_id;
+#.                           ">
+#.                               <img src="configure_cell.gif" class="typemakerConfigureBt" />
+#.                           </a>
+#.   <a type="button" title="cpstypes_editcell" attributes="href
+#.                           python:'cpstypes_widget_properties?type_id='+type_id+'&widget_id='+widget_id;
+#.                           ">
+#.                               <img src="configure_cell.gif" class="typemakerConfigureBt" />
+#.   
+#.   
+#.                           </a>
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_editcell"
+msgstr "Editer"
+
+#.   <div condition="python:wcount==0" class="typemaker_empty_layout">
+#.             pas de champs pour l'instant
+#.         </div>
+#.   <td width="70%" valign="middle" align="center" class="typemakerEmptyLayout">
+#.               No fields in the layout yet.
+#.           </td>
+#.   <div condition="python:wcount==0" class="typemakerEmptyLayout">
+#.         pas de champs pour l'instant
+#.         </div>
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#: ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_lib.pt
+#, fuzzy
+msgid "cpstypes_empty_layout"
+msgstr "Pas de champs pour l'instant."
+
 #.   <th>cpstypes_field_indexed</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_field_indexed"
 msgstr "Indicizzato:"
 
-#.   <h3>cpstypes_flexible_widgets</h3>
+#.   <span>cpstypes_flexible_widgets</span>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_flexible_widgets"
 msgstr "Componenti"
@@ -58,43 +174,101 @@ msgstr "Componenti"
 msgid "cpstypes_label_add_type"
 msgstr "Aggiungi un nuovo tipo di oggetto"
 
+#.   <input title="cpstypes_moveleft" type="submit" id="typemakerLeftBt" value="" attributes="name
+#.                                             string:left_${nrow}_${ncell};">
+#.                                      </input>
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_moveleft"
+msgstr "Déplacer à gauche"
+
+#.   <input title="cpstypes_moveright" type="submit" id="typemakerRightBt" value="" attributes="name
+#.                                             string:right_${nrow}_${ncell};">
+#.                                     </input>
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_moveright"
+msgstr "Déplacer à droite"
+
+#.   <span>Preview for </span>
+#: from ../skins/cps_typemaker/cpstypes_layout_preview.pt
+#, fuzzy
+msgid "cpstypes_preview_for"
+msgstr "Icône"
+
+#.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+#, fuzzy
+msgid "cpstypes_publictype"
+msgstr "Type utilisable sur le portail"
+
+#.   <div class="typemakerNoScript">
+#.                Warning : Javascript should be enabled for drag and drop features
+#.            </div>
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_scriptdisabled"
+msgstr "Disponible pour utilisation"
+
 #.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
-#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_shrink_cell"
 msgstr "Riduci la cella"
 
 #.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
-#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_split_cell"
 msgstr "Dividi la cella"
 
+#.   <input title="cpstypes_splitcell" type="submit" id="typemakerSplitBt" value="" attributes="name
+#.                                    python:'split_check_'+str(nrow)+'_'+str(ncell)" />
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#, fuzzy
+msgid "cpstypes_splitcell"
+msgstr "Couper"
+
 #.   <th align="right">cpstypes_type_description</th>
+#.   <small content="item/description">cpstypes_type_description</small>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
-#: ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_lib.pt
 #: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
 msgstr "Descrizione:"
 
 #.   <th align="right">cpstypes_type_icon</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_type_icon"
 msgstr "Icona:"
 
 #.   <th align="right">cpstypes_type_is_addable</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_type_is_addable"
 msgstr "Disponibile per l'uso:"
 
 #.   <th align="right">cpstypes_type_title</th>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
-#: ../skins/cps_typemaker/cpstypes_edit.pt
+#: ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_type_title"
 msgstr "Titolo:"
 
 #.   <input type="submit" name="widencell" value="cpstypes_widen_cell" />
-#: from ../skins/cps_typemaker/cpstypes_layout_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
+#: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_widen_cell"
 msgstr "Allarga la cella"
+
+#.   <th align="right">cpstypes_widget_label</th>
+#.   <th>cpstypes_widget_label</th>
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
+#, fuzzy
+msgid "cpstypes_widget_label"
+msgstr "Libellé"
 
 #.   <th>cpstypes_widget_max_repeats</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
@@ -102,32 +276,37 @@ msgid "cpstypes_widget_max_repeats"
 msgstr "Numero massimo di ripetizioni:"
 
 #.   <th>cpstypes_widget_required</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_widget_required"
 msgstr "Campo obbligatorio:"
 
 #.   <th>cpstypes_widget_show_in_view</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_widget_show_in_view"
 msgstr "Mostra in modalità visuale:"
 
 #.   <th>cpstypes_widget_size</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_size"
 msgstr "Grandezza:"
 
 #.   <th>cpstypes_widget_title</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_title"
 msgstr "Titolo:"
 
 #.   <th>cpstypes_widget_type</th>
-#: from ../skins/cps_typemaker/cpstypes_edit.pt
-#: ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#.   <th align="right">cpstypes_widget_type</th>
+#: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
+#: ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_widget_type"
 msgstr "Tipo di componente:"
+
+#.   <img condition="rfields" src="required_fields.gif" title="cpstypes_widgethasrequiredfields" />
+#: from ../skins/cps_typemaker/cpstypes_lib.pt
+#, fuzzy
+msgid "cpstypes_widgethasrequiredfields"
+msgstr "Certaines propriétés du champ sont obligatoire"
 
 #.   <h3>cpstypes_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
@@ -148,6 +327,10 @@ msgstr "Modifica l'aspetto"
 
 msgid "cpstypes_edit_flexible"
 msgstr "Modifica i componenti flessibili"
+
+#, fuzzy
+msgid "cpstypes_edit_flexible_layout"
+msgstr "Editer la disposition flexible"
 
 msgid "Type management"
 msgstr "Configura i tipi di oggetto"
@@ -293,3 +476,316 @@ msgstr "Attenzione, hai selezionato più volte lo stesso componente."
 
 msgid "psm_changed"
 msgstr "Modifica effettuata."
+
+#, fuzzy
+msgid "cpstypes_more"
+msgstr "Plus..."
+
+msgid "Format for empty list"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Display separator in view mode"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Label in view mode"
+msgstr ""
+
+msgid "Label in edit mode"
+msgstr ""
+
+msgid "Vocabulary"
+msgstr "Vocabulary"
+
+msgid "Is vocabulary translated on display ?"
+msgstr "Is vocabulary translated on display ?"
+
+msgid "Directory"
+msgstr "Directory"
+
+msgid "Optional directory used in view mode"
+msgstr ""
+
+msgid "Entry type"
+msgstr ""
+
+msgid "Skin name"
+msgstr ""
+
+msgid "Popup Mode"
+msgstr ""
+
+msgid "Deletable ?"
+msgstr ""
+
+msgid "Display Width"
+msgstr ""
+
+msgid "Display Height"
+msgstr ""
+
+msgid "Can resize to lower size ?"
+msgstr ""
+
+msgid "Render position"
+msgstr ""
+
+msgid "What is user configurable, require extra fields"
+msgstr ""
+
+msgid "Maximum input width"
+msgstr ""
+
+msgid "Width"
+msgstr ""
+
+msgid "Height"
+msgstr ""
+
+msgid "View format"
+msgstr ""
+
+msgid "Vocabulary is translated ?"
+msgstr ""
+
+msgid "View format empty"
+msgstr ""
+
+msgid "Use Javascript ?"
+msgstr ""
+
+msgid "View format (short, medium or long)"
+msgstr ""
+
+msgid "Enabling the setting of time of the day ?"
+msgstr ""
+
+msgid "default hour for time"
+msgstr ""
+
+msgid "default minutes for time"
+msgstr ""
+
+msgid "True label"
+msgstr ""
+
+msgid "False label"
+msgstr ""
+
+msgid "Maximum file size"
+msgstr ""
+
+msgid "Maximum size"
+msgstr ""
+
+msgid "Render format"
+msgstr ""
+
+#, fuzzy
+msgid "cps_types_auto"
+msgstr "Disposition automatique"
+
+msgid "Multiple Layouts"
+msgstr ""
+
+msgid "Id prefix for TypeMaker types"
+msgstr ""
+
+msgid "Id prefix for TypeMaker style"
+msgstr ""
+
+msgid "Base schemas"
+msgstr ""
+
+msgid "Base Layout"
+msgstr ""
+
+msgid "Add in types"
+msgstr ""
+
+msgid "Metadata layout"
+msgstr ""
+
+msgid "Metadata schemas"
+msgstr ""
+
+msgid "Immediate View"
+msgstr ""
+
+msgid "Hidden layout modes"
+msgstr ""
+
+msgid "Maximum number of rows"
+msgstr ""
+
+msgid "Process before type publish state changes"
+msgstr ""
+
+msgid "Process after type publish state changes"
+msgstr ""
+
+msgid "document types deleted"
+msgstr ""
+
+#, fuzzy
+msgid "cpstypemaker_save"
+msgstr "Enregistrer la configuration"
+
+#, fuzzy
+msgid "CPS Catalog Navigation Select Widget"
+msgstr "Sélection dans le portail"
+
+#, fuzzy
+msgid "CPS NewsLetter InternalLinks Widgets"
+msgstr "Lien interne"
+
+#, fuzzy
+msgid "CPS Generic Select Widget"
+msgstr "Selection avec entree vide"
+
+#, fuzzy
+msgid "CPS Generic MultiSelect Widget"
+msgstr "Selection multiple avec entree vide"
+
+msgid "Label in view layout mode"
+msgstr ""
+
+msgid "Label in edit layout mode"
+msgstr ""
+
+msgid "Fields"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "Read-only in layout modes"
+msgstr ""
+
+msgid "Label is i18n"
+msgstr ""
+
+msgid "Hidden in layout modes"
+msgstr ""
+
+msgid "Hidden if readonly in layout modes"
+msgstr ""
+
+msgid "Hidden if empty"
+msgstr ""
+
+msgid "Hide the widget if the given TAL expression returns true"
+msgstr ""
+
+#, fuzzy
+msgid "CSS class for view"
+msgstr "classe CSS utilisée pour l'affichage"
+
+msgid "Get the widget mode from the given TAL expression"
+msgstr ""
+
+msgid "Is vocabulary translated on display"
+msgstr ""
+
+msgid "Deletable"
+msgstr ""
+
+msgid ""
+"Accept blank values (defined in vocabulary) when validating if the widget is "
+"required and the vocabulary holds blank values"
+msgstr ""
+
+msgid "Allowed file suffixes (for example: .html .sxw)"
+msgstr ""
+
+msgid "Display for true"
+msgstr ""
+
+msgid "Display for false"
+msgstr ""
+
+msgid "Use javascript"
+msgstr ""
+
+msgid "Widget type"
+msgstr ""
+
+msgid "Display width"
+msgstr ""
+
+msgid "Maximum image size"
+msgstr ""
+
+msgid "Enable to resize img to lower size"
+msgstr ""
+
+msgid "Title of the popup"
+msgstr ""
+
+msgid "Allow configuration options"
+msgstr ""
+
+msgid "Widget render method"
+msgstr ""
+
+msgid "Group id for Javascript switching (if empty widget id is used)"
+msgstr ""
+
+msgid "Depends on id for Javascript switching"
+msgstr ""
+
+msgid "Depends on value for Javascript switching"
+msgstr ""
+
+msgid "Depends on value display widget"
+msgstr ""
+
+msgid "Required widget"
+msgstr ""
+
+msgid "browse or search"
+msgstr ""
+
+msgid "browse"
+msgstr ""
+
+msgid "search"
+msgstr ""
+
+msgid "Enabling the setting of time of the day"
+msgstr ""
+
+msgid "Value must be in range"
+msgstr ""
+
+msgid "Range minimum value"
+msgstr ""
+
+msgid "Range maximum value"
+msgstr ""
+
+msgid "Thousands separator"
+msgstr ""
+
+msgid "Decimal separator"
+msgstr ""
+
+msgid "Number of decimals"
+msgstr ""
+
+msgid "Html for edit"
+msgstr ""
+
+msgid "Html for view"
+msgstr ""
+
+msgid "Render format : select menu (default), radio buttons or checkboxes"
+msgstr ""
+
+msgid "Target for the link"
+msgstr ""
