@@ -19,7 +19,9 @@
 #
 import unittest, os.path
 from CPSTypeMakerTestCase import CPSTypeMakerTestCase
+
 from Products.CPSTypeMaker.CPSWidgetDefinition import CPSWidgetRenderer
+from Products.CPSSchemas.BasicWidgets import CPSStringWidget
 
 
 class TestCPSWidgetDefinitions(CPSTypeMakerTestCase):
@@ -39,6 +41,14 @@ class TestCPSWidgetDefinitions(CPSTypeMakerTestCase):
         self.assertEquals(wrenderer._canChange('Fields'), False)
         self.assertEquals(wrenderer._canChange('Title'), True)
 
+    def test_render(self):
+        # testing rendering (for bug #601)
+        widget = CPSStringWidget('my', 'String Widget')
+        widget = widget.__of__(self.portal)
+        ob = CPSWidgetRenderer()
+        ob = ob.__of__(self.portal)
+        res = ob.render(widget)
+        self.assertNotEquals(res.find('widget__description_widget'), -1)
 
 def test_suite():
     suites = [unittest.makeSuite(TestCPSWidgetDefinitions)]
