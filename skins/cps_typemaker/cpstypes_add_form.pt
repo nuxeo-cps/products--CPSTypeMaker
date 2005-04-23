@@ -28,7 +28,9 @@
     <form method="post" action="portal_typemaker/manage_addDocumentType">
       <table>
         <tr>
-          <th align='right' i18n:translate="">cpstypes_type_title</th>
+          <th align='right'>
+            <div class="label required" i18n:translate="">cpstypes_type_title</div>
+          </th>
           <td><input type="text" size="50" name="title" /></td>
         </tr>
         <tr>

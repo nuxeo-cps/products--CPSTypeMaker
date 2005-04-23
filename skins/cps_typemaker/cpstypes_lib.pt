@@ -109,7 +109,9 @@
           <div class="typemakerSpaced">
             <table>
               <tr>
-                <th align="right" i18n:translate="">cpstypes_widget_label</th>
+                <th align="right">
+                  <div class="label required" i18n:translate="">cpstypes_widget_label</div>
+                </th>
                 <td>
                   <div><input type="text" name="new_widget_title" /></div>
                 </td>
@@ -146,7 +148,9 @@
       <table tal:condition="typeob">
 
         <tr>
-          <th align='right' i18n:translate="">cpstypes_type_title</th>
+          <th align='right'>
+            <div class="label required" i18n:translate="">cpstypes_type_title</div>
+          </th>
           <td><input type="text" size="50" name="title" tal:attributes="value
                 typeob/title" />
           </td>
