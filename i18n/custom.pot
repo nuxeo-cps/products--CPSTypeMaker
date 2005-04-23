@@ -223,6 +223,9 @@ msgstr ""
 msgid "Popup Mode"
 msgstr ""
 
+msgid "Maximum image size"
+msgstr ""
+
 msgid "Deletable ?"
 msgstr ""
 
@@ -248,6 +251,9 @@ msgid "Width"
 msgstr ""
 
 msgid "Height"
+msgstr ""
+
+msgid "Format for empty list"
 msgstr ""
 
 msgid "View format"
@@ -389,7 +395,7 @@ msgid "CPS Generic MultiSelect Widget"
 msgstr ""
 
 msgid "Label in view layout mode"
-msgstr ""
+msgstr """
 
 msgid "Label in edit layout mode"
 msgstr ""
@@ -522,3 +528,10 @@ msgstr ""
 
 msgid "Target for the link"
 msgstr ""
+
+msgid "type_need_title"
+msgstr ""
+
+msgid "type_need_label"
+msgstr ""
+
