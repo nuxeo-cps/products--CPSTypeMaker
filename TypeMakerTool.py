@@ -256,12 +256,23 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
 
     security.declareProtected(ViewManagementScreens, 'manage_documentModified')
-    def manage_documentModified(self,type_id, is_addable=None,title=None, description=None,
-                         new_icon=None,  widgetinfo=[], new_widget_title=None,
-                         new_widget_type=None, REQUEST=None, RESPONSE=None, action=None):
-        """ this function is used to
-            update a Document Type
-        """
+    def manage_documentModified(self, type_id, is_addable=None, title=None,
+                                                   description=None, new_icon=None,
+                                                   widgetinfo=[],
+                                                   new_widget_title=None,
+                                                   new_widget_type=None,
+                                                   REQUEST=None, RESPONSE=None,
+                                                   action=None):
+        """ this function is used to  update a Document Type  """
+        utool = getToolByName(self, 'portal_url')
+        if title is not None and title.strip() == '':
+            if RESPONSE:
+                psm = 'portal_status_message=type_need_title'
+                redir = '/cpstypes_edit?type_id=%s&%s#main'  % (type_id, psm)
+                return RESPONSE.redirect(utool() + redir)
+            else:
+                return
+
         tagger = '#main'
 
         if REQUEST is not None and action is None:
@@ -270,17 +281,13 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
                     action = key[7:] # remove the 'action_'-part
                     break
 
-
         if not action:
             action='modify'
             #raise ValueError('No action specified')
 
         portal_layouts = getToolByName(self, 'portal_layouts')
         portal_schemas = getToolByName(self, 'portal_schemas')
-
-
         portal_status_message = []
-
         layout_count = self.getTypeLayoutCount(type_id)
 
         for i in range(layout_count):
@@ -330,6 +337,13 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
 
             if action == 'add' :
+                if new_widget_title.strip() == '':
+                    if RESPONSE:
+                        psm = 'portal_status_message=type_need_label'
+                        redir = '/cpstypes_edit?type_id=%s&%s'  % (type_id, psm)
+                        return RESPONSE.redirect(utool() + redir)
+                    else:
+                        return
                 new_widget_id = makeId(new_widget_title)
                 if new_widget_id is not None:
                     res = self._addwidget(layout, type_id, new_widget_id,
@@ -1009,16 +1023,23 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         return count
 
     security.declareProtected(ViewManagementScreens, 'manage_addDocumentType')
-    def manage_addDocumentType(self,title,description,RESPONSE=None):
-        """ called when a document type is added
-        """
+    def manage_addDocumentType(self, title, description, RESPONSE=None):
+        """ called when a document type is added  """
+        # no empty title
+        utool = getToolByName(self, 'portal_url')
+        if title.strip() == '':
+            if RESPONSE:
+                return RESPONSE.redirect(utool() + \
+                '/cpstypes_add_form?portal_status_message=type_need_title')
+            else:
+                return
+
         id = makeId(title)
 
         # getting tool links
         ttool = getToolByName(self, 'portal_types')
         stool = getToolByName(self, 'portal_schemas')
         ltool = getToolByName(self, 'portal_layouts')
-        utool = getToolByName(self, 'portal_url')
 
         # getting values out of tmaker
         prefix = self.type_prefix
