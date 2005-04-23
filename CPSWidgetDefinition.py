@@ -61,6 +61,8 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
     portal_type = meta_type = 'CPSWidgetRenderer'
     widget = None
     layout = schema = None
+    style_prefix = 'layout_default_'
+
     security = ClassSecurityInfo()
 
     def __init__(self):
