@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- encoding: iso-8859-15 -*-
-# (C) Copyright 2004-2005 Nuxeo SARL <http://nuxeo.com>
+# (C) Copyright 2004 Nuxeo SARL <http://nuxeo.com>
 # Author: Tarek Ziadé <tz@nuxeo.com>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -44,6 +44,8 @@ methods that should be unit tested here :
 
 """
 import unittest, os.path
+
+from Products.CPSUtil.id import generateId
 from CPSTypeMakerTestCase import CPSTypeMakerTestCase
 
 class TestTypeMakerTool(CPSTypeMakerTestCase):
@@ -165,29 +167,27 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
         types = self.portal.portal_widget_types
 
         for id, type in types.objectItems():
-            #raise str((type._properties))
             tmaker_tool.manage_documentModified(
                 type_id=type_name,
                 action=action,
-                new_widget_title='Totoro ' + str(id),
+                new_widget_title='Totoro '+str(id),
                 new_widget_type=type.id)
 
-            # check results on type
+            # check results on
             type_layouts = self.portal.portal_layouts
             type_layout = type_layouts[type_name + '_1']
 
-            wid = 'w__Totoro ' + str(id)
-            wid = wid.replace(' ', '-')
+            wid = 'Totoro ' + str(id)
+            wid = 'w__'  + generateId(wid)
 
-            found = False
-            for item_id, item in type_layout.objectItems():
-                if item.id == wid:
-                    found = True
-                    new_title = 'Totoro ' + str(id)
-                    self.assertEquals(item.title, new_title)
-                    break
-
-            self.assert_(found)
+            if len(type_layout.objectItems()) > 0:
+                found = False
+                for item_id, item in type_layout.objectItems():
+                    if item.id == wid:
+                        found = True
+                        self.assertEquals(item.title, 'Totoro ' + str(id))
+                        break
+                self.assert_(found)
 
     def test_listWidgets(self):
         tmaker_tool = self.portal.portal_typemaker
