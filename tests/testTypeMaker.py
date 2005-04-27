@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- encoding: iso-8859-15 -*-
-# (C) Copyright 2004 Nuxeo SARL <http://nuxeo.com>
+# (C) Copyright 2004-2005 Nuxeo SARL <http://nuxeo.com>
 # Author: Tarek Ziadé <tz@nuxeo.com>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -173,7 +173,7 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
                 new_widget_title='Totoro '+str(id),
                 new_widget_type=type.id)
 
-            # check results on
+            # check results on type
             type_layouts = self.portal.portal_layouts
             type_layout = type_layouts[type_name + '_1']
 
