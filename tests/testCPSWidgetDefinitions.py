@@ -48,7 +48,9 @@ class TestCPSWidgetDefinitions(CPSTypeMakerTestCase):
         ob = CPSWidgetRenderer()
         ob = ob.__of__(self.portal)
         res = ob.render(widget)
-        self.assertNotEquals(res.find('widget__description_widget'), -1)
+        self.assert_(isinstance(res, tuple))
+        self.assert_(len(res)>0)
+        self.assertNotEquals(res[0].find('widget__css_class'), -1)
 
 def test_suite():
     suites = [unittest.makeSuite(TestCPSWidgetDefinitions)]
