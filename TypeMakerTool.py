@@ -31,7 +31,7 @@ from Products.CMFCore.utils import getToolByName
 from Products.CMFCore.utils import UniqueObject
 from Products.CMFCore.permissions import ManagePortal
 from Products.CPSTypeMaker.CPSWidgetDefinition import CPSWidgetRenderer
-from Products.CPSCore.utils import makeId
+from Products.CPSUtil.id import generateId
 from Products.CPSSchemas.DataStructure import DataStructure
 from Products.CPSSchemas.DataModel import DataModel
 from Products.CPSCore.CPSBase import CPSBaseFolder
@@ -344,7 +344,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
                         return RESPONSE.redirect(utool() + redir)
                     else:
                         return
-                new_widget_id = makeId(new_widget_title)
+                new_widget_id = generateId(new_widget_title)
                 if new_widget_id is not None:
                     res = self._addwidget(layout, type_id, new_widget_id,
                         new_widget_title, new_widget_type)
@@ -433,7 +433,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
 
             if action == 'add':
-                new_widget_id = makeId(new_widget_title)
+                new_widget_id = generateId(new_widget_title)
 
                 if new_widget_id is not None:
 
@@ -1034,7 +1034,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             else:
                 return
 
-        id = makeId(title)
+        id = generateId(title)
 
         # getting tool links
         ttool = getToolByName(self, 'portal_types')
