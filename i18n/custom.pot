@@ -184,9 +184,6 @@ msgstr ""
 msgid "cpstypes_more"
 msgstr ""
 
-msgid "Format for empty list"
-msgstr ""
-
 msgid "Size"
 msgstr ""
 
@@ -395,7 +392,7 @@ msgid "CPS Generic MultiSelect Widget"
 msgstr ""
 
 msgid "Label in view layout mode"
-msgstr """
+msgstr ""
 
 msgid "Label in edit layout mode"
 msgstr ""
@@ -455,9 +452,6 @@ msgid "Widget type"
 msgstr ""
 
 msgid "Display width"
-msgstr ""
-
-msgid "Maximum image size"
 msgstr ""
 
 msgid "Enable to resize img to lower size"

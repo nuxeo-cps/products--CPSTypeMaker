@@ -7,13 +7,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CPSTypeMaker_en\n"
-"POT-Creation-Date: 2005-04-13 17:51default\n"
+"POT-Creation-Date: 2005-05-26 14:55default\n"
 "PO-Revision-Date: 2004-10-04 17:01+0100\n"
 "Last-Translator:  <>\n"
 "Language-Team: Euskara <eu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language-Code: eu\n"
+"Language-Name: Basque\n"
+"Domain: default\n"
 
 #.   <a attributes="href
 #.                                       python:'cpstypes_widget_properties?type_id='+type_id+
@@ -189,12 +192,6 @@ msgstr "Trepetak"
 msgid "cpstypes_preview_for"
 msgstr "Ikonoa"
 
-#.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
-#: from ../skins/cps_typemaker/cpstypes_list.pt
-#, fuzzy
-msgid "cpstypes_publictype"
-msgstr "Motak Editatu"
-
 #.   <div class="typemakerNoScript">
 #.                Warning : Javascript should be enabled for drag and drop features
 #.            </div>
@@ -227,10 +224,8 @@ msgid "cpstypes_splitcell"
 msgstr "Lerroa Ezabatu"
 
 #.   <th align="right">cpstypes_type_description</th>
-#.   <small content="item/description">cpstypes_type_description</small>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
-#: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
 msgstr "Deskribapena"
 
@@ -244,7 +239,7 @@ msgstr "Ikonoa"
 msgid "cpstypes_type_is_addable"
 msgstr "Erabilgarria"
 
-#.   <th align="right">cpstypes_type_title</th>
+#.   <div class="label required">cpstypes_type_title</div>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_type_title"
@@ -257,7 +252,7 @@ msgstr "Izenburua"
 msgid "cpstypes_widen_cell"
 msgstr "Lerroa Ezabatu"
 
-#.   <th align="right">cpstypes_widget_label</th>
+#.   <div class="label required">cpstypes_widget_label</div>
 #.   <th>cpstypes_widget_label</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 #, fuzzy
@@ -485,9 +480,6 @@ msgstr "Aldatuta."
 msgid "cpstypes_more"
 msgstr "Lerroa Gehitu"
 
-msgid "Format for empty list"
-msgstr ""
-
 msgid "Size"
 msgstr ""
 
@@ -524,6 +516,9 @@ msgstr ""
 msgid "Popup Mode"
 msgstr ""
 
+msgid "Maximum image size"
+msgstr ""
+
 msgid "Deletable ?"
 msgstr ""
 
@@ -549,6 +544,9 @@ msgid "Width"
 msgstr ""
 
 msgid "Height"
+msgstr ""
+
+msgid "Format for empty list"
 msgstr ""
 
 msgid "View format"
@@ -593,6 +591,10 @@ msgstr ""
 #, fuzzy
 msgid "cps_types_auto"
 msgstr "Lerroa Gehitu"
+
+#, fuzzy
+msgid "cpstypes_publictype"
+msgstr "Motak Editatu"
 
 msgid "Multiple Layouts"
 msgstr ""
@@ -722,9 +724,6 @@ msgstr ""
 msgid "Display width"
 msgstr ""
 
-msgid "Maximum image size"
-msgstr ""
-
 msgid "Enable to resize img to lower size"
 msgstr ""
 
@@ -793,3 +792,11 @@ msgstr ""
 
 msgid "Target for the link"
 msgstr ""
+
+#, fuzzy
+msgid "type_need_title"
+msgstr "Izenburua"
+
+#, fuzzy
+msgid "type_need_label"
+msgstr "Izenburua"

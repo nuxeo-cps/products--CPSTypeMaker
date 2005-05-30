@@ -1,13 +1,9 @@
-# ##########################################################
-# ################# DON'T EDIT THIS FILE! ##################
-# ##########################################################
 # Gettext Message File for default.
 # Your Name <your@email>, Year
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: CPStypeMaker\n"
-"POT-Creation-Date: 2005-04-13 17:51default\n"
+"POT-Creation-Date: 2005-05-26 14:55default\n"
 "PO-Revision-Date: 2004-09-30 16:28+0100\n"
 "Last-Translator: Fabio Nosari <fabnos@fastwebnet.it>\n"
 "Language-Team: Fabio Nosari <fabnos@fastwebnet.it>\n"
@@ -15,12 +11,12 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language-code: LL\n"
-"Language-name: Language\n"
 "Preferred-encodings: utf-8 latin1\n"
-"Domain: default\n"
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
+"Language-Code: it\n"
+"Language-Name: Italian\n"
+"Domain: default\n"
 
 #.   <a attributes="href
 #.                                       python:'cpstypes_widget_properties?type_id='+type_id+
@@ -198,12 +194,6 @@ msgstr "Déplacer à droite"
 msgid "cpstypes_preview_for"
 msgstr "Icône"
 
-#.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
-#: from ../skins/cps_typemaker/cpstypes_list.pt
-#, fuzzy
-msgid "cpstypes_publictype"
-msgstr "Type utilisable sur le portail"
-
 #.   <div class="typemakerNoScript">
 #.                Warning : Javascript should be enabled for drag and drop features
 #.            </div>
@@ -234,10 +224,8 @@ msgid "cpstypes_splitcell"
 msgstr "Couper"
 
 #.   <th align="right">cpstypes_type_description</th>
-#.   <small content="item/description">cpstypes_type_description</small>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
-#: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
 msgstr "Descrizione:"
 
@@ -251,7 +239,7 @@ msgstr "Icona:"
 msgid "cpstypes_type_is_addable"
 msgstr "Disponibile per l'uso:"
 
-#.   <th align="right">cpstypes_type_title</th>
+#.   <div class="label required">cpstypes_type_title</div>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_type_title"
@@ -263,7 +251,7 @@ msgstr "Titolo:"
 msgid "cpstypes_widen_cell"
 msgstr "Allarga la cella"
 
-#.   <th align="right">cpstypes_widget_label</th>
+#.   <div class="label required">cpstypes_widget_label</div>
 #.   <th>cpstypes_widget_label</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 #, fuzzy
@@ -481,9 +469,6 @@ msgstr "Modifica effettuata."
 msgid "cpstypes_more"
 msgstr "Plus..."
 
-msgid "Format for empty list"
-msgstr ""
-
 msgid "Size"
 msgstr ""
 
@@ -520,6 +505,9 @@ msgstr ""
 msgid "Popup Mode"
 msgstr ""
 
+msgid "Maximum image size"
+msgstr ""
+
 msgid "Deletable ?"
 msgstr ""
 
@@ -545,6 +533,9 @@ msgid "Width"
 msgstr ""
 
 msgid "Height"
+msgstr ""
+
+msgid "Format for empty list"
 msgstr ""
 
 msgid "View format"
@@ -589,6 +580,10 @@ msgstr ""
 #, fuzzy
 msgid "cps_types_auto"
 msgstr "Disposition automatique"
+
+#, fuzzy
+msgid "cpstypes_publictype"
+msgstr "Type utilisable sur le portail"
 
 msgid "Multiple Layouts"
 msgstr ""
@@ -718,9 +713,6 @@ msgstr ""
 msgid "Display width"
 msgstr ""
 
-msgid "Maximum image size"
-msgstr ""
-
 msgid "Enable to resize img to lower size"
 msgstr ""
 
@@ -789,3 +781,11 @@ msgstr ""
 
 msgid "Target for the link"
 msgstr ""
+
+#, fuzzy
+msgid "type_need_title"
+msgstr "Le champ titre est manquant"
+
+#, fuzzy
+msgid "type_need_label"
+msgstr "Le champ libellé est manquant"
