@@ -6,7 +6,9 @@ New features:
 -
 Bug fixes:
 ~~~~~~~~~~
--
+- #381: title and widget label are now required.
+- #601: crash on forbidden widgets.
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
--
+- Updated translations.
+- Use generateId from CPSUtil.id
