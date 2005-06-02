@@ -1,4 +1,22 @@
 *******************************************
+** CPSTypeMaker V1.5.6 [R1 build 2005/06/02-12:00 by fguillaume]
+** SVN URL: https://svn.nuxeo.org/pub/CPSTypeMaker/trunk Revision: 22120
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- #381: title and widget label are now required.
+- #601: crash on forbidden widgets.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- Updated translations.
+- Use generateId from CPSUtil.id
+
+*******************************************
 ** CPSTypeMaker V1.5.5 [R1 build 2005/04/13-15:52 by madarche]
 
 Requires:
