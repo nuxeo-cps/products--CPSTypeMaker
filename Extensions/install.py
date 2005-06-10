@@ -16,7 +16,7 @@
 # 02111-1307, USA.
 #
 # $Id$
-
+from Products.CMFCore.permissions import ManagePortal
 
 from Products.CPSInstaller.CPSInstaller import CPSInstaller
 from Products.CPSTypeMaker.TypeMakerTool import TypeMakerTool
@@ -73,7 +73,7 @@ def install(self):
                 name='Type management',
                 action='string:${portal_url}/cpstypes_list',
                 condition='',
-                permission=('Manage Portal',),
+                permission=ManagePortal,
                 category='global',
                 visible=1)
 
