@@ -649,10 +649,10 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
 
         if RESPONSE:
-            Localizer = getToolByName(self, 'Localizer')
+            translation_service = getToolByName(self, 'translation_service')
 
-            if Localizer:
-                mcat = Localizer.default
+            if translation_service:
+                mcat = translation_service
                 message = 'psm_changed'
             else:
                 message = ''

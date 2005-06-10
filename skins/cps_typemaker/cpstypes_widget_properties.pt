@@ -1,4 +1,3 @@
-
 <tal:block define="
   type_id request/type_id|options/type_id;
   widget_id request/widget_id|options/widget_id;
@@ -22,7 +21,7 @@
 
 <metal:block use-macro="here/main_template/macros/master">
   <metal:block fill-slot="css_slot">
-<tal:block define="dt_title python:here.Localizer.default('Document Types');
+<tal:block define="dt_title python:here.translation_service('Document Types');
                        dummy python:request.set('breadcrumb_set',
                         [{
                           'id': 'types',

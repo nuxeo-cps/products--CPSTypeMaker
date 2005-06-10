@@ -1,5 +1,5 @@
 <tal:block define="
-  dt_title python:here.Localizer.default('cpstypes_configuretool');
+  dt_title python:here.translation_service('cpstypes_configuretool');
   expanded_title dt_title;
   dummy python:request.set('breadcrumb_set',
     [{

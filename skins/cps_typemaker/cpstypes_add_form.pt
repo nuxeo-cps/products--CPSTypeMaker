@@ -1,7 +1,7 @@
 <metal:block use-macro="here/main_template/macros/master">
   <metal:block fill-slot="css_slot">
-    <tal:block define="dt_title python:here.Localizer.default('Document Types');
-                       cat_title python:here.Localizer.default('cpstypes_add_type');
+    <tal:block define="dt_title python:here.translation_service('Document Types');
+                       cat_title python:here.translation_service('cpstypes_add_type');
                        dummy python:request.set('breadcrumb_set',
                         [{
                           'id': 'types',
