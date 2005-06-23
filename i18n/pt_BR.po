@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pt-BR\n"
 "POT-Creation-Date: 2005-05-26 14:55default\n"
-"PO-Revision-Date: 2004-09-08 16:23-0300\n"
-"Last-Translator: Mario Olimpio de Menezes <mario@curiango.ipen.br>\n"
+"PO-Revision-Date: 2005-06-17 17:53-0300\n"
+"Last-Translator: Mario Olimpio de Menezes <mario@ipen.br>\n"
 "Language-Team: Portugues do Brasil <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-15\n"
@@ -24,13 +24,13 @@ msgstr ""
 #.                        </a>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "<img src=\"configure.gif\" title=\"cpstypes_configure\" />"
-msgstr ""
+msgstr "Configurar"
 
 #.   <input type="button" name="preview" value="Preview" attributes="onclick string:layoutPreview('${type_id}');" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "Preview"
-msgstr ""
+msgstr "Previsão"
 
 #.   <input type="submit" name="action_save" value="button_save" />
 #.   <input type="submit" name="action_save" value="button_save" condition="python:wcount>0" />
@@ -44,14 +44,12 @@ msgstr "Salvar"
 #.   <input type="submit" name="autolayout" value="cpstypemaker_autolayout" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypemaker_autolayout"
-msgstr "Automatic layout"
+msgstr "Layout automático"
 
 #.   <span>
 #.                                   cpstypemaker_layoutlabel</span>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
-#, fuzzy
 msgid "cpstypemaker_layoutlabel"
 msgstr "Layout"
 
@@ -69,35 +67,30 @@ msgstr "Adicionar linha"
 #.   <input title="cpstypes_appendcell" type="submit" id="typemakerAppendBt" value="" attributes="name string:addnamedrow_${wid}" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_appendcell"
-msgstr "Append cell"
+msgstr "Anexar célula"
 
 #.   <input type="submit" name="autolayout" value="cpstypes_auto" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_auto"
-msgstr "Automatic layout"
+msgstr "Layout Automático"
 
 #.   <h3>cpstypes_availablefields</h3>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_availablefields"
-msgstr "Available fields"
+msgstr "Campos disponíveis"
 
 #.   <img src="configure.gif" title="cpstypes_configure" />
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
-#, fuzzy
 msgid "cpstypes_configure"
-msgstr "Configure this component"
+msgstr "Configurar este componente"
 
 #.   <h1>cpstypes_configuretool</h1>
 #: from ../skins/cps_typemaker/cpstypes_configure.pt
-#, fuzzy
 msgid "cpstypes_configuretool"
-msgstr "Type Maker General configuration"
+msgstr "Configuração geral do Type Maker"
 
 #.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
@@ -108,15 +101,13 @@ msgstr "Remover célula"
 #.   <input title="cpstypes_deletecell" type="submit" id="typemakerDeleteBt" value="" attributes="name python:'del_check_'+str(nrow)+'_'+str(ncell)" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_deletecell"
-msgstr "Delete"
+msgstr "Remover"
 
 #.   <h1>cpstypes_documentlist</h1>
 #: from ../skins/cps_typemaker/cpstypes_list.pt
-#, fuzzy
 msgid "cpstypes_documentlist"
-msgstr "Document Types"
+msgstr "Tipos de Documentos"
 
 #.   <a type="button" title="cpstypes_editcell" attributes="href
 #.                           python:'cpstypes_widget_properties?type_id='+type_id+'&widget_id='+widget_id;
@@ -132,9 +123,8 @@ msgstr "Document Types"
 #.                           </a>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_editcell"
-msgstr "Edit cell"
+msgstr "Editar célula"
 
 #.   <div condition="python:wcount==0" class="typemaker_empty_layout">
 #.             pas de champs pour l'instant
@@ -149,9 +139,8 @@ msgstr "Edit cell"
 #: ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
-#, fuzzy
 msgid "cpstypes_empty_layout"
-msgstr "No fields in the layout yet."
+msgstr "Ainda não há campos no layout"
 
 #.   <th>cpstypes_field_indexed</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
@@ -173,33 +162,29 @@ msgstr "Adicionar um tipo"
 #.                                      </input>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_moveleft"
-msgstr "Move left"
+msgstr "Mover para esquerda"
 
 #.   <input title="cpstypes_moveright" type="submit" id="typemakerRightBt" value="" attributes="name
 #.                                             string:right_${nrow}_${ncell};">
 #.                                     </input>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_moveright"
-msgstr "Move right"
+msgstr "Mover para direita"
 
 #.   <span>Preview for </span>
 #: from ../skins/cps_typemaker/cpstypes_layout_preview.pt
-#, fuzzy
 msgid "cpstypes_preview_for"
-msgstr "Icon"
+msgstr "Ícone"
 
 #.   <div class="typemakerNoScript">
 #.                Warning : Javascript should be enabled for drag and drop features
 #.            </div>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_scriptdisabled"
-msgstr "Available for use"
+msgstr "Disponível para uso"
 
 #.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
@@ -217,9 +202,8 @@ msgstr "Dividir célula"
 #.                                    python:'split_check_'+str(nrow)+'_'+str(ncell)" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_splitcell"
-msgstr "Split"
+msgstr "Dividir"
 
 #.   <th align="right">cpstypes_type_description</th>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
@@ -252,9 +236,8 @@ msgstr "Alargar célula"
 #.   <div class="label required">cpstypes_widget_label</div>
 #.   <th>cpstypes_widget_label</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
-#, fuzzy
 msgid "cpstypes_widget_label"
-msgstr "Label"
+msgstr "Rótulo"
 
 #.   <th>cpstypes_widget_max_repeats</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
@@ -290,9 +273,8 @@ msgstr "Tipo"
 
 #.   <img condition="rfields" src="required_fields.gif" title="cpstypes_widgethasrequiredfields" />
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
-#, fuzzy
 msgid "cpstypes_widgethasrequiredfields"
-msgstr "Some properties have required values"
+msgstr "Algumas propriedades têm valores requeridos"
 
 #.   <h3>cpstypes_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
@@ -314,9 +296,8 @@ msgstr "Editar layout"
 msgid "cpstypes_edit_flexible"
 msgstr "Editar widgets flexíveis"
 
-#, fuzzy
 msgid "cpstypes_edit_flexible_layout"
-msgstr "Editer Flexible layout"
+msgstr "Editar layout Flexível"
 
 msgid "Type management"
 msgstr "Administração do tipo de documento"
@@ -459,327 +440,321 @@ msgstr "Atenção, widgets duplicados:"
 msgid "psm_changed"
 msgstr "Mudado."
 
-#, fuzzy
 msgid "cpstypes_more"
-msgstr "More..."
+msgstr "Mais ..."
 
 msgid "Size"
-msgstr ""
+msgstr "Tamanho"
 
 msgid "Display separator in view mode"
-msgstr ""
+msgstr "Mostrar separador em modo de visualização"
 
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 msgid "Label in view mode"
-msgstr ""
+msgstr "Rótulo no modo de visualização"
 
 msgid "Label in edit mode"
-msgstr ""
+msgstr "Rótulo no modo de edição"
 
 msgid "Vocabulary"
-msgstr "Vocabulary"
+msgstr "Vocabulário"
 
 msgid "Is vocabulary translated on display ?"
-msgstr "Is vocabulary translated on display ?"
+msgstr "O vocabulário está traduzido ao apresentar?"
 
 msgid "Directory"
-msgstr "Directory"
+msgstr "Diretório"
 
 msgid "Optional directory used in view mode"
-msgstr ""
+msgstr "Diretório opcional utilizado no modo de visualização"
 
 msgid "Entry type"
-msgstr ""
+msgstr "Tipo da entrada"
 
 msgid "Skin name"
-msgstr ""
+msgstr "Nome do tema"
 
 msgid "Popup Mode"
-msgstr ""
+msgstr "Modo popup"
 
 msgid "Maximum image size"
-msgstr ""
+msgstr "Tamanho máximo de imagem"
 
 msgid "Deletable ?"
-msgstr ""
+msgstr "Removível ?"
 
 msgid "Display Width"
-msgstr ""
+msgstr "Largura de apresentação"
 
 msgid "Display Height"
-msgstr ""
+msgstr "Altura de apresentação"
 
 msgid "Can resize to lower size ?"
-msgstr ""
+msgstr "Pode redimensionar para um tamanho menor ?"
 
 msgid "Render position"
-msgstr ""
+msgstr "Posição de renderização"
 
 msgid "What is user configurable, require extra fields"
-msgstr ""
+msgstr "O que é configurável pelo usuário, requer campos extras"
 
 msgid "Maximum input width"
-msgstr ""
+msgstr "Largura máxima de entrada"
 
 msgid "Width"
-msgstr ""
+msgstr "Largura"
 
 msgid "Height"
-msgstr ""
+msgstr "Altura"
 
 msgid "Format for empty list"
-msgstr ""
+msgstr "Formato para lista vazia"
 
 msgid "View format"
-msgstr ""
+msgstr "Formato de visualização"
 
 msgid "Vocabulary is translated ?"
-msgstr ""
+msgstr "Vocabulário é traduzido ?"
 
 msgid "View format empty"
-msgstr ""
+msgstr "Formato de visualização vazio"
 
 msgid "Use Javascript ?"
-msgstr ""
+msgstr "Usar Javascript ?"
 
 msgid "View format (short, medium or long)"
-msgstr ""
+msgstr "Formato de visualização (curto, médio ou longo)"
 
 msgid "Enabling the setting of time of the day ?"
-msgstr ""
+msgstr "Habilitar a definição de hora do dia ?"
 
 msgid "default hour for time"
-msgstr ""
+msgstr "formato padrão de hora"
 
 msgid "default minutes for time"
-msgstr ""
+msgstr "formato padrão de minutos"
 
 msgid "True label"
-msgstr ""
+msgstr "Rótulo Verdadeiro"
 
 msgid "False label"
-msgstr ""
+msgstr "Rótulo Falso"
 
 msgid "Maximum file size"
-msgstr ""
+msgstr "Tamanho máximo de arquivo"
 
 msgid "Maximum size"
-msgstr ""
+msgstr "Tamanho máximo"
 
 msgid "Render format"
-msgstr ""
+msgstr "Formato de renderização"
 
-#, fuzzy
 msgid "cps_types_auto"
-msgstr "Automatic layout"
+msgstr "Layout automático"
 
-#, fuzzy
 msgid "cpstypes_publictype"
-msgstr "Available type on the portal"
+msgstr "Tipo disponível no portal"
 
 msgid "Multiple Layouts"
-msgstr ""
+msgstr "Layouts múltiplos"
 
 msgid "Id prefix for TypeMaker types"
-msgstr ""
+msgstr "Prefixo de ID para os tipos do TypeMaker"
 
 msgid "Id prefix for TypeMaker style"
-msgstr ""
+msgstr "Prefixo de ID para os estilos do TypeMaker"
 
 msgid "Base schemas"
-msgstr ""
+msgstr "Esquemas base"
 
 msgid "Base Layout"
-msgstr ""
+msgstr "Layout base"
 
 msgid "Add in types"
-msgstr ""
+msgstr "Adicionar em tipos"
 
 msgid "Metadata layout"
-msgstr ""
+msgstr "Layout de Metadados"
 
 msgid "Metadata schemas"
-msgstr ""
+msgstr "Esquemas de Metadados"
 
 msgid "Immediate View"
-msgstr ""
+msgstr "Visualização imediata"
 
 msgid "Hidden layout modes"
-msgstr ""
+msgstr "Modos de layout oculto"
 
 msgid "Maximum number of rows"
-msgstr ""
+msgstr "Número máximo de linhas"
 
 msgid "Process before type publish state changes"
-msgstr ""
+msgstr "Processar antes do estado de publicação do tipo mudar"
 
 msgid "Process after type publish state changes"
-msgstr ""
+msgstr "Processar após o estado de publicação do tipo mudar"
 
 msgid "document types deleted"
-msgstr ""
+msgstr "tipos do documento removido"
 
-#, fuzzy
 msgid "cpstypemaker_save"
-msgstr "Save configuration"
+msgstr "Salvar configuração"
 
-#, fuzzy
 msgid "CPS Catalog Navigation Select Widget"
-msgstr "Catalog Navigation Select"
+msgstr "Seleção do Catálogo de Navegação"
 
-#, fuzzy
 msgid "CPS NewsLetter InternalLinks Widgets"
-msgstr "Newsletter internal link"
+msgstr "Link interno do Boletim de Notícias"
 
-#, fuzzy
 msgid "CPS Generic Select Widget"
-msgstr "Generic Select"
+msgstr "Seleção Genérica"
 
-#, fuzzy
 msgid "CPS Generic MultiSelect Widget"
-msgstr "Generic Multiselect"
+msgstr "Multiseleção Genérica"
 
 msgid "Label in view layout mode"
-msgstr ""
+msgstr "Rótulo no modo de visualização"
 
 msgid "Label in edit layout mode"
-msgstr ""
+msgstr "Rótulo no modo de layout"
 
 msgid "Fields"
-msgstr ""
+msgstr "Campos"
 
 msgid "Help"
-msgstr ""
+msgstr "Ajuda"
 
 msgid "Read-only in layout modes"
-msgstr ""
+msgstr "Somente para leitura em modos de layout"
 
 msgid "Label is i18n"
-msgstr ""
+msgstr "Rótulo é i18n"
 
 msgid "Hidden in layout modes"
-msgstr ""
+msgstr "Modos de layout oculto"
 
 msgid "Hidden if readonly in layout modes"
-msgstr ""
+msgstr "Oculto se somente leitura nos modos layout"
 
 msgid "Hidden if empty"
-msgstr ""
+msgstr "Oculto se vazio"
 
 msgid "Hide the widget if the given TAL expression returns true"
-msgstr ""
+msgstr "Ocultar o widget se a expressão TAL dada retornar verdadeiro"
 
-#, fuzzy
 msgid "CSS class for view"
-msgstr "Password"
+msgstr "Senha"
 
 msgid "Get the widget mode from the given TAL expression"
-msgstr ""
+msgstr "Obter o modo do widget da expressão TAL dada"
 
 msgid "Is vocabulary translated on display"
-msgstr ""
+msgstr "O vocabulário é traduzido na apresentação"
 
 msgid "Deletable"
-msgstr ""
+msgstr "Removível"
 
 msgid ""
 "Accept blank values (defined in vocabulary) when validating if the widget is "
 "required and the vocabulary holds blank values"
 msgstr ""
+"Aceitar valores brancos (definidos no vocabulário) quando validar se o "
+"widget é requerido e o vocabulário contém valores brancos"
 
 msgid "Allowed file suffixes (for example: .html .sxw)"
-msgstr ""
+msgstr "Sufixos de arquivo permitidos (por exemplo: .html .sxw)"
 
 msgid "Display for true"
-msgstr ""
+msgstr "Mostrar para verdadeiro"
 
 msgid "Display for false"
-msgstr ""
+msgstr "Mostrar para falso"
 
 msgid "Use javascript"
-msgstr ""
+msgstr "Usar javascript"
 
 msgid "Widget type"
-msgstr ""
+msgstr "Tipo do widget"
 
 msgid "Display width"
-msgstr ""
+msgstr "Largura de apresentação"
 
 msgid "Enable to resize img to lower size"
-msgstr ""
+msgstr "Habilitar redimensionar imagem para tamanho menor"
 
 msgid "Title of the popup"
-msgstr ""
+msgstr "Título do popup"
 
 msgid "Allow configuration options"
-msgstr ""
+msgstr "Permitir opções de configuração"
 
 msgid "Widget render method"
-msgstr ""
+msgstr "Método de renderização do widget"
 
 msgid "Group id for Javascript switching (if empty widget id is used)"
 msgstr ""
+"Id do grupo para mudança em Javascript (se um id vazio de widget é utilizado)"
 
 msgid "Depends on id for Javascript switching"
-msgstr ""
+msgstr "Depende do id para mudança em Javascript"
 
 msgid "Depends on value for Javascript switching"
-msgstr ""
+msgstr "Depende do valor para mudança em Javascript"
 
 msgid "Depends on value display widget"
-msgstr ""
+msgstr "Depende do valor para mostrar widget"
 
 msgid "Required widget"
-msgstr ""
+msgstr "Widget requerido"
 
 msgid "browse or search"
-msgstr ""
+msgstr "navegar ou buscar"
 
 msgid "browse"
-msgstr ""
+msgstr "navegar"
 
 msgid "search"
-msgstr ""
+msgstr "buscar"
 
 msgid "Enabling the setting of time of the day"
-msgstr ""
+msgstr "Habilitar a definição de hora do dia"
 
 msgid "Value must be in range"
-msgstr ""
+msgstr "Valor deve estar na faixa"
 
 msgid "Range minimum value"
-msgstr ""
+msgstr "Valor mínimo da faixa"
 
 msgid "Range maximum value"
-msgstr ""
+msgstr "Valor máximo da faixa"
 
 msgid "Thousands separator"
-msgstr ""
+msgstr "Separador de milhares"
 
 msgid "Decimal separator"
-msgstr ""
+msgstr "Separador decimal"
 
 msgid "Number of decimals"
-msgstr ""
+msgstr "Número de casas decimais"
 
 msgid "Html for edit"
-msgstr ""
+msgstr "HTML para editar"
 
 msgid "Html for view"
-msgstr ""
+msgstr "HTML para visualização"
 
 msgid "Render format : select menu (default), radio buttons or checkboxes"
 msgstr ""
+"Formato de renderização : menu de seleção (padrão), botão de rádio ou caixas "
+"de seleção (checkboxes)"
 
 msgid "Target for the link"
-msgstr ""
+msgstr "Alvo para o link"
 
-#, fuzzy
 msgid "type_need_title"
-msgstr "Title is required"
+msgstr "Título requerido"
 
-#, fuzzy
 msgid "type_need_label"
-msgstr "Label is required"
+msgstr "Rótulo requerido"
