@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CPSTypeMaker_en\n"
-"POT-Creation-Date: 2005-05-26 14:55default\n"
+"POT-Creation-Date: 2005-06-23 17:27default\n"
 "PO-Revision-Date: 2004-10-04 17:01+0100\n"
 "Last-Translator:  <>\n"
 "Language-Team: Euskara <eu@li.org>\n"
@@ -71,33 +71,33 @@ msgstr "Lerroa Gehitu"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_appendcell"
-msgstr "Lerroa Ezabatu"
+msgstr "Añadir"
 
 #.   <input type="submit" name="autolayout" value="cpstypes_auto" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_auto"
-msgstr "Lerroa Gehitu"
+msgstr "Disposición automática"
 
 #.   <h3>cpstypes_availablefields</h3>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_availablefields"
-msgstr "Trepetak"
+msgstr "Campos disponibles"
 
 #.   <img src="configure.gif" title="cpstypes_configure" />
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 #, fuzzy
 msgid "cpstypes_configure"
-msgstr "Trepetak"
+msgstr "Configurar el componente"
 
 #.   <h1>cpstypes_configuretool</h1>
 #: from ../skins/cps_typemaker/cpstypes_configure.pt
 #, fuzzy
 msgid "cpstypes_configuretool"
-msgstr "Trepetak"
+msgstr "Configuración general de Type Maker"
 
 #.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
@@ -110,13 +110,13 @@ msgstr "Lerroa Ezabatu"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_deletecell"
-msgstr "Lerroa Ezabatu"
+msgstr "Suprimir"
 
 #.   <h1>cpstypes_documentlist</h1>
 #: from ../skins/cps_typemaker/cpstypes_list.pt
 #, fuzzy
 msgid "cpstypes_documentlist"
-msgstr "Trepetak"
+msgstr "Tipos de documentos"
 
 #.   <a type="button" title="cpstypes_editcell" attributes="href
 #.                           python:'cpstypes_widget_properties?type_id='+type_id+'&widget_id='+widget_id;
@@ -134,7 +134,7 @@ msgstr "Trepetak"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_editcell"
-msgstr "Lerroa Ezabatu"
+msgstr "Editar"
 
 #.   <div condition="python:wcount==0" class="typemaker_empty_layout">
 #.             pas de champs pour l'instant
@@ -151,7 +151,7 @@ msgstr "Lerroa Ezabatu"
 #: ../skins/cps_typemaker/cpstypes_lib.pt
 #, fuzzy
 msgid "cpstypes_empty_layout"
-msgstr "Motak Editatu"
+msgstr "No hay campos por el momento"
 
 #.   <th>cpstypes_field_indexed</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
@@ -175,7 +175,7 @@ msgstr "Mota gehitu"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_moveleft"
-msgstr "Lerroa Ezabatu"
+msgstr "Desplazar a la izquierda"
 
 #.   <input title="cpstypes_moveright" type="submit" id="typemakerRightBt" value="" attributes="name
 #.                                             string:right_${nrow}_${ncell};">
@@ -184,13 +184,13 @@ msgstr "Lerroa Ezabatu"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_moveright"
-msgstr "Trepetak"
+msgstr "Desplazar a la derecha"
 
 #.   <span>Preview for </span>
 #: from ../skins/cps_typemaker/cpstypes_layout_preview.pt
 #, fuzzy
 msgid "cpstypes_preview_for"
-msgstr "Ikonoa"
+msgstr "Icono"
 
 #.   <div class="typemakerNoScript">
 #.                Warning : Javascript should be enabled for drag and drop features
@@ -199,21 +199,21 @@ msgstr "Ikonoa"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_scriptdisabled"
-msgstr "Erabilgarria"
+msgstr "Disponible para el uso"
 
 #.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_shrink_cell"
-msgstr "Lerroa Ezabatu"
+msgstr "Reducir la celda"
 
 #.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_split_cell"
-msgstr "Lerroa Ezabatu"
+msgstr "Dividir la celda"
 
 #.   <input title="cpstypes_splitcell" type="submit" id="typemakerSplitBt" value="" attributes="name
 #.                                    python:'split_check_'+str(nrow)+'_'+str(ncell)" />
@@ -221,7 +221,7 @@ msgstr "Lerroa Ezabatu"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_splitcell"
-msgstr "Lerroa Ezabatu"
+msgstr "Cortar"
 
 #.   <th align="right">cpstypes_type_description</th>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
@@ -250,20 +250,20 @@ msgstr "Izenburua"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_widen_cell"
-msgstr "Lerroa Ezabatu"
+msgstr "Alargar la celda"
 
 #.   <div class="label required">cpstypes_widget_label</div>
 #.   <th>cpstypes_widget_label</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 #, fuzzy
 msgid "cpstypes_widget_label"
-msgstr "Izenburua"
+msgstr "Etiquetado"
 
 #.   <th>cpstypes_widget_max_repeats</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 #, fuzzy
 msgid "cpstypes_widget_max_repeats"
-msgstr "Mota"
+msgstr "Número máximo de repeticiones"
 
 #.   <th>cpstypes_widget_required</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
@@ -274,7 +274,7 @@ msgstr "Derrigorrezkoa"
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 #, fuzzy
 msgid "cpstypes_widget_show_in_view"
-msgstr "Tamaina"
+msgstr "Mostrar en modo vista"
 
 #.   <th>cpstypes_widget_size</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
@@ -297,7 +297,7 @@ msgstr "Mota"
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 #, fuzzy
 msgid "cpstypes_widgethasrequiredfields"
-msgstr "Derrigorrezkoa"
+msgstr "Ciertas propiedades del campo son obligatorias"
 
 #.   <h3>cpstypes_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
@@ -315,15 +315,15 @@ msgstr "Motak Editatu"
 
 #, fuzzy
 msgid "cpstypes_edit_layout"
-msgstr "Motak Editatu"
+msgstr "Editar la disposición"
 
 #, fuzzy
 msgid "cpstypes_edit_flexible"
-msgstr "Motak Editatu"
+msgstr "Editar los componentes flexibles"
 
 #, fuzzy
 msgid "cpstypes_edit_flexible_layout"
-msgstr "Trepetak"
+msgstr "Editar la disposición flexible"
 
 msgid "Type management"
 msgstr ""
@@ -360,15 +360,15 @@ msgstr "MultiSelect"
 
 #, fuzzy
 msgid "CPS Lines Widget"
-msgstr "Lotura"
+msgstr "Líneas"
 
 #, fuzzy
 msgid "CPS Ordered List Widget"
-msgstr "Aukeratu"
+msgstr "Lista ordenada"
 
 #, fuzzy
 msgid "CPS Unordered List Widget"
-msgstr "Barne loturak"
+msgstr "Lista desordenada"
 
 msgid "CPS String Widget"
 msgstr "Katea"
@@ -381,11 +381,11 @@ msgstr "E-posta"
 
 #, fuzzy
 msgid "CPS Heading Widget"
-msgstr "Katea"
+msgstr "Título"
 
 #, fuzzy
 msgid "CPS Rich Text Editor Widget"
-msgstr "Testua"
+msgstr "Editor HTML"
 
 msgid "CPS InternalLinks Widget"
 msgstr "Barne loturak"
@@ -407,7 +407,7 @@ msgstr "Pasahitza"
 
 #, fuzzy
 msgid "CPS Int Widget"
-msgstr "Testua"
+msgstr "Entero"
 
 msgid "CPS CheckBox Widget"
 msgstr "CheckBox"
@@ -435,19 +435,19 @@ msgstr "Boolearra"
 
 #, fuzzy
 msgid "CPS Directory Entry Widget"
-msgstr "Katea"
+msgstr "Entrada de anuario"
 
 #, fuzzy
 msgid "CPS Directory MultiEntries Widget"
-msgstr "MultiSelect"
+msgstr "Entradas múltiples de anuario"
 
 #, fuzzy
 msgid "CPS Dummy Widget"
-msgstr "Data"
+msgstr "Maniquí"
 
 #, fuzzy
 msgid "CPS ExtendedSelect Widget"
-msgstr "Aukeratu"
+msgstr "Lista de elecciones extendida"
 
 msgid "CPS Identifier Widget"
 msgstr "Identifikatzailea"
@@ -478,7 +478,7 @@ msgstr "Aldatuta."
 
 #, fuzzy
 msgid "cpstypes_more"
-msgstr "Lerroa Gehitu"
+msgstr "Más..."
 
 msgid "Size"
 msgstr ""
@@ -590,11 +590,11 @@ msgstr ""
 
 #, fuzzy
 msgid "cps_types_auto"
-msgstr "Lerroa Gehitu"
+msgstr "Disposición automática"
 
 #, fuzzy
 msgid "cpstypes_publictype"
-msgstr "Motak Editatu"
+msgstr "Tipo utilizable en el portal"
 
 msgid "Multiple Layouts"
 msgstr ""
@@ -640,23 +640,23 @@ msgstr ""
 
 #, fuzzy
 msgid "cpstypemaker_save"
-msgstr "Mota gehitu"
+msgstr "Registrar la configuración"
 
 #, fuzzy
 msgid "CPS Catalog Navigation Select Widget"
-msgstr "MultiSelect"
+msgstr "Selección en el portal"
 
 #, fuzzy
 msgid "CPS NewsLetter InternalLinks Widgets"
-msgstr "Barne loturak"
+msgstr "Enlace interno"
 
 #, fuzzy
 msgid "CPS Generic Select Widget"
-msgstr "Aukeratu"
+msgstr "Selección con entrada vacía"
 
 #, fuzzy
 msgid "CPS Generic MultiSelect Widget"
-msgstr "MultiSelect"
+msgstr "Selección múltiple con entrada vacía"
 
 msgid "Label in view layout mode"
 msgstr ""
@@ -690,7 +690,7 @@ msgstr ""
 
 #, fuzzy
 msgid "CSS class for view"
-msgstr "Pasahitza"
+msgstr "clase CSS utilizada para la muestra"
 
 msgid "Get the widget mode from the given TAL expression"
 msgstr ""
@@ -795,8 +795,8 @@ msgstr ""
 
 #, fuzzy
 msgid "type_need_title"
-msgstr "Izenburua"
+msgstr "Title is required"
 
 #, fuzzy
 msgid "type_need_label"
-msgstr "Izenburua"
+msgstr "Label is required"

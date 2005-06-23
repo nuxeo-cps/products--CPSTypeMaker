@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CPStypeMaker\n"
-"POT-Creation-Date: 2005-05-26 14:55default\n"
+"POT-Creation-Date: 2005-06-23 17:27default\n"
 "PO-Revision-Date: 2004-09-30 16:28+0100\n"
 "Last-Translator: Fabio Nosari <fabnos@fastwebnet.it>\n"
 "Language-Team: Fabio Nosari <fabnos@fastwebnet.it>\n"

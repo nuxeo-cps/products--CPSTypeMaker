@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CPSTypeMaker\n"
-"POT-Creation-Date: 2005-04-13 17:51default\n"
+"POT-Creation-Date: 2005-06-23 17:27default\n"
 "PO-Revision-Date: 2005-05-18 17:38+0100\n"
 "Last-Translator: Jesús <jesusmartin@lasalle.es>\n"
 "Language-Team: español <jesusmartin@lasalle.es>\n"
@@ -25,7 +25,7 @@ msgstr ""
 #.                                       python:'cpstypes_widget_properties?type_id='+type_id+
 #.                                       '&widget_id='+widgetid">
 #.                               <img src="configure.gif" title="cpstypes_configure" />
-#.
+#.   
 #.                        </a>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "<img src=\"configure.gif\" title=\"cpstypes_configure\" />"
@@ -123,8 +123,8 @@ msgstr "Tipos de documentos"
 #.                           python:'cpstypes_widget_properties?type_id='+type_id+'&widget_id='+widget_id;
 #.                           ">
 #.                               <img src="configure_cell.gif" class="typemakerConfigureBt" />
-#.
-#.
+#.   
+#.   
 #.                           </a>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
@@ -183,11 +183,6 @@ msgstr "Desplazar a la derecha"
 msgid "cpstypes_preview_for"
 msgstr "Icono"
 
-#.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
-#: from ../skins/cps_typemaker/cpstypes_list.pt
-msgid "cpstypes_publictype"
-msgstr "Tipo utilizable en el portal"
-
 #.   <div class="typemakerNoScript">
 #.                Warning : Javascript should be enabled for drag and drop features
 #.            </div>
@@ -216,10 +211,8 @@ msgid "cpstypes_splitcell"
 msgstr "Cortar"
 
 #.   <th align="right">cpstypes_type_description</th>
-#.   <small content="item/description">cpstypes_type_description</small>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
-#: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
 msgstr "Descripción"
 
@@ -233,7 +226,7 @@ msgstr "Icono"
 msgid "cpstypes_type_is_addable"
 msgstr "Disponible para la utilización"
 
-#.   <th align="right">cpstypes_type_title</th>
+#.   <div class="label required">cpstypes_type_title</div>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_type_title"
@@ -245,7 +238,7 @@ msgstr "Título"
 msgid "cpstypes_widen_cell"
 msgstr "Alargar la celda"
 
-#.   <th align="right">cpstypes_widget_label</th>
+#.   <div class="label required">cpstypes_widget_label</div>
 #.   <th>cpstypes_widget_label</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_widget_label"
@@ -455,9 +448,6 @@ msgstr "Modificado"
 msgid "cpstypes_more"
 msgstr "Más..."
 
-msgid "Format for empty list"
-msgstr "Formato para lista vacía"
-
 msgid "Size"
 msgstr "Tamaño"
 
@@ -494,6 +484,9 @@ msgstr "Nombre de la skin"
 msgid "Popup Mode"
 msgstr "Modo de ventana emergente"
 
+msgid "Maximum image size"
+msgstr "Tamaño máximo de la imagen"
+
 msgid "Deletable ?"
 msgstr "¿Se puede borrar?"
 
@@ -520,6 +513,9 @@ msgstr "Largo"
 
 msgid "Height"
 msgstr "Altura"
+
+msgid "Format for empty list"
+msgstr "Formato para lista vacía"
 
 msgid "View format"
 msgstr "Formato de vista"
@@ -562,6 +558,9 @@ msgstr "Formato de muestra"
 
 msgid "cps_types_auto"
 msgstr "Disposición automática"
+
+msgid "cpstypes_publictype"
+msgstr "Tipo utilizable en el portal"
 
 msgid "Multiple Layouts"
 msgstr "El editor de la presentación permite crear varias presentaciones"
@@ -662,8 +661,12 @@ msgstr "Vocabulario traducido en la muestra"
 msgid "Deletable"
 msgstr "Borrable"
 
-msgid "Accept blank values (defined in vocabulary) when validating if the widget is required and the vocabulary holds blank values"
-msgstr "aceptar la elección vacía si el componente es requerido y si la lista contiene valores vacíos"
+msgid ""
+"Accept blank values (defined in vocabulary) when validating if the widget is "
+"required and the vocabulary holds blank values"
+msgstr ""
+"aceptar la elección vacía si el componente es requerido y si la lista "
+"contiene valores vacíos"
 
 msgid "Allowed file suffixes (for example: .html .sxw)"
 msgstr "Extensiones autorizadas (por ejemplo .html, .sxw)"
@@ -682,9 +685,6 @@ msgstr "Tipo de componente"
 
 msgid "Display width"
 msgstr "Mostrar anchura"
-
-msgid "Maximum image size"
-msgstr "Tamaño máximo de la imagen"
 
 msgid "Enable to resize img to lower size"
 msgstr "Autorizar la reducción de la ventana"
@@ -750,8 +750,17 @@ msgid "Html for view"
 msgstr "Código html para la muestra"
 
 msgid "Render format : select menu (default), radio buttons or checkboxes"
-msgstr "Formato de muestra : menu de selección (por defecto), botones o celdas a ocultar"
+msgstr ""
+"Formato de muestra : menu de selección (por defecto), botones o celdas a "
+"ocultar"
 
 msgid "Target for the link"
 msgstr "Objetivo del enlace"
 
+#, fuzzy
+msgid "type_need_title"
+msgstr "Title is required"
+
+#, fuzzy
+msgid "type_need_label"
+msgstr "Label is required"
