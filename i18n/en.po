@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: en\n"
-"POT-Creation-Date: 2005-06-23 17:27default\n"
+"POT-Creation-Date: 2005-06-24 10:34default\n"
 "PO-Revision-Date: 2004-05-19 14:34+0200\n"
 "Last-Translator: emmanuel <epietriga@nuxeo.com>\n"
 "Language-Team: francais <fr@li.org>\n"
@@ -183,6 +183,11 @@ msgstr "Move right"
 msgid "cpstypes_preview_for"
 msgstr "Icon"
 
+#.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+msgid "cpstypes_publictype"
+msgstr "Available type on the portal"
+
 #.   <div class="typemakerNoScript">
 #.                Warning : Javascript should be enabled for drag and drop features
 #.            </div>
@@ -212,8 +217,10 @@ msgid "cpstypes_splitcell"
 msgstr "Split"
 
 #.   <th align="right">cpstypes_type_description</th>
+#.   <small content="item/description">cpstypes_type_description</small>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
+#: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
 msgstr "Description"
 
@@ -559,9 +566,6 @@ msgstr "Render format"
 
 msgid "cps_types_auto"
 msgstr "Automatic layout"
-
-msgid "cpstypes_publictype"
-msgstr "Available type on the portal"
 
 msgid "Multiple Layouts"
 msgstr "Multiple Layouts mode"

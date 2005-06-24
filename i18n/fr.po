@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
-"POT-Creation-Date: 2005-06-23 17:27default\n"
+"POT-Creation-Date: 2005-06-24 10:34default\n"
 "PO-Revision-Date: 2004-05-19 14:33+0200\n"
 "Last-Translator: emmanuel <epietriga@nuxeo.com>\n"
 "Language-Team: francais <fr@li.org>\n"
@@ -183,6 +183,11 @@ msgstr "Déplacer à droite"
 msgid "cpstypes_preview_for"
 msgstr "Icône"
 
+#.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+msgid "cpstypes_publictype"
+msgstr "Type utilisable sur le portail"
+
 #.   <div class="typemakerNoScript">
 #.                Warning : Javascript should be enabled for drag and drop features
 #.            </div>
@@ -212,8 +217,10 @@ msgid "cpstypes_splitcell"
 msgstr "Couper"
 
 #.   <th align="right">cpstypes_type_description</th>
+#.   <small content="item/description">cpstypes_type_description</small>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
+#: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
 msgstr "Description"
 
@@ -559,9 +566,6 @@ msgstr "Format de rendu"
 
 msgid "cps_types_auto"
 msgstr "Disposition automatique"
-
-msgid "cpstypes_publictype"
-msgstr "Type utilisable sur le portail"
 
 msgid "Multiple Layouts"
 msgstr "L'éditeur de layout permet de créer plusieurs layouts"

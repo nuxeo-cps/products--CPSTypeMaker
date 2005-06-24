@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CPStypeMaker\n"
-"POT-Creation-Date: 2005-06-23 17:27default\n"
+"POT-Creation-Date: 2005-06-24 10:34default\n"
 "PO-Revision-Date: 2004-09-30 16:28+0100\n"
 "Last-Translator: Fabio Nosari <fabnos@fastwebnet.it>\n"
 "Language-Team: Fabio Nosari <fabnos@fastwebnet.it>\n"
@@ -194,6 +194,12 @@ msgstr "Déplacer à droite"
 msgid "cpstypes_preview_for"
 msgstr "Icône"
 
+#.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+#, fuzzy
+msgid "cpstypes_publictype"
+msgstr "Type utilisable sur le portail"
+
 #.   <div class="typemakerNoScript">
 #.                Warning : Javascript should be enabled for drag and drop features
 #.            </div>
@@ -224,8 +230,10 @@ msgid "cpstypes_splitcell"
 msgstr "Couper"
 
 #.   <th align="right">cpstypes_type_description</th>
+#.   <small content="item/description">cpstypes_type_description</small>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
+#: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
 msgstr "Descrizione:"
 
@@ -580,10 +588,6 @@ msgstr ""
 #, fuzzy
 msgid "cps_types_auto"
 msgstr "Disposition automatique"
-
-#, fuzzy
-msgid "cpstypes_publictype"
-msgstr "Type utilisable sur le portail"
 
 msgid "Multiple Layouts"
 msgstr ""

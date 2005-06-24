@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de 3.2.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-05-26 14:55default\n"
+"POT-Creation-Date: 2005-06-24 10:33default\n"
 "PO-Revision-Date: 2005-03-16 00:24+0100\n"
 "Last-Translator: Georg Hennemann <georg.hennemann@dhl.com>\n"
 "Language-Team: de <rheinland@dzug.org>\n"
@@ -178,6 +178,11 @@ msgstr "Gehe rechts"
 msgid "cpstypes_preview_for"
 msgstr "Icon"
 
+#.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+msgid "cpstypes_publictype"
+msgstr "Verhandene Typen im Portal"
+
 #.   <div class="typemakerNoScript">
 #.                Warning : Javascript should be enabled for drag and drop features
 #.            </div>
@@ -207,8 +212,10 @@ msgid "cpstypes_splitcell"
 msgstr "Aufteilen"
 
 #.   <th align="right">cpstypes_type_description</th>
+#.   <small content="item/description">cpstypes_type_description</small>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
+#: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
 msgstr "Beschreibung"
 
@@ -554,9 +561,6 @@ msgstr "Rendern Format"
 
 msgid "cps_types_auto"
 msgstr "Automatisches Layout"
-
-msgid "cpstypes_publictype"
-msgstr "Verhandene Typen im Portal"
 
 msgid "Multiple Layouts"
 msgstr "Mehrfache Layouts Modus"

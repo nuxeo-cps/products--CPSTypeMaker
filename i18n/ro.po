@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ro\n"
-"POT-Creation-Date: 2005-06-23 17:27default\n"
+"POT-Creation-Date: 2005-06-24 10:34default\n"
 "PO-Revision-Date: 2005-04-04 17:02+0300\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
@@ -184,6 +184,11 @@ msgstr "Misca spre dreapta"
 msgid "cpstypes_preview_for"
 msgstr "Icône"
 
+#.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+msgid "cpstypes_publictype"
+msgstr "Tip utilizabil in portal"
+
 #.   <div class="typemakerNoScript">
 #.                Warning : Javascript should be enabled for drag and drop features
 #.            </div>
@@ -213,8 +218,10 @@ msgid "cpstypes_splitcell"
 msgstr "Taie"
 
 #.   <th align="right">cpstypes_type_description</th>
+#.   <small content="item/description">cpstypes_type_description</small>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
+#: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
 msgstr "Descriere"
 
@@ -561,9 +568,6 @@ msgstr "Formatul de redare"
 
 msgid "cps_types_auto"
 msgstr "Asezare automatica in pagina"
-
-msgid "cpstypes_publictype"
-msgstr "Tip utilizabil in portal"
 
 msgid "Multiple Layouts"
 msgstr "Editarea layout-ului permite crearea mai multor layout-uri"

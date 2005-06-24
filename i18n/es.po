@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CPSTypeMaker\n"
-"POT-Creation-Date: 2005-06-23 17:27default\n"
+"POT-Creation-Date: 2005-06-24 10:34default\n"
 "PO-Revision-Date: 2005-05-18 17:38+0100\n"
 "Last-Translator: Jesús <jesusmartin@lasalle.es>\n"
 "Language-Team: español <jesusmartin@lasalle.es>\n"
@@ -183,6 +183,11 @@ msgstr "Desplazar a la derecha"
 msgid "cpstypes_preview_for"
 msgstr "Icono"
 
+#.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+msgid "cpstypes_publictype"
+msgstr "Tipo utilizable en el portal"
+
 #.   <div class="typemakerNoScript">
 #.                Warning : Javascript should be enabled for drag and drop features
 #.            </div>
@@ -211,8 +216,10 @@ msgid "cpstypes_splitcell"
 msgstr "Cortar"
 
 #.   <th align="right">cpstypes_type_description</th>
+#.   <small content="item/description">cpstypes_type_description</small>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
+#: ../skins/cps_typemaker/cpstypes_list.pt
 msgid "cpstypes_type_description"
 msgstr "Descripción"
 
@@ -558,9 +565,6 @@ msgstr "Formato de muestra"
 
 msgid "cps_types_auto"
 msgstr "Disposición automática"
-
-msgid "cpstypes_publictype"
-msgstr "Tipo utilizable en el portal"
 
 msgid "Multiple Layouts"
 msgstr "El editor de la presentación permite crear varias presentaciones"
