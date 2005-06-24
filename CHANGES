@@ -8,6 +8,9 @@ Bug fixes:
 ~~~~~~~~~~
 - Taking advantage of the new centralized CPSI18n.tests.translations module.
 - Fixed translation files through the CPSI18n/bin/fix_pos script.
+- Put back previous "multi-valued" value of a i18n:attributes attribute in ZPT
+  now that #611 (Not possible to translate multiple attributes on same HTML
+  element) is fixed.
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 -

@@ -99,7 +99,7 @@
                     <img src="public_type.gif"
                        alt="cpstypes_publictype"
                        title="cpstypes_publictype"
-                       i18n:attributes="alt title"/>
+                       i18n:attributes="alt; title"/>
 
                    </metal:block>
                     <br /><small tal:content="item/description" i18n:translate="">cpstypes_type_description</small>
