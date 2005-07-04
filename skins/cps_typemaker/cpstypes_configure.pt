@@ -32,7 +32,7 @@
       tal:define="tmaker python:here.portal_typemaker;">
 
       <form action="portal_typemaker/manage_pchangeProperties" method="post">
-      <table border="0" cellspacing="5" cellpadding="0">
+      <table cellspacing="5" cellpadding="0">
         <tr tal:repeat="property python:tmaker.getConfigurableProperties()">
           <th align="right" width="50%"><span tal:content="property/label" i18n:translate=""/></th>
           <td width="50%" tal:define="prop_type property/type;

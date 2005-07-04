@@ -47,7 +47,7 @@
                   batch_info python:batches_all[1];
          ">
       <form action="portal_typemaker/manage_deleteDocumentType" method="post">
-      <table width="100%" border="0" cellspacing="0" cellpadding="0"
+      <table width="100%" cellspacing="0" cellpadding="0"
              tal:condition="python:items and batch_info['nb_pages'] > 1">
         <tr class="even">
           <td align="right">
@@ -67,14 +67,14 @@
 
 
      </span>
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <table width="100%" cellspacing="0" cellpadding="0">
         <tr tal:define="col_width python:str(100 / columns)+'%'">
           <td align="left" valign="top"
               tal:attributes="width col_width"
               tal:repeat="batch_items batches">
             <tal:block condition="batch_items"
                        define="choosen_ids python:request.SESSION.get('choosen_ids', []);">
-              <table width="100%" border="0" cellspacing="0" cellpadding="5">
+              <table width="100%" cellspacing="0" cellpadding="5">
                 <tr valign="top" tal:repeat="item batch_items">
 
                   <metal:block tal:define="type_id item/getId">
@@ -115,7 +115,7 @@
 
       <tal:block condition="python:batch_info and batch_info['nb_pages'] > 1">
         <br />
-        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" cellspacing="0" cellpadding="0">
           <tr class="even">
             <td align="center" width="100%">
               <span i18:translate="label_page">Pages</span>:

@@ -118,7 +118,7 @@ string:${here/portal_url}/portal_typemaker/manage_layoutModified?#table"
 
     <td valign="top"  align="center" width="70%">
 
-    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+    <table cellspacing="0" cellpadding="0" width="100%">
       <tr class="row-normal">
         <td align="left" valign="top">
           <div class="form-label">

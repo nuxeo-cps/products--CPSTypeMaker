@@ -11,6 +11,9 @@ Bug fixes:
 - Put back previous "multi-valued" value of a i18n:attributes attribute in ZPT
   now that #611 (Not possible to translate multiple attributes on same HTML
   element) is fixed.
+- Modified some ZPT files so that they are valid XHTML 1.0 Strict. This is a
+  work in progress to fix #773 "Using XHTML 1.0 Strict by default for CPS
+  sites".
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 -
