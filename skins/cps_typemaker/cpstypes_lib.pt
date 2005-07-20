@@ -1,51 +1,49 @@
 <!-- layouts toolbar -->
 <metal:block define-macro="cpstm_layouts">
 <div class="typemakerLayoutList">
-    <table>
-        <tr>
-          <td tal:repeat="i python:range(layout_count)">
-            <div class="typemakerLayoutElement">
-                <div class="typemakerLayoutToolbar"
-                     tal:condition="python:i>0">
-                    <a tal:attributes="href
-               python:here.portal_url()+'/portal_typemaker/manage_delLayout?type_id='+type_id+'&layout_index='+str(i+1)">
-                      <img src="delete_cell.gif"/>
-                    </a>
-
-                </div>
-
-                <div tal:define="selected python:i==int(layout_index)-1">
-                    <metal:block tal:condition="not:selected">
-                        <div class="typemakerLayoutLink">
-                            <a tal:attributes="href
-                                python:base_url+'cpstypes_layout_edit?type_id='+type_id+
-                                '&layout_index='+str(i+1)">
-                                <span i18n:translate="">
-                                cpstypemaker_layoutlabel</span>&#160;
-                                <span tal:replace="python:str(i+1)"/>
-                            </a>
-                        </div>
-                    </metal:block>
-                    <metal:block tal:condition="selected">
-                        <div class="typemakerLayoutLinkSelected">
-                            <span i18n:translate="">
-                                cpstypemaker_layoutlabel</span>&#160;
-                            <span tal:replace="python:str(i+1)"/>
-
-                        </div>
-                    </metal:block>
-                </div>
-
-             </div>
-          </td>
-          <td tal:condition="python:layout_count<layout_max">
-              <a tal:attributes="href
-               python:here.portal_url()+'/portal_typemaker/manage_addLayout?type_id='+type_id">
-                  <img src="add_layout.gif"/>
-              </a>
-          </td>
-        </tr>
-    </table>
+  <table>
+    <tr>
+      <td tal:repeat="i python:range(layout_count)">
+        <div class="typemakerLayoutElement">
+          <div class="typemakerLayoutToolbar"
+               tal:condition="python:i>0">
+            <a tal:attributes="href
+           python:here.portal_url()+'/portal_typemaker/manage_delLayout?type_id='+type_id+'&layout_index='+str(i+1)">
+              <img src="delete_cell.gif"/>
+            </a>
+          </div>
+          <div tal:define="selected python:i==int(layout_index)-1">
+            <metal:block tal:condition="not:selected">
+              <div class="typemakerLayoutLink">
+                <a tal:attributes="href
+                    python:base_url+'cpstypes_layout_edit?type_id='+type_id+
+                    '&layout_index='+str(i+1)">
+                  <span i18n:translate="">
+                    cpstypemaker_layoutlabel
+                  </span>&#160;
+                  <span tal:replace="python:str(i+1)"/>
+                </a>
+              </div>
+            </metal:block>
+            <metal:block tal:condition="selected">
+              <div class="typemakerLayoutLinkSelected">
+                <span i18n:translate="">
+                  cpstypemaker_layoutlabel
+                </span>&#160;
+                <span tal:replace="python:str(i+1)"/>
+              </div>
+            </metal:block>
+          </div>
+       </div>
+      </td>
+      <td tal:condition="python:layout_count<layout_max">
+        <a tal:attributes="href
+         python:here.portal_url()+'/portal_typemaker/manage_addLayout?type_id='+type_id">
+            <img src="add_layout.gif"/>
+        </a>
+      </td>
+    </tr>
+  </table>
 </div>
 </metal:block>
 <!-- ################################################################################### -->
@@ -53,248 +51,226 @@
 <!-- layouts toolbar -->
 <metal:block define-macro="cpstm_flexible_layouts">
 <div class="typemakerLayoutList">
-    <table>
-        <tr>
-          <td tal:repeat="i python:range(layout_count)">
-            <div class="typemakerLayoutElement">
-                <div class="typemakerLayoutToolbar"
-                     tal:condition="python:i>0">
-                    <a tal:attributes="href
-               python:here.portal_url()+'/portal_typemaker/manage_delFlexibleLayout?type_id='+type_id+'&layout_index='+str(i+1)">
-                      <img src="delete_cell.gif"/>
-                    </a>
-
-                </div>
-
-                <div tal:define="selected python:i==int(layout_index)-1">
-                    <metal:block tal:condition="not:selected">
-                        <div class="typemakerLayoutLink">
-                            <a tal:attributes="href
-                                python:base_url+'cpstypes_flexible_layout_edit?type_id='+type_id+
-                                '&layout_index='+str(i+1)">
-                                <span i18n:translate="">
-                                cpstypemaker_layoutlabel</span>&#160;
-                                <span tal:replace="python:str(i+1)"/>
-                            </a>
-                        </div>
-                    </metal:block>
-                    <metal:block tal:condition="selected">
-                        <div class="typemakerLayoutLinkSelected">
-                            <span i18n:translate="">
-                                cpstypemaker_layoutlabel</span>&#160;
-                            <span tal:replace="python:str(i+1)"/>
-
-                        </div>
-                    </metal:block>
-                </div>
-
-             </div>
-          </td>
-          <td tal:condition="python:layout_count<layout_max">
-              <a tal:attributes="href
-               python:here.portal_url()+'/portal_typemaker/manage_addFlexibleLayout?type_id='+type_id">
-                  <img src="add_layout.gif"/>
-              </a>
-          </td>
-        </tr>
-    </table>
+  <table>
+    <tr>
+      <td tal:repeat="i python:range(layout_count)">
+        <div class="typemakerLayoutElement">
+          <div class="typemakerLayoutToolbar"
+               tal:condition="python:i>0">
+            <a tal:attributes="href
+            python:here.portal_url()+'/portal_typemaker/manage_delFlexibleLayout?type_id='+type_id+'&layout_index='+str(i+1)">
+              <img src="delete_cell.gif"/>
+            </a>
+          </div>
+          <div tal:define="selected python:i==int(layout_index)-1">
+            <metal:block tal:condition="not:selected">
+              <div class="typemakerLayoutLink">
+                <a tal:attributes="href
+                    python:base_url+'cpstypes_flexible_layout_edit?type_id='+type_id+
+                    '&layout_index='+str(i+1)">
+                  <span i18n:translate="">
+                    cpstypemaker_layoutlabel
+                  </span>&#160;
+                  <span tal:replace="python:str(i+1)"/>
+                </a>
+              </div>
+            </metal:block>
+            <metal:block tal:condition="selected">
+              <div class="typemakerLayoutLinkSelected">
+                <span i18n:translate="">
+                  cpstypemaker_layoutlabel
+                </span>&#160;
+                <span tal:replace="python:str(i+1)"/>
+              </div>
+            </metal:block>
+          </div>
+        </div>
+      </td>
+      <td tal:condition="python:layout_count<layout_max">
+        <a tal:attributes="href
+         python:here.portal_url()+'/portal_typemaker/manage_addFlexibleLayout?type_id='+type_id">
+          <img src="add_layout.gif"/>
+        </a>
+      </td>
+    </tr>
+  </table>
 </div>
 </metal:block>
 <!-- ################################################################################### -->
 
 <!-- a select widget for adding widget -->
 <metal:block define-macro="cpstm_addwidget">
-    <h3 i18n:translate="">cpstypes_add_new_widget</h3>
-      <div class="typemakerPadded">
-          <div class="typemakerSpaced">
-            <table>
-              <tr>
-                <th align="right">
-                  <div class="label required" i18n:translate="">cpstypes_widget_label</div>
-                </th>
-                <td>
-                  <div><input type="text" name="new_widget_title" /></div>
-                </td>
-              </tr>
-              <tr>
-                <th align="right" i18n:translate="">cpstypes_widget_type</th>
-                <td>
-                    <select name="new_widget_type">
-                        <tal:block tal:repeat="widget widgets">
-                            <option tal:attributes="value widget/id"
-                                    tal:define="metatype widget/meta_type"
-                                    tal:content="python:test(
-                                    metatype.endswith(' Type'),metatype[:len(metatype)-5],metatype)"
-                                    i18n:translate=""/>
-                        </tal:block>
-                    </select>
-                </td>
-              </tr>
-            </table>
-          </div>
-      </div>
-      <div style="margin-bottom: 8px;margin-top: 8px">
-        <input type="submit" name="action_add" value="button_add"
-            i18n:attributes="value" />
-      </div>
+  <h3 i18n:translate="">cpstypes_add_new_widget</h3>
+  <div class="typemakerPadded">
+    <div class="typemakerSpaced">
+      <table>
+        <tr>
+          <th align="right">
+            <div class="label required" i18n:translate="">cpstypes_widget_label</div>
+          </th>
+          <td>
+            <div><input type="text" name="new_widget_title" /></div>
+          </td>
+        </tr>
+        <tr>
+          <th align="right" i18n:translate="">cpstypes_widget_type</th>
+          <td>
+            <select name="new_widget_type">
+              <tal:block tal:repeat="widget widgets">
+                <option tal:attributes="value widget/id"
+                        tal:define="metatype widget/meta_type"
+                        tal:content="python:test(
+                        metatype.endswith(' Type'),metatype[:len(metatype)-5],metatype)"
+                        i18n:translate=""/>
+              </tal:block>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div style="margin-bottom: 8px;margin-top: 8px">
+    <input type="submit" name="action_add" value="button_add"
+           i18n:attributes="value" />
+  </div>
 </metal:block>
 
 <!-- ################################################################################### -->
 
 <!-- type properties -->
 <metal:block define-macro="cpstm_mainprops">
+  <input type="hidden" name="type_id" tal:attributes="value type_id" />
 
-      <input type="hidden" name="type_id" tal:attributes="value type_id" />
-      <table tal:condition="typeob">
+  <table tal:condition="typeob">
+    <tr>
+      <th align='right'>
+        <div class="label required" i18n:translate="">cpstypes_type_title</div>
+      </th>
+      <td><input type="text" size="50" name="title" tal:attributes="value
+            typeob/title" />
+      </td>
+    </tr>
+    <tr>
+      <th align='right' i18n:translate="">cpstypes_type_description</th>
+      <td><textarea cols="48" rows="3" name="description"
+                    tal:content="typeob/description" /></td>
+    </tr>
+    <tr>
+      <th align='right' i18n:translate="">cpstypes_type_is_addable</th>
+      <td><input type="checkbox" name="is_addable"
+            tal:attributes="checked
+            python:here.portal_typemaker.isAddable(type_id)" /></td>
+    </tr>
+    <tr>
+      <th align='right' i18n:translate="">cpstypes_type_icon</th>
+      <td>
+        <img tal:attributes="src string:${here/portal_url}/${typeob/content_icon}"
+             alt="document type icon" />
+        <input type="file" name="new_icon" />
+      </td>
+    </tr>
+  </table>
 
-        <tr>
-          <th align='right'>
-            <div class="label required" i18n:translate="">cpstypes_type_title</div>
-          </th>
-          <td><input type="text" size="50" name="title" tal:attributes="value
-                typeob/title" />
-          </td>
-        </tr>
-        <tr>
-          <th align='right' i18n:translate="">cpstypes_type_description</th>
-          <td><textarea cols="48" rows="3" name="description"
-                        tal:content="typeob/description" /></td>
-        </tr>
-        <tr>
-          <th align='right' i18n:translate="">cpstypes_type_is_addable</th>
-          <td><input type="checkbox" name="is_addable"
-                tal:attributes="checked
-                python:here.portal_typemaker.isAddable(type_id)" /></td>
-        </tr>
-        <tr>
-          <th align='right' i18n:translate="">cpstypes_type_icon</th>
-          <td>
-            <img tal:attributes="src string:${here/portal_url}/${typeob/content_icon}"
-                 alt="document type icon" />
-            <input type="file" name="new_icon" />
-          </td>
-        </tr>
-      </table>
-      <div class="typemakerSpaced"></div>
+  <div class="typemakerSpaced"></div>
 
-      <div class="typemakerButtons">
-
-        <input type="submit" name="action_save" value="button_save"
-            i18n:attributes="value" />
-
-      </div>
+  <div class="typemakerButtons">
+    <input type="submit" name="action_save" value="button_save"
+           i18n:attributes="value" />
+  </div>
 </metal:block>
 <!-- ################################################################################### -->
 
 <!-- list of widgets -->
 <metal:block define-macro="cpstm_comps">
-      <metal:block tal:define="widgets layoutob/objectValues;
-                               wcount python:len(widgets)">
-      <div class="typemakerSpaced"></div>
+  <metal:block tal:define="widgets layoutob/objectValues;
+                           wcount python:len(widgets)">
+    <div class="typemakerSpaced"></div>
 
-      <div tal:condition="python:wcount==0"
-          class="typemakerEmptyLayout"
-           i18n:translate="cpstypes_empty_layout">
+    <div tal:condition="python:wcount==0"
+         class="typemakerEmptyLayout"
+         i18n:translate="cpstypes_empty_layout">
       pas de champs pour l'instant
-      </div>
+    </div>
 
-      <table tal:condition="python:wcount>0">
+    <table tal:condition="python:wcount>0">
+      <tr align="left">
+        <th></th>
+        <th i18n:translate="">cpstypes_widget_label</th>
+        <th i18n:translate="">cpstypes_widget_type</th>
+        <th i18n:translate="">cpstypes_widget_required</th>
+        <th i18n:translate="">cpstypes_widget_show_in_view</th>
+        <th i18n:translate="">cpstypes_field_indexed</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr tal:repeat="widget widgets">
+        <tal:block define="widgetname widget/getWidgetId;
+                           widgetid widget/getId;
+                           widget_metatype widget/meta_type;
+                           rfields python:tmakertool.hasRequiredFields(widget);
+                           ">
+          <td>
+            <input type="hidden" name="widgetinfo.id:records"
+                                tal:attributes="value widgetid"/>
+            <input type="hidden" name="widgetinfo.name:records"
+                                tal:attributes="value widgetname"/>
+            <img tal:condition="rfields"
+              src="required_fields.gif"
+              title="cpstypes_widgethasrequiredfields"
+              i18n:attributes="title" />
+          </td>
+          <td>
+            <input type="text" size="20" name="widgetinfo.title:records"
+                tal:attributes="value widget/label_edit" i18n:translate="" />
+          </td>
+          <td tal:content="widget/meta_type" i18n:translate="" />
+          <td align="center">
+            <input type="checkbox" name="widgetinfo.required:records"
+                   tal:attributes="checked widget/is_required" />
+          </td>
+          <td align="center">
+            <input type="checkbox" name="widgetinfo.show_in_view:records"
+              tal:attributes="checked python:'view' not in widget.hidden_layout_modes" />
+          </td>
+          <td align="center">
+            <input type="checkbox" name="widgetinfo.indexed:records"
+              tal:attributes="checked
+                python:here.portal_typemaker.getFieldId(type_id, widget).is_searchabletext"
+            />
+          </td>
+          <td>
+            <a tal:attributes="href
+                 python:'cpstypes_widget_properties?type_id='+type_id+'&widget_id='+widgetid">
+              <img src="configure.gif"
+                   i18n:attributes="title"
+                   title="cpstypes_configure"/>
+             </a>
+          </td>
+          <td>
+            <a tal:attributes="href
+            python:here.portal_url()+'/portal_typemaker/manage_delWidget?type_id='+type_id+
+                            '&widget_id='+widgetid+'&widget_name='+widgetname">
+              <img src="button_delete.gif"
+                   i18n:attributes="title"
+                   title="action_delete"/>
+            </a>
+          </td>
+        </tal:block>
+       </tr>
+    </table>
 
-        <tr align="left">
-          <th></th>
-          <th i18n:translate="">cpstypes_widget_label</th>
-          <th i18n:translate="">cpstypes_widget_type</th>
-          <th i18n:translate="">cpstypes_widget_required</th>
-          <th i18n:translate="">cpstypes_widget_show_in_view</th>
-          <th i18n:translate="">cpstypes_field_indexed</th>
-          <th></th>
-          <th></th>
-        </tr>
+    <div class="typemakerSpaced"></div>
 
-        <tr tal:repeat="widget widgets">
-            <tal:block define="widgetname widget/getWidgetId;
-                               widgetid widget/getId;
-                               widget_metatype widget/meta_type;
-                               rfields python:tmakertool.hasRequiredFields(widget);
-                               ">
+    <div class="typemakerButtons">
+      <input tal:condition="python:nothing and wcount>0"
+          type="submit" name="action_delete" value="button_delete"
+          i18n:attributes="value" />
+      <input tal:condition="python:wcount>0"
+          type="submit" name="action_save" value="button_save"
+          i18n:attributes="value" />
+      <input type="hidden" name="layout_id"
+          tal:attributes="value type_id" />
+    </div>
 
-                <input type="hidden" name="widgetinfo.id:records"
-                                    tal:attributes="value widgetid"/>
-                <input type="hidden" name="widgetinfo.name:records"
-                                    tal:attributes="value widgetname"/>
-
-                <td>
-                <img
-                    tal:condition="rfields" src="required_fields.gif"
-                    i18n:attributes="title"
-                    title="cpstypes_widgethasrequiredfields"/>
-
-                </td>
-                <td>
-                    <input type="text" size="20" name="widgetinfo.title:records"
-                        tal:attributes="value widget/label_edit" i18n:translate="" />
-                </td>
-                <td tal:content="widget/meta_type"
-                  i18n:translate=""/>
-
-                <td align="center">
-                    <input type="checkbox" name="widgetinfo.required:records"
-                        tal:attributes="checked widget/is_required" />
-                </td>
-                <td align="center">
-                    <input type="checkbox" name="widgetinfo.show_in_view:records"
-                    tal:attributes="checked python:'view' not in widget.hidden_layout_modes" />
-                </td>
-                <td align="center">
-                    <input type="checkbox" name="widgetinfo.indexed:records"
-                        tal:attributes="checked
-                        python:here.portal_typemaker.getFieldId(type_id, widget).is_searchabletext"
-                     />
-                </td>
-                <td>
-                    <a i18n:translate="" tal:attributes="href
-                                    python:'cpstypes_widget_properties?type_id='+type_id+
-                                    '&widget_id='+widgetid" >
-                            <img
-                                src="configure.gif"
-                                i18n:attributes="title"
-                                title="cpstypes_configure"/>
-
-                     </a>
-                </td>
-
-
-                <td>
-                    <a tal:attributes="href
-                    python:here.portal_url()+'/portal_typemaker/manage_delWidget?type_id='+type_id+
-                                    '&widget_id='+widgetid+'&widget_name='+widgetname">
-
-                    <img src="button_delete.gif"
-                         i18n:attributes="title"
-                         title="action_delete"/>
-
-                    </a>
-
-                </td>
-
-
-            </tal:block>
-         </tr>
-      </table>
-
-      <div class="typemakerSpaced"></div>
-
-      <div class="typemakerButtons">
-        <!--<input type="submit" name="action_delete" value="button_delete"
-            i18n:attributes="value" tal:condition="python:wcount>0"/>-->
-        <input type="submit" name="action_save" value="button_save"
-            i18n:attributes="value" tal:condition="python:wcount>0"/>
-        <input type="hidden" name="layout_id" tal:attributes="value type_id" />
-      </div>
-
-      </metal:block>
+  </metal:block>
 </metal:block>
-
-
-
-

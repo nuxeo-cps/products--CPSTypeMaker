@@ -15,41 +15,42 @@
 
 <metal:block use-macro="here/main_template/macros/master">
   <metal:block fill-slot="css_slot">
-    <tal:block define="dt_title python:here.translation_service('Document Types');
-                       dummy python:request.set('breadcrumb_set',
-                        [{
-                          'id': 'types',
-                          'url': here.portal_url()+'/cpstypes_list',
-                          'longtitle': dt_title,
-                          'title': dt_title,
-                         },
-                         {
-                          'id': 'types',
-                          'url': here.portal_url()+'/cpstypes_edit?type_id='+type_id,
-                          'longtitle': title,
-                          'title': title,
-                        }]);
-                       actionlist python:[
-                         {'id':'edit_type',
-                          'url':base_url+'cpstypes_edit?type_id='+type_id,
-                          'name': 'cpstypes_edit_type',
-                          'category': 'object'},
-                         {'id':'edit_layout',
-                          'url':base_url+'cpstypes_layout_edit?type_id='+type_id,
-                          'name': 'cpstypes_edit_layout',
-                          'category': 'object'}];
-                       flexible_action python:test(flexible_enabled,[
-                         {'id':'edit_flexible',
-                          'url':base_url+'cpstypes_edit_flexible?type_id='+type_id,
-                          'name': 'cpstypes_edit_flexible',
-                          'category': 'object'},
-                         {'id':'edit_flexible_layout',
-                          'url':base_url+'cpstypes_flexible_layout_edit?type_id='+type_id,
-                          'name': 'cpstypes_edit_flexible_layout',
-                          'category': 'object'}],[]);
-                       actionlist python:typeob and actionlist + flexible_action or actionlist;
-                       actions python:actions.update({'object': actionlist});
-       " />
+    <tal:block define="
+      dt_title python:here.translation_service('Document Types');
+      dummy python:request.set('breadcrumb_set',
+       [{
+         'id': 'types',
+         'url': here.portal_url()+'/cpstypes_list',
+         'longtitle': dt_title,
+         'title': dt_title,
+        },
+        {
+         'id': 'types',
+         'url': here.portal_url()+'/cpstypes_edit?type_id='+type_id,
+         'longtitle': title,
+         'title': title,
+       }]);
+      actionlist python:[
+        {'id':'edit_type',
+         'url':base_url+'cpstypes_edit?type_id='+type_id,
+         'name': 'cpstypes_edit_type',
+         'category': 'object'},
+        {'id':'edit_layout',
+         'url':base_url+'cpstypes_layout_edit?type_id='+type_id,
+         'name': 'cpstypes_edit_layout',
+         'category': 'object'}];
+      flexible_action python:test(flexible_enabled,[
+        {'id':'edit_flexible',
+         'url':base_url+'cpstypes_edit_flexible?type_id='+type_id,
+         'name': 'cpstypes_edit_flexible',
+         'category': 'object'},
+        {'id':'edit_flexible_layout',
+         'url':base_url+'cpstypes_flexible_layout_edit?type_id='+type_id,
+         'name': 'cpstypes_edit_flexible_layout',
+         'category': 'object'}],[]);
+      actionlist python:typeob and actionlist + flexible_action or actionlist;
+      actions python:actions.update({'object': actionlist});
+      " />
     <tal:block condition="delete_allowed">
       <tal:block define="global actions python:
 actions['object'].append({'id':'delete_entry',
@@ -62,8 +63,8 @@ actions['object'].append({'id':'delete_entry',
     <link rel="Stylesheet" type="text/css" href=""
       tal:attributes="href string:${base_url}document.css" />
 
-      <link rel="Stylesheet" type="text/css" href=""
-        tal:attributes="href string:${base_url}cpstypes_layout.css" />
+    <link rel="Stylesheet" type="text/css" href=""
+      tal:attributes="href string:${base_url}cpstypes_layout.css" />
 
   </metal:block>
 
@@ -75,17 +76,14 @@ actions['object'].append({'id':'delete_entry',
     <form method="post" tal:attributes="action form_action"
                         enctype="multipart/form-data">
 
-        <a name="main"></a>
+      <a name="main"></a>
+      <metal:block use-macro="here/cpstypes_lib/macros/cpstm_mainprops"/>
 
-        <metal:block use-macro="here/cpstypes_lib/macros/cpstm_mainprops"/>
-
-        <a name="components"></a>
-        <h3 i18n:translate="">cpstypes_widgets</h3>
-        <metal:block use-macro="here/cpstypes_lib/macros/cpstm_comps"/>
-
-        <metal:block use-macro="here/cpstypes_lib/macros/cpstm_addwidget"/>
+      <a name="components"></a>
+      <h3 i18n:translate="">cpstypes_widgets</h3>
+      <metal:block use-macro="here/cpstypes_lib/macros/cpstm_comps"/>
+      <metal:block use-macro="here/cpstypes_lib/macros/cpstm_addwidget"/>
     </form>
-
   </metal:block>
 </metal:block>
 </tal:block>

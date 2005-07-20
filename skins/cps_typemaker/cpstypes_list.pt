@@ -102,7 +102,12 @@
                        i18n:attributes="alt; title"/>
 
                    </metal:block>
-                    <br /><small tal:content="item/description" i18n:translate="">cpstypes_type_description</small>
+                    <br />
+                    <small tal:condition="item/description"
+                      tal:content="item/description"
+                      i18n:translate="">
+                      cpstypes_type_description
+                    </small>
                   </td>
 
                   </metal:block>
@@ -143,18 +148,17 @@
       </tal:block>
 
       <div class="typemaker_up_spaced">
-       <span tal:replace="nothing">
-
-       <input type="button" value="Tout sélectionner"
-                   class="context"
-                   onclick="toggleSelect(this, 'Tout sélectionner', 'Tout désélectionner')" />
-       </span>
-
-      <input tal:condition="python:items"
-                  type="submit" name="type_delete"
-                   value="Supprimer" class="destructive"
-                   onclick="return window.confirm('Êtes-vous certain ?')" />
-
+        <input tal:condition="python:items"
+               type="button" value="button_select_all" class="context"
+               onclick="someJavaScriptFunctionThatWillBeReplaced"
+               i18n:attributes="value"
+               tal:attributes="onclick python:'toggleSelect(this, \'%s\', \'%s\')'
+                               % (cpsmcat('button_select_all'), cpsmcat('button_deselect_all'))" />
+        <input tal:condition="python:items"
+          type="submit" value="button_delete"
+          name="type_delete" class="destructive" i18n:attributes="value"
+          tal:attributes="onclick python:'return window.confirm(\'%s\')' %
+                         (cpsmcat('description_confirm_delete'), )" />
       </div>
       </form>
     </metal:block>
