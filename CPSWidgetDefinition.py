@@ -33,7 +33,7 @@ from Products.CMFCore.Expression import Expression
 from Products.CMFCore.Expression import getEngine
 from Products.PageTemplates.TALES import CompilerError
 from Products.CMFCore.utils import getToolByName
-from Products.CPSSchemas.PropertiesPostProcessor import PropertiesPostProcessor
+from Products.CPSUtil.PropertiesPostProcessor import PropertiesPostProcessor
 # from Products.CPSSchemas.StorageAdapter import AttributeStorageAdapter
 from Products.CPSSchemas.StorageAdapter import BaseStorageAdapter
 from Products.CPSSchemas.DataModel import DataModel

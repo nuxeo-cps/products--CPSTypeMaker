@@ -36,7 +36,7 @@ from Products.CPSSchemas.DataStructure import DataStructure
 from Products.CPSSchemas.DataModel import DataModel
 from Products.CPSCore.CPSBase import CPSBaseFolder
 from Products.CPSCore.ProxyBase import ProxyFolder
-from Products.CPSSchemas.PropertiesPostProcessor import PropertiesPostProcessor
+from Products.CPSUtil.PropertiesPostProcessor import PropertiesPostProcessor
 from Products.CPSSchemas.WidgetTypesTool import WidgetTypeRegistry
 import ExtensionClass
 from Products.CMFCore.permissions import ViewManagementScreens
