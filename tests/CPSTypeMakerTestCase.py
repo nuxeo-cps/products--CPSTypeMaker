@@ -36,7 +36,7 @@ class CPSTypeMakerTestsInstaller(CPSTestCase.CPSInstaller):
     def setupTypeMaker(self, portal_id):
         portal = getattr(self.app, portal_id)
         factory = portal.manage_addProduct['CPSTypeMaker']
-        factory.addCPSTypeMakerTool(portal_id)
+        factory.addCPSTypeMakerTool()
 
 
 

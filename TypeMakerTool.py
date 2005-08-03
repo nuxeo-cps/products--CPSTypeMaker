@@ -1558,14 +1558,12 @@ if not hasattr(CPSSelectWidget, '_getVocabulary'):
 
 ########################################################################################
 
-def addCPSTypeMakerTool(container, id=None, REQUEST=None, **kw):
-    """Add a CPS MemberData Tool."""
-    if id is None:
-        id = container.computeId()
+def addCPSTypeMakerTool(container, REQUEST=None, **kw):
+    """Add a CPS TypeMaker Tool."""
     container = container.this() # For FactoryDispatcher.
-
     t = TypeMakerTool()
-    container._setObject(t.getId(), t)
+    id = t.getId()
+    container._setObject(id, t)
     if REQUEST is not None:
-        t = container._getOb(t.getId())
+        t = container._getOb(id)
         REQUEST.RESPONSE.redirect(t.absolute_url()+'/manage_overview')
