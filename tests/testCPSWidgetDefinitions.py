@@ -27,14 +27,12 @@ from Products.CPSSchemas.BasicWidgets import CPSStringWidget
 class TestCPSWidgetDefinitions(CPSTypeMakerTestCase):
 
     def testEmptyTool(self):
-        """ simple instanciation
-        """
+        # simple instanciation
         ob = CPSWidgetRenderer()
         return ob
 
     def test_canChange(self):
-        """ trying widget fields black list
-        """
+        # trying widget fields black list
         tm = self.portal.portal_typemaker
         tm.widget_filter_list = ['Fields', ]
         wrenderer = tm.widget_renderer
