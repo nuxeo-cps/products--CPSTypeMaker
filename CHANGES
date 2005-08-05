@@ -1,20 +1,12 @@
 Requires:
 ~~~~~~~~~
-- CPSUtil > 0.5.3
+-
 New features:
 ~~~~~~~~~~~~~
 -
 Bug fixes:
 ~~~~~~~~~~
-- Taking advantage of the new centralized CPSI18n.tests.translations module.
-- Fixed translation files through the CPSI18n/bin/fix_pos script.
-- Put back previous "multi-valued" value of a i18n:attributes attribute in ZPT
-  now that #611 (Not possible to translate multiple attributes on same HTML
-  element) is fixed.
-- Modified some ZPT files so that they are valid XHTML 1.0 Strict. This is a
-  work in progress to fix #773 "Using XHTML 1.0 Strict by default for CPS
-  sites".
-- #751: cannot install with CMFQuickInstaller.
+-
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
-- Cleaned some ZPT code
+-
