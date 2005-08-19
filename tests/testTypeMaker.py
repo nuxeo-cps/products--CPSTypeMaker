@@ -40,8 +40,6 @@ methods that should be unit tested here :
     listFlexibleWidgetTypes
     getWidgetRenderer
     getWidgetType
-
-
 """
 import unittest, os.path
 
@@ -178,7 +176,7 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
             type_layout = type_layouts[type_name + '_1']
 
             wid = 'Totoro ' + str(id)
-            wid = 'w__'  + generateId(wid)
+            wid = 'w__'  + generateId(wid, lower=False)
 
             if len(type_layout.objectItems()) > 0:
                 found = False
