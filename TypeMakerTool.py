@@ -112,7 +112,8 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
         'is_required']
 
     type_filter_list = ['Dummy Widget', 'Search Widget', 'Link Widget',
-        'Text Image Widget', 'Text Widget', 'Range List Widget', 'File Widget']
+                        'Text Image Widget', 'Text Widget', 'Range List Widget',
+                        'File Widget', 'CPS Portlet Custom Widget']
 
     multiple_layouts = False
     flexible_aware = False
