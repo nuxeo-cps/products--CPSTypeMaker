@@ -78,7 +78,7 @@ msgstr "Adauga celula"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_auto"
-msgstr "Disposition automatique"
+msgstr "Dispunere automata"
 
 #.   <h3>cpstypes_availablefields</h3>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
@@ -145,7 +145,7 @@ msgstr "Editeaza celula"
 #: ../skins/cps_typemaker/cpstypes_lib.pt
 #, fuzzy
 msgid "cpstypes_empty_layout"
-msgstr "Pas de champs pour l'instant."
+msgstr "Momentan nu exista campuri."
 
 #.   <th>cpstypes_field_indexed</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
@@ -182,7 +182,7 @@ msgstr "Misca spre dreapta"
 #: from ../skins/cps_typemaker/cpstypes_layout_preview.pt
 #, fuzzy
 msgid "cpstypes_preview_for"
-msgstr "Icône"
+msgstr "Previzualizare"
 
 #.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
 #: from ../skins/cps_typemaker/cpstypes_list.pt
@@ -196,7 +196,7 @@ msgstr "Tip utilizabil in portal"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_scriptdisabled"
-msgstr "Disponible pour utilisation"
+msgstr "Disponibil pentru utilizare"
 
 #.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
@@ -293,7 +293,7 @@ msgstr "Unele proprietati ale campului sunt obligatorii"
 #.   <h3>cpstypes_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widgets"
-msgstr "Widgets"
+msgstr "Widget-uri"
 
 msgid "cpstypes_add_type"
 msgstr "Adauga un nou tip"
@@ -312,7 +312,7 @@ msgstr "Editeaza widget-urile flexibile"
 
 #, fuzzy
 msgid "cpstypes_edit_flexible_layout"
-msgstr "Editer la disposition flexible"
+msgstr "Editeaza dispunerea flexibila"
 
 msgid "Type management"
 msgstr "Administreaza tipurile de documente"
@@ -477,7 +477,7 @@ msgid "Vocabulary"
 msgstr "Vocabular"
 
 msgid "Is vocabulary translated on display ?"
-msgstr "Este vocabularul tradus la afisare ?"
+msgstr "Vocabularul este tradus la afisare ?"
 
 msgid "Directory"
 msgstr "Director"
@@ -507,13 +507,13 @@ msgid "Display Height"
 msgstr "Afiseaza inaltimea"
 
 msgid "Can resize to lower size ?"
-msgstr "Poti sa redimensionezi la o marime mai mica ?"
+msgstr "Poti sa redimensionezi la o marime mai mica?"
 
 msgid "Render position"
 msgstr "Pozitia redarii"
 
 msgid "What is user configurable, require extra fields"
-msgstr "Ceea ce este configurabil pentru utilizator, necesita campuri in plus"
+msgstr "Ceea ce este configurabil pentru utilizator necesita campuri in plus"
 
 msgid "Maximum input width"
 msgstr "Largimea maxima de introdus"
@@ -609,7 +609,7 @@ msgid "Process after type publish state changes"
 msgstr "Script sau expresie de executat dupa schimbarea starii unui tip"
 
 msgid "document types deleted"
-msgstr "Tip(uri) de document(e) sterse"
+msgstr "Tip(uri) de document(e) sters(e)"
 
 msgid "cpstypemaker_save"
 msgstr "Salveaza configurarea"
@@ -667,13 +667,13 @@ msgid "Is vocabulary translated on display"
 msgstr "Vocabular tradus la afisare"
 
 msgid "Deletable"
-msgstr "Care poate fi sters"
+msgstr "Poate fi sters"
 
 msgid ""
 "Accept blank values (defined in vocabulary) when validating if the widget is "
 "required and the vocabulary holds blank values"
 msgstr ""
-"Accepta alegerea vida daca componenta este obligatorie, si daca lista "
+"Accepta alegerea vida daca componenta este obligatorie si daca lista "
 "accepta valori vide "
 
 msgid "Allowed file suffixes (for example: .html .sxw)"
@@ -707,10 +707,10 @@ msgid "Widget render method"
 msgstr "Metoda de redare a widget-ului"
 
 msgid "Group id for Javascript switching (if empty widget id is used)"
-msgstr "id-ul grupului pentru Javascript ( daca id-ul widget-ului este vid)"
+msgstr "ID-ul grupului pentru Javascript ( daca id-ul widget-ului este vid)"
 
 msgid "Depends on id for Javascript switching"
-msgstr "Depinde de id-ul pentru Javascript"
+msgstr "Depinde de ID-ul pentru Javascript"
 
 msgid "Depends on value for Javascript switching"
 msgstr "Depinde de valorile pentru Javascript"
@@ -759,15 +759,15 @@ msgstr "Code html pentru editare"
 
 msgid "Render format : select menu (default), radio buttons or checkboxes"
 msgstr ""
-"Formatul afisarii : meniu de selectare (initial), butoane sau check-box-uri"
+"Formatul afisarii: meniu de selectare (initial), butoane sau check-box-uri"
 
 msgid "Target for the link"
 msgstr "Tinta legaturii"
 
 #, fuzzy
 msgid "type_need_title"
-msgstr "Le champ titre est manquant"
+msgstr "Campul titlu lipseste"
 
 #, fuzzy
 msgid "type_need_label"
-msgstr "Le champ libellé est manquant"
+msgstr "Campul eticheta lipseste"
