@@ -125,7 +125,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
     metadata_layout = 'metadata'
     metadata_schemas = ['metadata', 'common']
     immediate_view = 'cpsdocument_view'
-    hidden_layout_modes = []
+    hidden_layout_modes = ()
     max_rows = 4
 
     process_after_t = ''
@@ -1328,10 +1328,10 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
             'size_max': '0'
             }
         if current.get('show_in_view'):
-            kw['hidden_layout_modes'] = self.hidden_layout_modes
+            kw['hidden_layout_modes'] = tuple(self.hidden_layout_modes)
         else:
-            kw['hidden_layout_modes'] = ['view']+\
-                self.hidden_layout_modes
+            kw['hidden_layout_modes'] = ('view',) + \
+                tuple(self.hidden_layout_modes)
 
         widget.manage_changeProperties(**kw)
         # Update indexing:
