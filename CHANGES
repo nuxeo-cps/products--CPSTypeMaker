@@ -6,8 +6,7 @@ New features:
 -
 Bug fixes:
 ~~~~~~~~~~
-- #930: In certain cases you got an error in mixing tuples and list. Now I make
-  sure at every update that it's always tuples.
+-
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 -
