@@ -78,9 +78,6 @@ def install(self):
                 visible=1)
 
 
-    # creating widget type objects
-    #installer.verifyWidgetDefinitions()
-
     # Set up the custom metadata schema
     installer.verifySchemas({'custom_metadata': {}})
 

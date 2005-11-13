@@ -41,7 +41,7 @@ class TestCPSWidgetDefinitions(CPSTypeMakerTestCase):
 
     def test_render(self):
         # testing rendering (for bug #601)
-        widget = CPSStringWidget('my', 'String Widget')
+        widget = CPSStringWidget('my')
         widget = widget.__of__(self.portal)
         ob = CPSWidgetRenderer()
         ob = ob.__of__(self.portal)

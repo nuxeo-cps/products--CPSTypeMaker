@@ -44,6 +44,7 @@ from Products.CPSSchemas.Field import WriteAccessError
 from Products.CPSSchemas.Schema import CPSSchema
 from Products.CPSSchemas.Layout import CPSLayout
 from Products.CPSSchemas.Vocabulary import CPSVocabulary
+from Products.CPSSchemas.Widget import widgetRegistry
 
 from Products.CMFCore.permissions import View
 from Products.CMFCore.utils import getToolByName
@@ -106,8 +107,6 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
             if not widget:
                 return None
 
-            wtool = getToolByName(self, 'portal_widget_types')
-
             layout_id = widget.getId() + '_layout'
             layout = CPSLayout(layout_id)
 
@@ -142,9 +141,9 @@ class CPSWidgetRenderer(PropertiesPostProcessor, UniqueObject, Folder):
                         rows.append([element,])
 
                         # adding widget instance to layout
-                        widget_type = wtool[widget_type]
+                        class_ = widgetRegistry.getClass(widget_type)
 
-                        new_widget = widget_type.makeInstance(p_id)
+                        new_widget = class_(p_id)
 
                         new_widget.is_required = p_required
                         new_widget.is_i18n = 1

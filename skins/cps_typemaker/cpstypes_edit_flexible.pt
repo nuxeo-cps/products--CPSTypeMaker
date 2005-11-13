@@ -14,8 +14,8 @@
   layoutob python:here.portal_layouts[layoutid];
   widgetinfo layoutob/getFlexibleWidgetsDict;
   wttool here/portal_widget_types;
-  widgets python:tmakertool.listFlexibleWidgetTypes(True);
-  foo python:widgets.sort();
+  widget_meta_types python:tmakertool.listFlexibleWidgetTypes(translated=True);
+  dummy python:widget_meta_types.sort();
   debug nothing;
   ">
 <metal:block use-macro="here/main_template/macros/master">

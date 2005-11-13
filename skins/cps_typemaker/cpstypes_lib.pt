@@ -116,11 +116,9 @@
           <th align="right" i18n:translate="">cpstypes_widget_type</th>
           <td>
             <select name="new_widget_type">
-              <tal:block tal:repeat="widget widgets">
-                <option tal:attributes="value widget/id"
-                        tal:define="metatype widget/meta_type"
-                        tal:content="python:test(
-                        metatype.endswith(' Type'),metatype[:len(metatype)-5],metatype)"
+              <tal:block tal:repeat="meta_type widget_meta_types">
+                <option tal:attributes="value meta_type"
+                        tal:content="meta_type"
                         i18n:translate=""/>
               </tal:block>
             </select>

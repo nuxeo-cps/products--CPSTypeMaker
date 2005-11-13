@@ -37,9 +37,9 @@ from Products.CPSSchemas.DataModel import DataModel
 from Products.CPSCore.CPSBase import CPSBaseFolder
 from Products.CPSCore.ProxyBase import ProxyFolder
 from Products.CPSUtil.PropertiesPostProcessor import PropertiesPostProcessor
-from Products.CPSSchemas.WidgetTypesTool import WidgetTypeRegistry
 import ExtensionClass
 from Products.CMFCore.permissions import ViewManagementScreens
+from Products.CPSSchemas.Widget import widgetRegistry
 from Products.CPSSchemas.BasicWidgets import CPSSelectWidget
 from types import StringType
 """
@@ -1169,60 +1169,38 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
     security.declarePrivate('_listWidgets')
     def _listWidgets(self, attribute='_marker', translated = False):
-        """ returns a list of ids and meta_types
+        """ returns a list of widget meta_types
             filtered if needed
             by a boolean attribute
             meta_type is translated if needeed
         """
+        mcat = getToolByName(self, 'translation_service', None)
+
         res = []
-        portal_widget_types = getToolByName(self, 'portal_widget_types')
-        Localizer = getToolByName(self, 'Localizer')
-        if Localizer:
-            mcat = Localizer.default
-
-        for id, widget in portal_widget_types.objectItems():
-            if id not in self.type_filter_list:
-                # theses are widget types
-                if (attribute == '_marker') or not hasattr(widget, attribute)\
-                or widget.is_addable:
-                    meta_type = widget.meta_type
-
-                    if meta_type <> 'Broken Because Product is Gone':
-                        # we don't want duplicate meta_types
-                        already_in = False
-
-                        for sort, element in res:
-                            if element['meta_type'] == meta_type:
-                                already_in = True
-                                break
-
-                        if not already_in:
-                            element = {}
-                            element['id'] = widget.getId()
-                            element['meta_type'] = meta_type
-
-                            sort_key = widget.getId()
-
-                            if translated and mcat:
-                                trad_key = mcat(sort_key)
-                                if trad_key == sort_key:
-                                    trad_key = mcat('CPS '+sort_key)
-                                    if trad_key == 'CPS '+sort_key:
-                                        trad_key = sort_key
-                            else:
-                                trad_key = sort_key
-
-                            sorter =  (trad_key, element,)
-                            res.append(sorter)
+        for meta_type in widgetRegistry.listWidgetMetaTypes():
+            class_ = widgetRegistry.getClass(meta_type)
+            if meta_type in self.type_filter_list:
+                continue
+            if ((attribute != '_marker') and hasattr(class_, attribute)
+                and not class_.is_addable):
+                continue
+            sort_key = meta_type
+            if translated and mcat:
+                trad_key = mcat(sort_key)
+                if trad_key == sort_key:
+                    trad_key = mcat('CPS '+sort_key)
+                    if trad_key == 'CPS '+sort_key:
+                        trad_key = sort_key
+            else:
+                trad_key = sort_key
+            sorter =  (trad_key, meta_type)
+            res.append(sorter)
 
         # need to find out why it raises
         # on unicode errors here
         # when mcat make traductions with accents on ascii
         res.sort()
-        result = []
-        for item in res:
-            result.append(item[1])
-        return result
+        return [meta_type for (key, meta_type) in res]
 
     security.declareProtected(ViewManagementScreens, 'listWidgetTypes')
     def listWidgetTypes(self, translated = False):

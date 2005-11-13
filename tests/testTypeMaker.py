@@ -154,6 +154,7 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
         self.assert_(found)
 
     def testallWidgetTypes(self):
+        from Products.CPSSchemas.Widget import widgetRegistry
         self.testTypeAdding()
 
         tmaker_tool = self.portal.portal_typemaker
@@ -161,11 +162,9 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
         action = 'add'
         type_name = tmaker_tool.type_prefix + 'TotoroPowered'
 
-        # add 'empty widget'
-        types = self.portal.portal_widget_types
-
-        for id, type in types.objectItems():
-            if id in ('CPS Portlet Custom Widget', ):
+        for meta_type in widgetRegistry.listWidgetMetaTypes():
+            class_ = widgetRegistry.getClass(meta_type)
+            if meta_type in ['CPS Portlet Custom Widget']:
                 # some types incompatible
                 # with typemaker, like portlets, may fail this test
                 # at this time
@@ -173,14 +172,14 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
             tmaker_tool.manage_documentModified(
                 type_id=type_name,
                 action=action,
-                new_widget_title='Totoro '+str(id),
-                new_widget_type=type.id)
+                new_widget_title='Totoro '+meta_type,
+                new_widget_type=meta_type)
 
             # check results on type
             type_layouts = self.portal.portal_layouts
             type_layout = type_layouts[type_name + '_1']
 
-            wid = 'Totoro ' + str(id)
+            wid = 'Totoro ' + meta_type
             wid = 'w__'  + generateId(wid, lower=False)
 
             if len(type_layout.objectItems()) > 0:
@@ -188,7 +187,7 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
                 for item_id, item in type_layout.objectItems():
                     if item.id == wid:
                         found = True
-                        self.assertEquals(item.title, 'Totoro ' + str(id))
+                        self.assertEquals(item.title, 'Totoro ' + meta_type)
                         break
                 self.assert_(found)
 
@@ -201,13 +200,13 @@ class TestTypeMakerTool(CPSTypeMakerTestCase):
         tmaker_tool = self.portal.portal_typemaker
         wlist = tmaker_tool.listWidgetTypes()
 
-        for element in wlist:
-            self.assertNotEquals(element['id'], 'Search Widget')
+        for meta_type in wlist:
+            self.assertNotEquals(meta_type, 'Search Widget')
 
         tmaker_tool.type_filter_list.append('Int Widget')
         wlist = tmaker_tool.listWidgetTypes()
-        for element in wlist:
-            self.assertNotEquals(element['id'], 'Int Widget')
+        for meta_type in wlist:
+            self.assertNotEquals(meta_type, 'Int Widget')
 
 def test_suite():
     suites = [unittest.makeSuite(TestTypeMakerTool)]
