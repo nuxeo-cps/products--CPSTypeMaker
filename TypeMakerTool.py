@@ -1227,7 +1227,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
         return self.widget_renderer
 
-    security.declareProtected(ViewManagementScreens, 'getWidgetType')
+    security.declareProtected(ViewManagementScreens, 'layoutPreview')
     def layoutPreview(self,type_id):
         """ this renders a preview
             made up with
