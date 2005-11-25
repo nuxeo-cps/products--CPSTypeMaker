@@ -9,7 +9,7 @@
   wttool here/portal_widget_types;
   tmakertool here/portal_typemaker;
   flexible_enabled python:tmakertool.flexible_aware;
-  widget_meta_types python:tmakertool.listWidgetTypes(transated=True);
+  widget_meta_types python:tmakertool.listWidgetTypes(translated=True);
   form_action string:portal_typemaker/manage_documentModified;
   ">
 
