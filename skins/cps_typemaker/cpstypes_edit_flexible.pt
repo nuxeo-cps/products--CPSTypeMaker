@@ -13,7 +13,6 @@
   layoutid python:prefix + 'flexible_' + type_id[len(prefix):]+'_'+str(layout_index);
   layoutob python:here.portal_layouts[layoutid];
   widgetinfo layoutob/getFlexibleWidgetsDict;
-  wttool here/portal_widget_types;
   widget_meta_types python:tmakertool.listFlexibleWidgetTypes(translated=True);
   dummy python:widget_meta_types.sort();
   debug nothing;

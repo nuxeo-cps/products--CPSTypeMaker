@@ -6,7 +6,6 @@
   title typeob/title|type_id;
   expanded_title title;
   layoutob python:here.portal_layouts[primary_layout_id];
-  wttool here/portal_widget_types;
   tmakertool here/portal_typemaker;
   flexible_enabled python:tmakertool.flexible_aware;
   widget_meta_types python:tmakertool.listWidgetTypes(translated=True);
