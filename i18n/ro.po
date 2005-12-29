@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ro\n"
-"POT-Creation-Date: 2005-06-24 10:34default\n"
+"POT-Creation-Date: 2005-12-29 16:37default\n"
 "PO-Revision-Date: 2005-04-04 17:02+0300\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
@@ -19,16 +19,6 @@ msgstr ""
 "Language-Name: Romanian\n"
 "Domain: default\n"
 
-#.   <a attributes="href
-#.                                       python:'cpstypes_widget_properties?type_id='+type_id+
-#.                                       '&widget_id='+widgetid">
-#.                               <img src="configure.gif" title="cpstypes_configure" />
-#.   
-#.                        </a>
-#: from ../skins/cps_typemaker/cpstypes_lib.pt
-msgid "<img src=\"configure.gif\" title=\"cpstypes_configure\" />"
-msgstr ""
-
 #.   <input type="button" name="preview" value="Preview" attributes="onclick string:layoutPreview('${type_id}');" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
@@ -36,7 +26,7 @@ msgid "Preview"
 msgstr ""
 
 #.   <input type="submit" name="action_save" value="button_save" />
-#.   <input type="submit" name="action_save" value="button_save" condition="python:wcount>0" />
+#.   <input condition="python:wcount>0" type="submit" name="action_save" value="button_save" />
 #.   <input name="button_save" type="submit" class="standalone" value="button_save" />
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
@@ -51,7 +41,11 @@ msgid "cpstypemaker_autolayout"
 msgstr "Asezarea in pagina automata"
 
 #.   <span>
-#.                                   cpstypemaker_layoutlabel</span>
+#.                       cpstypemaker_layoutlabel
+#.                     </span>
+#.   <span>
+#.                     cpstypemaker_layoutlabel
+#.                   </span>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypemaker_layoutlabel"
 msgstr "Layout"
@@ -78,7 +72,7 @@ msgstr "Adauga celula"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_auto"
-msgstr "Dispunere automata"
+msgstr "Disposition automatique"
 
 #.   <h3>cpstypes_availablefields</h3>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
@@ -138,14 +132,14 @@ msgstr "Editeaza celula"
 #.           </td>
 #.   <div condition="python:wcount==0" class="typemakerEmptyLayout">
 #.         pas de champs pour l'instant
-#.         </div>
+#.       </div>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 #: ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
 #, fuzzy
 msgid "cpstypes_empty_layout"
-msgstr "Momentan nu exista campuri."
+msgstr "Pas de champs pour l'instant."
 
 #.   <th>cpstypes_field_indexed</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
@@ -182,7 +176,7 @@ msgstr "Misca spre dreapta"
 #: from ../skins/cps_typemaker/cpstypes_layout_preview.pt
 #, fuzzy
 msgid "cpstypes_preview_for"
-msgstr "Previzualizare"
+msgstr "Icône"
 
 #.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
 #: from ../skins/cps_typemaker/cpstypes_list.pt
@@ -196,7 +190,7 @@ msgstr "Tip utilizabil in portal"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_scriptdisabled"
-msgstr "Disponibil pentru utilizare"
+msgstr "Disponible pour utilisation"
 
 #.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
@@ -218,7 +212,9 @@ msgid "cpstypes_splitcell"
 msgstr "Taie"
 
 #.   <th align="right">cpstypes_type_description</th>
-#.   <small content="item/description">cpstypes_type_description</small>
+#.   <small content="item/description" condition="item/description">
+#.                         cpstypes_type_description
+#.                       </small>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
 #: ../skins/cps_typemaker/cpstypes_list.pt
@@ -312,7 +308,7 @@ msgstr "Editeaza widget-urile flexibile"
 
 #, fuzzy
 msgid "cpstypes_edit_flexible_layout"
-msgstr "Editeaza dispunerea flexibila"
+msgstr "Editer la disposition flexible"
 
 msgid "Type management"
 msgstr "Administreaza tipurile de documente"
@@ -673,8 +669,8 @@ msgid ""
 "Accept blank values (defined in vocabulary) when validating if the widget is "
 "required and the vocabulary holds blank values"
 msgstr ""
-"Accepta alegerea vida daca componenta este obligatorie si daca lista "
-"accepta valori vide "
+"Accepta alegerea vida daca componenta este obligatorie si daca lista accepta "
+"valori vide "
 
 msgid "Allowed file suffixes (for example: .html .sxw)"
 msgstr "Extensii autorizate ( de exemplu .html, .sxw)"
@@ -766,8 +762,8 @@ msgstr "Tinta legaturii"
 
 #, fuzzy
 msgid "type_need_title"
-msgstr "Campul titlu lipseste"
+msgstr "Le champ titre est manquant"
 
 #, fuzzy
 msgid "type_need_label"
-msgstr "Campul eticheta lipseste"
+msgstr "Le champ libellé est manquant"
