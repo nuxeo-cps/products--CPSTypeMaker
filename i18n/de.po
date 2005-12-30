@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de 3.2.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-06-24 10:34default\n"
+"POT-Creation-Date: 2005-12-29 16:37default\n"
 "PO-Revision-Date: 2005-03-16 00:24+0100\n"
 "Last-Translator: Georg Hennemann <georg.hennemann@dhl.com>\n"
 "Language-Team: de <rheinland@dzug.org>\n"
@@ -14,16 +14,6 @@ msgstr ""
 "Language-Name: German\n"
 "Domain: default\n"
 
-#.   <a attributes="href
-#.                                       python:'cpstypes_widget_properties?type_id='+type_id+
-#.                                       '&widget_id='+widgetid">
-#.                               <img src="configure.gif" title="cpstypes_configure" />
-#.   
-#.                        </a>
-#: from ../skins/cps_typemaker/cpstypes_lib.pt
-msgid "<img src=\"configure.gif\" title=\"cpstypes_configure\" />"
-msgstr ""
-
 #.   <input type="button" name="preview" value="Preview" attributes="onclick string:layoutPreview('${type_id}');" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
@@ -31,7 +21,7 @@ msgid "Preview"
 msgstr ""
 
 #.   <input type="submit" name="action_save" value="button_save" />
-#.   <input type="submit" name="action_save" value="button_save" condition="python:wcount>0" />
+#.   <input condition="python:wcount>0" type="submit" name="action_save" value="button_save" />
 #.   <input name="button_save" type="submit" class="standalone" value="button_save" />
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
@@ -46,7 +36,11 @@ msgid "cpstypemaker_autolayout"
 msgstr "Automatisches Layout"
 
 #.   <span>
-#.                                   cpstypemaker_layoutlabel</span>
+#.                       cpstypemaker_layoutlabel
+#.                     </span>
+#.   <span>
+#.                     cpstypemaker_layoutlabel
+#.                   </span>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypemaker_layoutlabel"
 msgstr "Layout"
@@ -133,7 +127,7 @@ msgstr "Editieren Zelle"
 #.           </td>
 #.   <div condition="python:wcount==0" class="typemakerEmptyLayout">
 #.         pas de champs pour l'instant
-#.         </div>
+#.       </div>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 #: ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
@@ -212,7 +206,9 @@ msgid "cpstypes_splitcell"
 msgstr "Aufteilen"
 
 #.   <th align="right">cpstypes_type_description</th>
-#.   <small content="item/description">cpstypes_type_description</small>
+#.   <small content="item/description" condition="item/description">
+#.                         cpstypes_type_description
+#.                       </small>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
 #: ../skins/cps_typemaker/cpstypes_list.pt
