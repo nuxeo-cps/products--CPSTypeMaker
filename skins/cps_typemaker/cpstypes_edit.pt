@@ -13,7 +13,7 @@
   ">
 
 <metal:block use-macro="here/main_template/macros/master">
-  <metal:block fill-slot="css_slot">
+  <metal:block fill-slot="style_slot">
     <tal:block define="
       dt_title python:here.translation_service('Document Types');
       dummy python:request.set('breadcrumb_set',

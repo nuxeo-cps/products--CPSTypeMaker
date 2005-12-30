@@ -11,3 +11,4 @@ Bug fixes:
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 - Removed obsolete widget types registration.
+- CPS css_slot was renamed style_slot to comply with later CMF/Zope 3 standard.
