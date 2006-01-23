@@ -1,4 +1,22 @@
 *******************************************
+** CPSTypeMaker V1.8.0 [R1 build 2006/01/23-17:32 by fermigier]
+** SVN URL: https://svn.nuxeo.org/pub/CPSTypeMaker/trunk Revision: 31976
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- Fixed security declarations.
+- Fixed incorrect naming of keyword parameter in cpstypes_edit.pt
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- Removed obsolete widget types registration.
+- CPS css_slot was renamed style_slot to comply with later CMF/Zope 3 standard.
+
+*******************************************
 ** CPSTypeMaker V1.7.1 [R1 build 2005/11/07-15:27 by fguillaume]
 ** SVN URL: https://svn.nuxeo.org/pub/CPSTypeMaker/trunk Revision: 29059
 Requires:

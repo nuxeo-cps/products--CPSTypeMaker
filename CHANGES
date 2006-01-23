@@ -6,9 +6,7 @@ New features:
 -
 Bug fixes:
 ~~~~~~~~~~
-- Fixed security declarations.
-- Fixed incorrect naming of keyword parameter in cpstypes_edit.pt
+-
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
-- Removed obsolete widget types registration.
-- CPS css_slot was renamed style_slot to comply with later CMF/Zope 3 standard.
+-
