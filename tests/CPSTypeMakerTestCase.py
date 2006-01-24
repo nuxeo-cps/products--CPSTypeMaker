@@ -18,42 +18,15 @@
 # 02111-1307, USA.
 #
 from Testing import ZopeTestCase
-from Products.CPSDefault.tests import CPSTestCase
+from Products.CPSDefault.tests.CPSTestCase import CPSTestCase, MANAGER_ID
 
-CPSTypeMakerTestCase = CPSTestCase.CPSTestCase
-
-
-class CPSTypeMakerTestsInstaller(CPSTestCase.CPSInstaller):
-
-    def install(self, portal_id):
-        self.addUser()
-        self.login()
-        self.addPortal(portal_id)
-        self.fixupTranslationServices(portal_id)
-        self.setupTypeMaker(portal_id)
-        self.logout()
-
-    def setupTypeMaker(self, portal_id):
-        portal = getattr(self.app, portal_id)
-        factory = portal.manage_addProduct['CPSTypeMaker']
-        factory.addCPSTypeMakerTool()
-
-
-
-""" setting up a portal for tests
-
-"""
-def setupPortal(PortalInstaller=CPSTypeMakerTestsInstaller):
-    # Create a CPS site in the test (demo-) storage with Type Maker
-    app = ZopeTestCase.app()
-
-    if hasattr(app, 'portal'):
-        app.manage_delObjects(['portal'])
-    CPSTypeMakerTestsInstaller(app).install('portal')
-    ZopeTestCase.close(app)
-
-# needeed products besides cps default onces
 ZopeTestCase.installProduct('CPSTypeMaker')
 
-# sets up the portal
-setupPortal()
+class CPSTypeMakerTestCase(CPSTestCase):
+
+    def afterSetUp(self):
+        CPSTestCase.afterSetUp(self)
+        self.login(MANAGER_ID)
+        factory = self.portal.manage_addProduct['CPSTypeMaker']
+        factory.addCPSTypeMakerTool()
+        self.logout()
