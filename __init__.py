@@ -76,5 +76,5 @@ def initialize(registrar):
         TypeMakerTool.TypeMakerTool,
         permission=AddUserFolders,
         constructors=(TypeMakerTool.addCPSTypeMakerTool,),
-        icon='zmi/tool.gif')
+        icon='zmi/tool.png')
 
