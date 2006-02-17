@@ -1,4 +1,20 @@
 *******************************************
+** CPSTypeMaker V1.8.1 [R1 build 2006/02/17-20:27 by fermigier]
+** SVN URL: https://svn.nuxeo.org/pub/CPSTypeMaker/trunk Revision: 33051
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- Updated tests.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
 ** CPSTypeMaker V1.8.0 [R1 build 2006/01/23-17:32 by fermigier]
 ** SVN URL: https://svn.nuxeo.org/pub/CPSTypeMaker/trunk Revision: 31976
 Requires:
