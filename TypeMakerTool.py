@@ -42,6 +42,9 @@ from Products.CMFCore.permissions import ViewManagementScreens
 from Products.CPSSchemas.Widget import widgetRegistry
 from Products.CPSSchemas.BasicWidgets import CPSSelectWidget
 from types import StringType
+
+from interfaces import ITypeMaker
+from zope.interface import implements
 """
 TypeMakerTool depends on these tools :
 
@@ -65,6 +68,7 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
     """
     id = 'portal_typemaker'
     meta_type = 'CPS Type Maker Tool'
+    implements(ITypeMaker)
 
     # TO be externalized
     default_preview = 'rien.'

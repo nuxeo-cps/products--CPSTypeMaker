@@ -33,7 +33,9 @@ from Products.CPSSchemas.Widget import Widget
 from AccessControl.Permissions import add_user_folders as AddUserFolders
 from AccessControl import ModuleSecurityInfo
 
-
+from Products.GenericSetup import EXTENSION
+from Products.GenericSetup import profile_registry
+from Products.CPSCore.interfaces import ICPSSite
 
 
 def getIcon(self, relative_to_portal=0):
@@ -78,3 +80,10 @@ def initialize(registrar):
         constructors=(TypeMakerTool.addCPSTypeMakerTool,),
         icon='zmi/tool.png')
 
+    profile_registry.registerProfile('default',
+                                     'CPSTypeMaker',
+                                     "Profile for CPSTypeMaker.",
+                                     'profiles/default',
+                                     'CPSTypeMaker',
+                                     EXTENSION,
+                                     for_=ICPSSite)

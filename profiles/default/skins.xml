@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<object name="portal_skins" meta_type="CMF Skins Tool" allow_any="False"
+   cookie_persistence="False" default_skin="CPSSkins"
+   request_varname="portal_skin">
+ <object name="cps_typemaker" meta_type="Filesystem Directory View"
+    directory="CPSTypeMaker/skins/cps_typemaker"/>
+ <object name="cps_typemaker_icons" meta_type="Filesystem Directory View"
+    directory="CPSTypeMaker/skins/cps_typemaker_icons"/>
+ <object name="cps_typemaker_widgets" meta_type="Filesystem Directory View"
+    directory="CPSTypeMaker/skins/cps_typemaker_widgets"/>
+ <skin-path name="CPSSkins">
+  <layer name="cps_typemaker"/>
+  <layer name="cps_typemaker_icons"/>
+  <layer name="cps_typemaker_widgets"/>
+ </skin-path>
+ <skin-path name="CPSSkins-macroless">
+  <layer name="cps_typemaker"/>
+  <layer name="cps_typemaker_icons"/>
+  <layer name="cps_typemaker_widgets"/>
+ </skin-path>
+</object>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<object name="portal_typemaker" meta_type="CPS Type Maker Tool">
+ <property name="title"></property>
+ <property name="multiple_layouts">False</property>
+ <property name="flexible_aware">False</property>
+ <property name="type_prefix">simpletype_</property>
+ <property name="style_prefix">layout_default_tab_</property>
+ <property name="base_schemas">
+  <element value="metadata"/>
+  <element value="common"/>
+ </property>
+ <property name="base_layouts">
+  <element value="common"/>
+ </property>
+ <property name="add_in_types">
+  <element value="Workspace"/>
+  <element value="Section"/>
+ </property>
+ <property name="metadata_layout">metadata</property>
+ <property name="metadata_schemas">
+  <element value="metadata"/>
+  <element value="common"/>
+ </property>
+ <property name="immediate_view">cpsdocument_view</property>
+ <property name="hidden_layout_modes"/>
+ <property name="max_rows">4</property>
+ <property name="process_before_t"></property>
+ <property name="process_after_t"></property>
+ <property name="widget_filter_list">
+  <element value="fields"/>
+  <element value="help"/>
+  <element value="hidden_layout_modes"/>
+  <element value="hidden_readonly_layout_modes"/>
+  <element value="hidden_empty"/>
+  <element value="hidden_if_expr"/>
+  <element value="is_required"/>
+ </property>
+ <property name="type_filter_list">
+  <element value="Dummy Widget"/>
+  <element value="Search Widget"/>
+  <element value="Link Widget"/>
+  <element value="Text Image Widget"/>
+  <element value="Text Widget"/>
+  <element value="Range List Widget"/>
+  <element value="File Widget"/>
+  <element value="CPS Portlet Custom Widget"/>
+ </property>
+</object>

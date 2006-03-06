@@ -5,6 +5,6 @@ but also removing most flexibility.
 It is developed by Nuxeo for CGEY.
 
 CPSTypeMaker requires CPSSchemas, CPSDocuments and Localizer.
-It uses CPSInstaller for installation, so that it recommended.
+It uses GenericSetup for installation, so that it recommended.
 
 Please chek doc/HOWTO.txt for a quick overview

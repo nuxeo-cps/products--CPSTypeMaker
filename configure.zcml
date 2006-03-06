@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five">
+
+  <adapter
+      factory=".exportimport.CPSTypeMakerXMLAdapter"
+      provides="Products.GenericSetup.interfaces.IBody"
+      for="Products.CPSTypeMaker.interfaces.ITypeMaker
+           Products.GenericSetup.interfaces.ISetupEnviron"
+      />
+
+</configure>

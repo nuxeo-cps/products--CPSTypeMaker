@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<export-steps>
+ <export-step id="typemaker"
+              handler="Products.CPSTypeMaker.exportimport.exportCPSTypeMaker"
+              title="CPSTypeMaker">
+     Export CPSTypeMaker
+ </export-step>
+</export-steps>
