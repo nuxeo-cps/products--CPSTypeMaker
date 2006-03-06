@@ -19,7 +19,6 @@
 #
 # $Id$
 
-
 from Products.CMFCore.TypesTool import FactoryTypeInformation
 from Products.CMFCore.DirectoryView import registerDirectory
 from Products.CPSSchemas.Field import Field
@@ -83,9 +82,9 @@ def initialize(registrar):
         icon='zmi/tool.png')
 
     profile_registry.registerProfile('default',
-                                     'CPSTypeMaker',
+                                     'CPS TypeMaker',
                                      "Profile for CPSTypeMaker.",
                                      'profiles/default',
-                                     'CPS TypeMaker',
+                                     'CPSTypeMaker',
                                      EXTENSION,
                                      for_=ICPSSite)
