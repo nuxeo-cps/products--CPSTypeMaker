@@ -17,6 +17,8 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
 # 02111-1307, USA.
 #
+# $Id$
+
 
 from Products.CMFCore.TypesTool import FactoryTypeInformation
 from Products.CMFCore.DirectoryView import registerDirectory
@@ -84,6 +86,6 @@ def initialize(registrar):
                                      'CPSTypeMaker',
                                      "Profile for CPSTypeMaker.",
                                      'profiles/default',
-                                     'CPSTypeMaker',
+                                     'CPS TypeMaker',
                                      EXTENSION,
                                      for_=ICPSSite)
