@@ -6,7 +6,7 @@ New features:
 -
 Bug fixes:
 ~~~~~~~~~~
--
+- fixed typo in profile name: 'CPSTypeMaker' -> 'CPS TypeMaker'
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 -
