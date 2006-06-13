@@ -145,7 +145,8 @@ class TypeMakerTool(UniqueObject, Folder, PropertiesPostProcessor):
 
     # XXXX this needs to be externalized
     workflow_list = {'workspaces': 'workspace_content_wf',
-        'sections': 'section_content_wf',}
+                     'members': 'workspace_content_wf',
+                     'sections': 'section_content_wf',}
 
     widget_renderer = CPSWidgetRenderer()
 
