@@ -1,4 +1,21 @@
 *******************************************
+** CPSTypeMaker V1.10.2 [R1 build 2006/07/31-13:09 by fermigier]
+** SVN URL: https://svn.nuxeo.org/pub/CPS3/products/CPSTypeMaker/trunk Revision: 47588
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- New types are now added to the local workflow chains in members, so
+  that they can be added to private member areas.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
 ** CPSTypeMaker V1.10.1 [R1 build 2006/05/19-13:21 by fermigier]
 ** SVN URL: https://svn.nuxeo.org/pub/CPS3/products/CPSTypeMaker/trunk Revision: 45816
 Requires:
