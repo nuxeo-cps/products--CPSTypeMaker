@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CPSTypeMaker\n"
 "POT-Creation-Date: 2005-06-24 10:34default\n"
-"PO-Revision-Date: 2006-02-23 10:13+0100\n"
+"PO-Revision-Date: 2006-08-17 10:09+0100\n"
 "Last-Translator: Jesús Martín <jesusmartin@lasalle.es>\n"
 "Language-Team: español <jesusmartin@lasalle.es>\n"
 "MIME-Version: 1.0\n"
@@ -406,10 +406,10 @@ msgid "CPS Directory MultiEntries Widget"
 msgstr "Entradas múltiples de anuario"
 
 msgid "CPS Dummy Widget"
-msgstr "Maniquí"
+msgstr "Ficticio"
 
 msgid "CPS ExtendedSelect Widget"
-msgstr "Lista de elecciones extendida"
+msgstr "Listado extendido de elecciones"
 
 msgid "CPS Identifier Widget"
 msgstr "Identificador"
@@ -577,7 +577,7 @@ msgid "Metadata schemas"
 msgstr "Esquema de los metadatos"
 
 msgid "Immediate View"
-msgstr "Zpt utilizado para la vista inmediata"
+msgstr "ZPT utilizado para la vista inmediata"
 
 msgid "Hidden layout modes"
 msgstr "Modos para las presentaciones ocultas"
@@ -652,7 +652,7 @@ msgid "Deletable"
 msgstr "Borrable"
 
 msgid "Accept blank values (defined in vocabulary) when validating if the widget is required and the vocabulary holds blank values"
-msgstr "aceptar la elección vacía si el componente es requerido y si la lista contiene valores vacíos"
+msgstr "Aceptar la elección vacía si el componente es requerido y si la lista contiene valores vacíos"
 
 msgid "Allowed file suffixes (for example: .html .sxw)"
 msgstr "Extensiones autorizadas (por ejemplo .html, .sxw)"
@@ -700,7 +700,7 @@ msgid "Required widget"
 msgstr "Componente obligatorio"
 
 msgid "browse or search"
-msgstr "¿navegar o buscar?"
+msgstr "¿Navegar o buscar?"
 
 msgid "browse"
 msgstr "navegación"
@@ -736,7 +736,7 @@ msgid "Html for view"
 msgstr "Código html para la muestra"
 
 msgid "Render format : select menu (default), radio buttons or checkboxes"
-msgstr "Formato de muestra : menu de selección (por defecto), botones o celdas a ocultar"
+msgstr "Formato de muestra: menú de selección (por defecto), botones o celdas a ocultar"
 
 msgid "Target for the link"
 msgstr "Objetivo del enlace"
