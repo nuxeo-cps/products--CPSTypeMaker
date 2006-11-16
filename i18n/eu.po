@@ -1,116 +1,104 @@
-# translation of CPSTypeMaker_en.po to Euskara
-# translation of en.po to francais
-# Gettext Message File for default.
-# Your Name <your@email>, Year
-# emmanuel <epietriga@nuxeo.com>, 2004.
-# Aitzol Naberan Burgaña <anaberan@codesyntax.com>, 2004.
 msgid ""
 msgstr ""
-"Project-Id-Version: CPSTypeMaker_en\n"
-"POT-Creation-Date: 2006-01-03 14:48default\n"
-"PO-Revision-Date: 2004-10-04 17:01+0100\n"
-"Last-Translator:  <>\n"
-"Language-Team: Euskara <eu@li.org>\n"
+"Project-Id-Version: CPSTypeMaker\n"
+"POT-Creation-Date: 2005-06-24 10:34default\n"
+"PO-Revision-Date: 2006-11-16 15:57+0100\n"
+"Last-Translator: Jesus Martin <jesusmartin@lasalle.es>\n"
+"Language-Team: euskera <perikoalkain@lasalle.es>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language-Code: eu\n"
-"Language-Name: Basque\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: es\n"
+"Language-Name: Spanish\n"
+"Preferred-encodings: utf-8 latin1\n"
 "Domain: default\n"
+"X-Generator: KBabel 1.3.1\n"
+"X-Poedit-Language: basque\n"
+"X-Poedit-Country: SPAIN\n"
 
 #.   <input type="button" name="preview" value="Preview" attributes="onclick string:layoutPreview('${type_id}');" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "Preview"
-msgstr ""
+msgstr "Aurrebista"
 
 #.   <input type="submit" name="action_save" value="button_save" />
-#.   <input condition="python:wcount>0" type="submit" name="action_save" value="button_save" />
+#.   <input type="submit" name="action_save" value="button_save" condition="python:wcount>0" />
 #.   <input name="button_save" type="submit" class="standalone" value="button_save" />
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
 #: ../skins/cps_typemaker/cpstypes_widget_properties.pt
 msgid "button_save"
-msgstr "Gorde"
+msgstr "Erregistratu"
 
 #.   <input type="submit" name="autolayout" value="cpstypemaker_autolayout" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypemaker_autolayout"
-msgstr ""
+msgstr "Orrialde automatikoan jarria"
 
 #.   <span>
-#.                       cpstypemaker_layoutlabel
-#.                     </span>
-#.   <span>
-#.                     cpstypemaker_layoutlabel
-#.                   </span>
+#.                                   cpstypemaker_layoutlabel</span>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypemaker_layoutlabel"
-msgstr ""
+msgstr "Aurkezpena"
 
 #.   <h3>cpstypes_add_new_widget</h3>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_add_new_widget"
-msgstr "Trepeta berria gehitu"
+msgstr "Osagai berri bat erantsi"
 
 #.   <input type="submit" name="addrow" value="cpstypes_add_row" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_add_row"
-msgstr "Lerroa Gehitu"
+msgstr "Lerro bat erantsi"
 
 #.   <input title="cpstypes_appendcell" type="submit" id="typemakerAppendBt" value="" attributes="name string:addnamedrow_${wid}" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_appendcell"
-msgstr "Añadir"
+msgstr "Erantsi"
 
 #.   <input type="submit" name="autolayout" value="cpstypes_auto" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_auto"
-msgstr "Disposición automática"
+msgstr "Automatikoa"
 
 #.   <h3>cpstypes_availablefields</h3>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_availablefields"
-msgstr "Campos disponibles"
+msgstr "Eremu erabilgarriak"
 
 #.   <img src="configure.gif" title="cpstypes_configure" />
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
-#, fuzzy
 msgid "cpstypes_configure"
-msgstr "Configurar el componente"
+msgstr "Osagaia konfiguratu"
 
 #.   <h1>cpstypes_configuretool</h1>
 #: from ../skins/cps_typemaker/cpstypes_configure.pt
-#, fuzzy
 msgid "cpstypes_configuretool"
-msgstr "Configuración general de Type Maker"
+msgstr "Type Maker-en konfigurazio orokorra"
 
 #.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_delete_cell"
-msgstr "Lerroa Ezabatu"
+msgstr "Gelaxka bat ezabatu"
 
 #.   <input title="cpstypes_deletecell" type="submit" id="typemakerDeleteBt" value="" attributes="name python:'del_check_'+str(nrow)+'_'+str(ncell)" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_deletecell"
-msgstr "Suprimir"
+msgstr "Ezabatu"
 
 #.   <h1>cpstypes_documentlist</h1>
 #: from ../skins/cps_typemaker/cpstypes_list.pt
-#, fuzzy
 msgid "cpstypes_documentlist"
-msgstr "Tipos de documentos"
+msgstr "Dokumentu-motak"
 
 #.   <a type="button" title="cpstypes_editcell" attributes="href
 #.                           python:'cpstypes_widget_properties?type_id='+type_id+'&widget_id='+widget_id;
@@ -121,14 +109,13 @@ msgstr "Tipos de documentos"
 #.                           python:'cpstypes_widget_properties?type_id='+type_id+'&widget_id='+widget_id;
 #.                           ">
 #.                               <img src="configure_cell.gif" class="typemakerConfigureBt" />
-#.   
-#.   
+#.
+#.
 #.                           </a>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_editcell"
-msgstr "Editar"
+msgstr "Editatu"
 
 #.   <div condition="python:wcount==0" class="typemaker_empty_layout">
 #.             pas de champs pour l'instant
@@ -138,95 +125,84 @@ msgstr "Editar"
 #.           </td>
 #.   <div condition="python:wcount==0" class="typemakerEmptyLayout">
 #.         pas de champs pour l'instant
-#.       </div>
+#.         </div>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 #: ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
-#, fuzzy
 msgid "cpstypes_empty_layout"
-msgstr "No hay campos por el momento"
+msgstr "Oraingoz ez dago eremurik"
 
 #.   <th>cpstypes_field_indexed</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_field_indexed"
-msgstr "Indexatuta"
+msgstr "Aurkibidean"
 
 #.   <span>cpstypes_flexible_widgets</span>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_flexible_widgets"
-msgstr "Trepetak"
+msgstr "Osagaiak"
 
 #.   <h1>cpstypes_label_add_type</h1>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 msgid "cpstypes_label_add_type"
-msgstr "Mota gehitu"
+msgstr "Dokumentu-mota bat erantsi"
 
 #.   <input title="cpstypes_moveleft" type="submit" id="typemakerLeftBt" value="" attributes="name
 #.                                             string:left_${nrow}_${ncell};">
 #.                                      </input>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_moveleft"
-msgstr "Desplazar a la izquierda"
+msgstr "Eskerrera eraman"
 
 #.   <input title="cpstypes_moveright" type="submit" id="typemakerRightBt" value="" attributes="name
 #.                                             string:right_${nrow}_${ncell};">
 #.                                     </input>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_moveright"
-msgstr "Desplazar a la derecha"
+msgstr "Eskuinera eraman"
 
 #.   <span>Preview for </span>
 #: from ../skins/cps_typemaker/cpstypes_layout_preview.pt
-#, fuzzy
 msgid "cpstypes_preview_for"
-msgstr "Icono"
+msgstr "Ikonoa"
 
 #.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
 #: from ../skins/cps_typemaker/cpstypes_list.pt
-#, fuzzy
 msgid "cpstypes_publictype"
-msgstr "Tipo utilizable en el portal"
+msgstr "Atarian erabilgarri den tipoa"
 
 #.   <div class="typemakerNoScript">
 #.                Warning : Javascript should be enabled for drag and drop features
 #.            </div>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_scriptdisabled"
-msgstr "Disponible para el uso"
+msgstr "Erabilgarria"
 
 #.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_shrink_cell"
-msgstr "Reducir la celda"
+msgstr "Gelaxka txikitu"
 
 #.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_split_cell"
-msgstr "Dividir la celda"
+msgstr "Gelaxka zatitu"
 
 #.   <input title="cpstypes_splitcell" type="submit" id="typemakerSplitBt" value="" attributes="name
 #.                                    python:'split_check_'+str(nrow)+'_'+str(ncell)" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_splitcell"
-msgstr "Cortar"
+msgstr "Ebaki"
 
 #.   <th align="right">cpstypes_type_description</th>
-#.   <small content="item/description" condition="item/description">
-#.                         cpstypes_type_description
-#.                       </small>
+#.   <small content="item/description">cpstypes_type_description</small>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
 #: ../skins/cps_typemaker/cpstypes_list.pt
@@ -241,7 +217,7 @@ msgstr "Ikonoa"
 #.   <th align="right">cpstypes_type_is_addable</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_type_is_addable"
-msgstr "Erabilgarria"
+msgstr "Erabiltzeko prest"
 
 #.   <div class="label required">cpstypes_type_title</div>
 #: from ../skins/cps_typemaker/cpstypes_add_form.pt
@@ -252,33 +228,29 @@ msgstr "Izenburua"
 #.   <input type="submit" name="widencell" value="cpstypes_widen_cell" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
-#, fuzzy
 msgid "cpstypes_widen_cell"
-msgstr "Alargar la celda"
+msgstr "Gelaxka handitu"
 
 #.   <div class="label required">cpstypes_widget_label</div>
 #.   <th>cpstypes_widget_label</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
-#, fuzzy
 msgid "cpstypes_widget_label"
-msgstr "Etiquetado"
+msgstr "Etiketatua"
 
 #.   <th>cpstypes_widget_max_repeats</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
-#, fuzzy
 msgid "cpstypes_widget_max_repeats"
-msgstr "Número máximo de repeticiones"
+msgstr "Errepikapen-kopuru maximoa"
 
 #.   <th>cpstypes_widget_required</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_widget_required"
-msgstr "Derrigorrezkoa"
+msgstr "Eskatutako eremuak"
 
 #.   <th>cpstypes_widget_show_in_view</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
-#, fuzzy
 msgid "cpstypes_widget_show_in_view"
-msgstr "Mostrar en modo vista"
+msgstr "Modu normalean erakutsi"
 
 #.   <th>cpstypes_widget_size</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
@@ -295,48 +267,44 @@ msgstr "Izenburua"
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_widget_type"
-msgstr "Mota"
+msgstr "Osagai-mota"
 
 #.   <img condition="rfields" src="required_fields.gif" title="cpstypes_widgethasrequiredfields" />
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
-#, fuzzy
 msgid "cpstypes_widgethasrequiredfields"
-msgstr "Ciertas propiedades del campo son obligatorias"
+msgstr "Eremuaren zenbait propietate derrizgorrezkoak dira"
 
 #.   <h3>cpstypes_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
 msgid "cpstypes_widgets"
-msgstr "Trepetak"
+msgstr "Osagaiak"
 
 msgid "cpstypes_add_type"
-msgstr "Mota berria gehitu"
+msgstr "Tipo berri bat erakutsi"
 
 msgid "cpstypes_edit_metadata"
-msgstr "Metadatuak Editatu"
+msgstr "Metadatuak editatu"
 
 msgid "cpstypes_edit_type"
-msgstr "Motak Editatu"
+msgstr "Tipoa editatu"
 
-#, fuzzy
 msgid "cpstypes_edit_layout"
-msgstr "Editar la disposición"
+msgstr "Aurkezpena editatu"
 
-#, fuzzy
 msgid "cpstypes_edit_flexible"
-msgstr "Editar los componentes flexibles"
+msgstr "Osagai malguak editatu"
 
-#, fuzzy
 msgid "cpstypes_edit_flexible_layout"
-msgstr "Editar la disposición flexible"
+msgstr "Aurkezpen malgua editatu"
 
 msgid "Type management"
-msgstr ""
+msgstr "Dokumentu-motak editatu"
 
 msgid "CPS String List Field"
-msgstr "Kateen Zerrenda"
+msgstr "Kate-zerrenda"
 
 msgid "CPS Float Field"
-msgstr "Float"
+msgstr "Eremu mugikorra"
 
 msgid "CPS File Field"
 msgstr "Fitxategia"
@@ -345,63 +313,58 @@ msgid "CPS Image Field"
 msgstr "Irudia"
 
 msgid "CPS String Field"
-msgstr "Katea"
+msgstr "Hizki-katea"
 
 msgid "CPS DateTime Field"
-msgstr "EgunaOrdua"
+msgstr "Data eta ordua"
 
 msgid "CPS Password Field"
 msgstr "Pasahitza"
 
 msgid "CPS Int Field"
-msgstr "Int"
+msgstr "Zenbaki osoa"
 
 msgid "CPS Long Field"
-msgstr "Luzea"
+msgstr "Zenbaki osoa (luzea)"
 
 msgid "CPS MultiSelect Widget"
-msgstr "MultiSelect"
+msgstr "Hautapen anizkoitzeko zerrenda"
 
-#, fuzzy
 msgid "CPS Lines Widget"
-msgstr "Líneas"
+msgstr "Lerroak"
 
-#, fuzzy
 msgid "CPS Ordered List Widget"
-msgstr "Lista ordenada"
+msgstr "Ordenatutako zerrenda"
 
-#, fuzzy
 msgid "CPS Unordered List Widget"
-msgstr "Lista desordenada"
+msgstr "Ordenarik gabeko zerrenda"
 
 msgid "CPS String Widget"
-msgstr "Katea"
+msgstr "Hizki-katea"
 
 msgid "CPS TextArea Widget"
-msgstr "Testua"
+msgstr "Testu-area"
 
 msgid "CPS Email Widget"
-msgstr "E-posta"
+msgstr "Posta"
 
-#, fuzzy
 msgid "CPS Heading Widget"
-msgstr "Título"
+msgstr "Izenburua"
 
-#, fuzzy
 msgid "CPS Rich Text Editor Widget"
-msgstr "Editor HTML"
+msgstr "HTML editorea"
 
 msgid "CPS InternalLinks Widget"
-msgstr "Barne loturak"
+msgstr "Barneko estekak"
 
 msgid "CPS Link Widget"
-msgstr "Lotura"
+msgstr "Esteka"
 
 msgid "CPS Html Widget"
 msgstr "Html"
 
 msgid "CPS DateTime Widget"
-msgstr "Data/Ordua"
+msgstr "Data eta ordua"
 
 msgid "CPS Date Widget"
 msgstr "Data"
@@ -409,21 +372,20 @@ msgstr "Data"
 msgid "CPS Password Widget"
 msgstr "Pasahitza"
 
-#, fuzzy
 msgid "CPS Int Widget"
-msgstr "Entero"
+msgstr "Osoa"
 
 msgid "CPS CheckBox Widget"
-msgstr "CheckBox"
+msgstr "Ezkutatzeko gelaxka"
 
 msgid "CPS Long Widget"
-msgstr "Long"
+msgstr "Zenbaki osoa (luzea)"
 
 msgid "CPS Float Widget"
-msgstr "Float"
+msgstr "Mugikorra"
 
 msgid "CPS AttachedFile Widget"
-msgstr "FitxategiaErantsi"
+msgstr "Fitxategi erantsia"
 
 msgid "CPS File Widget"
 msgstr "Fitxategia"
@@ -435,23 +397,19 @@ msgid "CPS Photo Widget"
 msgstr "Argazkia"
 
 msgid "CPS Boolean Widget"
-msgstr "Boolearra"
+msgstr "Bolearra"
 
-#, fuzzy
 msgid "CPS Directory Entry Widget"
-msgstr "Entrada de anuario"
+msgstr "Urtekari-sarrera"
 
-#, fuzzy
 msgid "CPS Directory MultiEntries Widget"
-msgstr "Entradas múltiples de anuario"
+msgstr "Urtekari-sarrera anizkoitzak"
 
-#, fuzzy
 msgid "CPS Dummy Widget"
-msgstr "Maniquí"
+msgstr "Itxurazko"
 
-#, fuzzy
 msgid "CPS ExtendedSelect Widget"
-msgstr "Lista de elecciones extendida"
+msgstr "Hautapen-zerrenda hedatua"
 
 msgid "CPS Identifier Widget"
 msgstr "Identifikatzailea"
@@ -460,343 +418,332 @@ msgid "CPS Method Widget"
 msgstr "Metodoa"
 
 msgid "CPS Select Widget"
-msgstr "Aukeratu"
+msgstr "Hautapen-zerrenda"
 
 msgid "CPS Text Widget"
 msgstr "Testua"
 
 msgid "CPS URL Widget"
-msgstr "URL"
+msgstr "URLa"
 
 msgid "type_already_exists"
-msgstr "Izen hori duen mota bat dagoeneko badago"
+msgstr "Identifikatzaile hau dagoeneko erabiltzen ari dira"
 
 msgid "field_already_exists"
-msgstr "Izen hori duen atal bat dagoeneko badago"
+msgstr "Eremu-identifikatzailea dagoeneko erabiltzen ari dira"
 
 msgid "psm_duplicate_widgets"
-msgstr "Kontuz, trepetak bikoiztuta: "
+msgstr "Erne!  Osagai bera behin baino gehiagotan hautatu duzu"
 
 msgid "psm_changed"
-msgstr "Aldatuta."
+msgstr "Aldatuta"
 
-#, fuzzy
 msgid "cpstypes_more"
-msgstr "Más..."
+msgstr "Gehiago..."
 
 msgid "Size"
-msgstr ""
+msgstr "Tamaina"
 
 msgid "Display separator in view mode"
-msgstr ""
+msgstr "Bereizlea erakus-moduan"
 
 msgid "Title"
-msgstr ""
+msgstr "Izenburua"
 
 msgid "Label in view mode"
-msgstr ""
+msgstr "Etiketa ikuspegi-moduan"
 
 msgid "Label in edit mode"
-msgstr ""
+msgstr "Etiketa edizio-moduan"
 
 msgid "Vocabulary"
-msgstr "Vocabulary"
+msgstr "Hiztegia"
 
 msgid "Is vocabulary translated on display ?"
-msgstr "Is vocabulary translated on display ?"
+msgstr "Hiztegia itzulita al dago pantailan?"
 
 msgid "Directory"
-msgstr "Directory"
+msgstr "Direktorioa"
 
 msgid "Optional directory used in view mode"
-msgstr ""
+msgstr "Ikuspegi-modurako aukerako direktorioa"
 
 msgid "Entry type"
-msgstr ""
+msgstr "Sarrera-mota"
 
 msgid "Skin name"
-msgstr ""
+msgstr "Skin-aren izena"
 
 msgid "Popup Mode"
-msgstr ""
+msgstr "Azaleratzeko leiho-modua"
 
 msgid "Maximum image size"
-msgstr ""
+msgstr "Irudiaren tamaina maximoa"
 
 msgid "Deletable ?"
-msgstr ""
+msgstr "Ezaba al daiteke?"
 
 msgid "Display Width"
-msgstr ""
+msgstr "Ikuspegiaren tamaina"
 
 msgid "Display Height"
-msgstr ""
+msgstr "Ikuspegiaren altuera"
 
 msgid "Can resize to lower size ?"
-msgstr ""
+msgstr "Txiki daitekeen tamaina"
 
 msgid "Render position"
-msgstr ""
+msgstr "Ikuspegi-posizioa"
 
 msgid "What is user configurable, require extra fields"
-msgstr ""
+msgstr "Erabiltzaileak konfiguragarri"
 
 msgid "Maximum input width"
-msgstr ""
+msgstr "Tamaina maximoa"
 
 msgid "Width"
-msgstr ""
+msgstr "Zabalera"
 
 msgid "Height"
-msgstr ""
+msgstr "Altuera"
 
 msgid "Format for empty list"
-msgstr ""
+msgstr "Zerrenda hutsarentzako formatua"
 
 msgid "View format"
-msgstr ""
+msgstr "Ikusteko formatua"
 
 msgid "Vocabulary is translated ?"
-msgstr ""
+msgstr "Hiztegia itzulita?"
 
 msgid "View format empty"
-msgstr ""
+msgstr "Ikusteko formatua hutsik"
 
 msgid "Use Javascript ?"
-msgstr ""
+msgstr "Javasript erabili?"
 
 msgid "View format (short, medium or long)"
-msgstr ""
+msgstr "Ikusteko formatua (txikia, laburra, zabala)"
 
 msgid "Enabling the setting of time of the day ?"
-msgstr ""
+msgstr "Egunaren orduaren konfigurazioa ahalbidetu?"
 
 msgid "default hour for time"
-msgstr ""
+msgstr "Lehenetsitako ordua"
 
 msgid "default minutes for time"
-msgstr ""
+msgstr "Lehenetsitako minutuak"
 
 msgid "True label"
-msgstr ""
+msgstr "Egiazko etiketa"
 
 msgid "False label"
-msgstr ""
+msgstr "Etiketa faltsua"
 
 msgid "Maximum file size"
-msgstr ""
+msgstr "Fitxategiaren tamaina maximoa"
 
 msgid "Maximum size"
-msgstr ""
+msgstr "Tamaina maximoa"
 
 msgid "Render format"
-msgstr ""
+msgstr "Errendatzeko formatua"
 
-#, fuzzy
 msgid "cps_types_auto"
-msgstr "Disposición automática"
+msgstr "Aurkezpen automatikoa"
 
 msgid "Multiple Layouts"
-msgstr ""
+msgstr "Aurkezpenaren editoreak aurkezpen batzuk sortzea ahalbidetzen ditu"
 
 msgid "Id prefix for TypeMaker types"
-msgstr ""
+msgstr "Tipo-identifikatzaileentzako aurrizkiak"
 
 msgid "Id prefix for TypeMaker style"
-msgstr ""
+msgstr "Aurkezpenetarako erabilitako zpt-arentzako aurrizkia "
 
 msgid "Base schemas"
-msgstr ""
+msgstr "Oinarrizko eskemak"
 
 msgid "Base Layout"
-msgstr ""
+msgstr "Oinarrizko aurkezpena"
 
 msgid "Add in types"
-msgstr ""
+msgstr "Ontzi-motak"
 
 msgid "Metadata layout"
-msgstr ""
+msgstr "Metadatuen aurkezpena"
 
 msgid "Metadata schemas"
-msgstr ""
+msgstr "Metadatuen eskema"
 
 msgid "Immediate View"
-msgstr ""
+msgstr "Berehalako ikuspegirako erabilitako ZPTa"
 
 msgid "Hidden layout modes"
-msgstr ""
+msgstr "Ezkutuko aurkezpenetarako moduak"
 
 msgid "Maximum number of rows"
-msgstr ""
+msgstr "Aurkezpenetarako zutabe-kopuru maximoa"
 
 msgid "Process before type publish state changes"
-msgstr ""
+msgstr "Egoera-aldaketen argitaratu aurreko prozesua "
 
 msgid "Process after type publish state changes"
-msgstr ""
+msgstr "Egoera-aldaketen argitaratze ondoko prozesua "
 
 msgid "document types deleted"
-msgstr ""
+msgstr "Ezabatutako dokumentu-mota(k)"
 
-#, fuzzy
 msgid "cpstypemaker_save"
-msgstr "Registrar la configuración"
+msgstr "Konfigurazioa erregistratu"
 
-#, fuzzy
 msgid "CPS Catalog Navigation Select Widget"
-msgstr "Selección en el portal"
+msgstr "Hautapena atarian"
 
-#, fuzzy
 msgid "CPS NewsLetter InternalLinks Widgets"
-msgstr "Enlace interno"
+msgstr "Barneko esteka"
 
-#, fuzzy
 msgid "CPS Generic Select Widget"
-msgstr "Selección con entrada vacía"
+msgstr "Hautapena hutsik dagoen sarrerarekin"
 
-#, fuzzy
 msgid "CPS Generic MultiSelect Widget"
-msgstr "Selección múltiple con entrada vacía"
+msgstr "Hautapen anizkoitza hutsik dagoen sarrerarekin"
 
 msgid "Label in view layout mode"
-msgstr ""
+msgstr "Ikuspegi moduko etiketa"
 
 msgid "Label in edit layout mode"
-msgstr ""
+msgstr "Edizio-moduko etiketa"
 
 msgid "Fields"
-msgstr ""
+msgstr "Eremuak"
 
 msgid "Help"
-msgstr ""
+msgstr "Laguntza"
 
 msgid "Read-only in layout modes"
-msgstr ""
+msgstr "Osagaia irakurtzeko eran baino ez honako moduotan"
 
 msgid "Label is i18n"
-msgstr ""
+msgstr "Itzulitako etiketa"
 
 msgid "Hidden in layout modes"
-msgstr ""
+msgstr "Ezkutuko osagaia honako moduotan"
 
 msgid "Hidden if readonly in layout modes"
-msgstr ""
+msgstr "Ezkutuko osagaia honako moduotan (irakurtzeko baino ez)"
 
 msgid "Hidden if empty"
-msgstr ""
+msgstr "Ezkutuko osagaia hutsik badago"
 
 msgid "Hide the widget if the given TAL expression returns true"
-msgstr ""
+msgstr "Osagaia ezkutatu baldin eta adierazpena egiazkoa bada"
 
-#, fuzzy
 msgid "CSS class for view"
-msgstr "clase CSS utilizada para la muestra"
+msgstr "CSS mota ikuspegirako erabilia"
 
 msgid "Get the widget mode from the given TAL expression"
-msgstr ""
+msgstr "Honako adierazpenaren modua ondorioztatu"
 
 msgid "Is vocabulary translated on display"
-msgstr ""
+msgstr "Itzulitako hiztegia ikuspegian"
 
 msgid "Deletable"
-msgstr ""
+msgstr "Ezabagarria"
 
-msgid ""
-"Accept blank values (defined in vocabulary) when validating if the widget is "
-"required and the vocabulary holds blank values"
-msgstr ""
+msgid "Accept blank values (defined in vocabulary) when validating if the widget is required and the vocabulary holds blank values"
+msgstr "Osagaia eskatzen bada onartu hutsik dagoen hautapena eta zerrendak hutsik dauden balioak baino ez baditu "
 
 msgid "Allowed file suffixes (for example: .html .sxw)"
-msgstr ""
+msgstr "baimendutako luzapenak  (adibidez, .html, .sxw)"
 
 msgid "Display for true"
-msgstr ""
+msgstr " \"egiazkoa\" adierazpenerako erakutsitako hitza"
 
 msgid "Display for false"
-msgstr ""
+msgstr "\"faltsua\" adierazpenerako erakutsitako hitza"
 
 msgid "Use javascript"
-msgstr ""
+msgstr "Javascript erabili"
 
 msgid "Widget type"
-msgstr ""
+msgstr "Osagai-mota"
 
 msgid "Display width"
-msgstr ""
+msgstr "Zabalera erakutsi"
 
 msgid "Enable to resize img to lower size"
-msgstr ""
+msgstr "Leihoaren txikitzea onartu"
 
 msgid "Title of the popup"
-msgstr ""
+msgstr "Azaleratutako leihoaren izenburua"
 
 msgid "Allow configuration options"
-msgstr ""
+msgstr "Konfigurazio-aukeretarako sarbidea onartu"
 
 msgid "Widget render method"
-msgstr ""
+msgstr "Osagaiaren ikusteko metodoa"
 
 msgid "Group id for Javascript switching (if empty widget id is used)"
-msgstr ""
+msgstr "Group-en IDa Javascripterako (hutsik badago)"
 
 msgid "Depends on id for Javascript switching"
-msgstr ""
+msgstr "Javascripterako identifikatzaileen menpe"
 
 msgid "Depends on value for Javascript switching"
-msgstr ""
+msgstr "Javascripterako balioen menpe"
 
 msgid "Depends on value display widget"
-msgstr ""
+msgstr "Ikuspegi-balioaren menpe"
 
 msgid "Required widget"
-msgstr ""
+msgstr "Derrigorrezko osagaia"
 
 msgid "browse or search"
-msgstr ""
+msgstr "Nabigatu edo bilatu?"
 
 msgid "browse"
-msgstr ""
+msgstr "nabigazioa"
 
 msgid "search"
-msgstr ""
+msgstr "bilaketa"
 
 msgid "Enabling the setting of time of the day"
-msgstr ""
+msgstr "Eguneko orduaren konfigurazioa baimendu"
 
 msgid "Value must be in range"
-msgstr ""
+msgstr "Balioak heinaren barruan egon behar du"
 
 msgid "Range minimum value"
-msgstr ""
+msgstr "Balio minimoa"
 
 msgid "Range maximum value"
-msgstr ""
+msgstr "Balio maximoa"
 
 msgid "Thousands separator"
-msgstr ""
+msgstr "Milakoaren bereizlea"
 
 msgid "Decimal separator"
-msgstr ""
+msgstr "Hamarrenen bereizlea"
 
 msgid "Number of decimals"
-msgstr ""
+msgstr "Hamarren-kopurua"
 
 msgid "Html for edit"
-msgstr ""
+msgstr "Html  kodea ediziorako"
 
 msgid "Html for view"
-msgstr ""
+msgstr "Html kodea ikuspegirako"
 
 msgid "Render format : select menu (default), radio buttons or checkboxes"
-msgstr ""
+msgstr "Ikuspegi-formatua: hautapen-menua (lehenetsia), ezkutatzeko gelaxka edo botoiak"
 
 msgid "Target for the link"
-msgstr ""
+msgstr "Estekaren helburua"
 
-#, fuzzy
 msgid "type_need_title"
-msgstr "Title is required"
+msgstr "Izenburua eskatzen da"
 
-#, fuzzy
 msgid "type_need_label"
-msgstr "Label is required"
+msgstr "Etiketa eskatzen da"
+
