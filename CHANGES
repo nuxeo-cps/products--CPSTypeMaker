@@ -1,15 +1,12 @@
-Requires:
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+-
+Bug fixes
 ~~~~~~~~~
 -
-New features:
-~~~~~~~~~~~~~
--
-Bug fixes:
-~~~~~~~~~~
-- Updated Spanish translation thanks to Jesús Martín.
-- Commented out the test_render tests in testCPSWidgetDefinitions. This is to
-  have the buildbot pass for the CPS 3.4.3 release. This is dirty but it's more
-  valuable to have a passing buildbot.
-New internal features:
-~~~~~~~~~~~~~~~~~~~~~~
--
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 

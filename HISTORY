@@ -1,3 +1,26 @@
+===========================================================
+Package: CPSTypeMaker 1.10.3
+===========================================================
+First release built by: madarche at: 2006-12-04T15:34:07
+SVN Tag: https://svn.nuxeo.org/pub/CPS3/products/CPSTypeMaker/tags/1.10.3
+Build from: https://svn.nuxeo.org/pub/CPS3/products/CPSTypeMaker/trunk@50420
+
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- Updated Spanish translation thanks to Jesús Martín.
+- Commented out the test_render tests in testCPSWidgetDefinitions. This is to
+  have the buildbot pass for the CPS 3.4.3 release. This is dirty but it's more
+  valuable to have a passing buildbot.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
 *******************************************
 ** CPSTypeMaker V1.10.2 [R1 build 2006/07/31-13:09 by fermigier]
 ** SVN URL: https://svn.nuxeo.org/pub/CPS3/products/CPSTypeMaker/trunk Revision: 47588
