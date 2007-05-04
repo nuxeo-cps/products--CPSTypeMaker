@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CPSTypeMaker\n"
-"POT-Creation-Date: 2005-06-24 10:34default\n"
+"POT-Creation-Date: 2007-05-04 11:15default\n"
 "PO-Revision-Date: 2007-03-22 23:12+0100\n"
 "Last-Translator: Jesus Martin <jesusmartin@lasalle.es>\n"
 "Language-Team: español <jesusmartin@lasalle.es>\n"
@@ -17,6 +17,13 @@ msgstr ""
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 
+#.   <span>
+#.                 Objects: ${batch_start (tal replace="batch_info/start")} - ${batch_limit (tal replace="batch_info/limit")} of ${batch_length (tal replace="batch_info/length")}
+#.               </span>
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+msgid "Objects: ${batch_start} - ${batch_limit} of ${batch_length}"
+msgstr ""
+
 #.   <input type="button" name="preview" value="Preview" attributes="onclick string:layoutPreview('${type_id}');" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
@@ -24,7 +31,7 @@ msgid "Preview"
 msgstr "Previsualización"
 
 #.   <input type="submit" name="action_save" value="button_save" />
-#.   <input type="submit" name="action_save" value="button_save" condition="python:wcount>0" />
+#.   <input condition="python:wcount>0" type="submit" name="action_save" value="button_save" />
 #.   <input name="button_save" type="submit" class="standalone" value="button_save" />
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
@@ -113,8 +120,8 @@ msgstr "Tipos de documentos"
 #.                           python:'cpstypes_widget_properties?type_id='+type_id+'&widget_id='+widget_id;
 #.                           ">
 #.                               <img src="configure_cell.gif" class="typemakerConfigureBt" />
-#.
-#.
+#.   
+#.   
 #.                           </a>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
@@ -129,7 +136,7 @@ msgstr "Editar"
 #.           </td>
 #.   <div condition="python:wcount==0" class="typemakerEmptyLayout">
 #.         pas de champs pour l'instant
-#.         </div>
+#.       </div>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 #: ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
@@ -657,8 +664,12 @@ msgstr "Vocabulario traducido en la muestra"
 msgid "Deletable"
 msgstr "Borrable"
 
-msgid "Accept blank values (defined in vocabulary) when validating if the widget is required and the vocabulary holds blank values"
-msgstr "Aceptar la elección vacía si el componente es requerido y si la lista contiene valores vacíos"
+msgid ""
+"Accept blank values (defined in vocabulary) when validating if the widget is "
+"required and the vocabulary holds blank values"
+msgstr ""
+"Aceptar la elección vacía si el componente es requerido y si la lista "
+"contiene valores vacíos"
 
 msgid "Allowed file suffixes (for example: .html .sxw)"
 msgstr "Extensiones autorizadas (por ejemplo .html, .sxw)"
@@ -742,7 +753,9 @@ msgid "Html for view"
 msgstr "Código html para la muestra"
 
 msgid "Render format : select menu (default), radio buttons or checkboxes"
-msgstr "Formato de muestra: menú de selección (por defecto), botones o celdas a ocultar"
+msgstr ""
+"Formato de muestra: menú de selección (por defecto), botones o celdas a "
+"ocultar"
 
 msgid "Target for the link"
 msgstr "Objetivo del enlace"
@@ -752,4 +765,3 @@ msgstr "El título es obligatorio"
 
 msgid "type_need_label"
 msgstr "La etiqueta es obligatoria"
-

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ro\n"
-"POT-Creation-Date: 2006-01-03 14:48default\n"
+"POT-Creation-Date: 2007-05-04 11:15default\n"
 "PO-Revision-Date: 2005-04-04 17:02+0300\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
@@ -18,6 +18,13 @@ msgstr ""
 "Language-Code: ro\n"
 "Language-Name: Romanian\n"
 "Domain: default\n"
+
+#.   <span>
+#.                 Objects: ${batch_start (tal replace="batch_info/start")} - ${batch_limit (tal replace="batch_info/limit")} of ${batch_length (tal replace="batch_info/length")}
+#.               </span>
+#: from ../skins/cps_typemaker/cpstypes_list.pt
+msgid "Objects: ${batch_start} - ${batch_limit} of ${batch_length}"
+msgstr ""
 
 #.   <input type="button" name="preview" value="Preview" attributes="onclick string:layoutPreview('${type_id}');" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
@@ -72,7 +79,7 @@ msgstr "Adauga celula"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_auto"
-msgstr "Disposition automatique"
+msgstr "Automatic layout"
 
 #.   <h3>cpstypes_availablefields</h3>
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
@@ -139,7 +146,7 @@ msgstr "Editeaza celula"
 #: ../skins/cps_typemaker/cpstypes_lib.pt
 #, fuzzy
 msgid "cpstypes_empty_layout"
-msgstr "Pas de champs pour l'instant."
+msgstr "No fields in the layout yet."
 
 #.   <th>cpstypes_field_indexed</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
@@ -176,7 +183,7 @@ msgstr "Misca spre dreapta"
 #: from ../skins/cps_typemaker/cpstypes_layout_preview.pt
 #, fuzzy
 msgid "cpstypes_preview_for"
-msgstr "Icône"
+msgstr "Icon"
 
 #.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
 #: from ../skins/cps_typemaker/cpstypes_list.pt
@@ -190,7 +197,7 @@ msgstr "Tip utilizabil in portal"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #, fuzzy
 msgid "cpstypes_scriptdisabled"
-msgstr "Disponible pour utilisation"
+msgstr "Available for use"
 
 #.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
@@ -308,7 +315,7 @@ msgstr "Editeaza widget-urile flexibile"
 
 #, fuzzy
 msgid "cpstypes_edit_flexible_layout"
-msgstr "Editer la disposition flexible"
+msgstr "Editer Flexible layout"
 
 msgid "Type management"
 msgstr "Administreaza tipurile de documente"
@@ -762,8 +769,8 @@ msgstr "Tinta legaturii"
 
 #, fuzzy
 msgid "type_need_title"
-msgstr "Le champ titre est manquant"
+msgstr "Title is required"
 
 #, fuzzy
 msgid "type_need_label"
-msgstr "Le champ libellé est manquant"
+msgstr "Label is required"

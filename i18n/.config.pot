@@ -1,1 +1,0 @@
-cpstypemaker.pot
