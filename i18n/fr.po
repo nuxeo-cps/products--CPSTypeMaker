@@ -301,7 +301,7 @@ msgid "cpstypes_add_type"
 msgstr "Ajouter un nouveau type"
 
 msgid "cpstypes_edit_metadata"
-msgstr "Editer les méta-données"
+msgstr "Editer les métadonnées"
 
 msgid "cpstypes_edit_type"
 msgstr "Editer le type"
