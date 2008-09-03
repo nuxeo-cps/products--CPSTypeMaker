@@ -8,14 +8,14 @@ msgstr ""
 "Last-Translator: Stefano Schintu <schintu@gmail.com>\n"
 "Language-Team: CPS Italian <schintu@gmail.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Preferred-encodings: utf-8 latin1\n"
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
 "Language-Code: it\n"
 "Language-Name: Italian\n"
 "Domain: default\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Preferred-Encodings: utf-8\n"
 
 #.   <span>
 #.                 Objects: ${batch_start (tal replace="batch_info/start")} - ${batch_limit (tal replace="batch_info/limit")} of ${batch_length (tal replace="batch_info/length")}
@@ -142,7 +142,7 @@ msgstr "Modifica"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_empty_layout"
-msgstr "Non c'Ë ancora nessun campo nel layout."
+msgstr "Non c'√® ancora nessun campo nel layout."
 
 #.   <th>cpstypes_field_indexed</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
@@ -192,7 +192,7 @@ msgstr "Tipo utilizzabile nel portale"
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_scriptdisabled"
 msgstr ""
-"Attenzione: per utilizzare le funzioni di trascinamento Ë necessario "
+"Attenzione: per utilizzare le funzioni di trascinamento √® necessario "
 "abilitare Javascript"
 
 #.   <input type="submit" name="shrinkcell" value="cpstypes_shrink_cell" />
@@ -265,7 +265,7 @@ msgstr "Campo obbligatorio:"
 #.   <th>cpstypes_widget_show_in_view</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_widget_show_in_view"
-msgstr "Mostra in modalit‡ visuale:"
+msgstr "Mostra in modalit√† visuale:"
 
 #.   <th>cpstypes_widget_size</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
@@ -287,7 +287,7 @@ msgstr "Tipo di componente:"
 #.   <img condition="rfields" src="required_fields.gif" title="cpstypes_widgethasrequiredfields" />
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_widgethasrequiredfields"
-msgstr "Alcune propriet‡ del campo sono obbligatorie"
+msgstr "Alcune propriet√† del campo sono obbligatorie"
 
 #.   <h3>cpstypes_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
@@ -443,49 +443,49 @@ msgstr "URL"
 
 msgid "type_already_exists"
 msgstr ""
-"Hai nominato un nuovo tipo di oggetto con un nome gi‡ presente in archivio. "
+"Hai nominato un nuovo tipo di oggetto con un nome gi√† presente in archivio. "
 "Correggi il valore."
 
 msgid "field_already_exists"
 msgstr ""
-"Questo identificativo di campo Ë gi‡ utilizzato. <br>Sostituisci con un "
+"Questo identificativo di campo √® gi√† utilizzato. <br>Sostituisci con un "
 "altro valore."
 
 msgid "psm_duplicate_widgets"
-msgstr "Attenzione, hai selezionato pi˘ volte lo stesso componente."
+msgstr "Attenzione, hai selezionato pi√π volte lo stesso componente."
 
 msgid "psm_changed"
 msgstr "Modifica effettuata."
 
 msgid "cpstypes_more"
-msgstr "Di pi˘"
+msgstr "Di pi√π"
 
 msgid "Size"
 msgstr "Dimensione"
 
 msgid "Display separator in view mode"
-msgstr "Mostra il separatore nella modalit‡ di visualizzazione"
+msgstr "Mostra il separatore nella modalit√† di visualizzazione"
 
 msgid "Title"
 msgstr "Titolo"
 
 msgid "Label in view mode"
-msgstr "Etichetta nella modalit‡ di visualizzazione"
+msgstr "Etichetta nella modalit√† di visualizzazione"
 
 msgid "Label in edit mode"
-msgstr "Etichetta nella modalit‡ di modifica"
+msgstr "Etichetta nella modalit√† di modifica"
 
 msgid "Vocabulary"
 msgstr "Dizionario"
 
 msgid "Is vocabulary translated on display ?"
-msgstr "Il dizionario Ë tradotto durante la visualizzazione?"
+msgstr "Il dizionario √® tradotto durante la visualizzazione?"
 
 msgid "Directory"
 msgstr "Cartella"
 
 msgid "Optional directory used in view mode"
-msgstr "Cartella opzionale utilizzata nella modalit‡ di visualizzazione"
+msgstr "Cartella opzionale utilizzata nella modalit√† di visualizzazione"
 
 msgid "Entry type"
 msgstr "Tipo di inserimento"
@@ -494,7 +494,7 @@ msgid "Skin name"
 msgstr "Nome della skin"
 
 msgid "Popup Mode"
-msgstr "Modalit‡ popup"
+msgstr "Modalit√† popup"
 
 msgid "Maximum image size"
 msgstr "Dimensione massima dell'immagine"
@@ -509,7 +509,7 @@ msgid "Display Height"
 msgstr "Altezza visualizzazione"
 
 msgid "Can resize to lower size ?"
-msgstr "PuÚ essere ridimensionato ad una dimensione minore?"
+msgstr "Pu√≤ essere ridimensionato ad una dimensione minore?"
 
 msgid "Render position"
 msgstr "Posizione di renderizzazione"
@@ -599,7 +599,7 @@ msgid "Immediate View"
 msgstr "Visualizzazione immediata"
 
 msgid "Hidden layout modes"
-msgstr "Modalit‡ di layout nascoste"
+msgstr "Modalit√† di layout nascoste"
 
 msgid "Maximum number of rows"
 msgstr "Numero massimo di righe"
@@ -608,7 +608,7 @@ msgid "Process before type publish state changes"
 msgstr "Processa prima che lo stato di pubblicazione cambi"
 
 msgid "Process after type publish state changes"
-msgstr "Processa dopo che lo stato di pubblicazione Ë cambiato"
+msgstr "Processa dopo che lo stato di pubblicazione √® cambiato"
 
 msgid "document types deleted"
 msgstr "Tipi di documento eliminati"
@@ -629,10 +629,10 @@ msgid "CPS Generic MultiSelect Widget"
 msgstr "Selezione multipla"
 
 msgid "Label in view layout mode"
-msgstr "Etichetta in modalit‡ di visualizzazione"
+msgstr "Etichetta in modalit√† di visualizzazione"
 
 msgid "Label in edit layout mode"
-msgstr "Etichetta in modalit‡ di modifica"
+msgstr "Etichetta in modalit√† di modifica"
 
 msgid "Fields"
 msgstr "Campi"
@@ -641,19 +641,19 @@ msgid "Help"
 msgstr "Aiuto"
 
 msgid "Read-only in layout modes"
-msgstr "Sola-lettura in modalit‡ di visualizzazione"
+msgstr "Sola-lettura in modalit√† di visualizzazione"
 
 msgid "Label is i18n"
-msgstr "L'etichetta Ë i18n"
+msgstr "L'etichetta √® i18n"
 
 msgid "Hidden in layout modes"
-msgstr "Nascosto in modalit‡ di visualizzazione"
+msgstr "Nascosto in modalit√† di visualizzazione"
 
 msgid "Hidden if readonly in layout modes"
-msgstr "Nascosto se in sola-lettura in modalit‡ di visualizzazione"
+msgstr "Nascosto se in sola-lettura in modalit√† di visualizzazione"
 
 msgid "Hidden if empty"
-msgstr "Nascosto se Ë vuoto"
+msgstr "Nascosto se √® vuoto"
 
 msgid "Hide the widget if the given TAL expression returns true"
 msgstr "Nascondi il widget se l'espressione TAL restituisce un valore vero"
@@ -662,10 +662,10 @@ msgid "CSS class for view"
 msgstr "classe CSS da utilizzare per la visualizzazione"
 
 msgid "Get the widget mode from the given TAL expression"
-msgstr "Ottieni la modalit‡ del widget dall'espressione TAL"
+msgstr "Ottieni la modalit√† del widget dall'espressione TAL"
 
 msgid "Is vocabulary translated on display"
-msgstr "Il dizionario viene tradotto quando Ë mostrato"
+msgstr "Il dizionario viene tradotto quando √® mostrato"
 
 msgid "Deletable"
 msgstr "Eliminabile"
@@ -675,7 +675,7 @@ msgid ""
 "required and the vocabulary holds blank values"
 msgstr ""
 "Accetta valori in bianco (definiti nel dizionario) durante la convalida se "
-"il widget Ë obbligatorio e se nel dizionario Ë presente un valore in bianco"
+"il widget √® obbligatorio e se nel dizionario √® presente un valore in bianco"
 
 msgid "Allowed file suffixes (for example: .html .sxw)"
 msgstr "Suffisi del file consentiti (per esempio: .html .sxw)"
@@ -763,17 +763,17 @@ msgstr "HTML per la visualizzazione"
 
 msgid "Render format : select menu (default), radio buttons or checkboxes"
 msgstr ""
-"Formato di renderizzazione: men˘ di selezione (default), bottoni radio o "
+"Formato di renderizzazione: men√π di selezione (default), bottoni radio o "
 "caselle di selezione"
 
 msgid "Target for the link"
 msgstr "Destinazione del collegamento"
 
 msgid "type_need_title"
-msgstr "Il campo titolo Ë assente"
+msgstr "Il campo titolo √® assente"
 
 msgid "type_need_label"
-msgstr "Il campo etichetta Ë assente"
+msgstr "Il campo etichetta √® assente"
 
 #~ msgid "<img src=\"configure.gif\" title=\"cpstypes_configure\" />"
 #~ msgstr "Configura"

@@ -10,14 +10,14 @@ msgstr ""
 "Last-Translator: emmanuel <epietriga@nuxeo.com>\n"
 "Language-Team: francais <fr@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Preferred-encodings: utf-8 latin1\n"
 "X-Generator: KBabel 1.3.1\n"
 "Language-Code: fr\n"
 "Language-Name: French\n"
 "Domain: default\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Preferred-Encodings: utf-8\n"
 
 #.   <span>
 #.                 Objects: ${batch_start (tal replace="batch_info/start")} - ${batch_limit (tal replace="batch_info/limit")} of ${batch_length (tal replace="batch_info/length")}
@@ -95,7 +95,7 @@ msgstr "Configurer le composant"
 #.   <h1>cpstypes_configuretool</h1>
 #: from ../skins/cps_typemaker/cpstypes_configure.pt
 msgid "cpstypes_configuretool"
-msgstr "Configuration générale de Type Maker"
+msgstr "Configuration gÃ©nÃ©rale de Type Maker"
 
 #.   <input type="submit" name="delcell" value="cpstypes_delete_cell" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
@@ -150,7 +150,7 @@ msgstr "Pas de champs pour l'instant."
 #.   <th>cpstypes_field_indexed</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_field_indexed"
-msgstr "Indexé"
+msgstr "IndexÃ©"
 
 #.   <span>cpstypes_flexible_widgets</span>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
@@ -168,7 +168,7 @@ msgstr "Ajouter un type de document"
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_moveleft"
-msgstr "Déplacer à gauche"
+msgstr "DÃ©placer Ã  gauche"
 
 #.   <input title="cpstypes_moveright" type="submit" id="typemakerRightBt" value="" attributes="name
 #.                                             string:right_${nrow}_${ncell};">
@@ -176,13 +176,13 @@ msgstr "Déplacer à gauche"
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_moveright"
-msgstr "Déplacer à droite"
+msgstr "DÃ©placer Ã  droite"
 
 #.   <span>Preview for </span>
 #: from ../skins/cps_typemaker/cpstypes_layout_preview.pt
 #, fuzzy
 msgid "cpstypes_preview_for"
-msgstr "Icône"
+msgstr "IcÃ´ne"
 
 #.   <img src="public_type.gif" alt="cpstypes_publictype" title="cpstypes_publictype" />
 #: from ../skins/cps_typemaker/cpstypes_list.pt
@@ -202,7 +202,7 @@ msgstr "Disponible pour utilisation"
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
 #: ../skins/cps_typemaker/cpstypes_layout_edit.pt
 msgid "cpstypes_shrink_cell"
-msgstr "Réduire la cellule"
+msgstr "RÃ©duire la cellule"
 
 #.   <input type="submit" name="splitcell" value="cpstypes_split_cell" />
 #: from ../skins/cps_typemaker/cpstypes_flexible_layout_edit.pt
@@ -230,7 +230,7 @@ msgstr "Description"
 #.   <th align="right">cpstypes_type_icon</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_type_icon"
-msgstr "Icône"
+msgstr "IcÃ´ne"
 
 #.   <th align="right">cpstypes_type_is_addable</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
@@ -253,12 +253,12 @@ msgstr "Elargir la cellule"
 #.   <th>cpstypes_widget_label</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_widget_label"
-msgstr "Libellé"
+msgstr "LibellÃ©"
 
 #.   <th>cpstypes_widget_max_repeats</th>
 #: from ../skins/cps_typemaker/cpstypes_edit_flexible.pt
 msgid "cpstypes_widget_max_repeats"
-msgstr "Nombre max. de répétitions"
+msgstr "Nombre max. de rÃ©pÃ©titions"
 
 #.   <th>cpstypes_widget_required</th>
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
@@ -290,7 +290,7 @@ msgstr "Type de composant"
 #.   <img condition="rfields" src="required_fields.gif" title="cpstypes_widgethasrequiredfields" />
 #: from ../skins/cps_typemaker/cpstypes_lib.pt
 msgid "cpstypes_widgethasrequiredfields"
-msgstr "Certaines propriétés du champ sont obligatoire"
+msgstr "Certaines propriÃ©tÃ©s du champ sont obligatoire"
 
 #.   <h3>cpstypes_widgets</h3>
 #: from ../skins/cps_typemaker/cpstypes_edit.pt
@@ -301,7 +301,7 @@ msgid "cpstypes_add_type"
 msgstr "Ajouter un nouveau type"
 
 msgid "cpstypes_edit_metadata"
-msgstr "Editer les métadonnées"
+msgstr "Editer les mÃ©tadonnÃ©es"
 
 msgid "cpstypes_edit_type"
 msgstr "Editer le type"
@@ -316,10 +316,10 @@ msgid "cpstypes_edit_flexible_layout"
 msgstr "Editer la disposition flexible"
 
 msgid "Type management"
-msgstr "Gérer les types de documents"
+msgstr "GÃ©rer les types de documents"
 
 msgid "CPS String List Field"
-msgstr "Liste de chaînes"
+msgstr "Liste de chaÃ®nes"
 
 msgid "CPS Float Field"
 msgstr "Nombre flotant"
@@ -331,7 +331,7 @@ msgid "CPS Image Field"
 msgstr "Image"
 
 msgid "CPS String Field"
-msgstr "Chaîne de caractères"
+msgstr "ChaÃ®ne de caractÃ¨res"
 
 msgid "CPS DateTime Field"
 msgstr "Date et heure"
@@ -346,19 +346,19 @@ msgid "CPS Long Field"
 msgstr "Nombre entier (long)"
 
 msgid "CPS MultiSelect Widget"
-msgstr "Liste à sélections multiples"
+msgstr "Liste Ã  sÃ©lections multiples"
 
 msgid "CPS Lines Widget"
 msgstr "Lignes"
 
 msgid "CPS Ordered List Widget"
-msgstr "Liste ordonnée"
+msgstr "Liste ordonnÃ©e"
 
 msgid "CPS Unordered List Widget"
-msgstr "Liste non ordonnée"
+msgstr "Liste non ordonnÃ©e"
 
 msgid "CPS String Widget"
-msgstr "Chaîne de caractères"
+msgstr "ChaÃ®ne de caractÃ¨res"
 
 msgid "CPS TextArea Widget"
 msgstr "Zone de texte"
@@ -394,7 +394,7 @@ msgid "CPS Int Widget"
 msgstr "Entier"
 
 msgid "CPS CheckBox Widget"
-msgstr "Case à cocher"
+msgstr "Case Ã  cocher"
 
 msgid "CPS Long Widget"
 msgstr "Entier long"
@@ -403,7 +403,7 @@ msgid "CPS Float Widget"
 msgstr "Flottant"
 
 msgid "CPS AttachedFile Widget"
-msgstr "Fichier attaché"
+msgstr "Fichier attachÃ©"
 
 msgid "CPS File Widget"
 msgstr "Fichier"
@@ -415,28 +415,28 @@ msgid "CPS Photo Widget"
 msgstr "Photo"
 
 msgid "CPS Boolean Widget"
-msgstr "Booléen"
+msgstr "BoolÃ©en"
 
 msgid "CPS Directory Entry Widget"
-msgstr "Entrée d'annuaire"
+msgstr "EntrÃ©e d'annuaire"
 
 msgid "CPS Directory MultiEntries Widget"
-msgstr "Entrées multiples d'annuaire"
+msgstr "EntrÃ©es multiples d'annuaire"
 
 msgid "CPS Dummy Widget"
 msgstr "Dummy"
 
 msgid "CPS ExtendedSelect Widget"
-msgstr "Liste de choix étendue"
+msgstr "Liste de choix Ã©tendue"
 
 msgid "CPS Identifier Widget"
 msgstr "Identifiant"
 
 msgid "CPS Method Widget"
-msgstr "Composant méthode"
+msgstr "Composant mÃ©thode"
 
 msgid "CPS Select Widget"
-msgstr "Liste de sélection"
+msgstr "Liste de sÃ©lection"
 
 msgid "CPS Text Widget"
 msgstr "Texte"
@@ -445,16 +445,16 @@ msgid "CPS URL Widget"
 msgstr "URL"
 
 msgid "type_already_exists"
-msgstr "Cet identifiant de type est déjá utilisé."
+msgstr "Cet identifiant de type est dÃ©jÃ¡Â utilisÃ©."
 
 msgid "field_already_exists"
-msgstr "Cet identifiant de champ est déjá utilisé."
+msgstr "Cet identifiant de champ est dÃ©jÃ¡Â utilisÃ©."
 
 msgid "psm_duplicate_widgets"
-msgstr "Attention, vous avez sélectionné plusieurs fois le même composant: "
+msgstr "Attention, vous avez sÃ©lectionnÃ© plusieurs fois le mÃªme composant: "
 
 msgid "psm_changed"
-msgstr "Modifié."
+msgstr "ModifiÃ©."
 
 msgid "cpstypes_more"
 msgstr "Plus..."
@@ -463,31 +463,31 @@ msgid "Size"
 msgstr "Taille"
 
 msgid "Display separator in view mode"
-msgstr "Séparateur en mode affichage"
+msgstr "SÃ©parateur en mode affichage"
 
 msgid "Title"
 msgstr "Titre"
 
 msgid "Label in view mode"
-msgstr "Libellé en mode édition"
+msgstr "LibellÃ© en mode Ã©dition"
 
 msgid "Label in edit mode"
-msgstr "Libellé en mode affichage"
+msgstr "LibellÃ© en mode affichage"
 
 msgid "Vocabulary"
 msgstr "Vocabulaire"
 
 msgid "Is vocabulary translated on display ?"
-msgstr "Vocabulaire traduit à l'affichage ?"
+msgstr "Vocabulaire traduit Ã  l'affichage ?"
 
 msgid "Directory"
 msgstr "Annuaire"
 
 msgid "Optional directory used in view mode"
-msgstr "Annuaire utilisé pour l'affichage (optionnel)"
+msgstr "Annuaire utilisÃ© pour l'affichage (optionnel)"
 
 msgid "Entry type"
-msgstr "Type d'entrée"
+msgstr "Type d'entrÃ©e"
 
 msgid "Skin name"
 msgstr "Nom de la skin"
@@ -508,7 +508,7 @@ msgid "Display Height"
 msgstr "Hauteur d'affichage"
 
 msgid "Can resize to lower size ?"
-msgstr "Taille réductible ?"
+msgstr "Taille rÃ©ductible ?"
 
 msgid "Render position"
 msgstr "Position de rendu"
@@ -547,16 +547,16 @@ msgid "Enabling the setting of time of the day ?"
 msgstr "Permettre la configuration de l'heure pour le jour ?"
 
 msgid "default hour for time"
-msgstr "Heure par défaut pour l'heure"
+msgstr "Heure par dÃ©faut pour l'heure"
 
 msgid "default minutes for time"
-msgstr "Minutes par défaut pour l'heure"
+msgstr "Minutes par dÃ©faut pour l'heure"
 
 msgid "True label"
-msgstr "Libellé vrai"
+msgstr "LibellÃ© vrai"
 
 msgid "False label"
-msgstr "Libellé faux"
+msgstr "LibellÃ© faux"
 
 msgid "Maximum file size"
 msgstr "Taille maximum de fichier"
@@ -571,13 +571,13 @@ msgid "cps_types_auto"
 msgstr "Disposition automatique"
 
 msgid "Multiple Layouts"
-msgstr "L'éditeur de layout permet de créer plusieurs layouts"
+msgstr "L'Ã©diteur de layout permet de crÃ©er plusieurs layouts"
 
 msgid "Id prefix for TypeMaker types"
-msgstr "Préfixe pour les identifiants des types"
+msgstr "PrÃ©fixe pour les identifiants des types"
 
 msgid "Id prefix for TypeMaker style"
-msgstr "Préfixe pour le zpt utilisé pour les layouts"
+msgstr "PrÃ©fixe pour le zpt utilisÃ© pour les layouts"
 
 msgid "Base schemas"
 msgstr "Schemas de base"
@@ -589,34 +589,34 @@ msgid "Add in types"
 msgstr "Types de conteneurs"
 
 msgid "Metadata layout"
-msgstr "Layout pour les métadonnées"
+msgstr "Layout pour les mÃ©tadonnÃ©es"
 
 msgid "Metadata schemas"
-msgstr "Schema pour les métadonnées"
+msgstr "Schema pour les mÃ©tadonnÃ©es"
 
 msgid "Immediate View"
-msgstr "Zpt utilisé pour la vue immédiate"
+msgstr "Zpt utilisÃ© pour la vue immÃ©diate"
 
 msgid "Hidden layout modes"
-msgstr "Modes pour les layouts masqués"
+msgstr "Modes pour les layouts masquÃ©s"
 
 msgid "Maximum number of rows"
 msgstr "Nombre maximum de colonnes pour les layouts"
 
 msgid "Process before type publish state changes"
-msgstr "Script ou expression à exécuter avant le changement d'état d'un type"
+msgstr "Script ou expression Ã  exÃ©cuter avant le changement d'Ã©tat d'un type"
 
 msgid "Process after type publish state changes"
-msgstr "Script ou expression à exécuter après le changement d'état d'un type"
+msgstr "Script ou expression Ã  exÃ©cuter aprÃ¨s le changement d'Ã©tat d'un type"
 
 msgid "document types deleted"
-msgstr "Type(s) de document(s) effacé(s)"
+msgstr "Type(s) de document(s) effacÃ©(s)"
 
 msgid "cpstypemaker_save"
 msgstr "Enregistrer la configuration"
 
 msgid "CPS Catalog Navigation Select Widget"
-msgstr "Sélection dans le portail"
+msgstr "SÃ©lection dans le portail"
 
 msgid "CPS NewsLetter InternalLinks Widgets"
 msgstr "Lien interne"
@@ -628,10 +628,10 @@ msgid "CPS Generic MultiSelect Widget"
 msgstr "Selection multiple avec entree vide"
 
 msgid "Label in view layout mode"
-msgstr "Libellé en mode affichage"
+msgstr "LibellÃ© en mode affichage"
 
 msgid "Label in edit layout mode"
-msgstr "Libellé en mode édition"
+msgstr "LibellÃ© en mode Ã©dition"
 
 msgid "Fields"
 msgstr "Champs"
@@ -643,28 +643,28 @@ msgid "Read-only in layout modes"
 msgstr "Composant en lecture seule dans les modes suivants"
 
 msgid "Label is i18n"
-msgstr "Libellé traduit"
+msgstr "LibellÃ© traduit"
 
 msgid "Hidden in layout modes"
-msgstr "Composant caché dans les modes suivants :"
+msgstr "Composant cachÃ© dans les modes suivants :"
 
 msgid "Hidden if readonly in layout modes"
-msgstr "Composant caché dans les modes suivants (s'il est en lecture seule)"
+msgstr "Composant cachÃ© dans les modes suivants (s'il est en lecture seule)"
 
 msgid "Hidden if empty"
-msgstr "Composant caché si vide"
+msgstr "Composant cachÃ© si vide"
 
 msgid "Hide the widget if the given TAL expression returns true"
 msgstr "Cacher le composant si l'expression TAL suivante renvoie vrai"
 
 msgid "CSS class for view"
-msgstr "classe CSS utilisée pour l'affichage"
+msgstr "classe CSS utilisÃ©e pour l'affichage"
 
 msgid "Get the widget mode from the given TAL expression"
-msgstr "Déduire le mode de l'expression TAL suivante"
+msgstr "DÃ©duire le mode de l'expression TAL suivante"
 
 msgid "Is vocabulary translated on display"
-msgstr "Vocabulaire traduit à l'affichage"
+msgstr "Vocabulaire traduit Ã  l'affichage"
 
 msgid "Deletable"
 msgstr "Effacable"
@@ -677,13 +677,13 @@ msgstr ""
 "des valeurs vides "
 
 msgid "Allowed file suffixes (for example: .html .sxw)"
-msgstr "Extensions autorisées (par exemple .html, .sxw)"
+msgstr "Extensions autorisÃ©es (par exemple .html, .sxw)"
 
 msgid "Display for true"
-msgstr "Mot affiché pour le booléen 'vrai'"
+msgstr "Mot affichÃ© pour le boolÃ©en 'vrai'"
 
 msgid "Display for false"
-msgstr "Mot affiché pour le booléen 'faux'"
+msgstr "Mot affichÃ© pour le boolÃ©en 'faux'"
 
 msgid "Use javascript"
 msgstr "Utiliser Javascript"
@@ -695,28 +695,28 @@ msgid "Display width"
 msgstr "Taille d'affichage"
 
 msgid "Enable to resize img to lower size"
-msgstr "Autoriser la réduction de la fenêtre"
+msgstr "Autoriser la rÃ©duction de la fenÃªtre"
 
 msgid "Title of the popup"
 msgstr "Titre du pop-up"
 
 msgid "Allow configuration options"
-msgstr "Autoriser l'accès aux options de configuration"
+msgstr "Autoriser l'accÃ¨s aux options de configuration"
 
 msgid "Widget render method"
-msgstr "Méthode de rendu du composant"
+msgstr "MÃ©thode de rendu du composant"
 
 msgid "Group id for Javascript switching (if empty widget id is used)"
 msgstr "id de Group pour le Javascript (si l'id de widget est vide)"
 
 msgid "Depends on id for Javascript switching"
-msgstr "Dépend des id pour le Javascript"
+msgstr "DÃ©pend des id pour le Javascript"
 
 msgid "Depends on value for Javascript switching"
-msgstr "Dépend des valeurs pour le Javascript"
+msgstr "DÃ©pend des valeurs pour le Javascript"
 
 msgid "Depends on value display widget"
-msgstr "Dépend de la valeur du widget"
+msgstr "DÃ©pend de la valeur du widget"
 
 msgid "Required widget"
 msgstr "Composant obligatoire"
@@ -731,7 +731,7 @@ msgid "search"
 msgstr "recherche"
 
 msgid "Enabling the setting of time of the day"
-msgstr "Autoriser le réglage de l'heure du jour"
+msgstr "Autoriser le rÃ©glage de l'heure du jour"
 
 msgid "Value must be in range"
 msgstr "La valeur doit respecter l'interval"
@@ -743,23 +743,23 @@ msgid "Range maximum value"
 msgstr "Valeur maximum"
 
 msgid "Thousands separator"
-msgstr "Séparateur des milliers"
+msgstr "SÃ©parateur des milliers"
 
 msgid "Decimal separator"
-msgstr "Séparateur des décimales"
+msgstr "SÃ©parateur des dÃ©cimales"
 
 msgid "Number of decimals"
-msgstr "Nombre de décimales"
+msgstr "Nombre de dÃ©cimales"
 
 msgid "Html for edit"
-msgstr "Code html pour l'édition"
+msgstr "Code html pour l'Ã©dition"
 
 msgid "Html for view"
 msgstr "Code html pour l'affichage"
 
 msgid "Render format : select menu (default), radio buttons or checkboxes"
 msgstr ""
-"Format d'affichage : menu de sélection (défaut), boutons ou cases à cocher"
+"Format d'affichage : menu de sÃ©lection (dÃ©faut), boutons ou cases Ã  cocher"
 
 msgid "Target for the link"
 msgstr "Cible pour le lien"
@@ -768,4 +768,4 @@ msgid "type_need_title"
 msgstr "Le champ titre est manquant"
 
 msgid "type_need_label"
-msgstr "Le champ libellé est manquant"
+msgstr "Le champ libellÃ© est manquant"
